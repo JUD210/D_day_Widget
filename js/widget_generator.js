@@ -8,10 +8,9 @@ for (i = 0; i < data["exam"].length; i++) {
   data["exam"][i]["dday"] = "";
 }
 
-// Create div for each exam
 divs = [];
-
 for (i = 0; i < data["exam"].length; i++) {
+  // Create div for each exam
   divs.push(document.createElement("div"));
   divs[i].id = "exam_" + i; // == divs[i].setAttribute("id", "exam_" + i);
 
@@ -29,9 +28,9 @@ for (i = 0; i < data["exam"].length; i++) {
 }
 
 // Create a timer function reloaded continuously
-const KOREAN_TIME = 1000 * 60 * 60 * 9;
-
 var x = setInterval(function() {
+  const KOREAN_TIME = 1000 * 60 * 60 * 9;
+
   for (i = 0; i < data["exam"].length; i++) {
     var now = new Date().getTime() + KOREAN_TIME;
 
