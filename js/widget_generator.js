@@ -43,14 +43,6 @@ var x = setInterval(function() {
     var s = Math.floor((distance % (1000 * 60)) / 1000);
 
     document.querySelector("#exam_" + i + " > .dday").innerHTML =
-      "디데이까지 " +
-      d +
-      "일 " +
-      h +
-      "시간 " +
-      m +
-      "분 " +
-      s +
-      "초 남았습니다. 오우야..";
+      "D - " + d + "d " + h + "h " + m + "m " + s + "s ";
   }
 }, 1000);

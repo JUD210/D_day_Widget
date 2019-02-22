@@ -1,0 +1,14 @@
+.widget {
+  position: fixed;
+  bottom: 10%;
+  right: 10%;
+  opacity: 0.9;
+  text-align: center;
+  border-style: dotted;
+  border-width: 1px;
+  border-color: black;
+}
+
+.widget .title {
+  font-size: 30px;
+}
