@@ -1,0 +1,9 @@
+.header__folder {
+  width: 30px;
+  height: 30px;
+}
+
+.header__title {
+    font-size: 1.5em;
+    font-weight: bold;
+}

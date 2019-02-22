@@ -1,30 +1,14 @@
 <div class="middle__load_widget">
   <h2>위젯 복사/수정하기</h2>
 
-  <p class="load_widget__p1">
-    이전에 생성된 위젯을 복사하거나 수정하려면, 우측 버튼을 클릭해주세요.
+  <p>
+    이전에 생성된 위젯을 복사하거나 수정하시려면, 아래의 순서를 따라주세요.<br><br>
+
+    1. 해당 위젯의 URL주소 (혹은 HTML 코드)를 아래 박스에 복사<br>
+    2. (미구현) 불러오기 버튼 클릭<br><br>
+    <input class="box_url load_widget__box_url" type="text" value="">
+    <!-- !TODO: -->
+    <input type="button" value="(미구현) 불러오기">
   </p>
-
-  <input class="btn_loader load_widget__btn_loader" type="button" value="위젯 복사/수정하기" onclick="toggleLoadWidget()">
-
-  <script>
-    function toggleLoadWidget() {
-      var d = document.querySelector('.load_widget__p2').style.display
-
-      if (d == 'none') {
-        document.querySelector('.load_widget__p2').style.display = 'block'
-      }
-      else if (d == 'block') {
-        document.querySelector('.load_widget__p2').style.display = 'none'
-      }
-    }
-  </script>
-
-  <p class="load_widget__p2" style="display: none">
-    1. 해당 위젯의 URL주소 (혹은 HTML 코드)를 아래 박스에 복사해주세요.<br>
-    2. '불러오기' 버튼을 클릭해주세요.<br><br>
-  </p>
-
-  <input class="box_url load_widget__box_url" type="text" value="">
 
 </div>
