@@ -1,8 +1,8 @@
 .widget {
   position: fixed;
-  bottom: 10%;
-  right: 10%;
-  opacity: 0.9;
+  bottom: 5%;
+  right: 5%;
+  opacity: 1.0;
   text-align: center;
   border-style: dotted;
   border-width: 1px;
