@@ -1,5 +1,5 @@
 function toggleShow(source) {
-  var d = source.style.display;
+  let d = source.style.display;
 
   if (d == "none") {
     source.style.display = "block";

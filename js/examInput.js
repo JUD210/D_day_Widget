@@ -1,7 +1,7 @@
-var examInputs = [];
+let examInputs = [];
 
 function addExamInput() {
-  var examInput = document.createElement("div");
+  let examInput = document.createElement("div");
   examInput.classList = "examInput_" + examInputs.length;
 
   examInput.innerHTML = `

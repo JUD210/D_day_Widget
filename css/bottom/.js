@@ -1,4 +1,4 @@
-var examInputs = [];
+let examInputs = [];
 
 function drawExamInput() {
   for (i = 0; examInputs.length; i++) {
@@ -21,7 +21,7 @@ function addExamInput() {
 /*--------------------------------------------------------*/
 
 function addExamInput() {
-  var examInput = document.createElement("div");
+  let examInput = document.createElement("div");
   examInput.classList = "examInput_";
 
   document
