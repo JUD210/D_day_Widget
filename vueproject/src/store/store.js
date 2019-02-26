@@ -2,20 +2,13 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 import firebase from 'firebase/app'
 import 'firebase/database'
+import config from './config'
 
 import * as exams from './modules/exams'
 import * as format from './modules/format'
 import * as style from './modules/style'
 import * as animation from './modules/animation'
 
-var config = {
-  apiKey: 'AIzaSyCKYA_nePbrY6c3ZSdl9DqqegQ4pkRelcQ',
-  authDomain: 'd-day-test.firebaseapp.com',
-  databaseURL: 'https://d-day-test.firebaseio.com',
-  projectId: 'd-day-test',
-  storageBucket: 'd-day-test.appspot.com',
-  messagingSenderId: '638559532201',
-}
 if (!firebase.apps.length) {
   firebase.initializeApp(config)
 }
