@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="inputForm">
     <div>
       <h3>{{ title }}</h3>
     </div>
@@ -24,7 +24,7 @@
         min="1"
         :value="getStyleByAttr(styleFor, 'font-size')"
         @change="updateFontSize"
-      />px
+      /><span>&nbsp;px</span>
     </div>
     <div class="inputLine">
       <label>Font Color: </label>

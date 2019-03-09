@@ -5,8 +5,8 @@
       <button @click="removeExam">-</button>
     </div>
 
-    <div>
-      <div>
+    <div class="inputForm">
+      <div class="inputLine">
         <label>title: </label>
         <input
           type="text"
@@ -15,7 +15,7 @@
         />
       </div>
 
-      <div>
+      <div class="inputLine">
         <label>date: </label>
         <input
           type="date"

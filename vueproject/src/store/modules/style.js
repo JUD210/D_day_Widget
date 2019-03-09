@@ -2,21 +2,21 @@ export const state = {
   fontFamilies: ["arial", "verdana", "georgia"],
   title: {
     "font-family": "arial",
-    "font-size": 4,
-    color: "#ff0000",
-    "background-color": "#ff0000",
+    "font-size": 10,
+    color: "#2c3e50",
+    "background-color": "#ffffff",
   },
   dday: {
     "font-family": "arial",
-    "font-size": 4,
-    color: "#ff0000",
-    "background-color": "#ff0000",
+    "font-size": 10,
+    color: "#2c3e50",
+    "background-color": "#ffffff",
   },
   date: {
     "font-family": "arial",
-    "font-size": 4,
-    color: "#ff0000",
-    "background-color": "#ff0000",
+    "font-size": 10,
+    color: "#2c3e50",
+    "background-color": "#ffffff",
   },
 }
 

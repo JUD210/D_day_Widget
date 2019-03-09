@@ -1,9 +1,10 @@
 <template>
   <div>
-    <h2>Loader</h2>
+    <h2>저장한 위젯 불러오기</h2>
     <input type="text" :value="uniqueId" @change="updateUniqueId" />
     <button @click="newUniqueId">New</button>
     <button @click="loadWidgetData">Load</button>
+    <!-- <button @click="">Reset</button> -->
   </div>
 </template>
 

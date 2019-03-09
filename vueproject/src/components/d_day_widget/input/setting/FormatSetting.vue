@@ -1,26 +1,28 @@
 <template>
   <BaseToggleBox title="Formatting">
-    <div>
-      <label>D-day Format: </label>
-      <select :value="dday" @change="updateDday">
-        <option
-          v-for="(format, index) in ddayFormats"
-          :value="format"
-          :key="index"
-          >{{ format }}</option
-        >
-      </select>
-    </div>
-    <div>
-      <label>Date Format: </label>
-      <select :value="date" @change="updateDate">
-        <option
-          v-for="(format, index) in dateFormats"
-          :value="format"
-          :key="index"
-          >{{ format }}</option
-        >
-      </select>
+    <div class="inputForm">
+      <div class="inputLine">
+        <label>D-day Format: </label>
+        <select :value="dday" @change="updateDday">
+          <option
+            v-for="(format, index) in ddayFormats"
+            :value="format"
+            :key="index"
+            >{{ format }}</option
+          >
+        </select>
+      </div>
+      <div class="inputLine">
+        <label>Date Format: </label>
+        <select :value="date" @change="updateDate">
+          <option
+            v-for="(format, index) in dateFormats"
+            :value="format"
+            :key="index"
+            >{{ format }}</option
+          >
+        </select>
+      </div>
     </div>
   </BaseToggleBox>
 </template>

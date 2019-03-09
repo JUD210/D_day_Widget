@@ -1,26 +1,33 @@
 <template>
   <BaseToggleBox title="Animation">
-    <div>
-      <label>Animation Type: </label>
-      <select :value="type" @change="updateType">
-        <option v-for="(type, index) in types" :value="type" :key="index">
-          {{ type }}
-        </option>
-      </select>
-    </div>
-    <div>
-      <label>Animation Speed: </label>
-      <input type="number" min="1" :value="speed" @change="updateSpeed" />m/s
-    </div>
-    <div>
-      <label>Animation Interval: </label>
-      <input
-        type="number"
-        min="0.1"
-        step="0.1"
-        :value="interval"
-        @change="updateInterval"
-      />m/s
+    <div class="inputForm">
+      <div class="inputLine">
+        <label>Animation Type: </label>
+        <select :value="type" @change="updateType">
+          <option v-for="(type, index) in types" :value="type" :key="index">
+            {{ type }}
+          </option>
+        </select>
+      </div>
+      <div class="inputLine">
+        <label>Animation Speed: </label>
+        <input
+          type="number"
+          min="1"
+          :value="speed"
+          @change="updateSpeed"
+        /><span>&nbsp;second</span>
+      </div>
+      <div class="inputLine">
+        <label>Animation Interval: </label>
+        <input
+          type="number"
+          min="0.1"
+          step="0.1"
+          :value="interval"
+          @change="updateInterval"
+        /><span>&nbsp;second</span>
+      </div>
     </div>
   </BaseToggleBox>
 </template>

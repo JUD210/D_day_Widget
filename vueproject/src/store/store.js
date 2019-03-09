@@ -81,6 +81,9 @@ export default new Vuex.Store({
           commit("RESET_STYLE", { target: "date", style: newData.style.date })
           commit("RESET_ANIMATION", newData.animation)
         })
+        .catch(() => {
+          alert("There is no matching ID!")
+        })
     },
   },
   getters: {

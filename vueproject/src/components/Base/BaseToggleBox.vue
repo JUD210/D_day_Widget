@@ -46,6 +46,7 @@ export default {
 
 .folder_title {
   font-size: 30px;
+  font-weight: bold;
 }
 
 .baseToggleBox {
