@@ -3,8 +3,8 @@
     <div>
       <h3>{{ title }}</h3>
     </div>
-    <div>
-      <label>Font Type</label>
+    <div class="inputLine">
+      <label>Font Type: </label>
       <select
         :value="getStyleByAttr(styleFor, 'font-family')"
         @change="updateFontFamily"
@@ -17,8 +17,8 @@
         >
       </select>
     </div>
-    <div>
-      <label>Font Size</label>
+    <div class="inputLine">
+      <label>Font Size: </label>
       <input
         type="number"
         min="1"
@@ -26,16 +26,16 @@
         @change="updateFontSize"
       />px
     </div>
-    <div>
-      <label>Font Color</label>
+    <div class="inputLine">
+      <label>Font Color: </label>
       <input
         type="color"
         :value="getStyleByAttr(styleFor, 'color')"
         @change="updateFontColor"
       />
     </div>
-    <div>
-      <label>Background Color</label>
+    <div class="inputLine">
+      <label>Background Color: </label>
       <input
         type="color"
         :value="getStyleByAttr(styleFor, 'background-color')"
@@ -46,53 +46,53 @@
 </template>
 
 <script>
-import { mapState, mapGetters } from 'vuex'
+import { mapState, mapGetters } from "vuex"
 
 export default {
-  name: 'StyleForm',
+  name: "StyleForm",
   props: {
     title: {
       type: String,
-      default: '',
+      default: "",
     },
     styleFor: {
       type: String,
-      default: '',
+      default: "",
     },
   },
   methods: {
     updateFontFamily(e) {
-      this.$store.commit('UPDATE_STYLE', {
+      this.$store.commit("UPDATE_STYLE", {
         target: this.styleFor,
-        attr: 'font-family',
+        attr: "font-family",
         style: e.target.value,
       })
     },
     updateFontSize(e) {
-      this.$store.commit('UPDATE_STYLE', {
+      this.$store.commit("UPDATE_STYLE", {
         target: this.styleFor,
-        attr: 'font-size',
+        attr: "font-size",
         style: e.target.value,
       })
     },
     updateFontColor(e) {
-      this.$store.commit('UPDATE_STYLE', {
+      this.$store.commit("UPDATE_STYLE", {
         target: this.styleFor,
-        attr: 'color',
+        attr: "color",
         style: e.target.value,
       })
     },
     updateBGColor(e) {
-      this.$store.commit('UPDATE_STYLE', {
+      this.$store.commit("UPDATE_STYLE", {
         target: this.styleFor,
-        attr: 'background-color',
+        attr: "background-color",
         style: e.target.value,
       })
     },
   },
   computed: {
     ...mapState({ fontFamilies: state => state.style.fontFamilies }),
-    ...mapGetters(['getStyleByAttr']),
+    ...mapGetters(["getStyleByAttr"]),
   },
 }
 </script>

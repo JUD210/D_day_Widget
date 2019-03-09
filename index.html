@@ -1,119 +1,103 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-<head>
+    <!-- for Vue.js -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
-  <meta charset='utf-8'>
-  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-  <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+    <!-- for HTML Source File Importer (Ref. Code Snippet) -->
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"
+    ></script>
 
+    <script type="text/javascript">
+      $(document).ready(function() {
+        // Ready the document to import multiple HTMLs.
+        // ex) $('#content1-navbar').load('content1/navbar.html');
+        // ex) $('#content1-navbar_ul').load('content1/navbar.html #navbar_ul');
 
+        // You can import a html like this.
+        // <div id='content1-navbar'></div>
+        // <div id='content1-navbar_ul'></div>
 
-  <!-- for Vue.js -->
-  <script src='https://cdn.jsdelivr.net/npm/vue/dist/vue.js'></script>
+        // top
+        $("#title").load("html/top/title.html")
+        $("#navbar").load("html/top/navbar.html")
 
-  <!-- for HTML Source File Importer (Ref. Code Snippet) -->
-  <script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=' crossorigin='anonymous'></script>
+        // middle
+        $("#about_d_day_widget").load("html/middle/about_d_day_widget.html")
+        $("#main_feature").load("html/middle/main_feature.html")
+        $("#how_to_use").load("html/middle/how_to_use.html")
+        $("#load_widget").load("html/middle/load_widget.html")
 
-  <script type='text/javascript'>
-    $(document).ready(function () {
-      // Ready the document to import multiple HTMLs.
-      // ex) $('#content1-navbar').load('content1/navbar.html');
-      // ex) $('#content1-navbar_ul').load('content1/navbar.html #navbar_ul');
+        // bottom
+        $("#exam_data").load("html/bottom/exam_data.html")
+        // $('#formatting').load('html/bottom/formatting.html')
+        // $('#font_and_background').load('html/bottom/font_and_background.html')
+        // $('#animation').load('html/bottom/animation.html')
+        // $('#create_widget').load('html/bottom/create_widget.html')
+        // $('#preset').load('html/bottom/preset.html')
 
-      // You can import a html like this.
-      // <div id='content1-navbar'></div>
-      // <div id='content1-navbar_ul'></div>
+        // widget_preview
+      })
+    </script>
 
-      // top
-      $('#title').load('html/top/title.html')
-      $('#navbar').load('html/top/navbar.html')
+    <!-- css -->
+    <link rel="stylesheet" href="css/bottom/exam_data.css" />
 
+    <link rel="stylesheet" href="css/floating_widget.css" />
 
-      // middle
-      $('#about_d_day_widget').load('html/middle/about_d_day_widget.html')
-      $('#main_feature').load('html/middle/main_feature.html')
-      $('#how_to_use').load('html/middle/how_to_use.html')
-      $('#load_widget').load('html/middle/load_widget.html')
+    <link rel="stylesheet" href="css/body.css" />
+    <link rel="stylesheet" href="css/top.css" />
+    <link rel="stylesheet" href="css/middle.css" />
+    <link rel="stylesheet" href="css/bottom.css" />
 
+    <!-- scripts -->
+    <script src="js/toggleShow.js"></script>
 
-      // bottom
-      $('#exam_data').load('html/bottom/exam_data.html')
-      // $('#formatting').load('html/bottom/formatting.html')
-      // $('#font_and_background').load('html/bottom/font_and_background.html')
-      // $('#animation').load('html/bottom/animation.html')
-      // $('#create_widget').load('html/bottom/create_widget.html')
-      // $('#preset').load('html/bottom/preset.html')
+    <title>Project: D-day Widget v0.01</title>
+  </head>
 
+  <body>
+    <!-- top -->
+    <div class="top">
+      <div id="title"></div>
+      <div id="navbar"></div>
+    </div>
 
-      // widget_preview
+    <!-- middle -->
+    <div class="middle">
+      <div id="about_d_day_widget"></div>
+      <br />
 
+      <div id="main_feature"></div>
+      <br />
 
-    });
-  </script>
+      <div id="how_to_use"></div>
+      <br />
 
-  <!-- css -->
-  <link rel='stylesheet' href='css/bottom/exam_data.css'>
+      <div id="load_widget"></div>
+    </div>
 
-  <link rel="stylesheet" href="css/floating_widget.css">
+    <!-- bottom -->
+    <div class="bottom">
+      <div id="exam_data"></div>
+      <!-- <div id="formatting"></div> -->
+      <!-- <div id="font_and_background"></div> -->
+      <!-- <div id="animation"></div> -->
+      <!-- <div id="create_widget"></div> -->
+      <!-- <div id="preset"></div> -->
+    </div>
 
-  <link rel="stylesheet" href="css/body.css">
-  <link rel="stylesheet" href="css/top.css">
-  <link rel="stylesheet" href="css/middle.css">
-  <link rel="stylesheet" href="css/bottom.css">
+    <!-- widget_preview -->
+    <div class="widget"></div>
 
-  <!-- scripts -->
-  <script src="js/toggleShow.js"></script>
-
-
-  <title>Project: D-day Widget v0.01</title>
-
-</head>
-
-<body>
-
-
-
-  <!-- top -->
-  <div class="top">
-    <div id="title"></div>
-    <div id="navbar"></div>
-  </div>
-
-
-  <!-- middle -->
-  <div class="middle">
-    <div id="about_d_day_widget"></div>
-    <br>
-
-    <div id="main_feature"></div>
-    <br>
-
-    <div id="how_to_use"></div>
-    <br>
-
-    <div id="load_widget"></div>
-  </div>
-
-
-  <!-- bottom -->
-  <div class="bottom">
-    <div id="exam_data"></div>
-    <!-- <div id="formatting"></div> -->
-    <!-- <div id="font_and_background"></div> -->
-    <!-- <div id="animation"></div> -->
-    <!-- <div id="create_widget"></div> -->
-    <!-- <div id="preset"></div> -->
-  </div>
-
-
-  <!-- widget_preview -->
-  <div class="widget"></div>
-
-
-  <!-- apply on '.widget' -->
-  <script src="js/widget_generator.js"></script>
-
-</body>
-
+    <!-- apply on '.widget' -->
+    <script src="js/widget_generator.js"></script>
+  </body>
 </html>

@@ -8,22 +8,22 @@
 </template>
 
 <script>
-import { mapState, mapActions } from 'vuex'
+import { mapState, mapActions } from "vuex"
 
 export default {
-  name: 'UniqueIdLoader',
+  name: "UniqueIdLoader",
   methods: {
-    ...mapActions(['loadWidgetData']),
+    ...mapActions(["loadWidgetData"]),
     newUniqueId() {
-      this.$store.commit('NEW_UNIQUE_ID')
+      this.$store.commit("NEW_UNIQUE_ID")
     },
     updateUniqueId(e) {
-      this.$store.commit('UPDATE_UNIQUE_ID', e.target.value)
+      this.$store.commit("UPDATE_UNIQUE_ID", e.target.value)
     },
   },
-  computed: mapState(['uniqueId']),
+  computed: mapState(["uniqueId"]),
   created() {
-    this.$store.commit('NEW_UNIQUE_ID')
+    this.$store.commit("NEW_UNIQUE_ID")
   },
 }
 </script>

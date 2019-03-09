@@ -1,13 +1,17 @@
-import Vue from 'vue'
-import Vuex from 'vuex'
-import firebase from 'firebase/app'
-import 'firebase/database'
-import config from './config'
+import Vue from "vue"
+import Vuex from "vuex"
 
-import * as exams from './modules/exams'
-import * as format from './modules/format'
-import * as style from './modules/style'
-import * as animation from './modules/animation'
+import * as exams from "./modules/exams"
+import * as format from "./modules/format"
+import * as style from "./modules/style"
+import * as animation from "./modules/animation"
+
+import firebase from "firebase/app"
+import "firebase/database"
+// import firebase from "firebase"
+// import "firebase/firestore"
+
+import config from "./config"
 
 if (!firebase.apps.length) {
   firebase.initializeApp(config)
@@ -16,6 +20,7 @@ if (!firebase.apps.length) {
 Vue.use(Vuex)
 
 var database = firebase.database()
+// var database = firebase.firestore()
 
 export default new Vuex.Store({
   modules: {
@@ -25,15 +30,15 @@ export default new Vuex.Store({
     animation,
   },
   state: {
-    uniqueId: '',
+    uniqueId: "",
   },
   mutations: {
     NEW_UNIQUE_ID(state) {
-      state.uniqueId = ''
-      let possible = 'abcdefghijklmnopqrstuvwxyz0123456789'
+      state.uniqueId = ""
+      let possible = "abcdefghijklmnopqrstuvwxyz0123456789"
 
-      state.uniqueId = ''
-      for (let i = 0; i < 6; i++) {
+      state.uniqueId = ""
+      for (let i = 0; i < 20; i++) {
         state.uniqueId += possible.charAt(
           Math.floor(Math.random() * possible.length),
         )
@@ -46,20 +51,35 @@ export default new Vuex.Store({
   actions: {
     saveWidgetData({ state, getters }) {
       console.log(getters.getWidgetData)
-      database.ref('widgets/' + state.uniqueId).set(getters.getWidgetData)
+      alert(
+        `Success! Copy and paste this url: http://www.test.com/${
+          state.uniqueId
+        }`,
+      )
+
+      // !REVIEW
+      // database
+      //   .doc(`d_day_widgets/${state.uniqueId}`)
+      //   .set(getters.getWidgetData)
+      //   .then(() => console.log("SUCCESS!"))
+      //   .catch(error => {
+      //     console.log(`Got an Error: ${error}`)
+      //   })
+
+      database.ref(`d_day_widgets/${state.uniqueId}`).set(getters.getWidgetData)
     },
     loadWidgetData({ state, commit }) {
       database
-        .ref('widgets/' + state.uniqueId)
-        .once('value')
+        .ref(`d_day_widgets/${state.uniqueId}`)
+        .once("value")
         .then(snapshot => {
           var newData = snapshot.val()
-          commit('RESET_EXAMS', newData.exams)
-          commit('RESET_FORMAT', newData.format)
-          commit('RESET_STYLE', { target: 'title', style: newData.style.title })
-          commit('RESET_STYLE', { target: 'dday', style: newData.style.dday })
-          commit('RESET_STYLE', { target: 'date', style: newData.style.date })
-          commit('RESET_ANIMATION', newData.animation)
+          commit("RESET_EXAMS", newData.exams)
+          commit("RESET_FORMAT", newData.format)
+          commit("RESET_STYLE", { target: "title", style: newData.style.title })
+          commit("RESET_STYLE", { target: "dday", style: newData.style.dday })
+          commit("RESET_STYLE", { target: "date", style: newData.style.date })
+          commit("RESET_ANIMATION", newData.animation)
         })
     },
   },

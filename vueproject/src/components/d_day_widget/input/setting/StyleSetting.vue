@@ -7,10 +7,10 @@
 </template>
 
 <script>
-import StyleForm from '@/components/StyleForm.vue'
+import StyleForm from "@/components/d_day_widget/input/setting/form/StyleForm.vue"
 
 export default {
-  name: 'StyleSetting',
+  name: "StyleSetting",
   components: {
     StyleForm,
   },

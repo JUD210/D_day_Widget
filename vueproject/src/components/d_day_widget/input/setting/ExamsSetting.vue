@@ -10,15 +10,15 @@
 </template>
 
 <script>
-import ExamForm from '@/components/ExamForm.vue'
-import { mapState, mapActions } from 'vuex'
+import ExamForm from "@/components/d_day_widget/input/setting/form/ExamForm.vue"
+import { mapState, mapActions } from "vuex"
 
 export default {
-  name: 'ExamsSetting',
+  name: "ExamsSetting",
   components: {
     ExamForm,
   },
-  methods: mapActions(['addExam']),
+  methods: mapActions(["addExam"]),
   computed: mapState({
     exams: state => state.exams.exams,
   }),

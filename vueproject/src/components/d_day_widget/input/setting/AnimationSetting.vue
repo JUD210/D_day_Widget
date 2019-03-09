@@ -1,19 +1,19 @@
 <template>
   <BaseToggleBox title="Animation">
     <div>
-      <label>Animation Type</label>
+      <label>Animation Type: </label>
       <select :value="type" @change="updateType">
-        <option v-for="(type, index) in types" :value="type" :key="index">{{
-          type
-        }}</option>
+        <option v-for="(type, index) in types" :value="type" :key="index">
+          {{ type }}
+        </option>
       </select>
     </div>
     <div>
-      <label>Animation Speed</label>
+      <label>Animation Speed: </label>
       <input type="number" min="1" :value="speed" @change="updateSpeed" />m/s
     </div>
     <div>
-      <label>Animation Interval</label>
+      <label>Animation Interval: </label>
       <input
         type="number"
         min="0.1"
@@ -26,19 +26,19 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
+import { mapState } from "vuex"
 
 export default {
-  name: 'AnimationSetting',
+  name: "AnimationSetting",
   methods: {
     updateType(e) {
-      this.$store.commit('UPDATE_ANIMATION_TYPE', e.target.value)
+      this.$store.commit("UPDATE_ANIMATION_TYPE", e.target.value)
     },
     updateSpeed(e) {
-      this.$store.commit('UPDATE_ANIMATION_SPEED', e.target.value)
+      this.$store.commit("UPDATE_ANIMATION_SPEED", e.target.value)
     },
     updateInterval(e) {
-      this.$store.commit('UPDATE_ANIMATION_INTERVAL', e.target.value)
+      this.$store.commit("UPDATE_ANIMATION_INTERVAL", e.target.value)
     },
   },
   computed: mapState({

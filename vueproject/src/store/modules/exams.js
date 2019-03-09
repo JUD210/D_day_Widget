@@ -4,7 +4,7 @@ export const state = {
 
 export const mutations = {
   ADD_EXAM(state) {
-    state.exams.push({ title: '', date: '' })
+    state.exams.push({ title: "", date: "" })
   },
   REMOVE_EXAM(state, index) {
     state.exams.splice(index, 1)
@@ -22,7 +22,7 @@ export const mutations = {
 
 export const actions = {
   addExam({ commit }) {
-    commit('ADD_EXAM')
+    commit("ADD_EXAM")
   },
 }
 

@@ -1,21 +1,27 @@
 <template>
-  <div>
-    <div @click="isOpen = !isOpen">
-      <h2>{{ title }}</h2>
+  <div class="baseToggleBox">
+    <div class="folder" @click="isOpen = !isOpen">
+      <img
+        class="folder_image"
+        type="image"
+        src="@/assets/down_arrow_in_circle.png"
+      />
+      <span class="folder_title">&nbsp;{{ title }}</span>
     </div>
+
     <div v-if="isOpen">
-      <slot>none</slot>
+      <slot>DEBUG: fill the content!</slot>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'BaseToggleBox',
+  name: "BaseToggleBox",
   props: {
     title: {
       type: String,
-      default: '',
+      default: "",
     },
   },
   data() {
@@ -26,4 +32,23 @@ export default {
 }
 </script>
 
-<style scoped></style>
+<style scoped>
+.folder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.folder_image {
+  width: 33px;
+  height: 33px;
+}
+
+.folder_title {
+  font-size: 30px;
+}
+
+.baseToggleBox {
+  padding: 10px;
+}
+</style>

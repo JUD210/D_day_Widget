@@ -4,17 +4,19 @@
       <h3>Exam #{{ index }}</h3>
       <button @click="removeExam">-</button>
     </div>
+
     <div>
       <div>
-        <label>title</label>
+        <label>title: </label>
         <input
           type="text"
           :value="getExamTitleById(index)"
           @change="updateTitle"
         />
       </div>
+
       <div>
-        <label>date</label>
+        <label>date: </label>
         <input
           type="date"
           :value="getExamDateById(index)"
@@ -26,10 +28,10 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
+import { mapGetters } from "vuex"
 
 export default {
-  name: 'ExamForm',
+  name: "ExamForm",
   props: {
     index: {
       type: Number,
@@ -38,22 +40,22 @@ export default {
   },
   methods: {
     removeExam() {
-      this.$store.commit('REMOVE_EXAM', this.index)
+      this.$store.commit("REMOVE_EXAM", this.index)
     },
     updateTitle(e) {
-      this.$store.commit('UPDATE_EXAM_TITLE', {
+      this.$store.commit("UPDATE_EXAM_TITLE", {
         index: this.index,
         title: e.target.value,
       })
     },
     updateDate(e) {
-      this.$store.commit('UPDATE_EXAM_DATE', {
+      this.$store.commit("UPDATE_EXAM_DATE", {
         index: this.index,
         date: e.target.value,
       })
     },
   },
-  computed: mapGetters(['getExamTitleById', 'getExamDateById']),
+  computed: mapGetters(["getExamTitleById", "getExamDateById"]),
 }
 </script>
 

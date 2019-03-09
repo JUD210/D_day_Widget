@@ -4,7 +4,7 @@ function addExamInput() {
   let examInput = document.createElement("div");
   examInput.classList.add("examInput");
 
-  examInput.innerHTML = `
+  examInput.innerHTML = /* html */`
     Exam ${counter} &nbsp;&nbsp;&nbsp;
     <input class='remove' type='button' value='-' onclick='removeExamInput(this)'>
     <br>
