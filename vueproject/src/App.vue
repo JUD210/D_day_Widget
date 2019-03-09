@@ -88,12 +88,13 @@ body {
 h3 {
   font-size: 25px;
   font-weight: normal;
-  margin: 10px;
+  margin: 15px;
+  margin-top: 0px;
 }
 
 .inputForm {
   margin: auto;
-  width: 500px;
+  width: 550px;
   /* padding: 20px; */
   background-color: rgb(250, 250, 250);
 }
@@ -122,9 +123,14 @@ textarea {
   margin: 0;
 }
 
-button,
-input {
-  overflow: visible;
+label {
+  width: 200px;
+  text-align: left;
+}
+
+input,
+select {
+  width: 300px;
 }
 
 button,

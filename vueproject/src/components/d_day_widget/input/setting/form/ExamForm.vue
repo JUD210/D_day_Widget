@@ -1,13 +1,15 @@
 <template>
   <div>
-    <div>
-      <h3>Exam #{{ index }}</h3>
-      <button @click="removeExam">-</button>
-    </div>
-
     <div class="inputForm">
+      <div>
+        <h3>
+          Exam #{{ index }}
+          <button @click="removeExam">-</button>
+        </h3>
+      </div>
+
       <div class="inputLine">
-        <label>title: </label>
+        <label>Title: </label>
         <input
           type="text"
           :value="getExamTitleById(index)"
@@ -16,7 +18,7 @@
       </div>
 
       <div class="inputLine">
-        <label>date: </label>
+        <label>Date: </label>
         <input
           type="date"
           :value="getExamDateById(index)"
@@ -24,6 +26,7 @@
         />
       </div>
     </div>
+    <br />
   </div>
 </template>
 

@@ -51,24 +51,35 @@ export default new Vuex.Store({
   actions: {
     saveWidgetData({ state, getters }) {
       console.log(getters.getWidgetData)
-      alert(
-        `Success! Copy and paste this url: http://www.test.com/${
-          state.uniqueId
-        }`,
-      )
 
       // !REVIEW
       // database
       //   .doc(`d_day_widgets/${state.uniqueId}`)
       //   .set(getters.getWidgetData)
       //   .then(() => console.log("SUCCESS!"))
-      //   .catch(error => {
-      //     console.log(`Got an Error: ${error}`)
-      //   })
 
-      database.ref(`d_day_widgets/${state.uniqueId}`).set(getters.getWidgetData)
+      database
+        .ref(`d_day_widgets/${state.uniqueId}`)
+        .set(getters.getWidgetData)
+        .then(() => {
+          alert(
+            `저장 완료! 오른쪽 URL을 복사해서 사용하시면 돼요. : http://www.test.com/${
+              state.uniqueId
+            }`,
+          )
+        })
+        .catch(error => {
+          alert(`오류 발생! 제 연락처로 문의해주세요. ${error}`)
+        })
     },
     loadWidgetData({ state, commit }) {
+      if (!/^([a-z0-9]+)$/.test(state.uniqueId)) {
+        alert(
+          "유효한 키값이 아닙니다! 데이터를 잘못 붙여넣었는지 확인해주세요. (띄어쓰기 등)",
+        )
+        return 0
+      }
+
       database
         .ref(`d_day_widgets/${state.uniqueId}`)
         .once("value")
@@ -82,7 +93,7 @@ export default new Vuex.Store({
           commit("RESET_ANIMATION", newData.animation)
         })
         .catch(() => {
-          alert("There is no matching ID!")
+          alert("일치하는 ID가 없습니다!")
         })
     },
   },

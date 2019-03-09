@@ -1,8 +1,11 @@
 <template>
   <BaseToggleBox title="Style">
     <StyleForm title="Exam Title" styleFor="title"></StyleForm>
+    <br />
     <StyleForm title="Exam D-day" styleFor="dday"></StyleForm>
+    <br />
     <StyleForm title="Exam Date" styleFor="date"></StyleForm>
+    <br />
   </BaseToggleBox>
 </template>
 

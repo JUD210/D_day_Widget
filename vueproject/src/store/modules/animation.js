@@ -1,8 +1,8 @@
 export const state = {
+  types: ["slide", "none"],
   type: "slide",
   speed: 4,
   interval: 1.5,
-  types: ["slide"],
 }
 
 export const mutations = {
