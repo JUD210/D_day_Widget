@@ -1,6 +1,5 @@
 <template>
   <div>
-    <!-- <div v-for=""></div> -->
     <div class="d_day_widget intro">
       <Description></Description>
       <UniqueIdLoader></UniqueIdLoader>
@@ -25,7 +24,6 @@ import Description from "@/components/d_day_widget/intro/Description.vue"
 import UniqueIdLoader from "@/components/d_day_widget/input/UniqueIdLoader.vue"
 import SettingList from "@/components/d_day_widget/input/SettingList.vue"
 
-// ! TODO: Add DDAY WIDGET and PREVIEW it !!
 import DDayWidget from "@/components/d_day_widget/output/DDayWidget.vue"
 
 import { mapActions } from "vuex"

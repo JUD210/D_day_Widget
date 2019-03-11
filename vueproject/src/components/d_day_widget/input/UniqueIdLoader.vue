@@ -4,6 +4,7 @@
     <input type="text" :value="uniqueId" @change="updateUniqueId" />
     <button @click="newUniqueId">New</button>
     <button @click="loadWidgetData">Load</button>
+    <!-- // !TODO: Reset Button -->
     <!-- <button @click="">Reset</button> -->
   </div>
 </template>
