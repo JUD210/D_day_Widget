@@ -7,7 +7,7 @@
       style="width: 100%;"
       readonly
     />
-    <!-- // !TODO: copyText -->
+
     <button @click="copyText">
       이 버튼을 누르면 URL 주소값이 복사될 것이여
     </button>
@@ -18,7 +18,7 @@
 
 <script>
 import DDayWidget from "@/components/d_day_widget/output/DDayWidget.vue"
-import { mapState } from "vuex"
+import { mapState, mapActions } from "vuex"
 
 export default {
   props: {
@@ -41,6 +41,7 @@ export default {
   },
 
   methods: {
+    ...mapActions(["loadWidgetData"]),
     copyText() {
       var copyText = document.querySelector("#copy_url")
       copyText.select()
@@ -49,8 +50,17 @@ export default {
     },
   },
 
-  created() {},
+  created() {
+    this.$store.commit(
+      "UPDATE_UNIQUE_ID",
+      this.$route.fullPath.split("/").pop(),
+    )
+
+    this.loadWidgetData()
+  },
 }
 </script>
 
-<style scoped></style>
+<style scoped>
+/* //!TODO: FIX PREVIEW  */
+</style>

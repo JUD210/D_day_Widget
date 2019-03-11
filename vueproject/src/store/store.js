@@ -66,7 +66,7 @@ export default new Vuex.Store({
     loadWidgetData({ state, commit }) {
       if (!/^([a-z0-9]+)$/.test(state.uniqueId)) {
         alert(
-          "유효한 키값이 아닙니다! 데이터를 잘못 붙여넣었는지 확인해주세요. (띄어쓰기 등)",
+          "유효한 키값이 아닙니다! 키 값을 잘못 붙여넣었는지 확인해주세요. (띄어쓰기 등)",
         )
         return 0
       }
@@ -84,7 +84,9 @@ export default new Vuex.Store({
           commit("RESET_ANIMATION", newData.animation)
         })
         .catch(() => {
-          alert("일치하는 ID가 없습니다!")
+          alert(`입력된 키 값과 일치하는 데이터가 없습니다!
+키 값을 잘못 붙여넣었는지 확인해주세요. (띄어쓰기 등)
+${state.uniqueId}`)
         })
     },
   },
