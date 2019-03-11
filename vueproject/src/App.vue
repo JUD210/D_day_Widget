@@ -4,19 +4,7 @@
       <NavBar></NavBar>
     </div>
 
-    <div class="d_day_widget result">
-      <DDayWidgetGenerator></DDayWidgetGenerator>
-    </div>
-
-    <div class="d_day_widget intro">
-      <Description></Description>
-      <UniqueIdLoader></UniqueIdLoader>
-    </div>
-
-    <div class="d_day_widget input">
-      <SettingList></SettingList>
-      <button @click="saveWidgetData">Save</button>
-    </div>
+    <router-view :key="$route.fullPath" />
 
     <!-- // !TODO: Pomodoro Timer -->
     <!-- // !TODO: Caption -->
@@ -27,31 +15,11 @@
 // common
 import NavBar from "@/components/common/NavBar.vue"
 
-// d_day_widget
-import Description from "@/components/d_day_widget/intro/Description.vue"
-
-import UniqueIdLoader from "@/components/d_day_widget/input/UniqueIdLoader.vue"
-import SettingList from "@/components/d_day_widget/input/SettingList.vue"
-
-import DDayWidgetGenerator from "@/components/d_day_widget/result/DDayWidgetGenerator.vue"
-
-import { mapActions } from "vuex"
-
 export default {
   name: "app",
   components: {
-    // common
     NavBar,
-
-    // d_day_widget
-    Description,
-
-    UniqueIdLoader,
-    SettingList,
-
-    DDayWidgetGenerator,
   },
-  methods: mapActions(["saveWidgetData"]),
 }
 </script>
 

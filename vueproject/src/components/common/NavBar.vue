@@ -1,8 +1,11 @@
 <template>
   <div class="top">
     <h1 class="title">GongBang Helper v0.01</h1>
+
     <nav class="navbar">
-      <a href="">D-day 위젯</a>
+      <router-link :to="{ name: 'd-day-widget-generator' }"
+        >D-day 위젯</router-link
+      >
       <a onclick="alert('제작중입니다.')">(제작중) 타이머</a>
       <a onclick="alert('제작중입니다.')">(제작중) 자막</a>
     </nav>

@@ -8,8 +8,6 @@ import * as animation from "./modules/animation"
 
 import firebase from "firebase/app"
 import "firebase/database"
-// import firebase from "firebase"
-// import "firebase/firestore"
 
 import config from "./config"
 
@@ -20,7 +18,6 @@ if (!firebase.apps.length) {
 Vue.use(Vuex)
 
 var database = firebase.database()
-// var database = firebase.firestore()
 
 export default new Vuex.Store({
   modules: {
@@ -52,18 +49,12 @@ export default new Vuex.Store({
     saveWidgetData({ state, getters }) {
       console.log(getters.getWidgetData)
 
-      // !REVIEW
-      // database
-      //   .doc(`d_day_widgets/${state.uniqueId}`)
-      //   .set(getters.getWidgetData)
-      //   .then(() => console.log("SUCCESS!"))
-
       database
-        .ref(`d_day_widgets/${state.uniqueId}`)
+        .ref(`d_day_widget/${state.uniqueId}`)
         .set(getters.getWidgetData)
         .then(() => {
           alert(
-            `저장 완료! 오른쪽 URL을 복사해서 사용하시면 돼요. : http://www.test.com/${
+            `저장 완료! 오른쪽 URL을 복사해서 사용하시면 됩니다. : http://www.test.com/${
               state.uniqueId
             }`,
           )
@@ -81,7 +72,7 @@ export default new Vuex.Store({
       }
 
       database
-        .ref(`d_day_widgets/${state.uniqueId}`)
+        .ref(`d_day_widget/${state.uniqueId}`)
         .once("value")
         .then(snapshot => {
           var newData = snapshot.val()
