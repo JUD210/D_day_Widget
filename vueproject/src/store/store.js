@@ -50,7 +50,7 @@ export default new Vuex.Store({
       console.log(getters.getWidgetData)
 
       database
-        .ref(`d_day_widget/${state.uniqueId}`)
+        .ref(`${state.uniqueId}/d_day_widget`)
         .set(getters.getWidgetData)
         .then(() => {
           alert(
@@ -72,7 +72,7 @@ export default new Vuex.Store({
       }
 
       database
-        .ref(`d_day_widget/${state.uniqueId}`)
+        .ref(`${state.uniqueId}/d_day_widget`)
         .once("value")
         .then(snapshot => {
           var newData = snapshot.val()

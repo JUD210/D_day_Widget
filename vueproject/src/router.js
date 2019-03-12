@@ -15,7 +15,7 @@ export default new Router({
       component: DDayWidgetGenerator,
     },
     {
-      path: "/ddw/:id",
+      path: "/:id/ddw",
       name: "d-day-widget-show",
       component: DDayWidgetShow,
       props: true,
