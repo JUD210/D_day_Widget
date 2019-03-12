@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import "@/assets/css/NavBar.css"
+import "@/assets/css/common/NavBar.css"
 
 export default {}
 </script>

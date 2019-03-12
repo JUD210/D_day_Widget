@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import "@/assets/css/BaseToggleBox.css"
+import "@/assets/css/base/BaseToggleBox.css"
 
 export default {
   name: "BaseToggleBox",
