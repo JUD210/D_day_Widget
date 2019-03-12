@@ -1,3 +1,5 @@
+export const namespaced = true
+
 export const state = {
   types: ["slide", "none"],
   type: "slide",
@@ -15,9 +17,26 @@ export const mutations = {
   UPDATE_ANIMATION_INTERVAL(state, interval) {
     state.interval = interval
   },
+
   RESET_ANIMATION(state, { type, speed, interval }) {
     state.type = type
     state.speed = speed
     state.interval = interval
+  },
+}
+
+export const actions = {
+  updateAnimationType({ commit }, event) {
+    commit("UPDATE_ANIMATION_TYPE", event.target.value)
+  },
+  updateAnimationSpeed({ commit }, event) {
+    commit("UPDATE_ANIMATION_SPEED", event.target.value)
+  },
+  updateAnimationInterval({ commit }, event) {
+    commit("UPDATE_ANIMATION_INTERVAL", event.target.value)
+  },
+
+  resetAnimation({ commit }, { type, speed, interval }) {
+    commit("RESET_ANIMATION", { type, speed, interval })
   },
 }

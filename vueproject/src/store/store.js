@@ -30,7 +30,7 @@ export default new Vuex.Store({
     uniqueId: "",
   },
   mutations: {
-    NEW_UNIQUE_ID(state) {
+    CREATE_UNIQUE_ID(state) {
       state.uniqueId = ""
       let possible = "abcdefghijklmnopqrstuvwxyz0123456789"
 
@@ -63,7 +63,7 @@ export default new Vuex.Store({
           alert(`오류 발생! 제 연락처로 문의해주세요. ${error}`)
         })
     },
-    loadWidgetData({ state, commit }) {
+    loadWidgetData({ state, dispatch }) {
       if (!/^([a-z0-9]+)$/.test(state.uniqueId)) {
         alert(
           "유효한 키값이 아닙니다! 키 값을 잘못 붙여넣었는지 확인해주세요. (띄어쓰기 등)",
@@ -76,17 +76,27 @@ export default new Vuex.Store({
         .once("value")
         .then(snapshot => {
           var newData = snapshot.val()
-          commit("RESET_EXAMS", newData.exams)
-          commit("RESET_FORMAT", newData.format)
-          commit("RESET_STYLE", { target: "title", style: newData.style.title })
-          commit("RESET_STYLE", { target: "dday", style: newData.style.dday })
-          commit("RESET_STYLE", { target: "date", style: newData.style.date })
-          commit("RESET_ANIMATION", newData.animation)
+          dispatch("exams/resetExams", newData.exams)
+          dispatch("format/resetFormat", newData.format)
+          dispatch("style/resetStyle", {
+            target: "title",
+            style: newData.style.title,
+          })
+          dispatch("style/resetStyle", {
+            target: "dday",
+            style: newData.style.dday,
+          })
+          dispatch("style/resetStyle", {
+            target: "date",
+            style: newData.style.date,
+          })
+          dispatch("animation/resetAnimation", newData.animation)
         })
-        .catch(() => {
+        .catch(err => {
           alert(`입력된 키 값과 일치하는 데이터가 없습니다!
 키 값을 잘못 붙여넣었는지 확인해주세요. (띄어쓰기 등)
 ${state.uniqueId}`)
+          console.log(err)
         })
     },
   },

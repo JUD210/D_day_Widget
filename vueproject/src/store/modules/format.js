@@ -1,3 +1,5 @@
+export const namespaced = true
+
 export const state = {
   ddayFormats: [
     "D-28 (D-%d)",
@@ -17,14 +19,28 @@ export const state = {
 }
 
 export const mutations = {
-  UPDATE_FORMAT_DDAY(state, format) {
-    state.dday = format
+  UPDATE_FORMAT_DDAY(state, dday) {
+    state.dday = dday
   },
-  UPDATE_FORMAT_DATE(state, format) {
-    state.date = format
+  UPDATE_FORMAT_DATE(state, date) {
+    state.date = date
   },
+
   RESET_FORMAT(state, { dday, date }) {
     state.dday = dday
     state.date = date
+  },
+}
+
+export const actions = {
+  updateFormatDDay({ commit }, dday) {
+    commit("UPDATE_FORMAT_DDAY", dday)
+  },
+  updateFormatDate({ commit }, date) {
+    commit("UPDATE_FORMAT_DATE", date)
+  },
+
+  resetFormat({ commit }, { dday, date }) {
+    commit("RESET_FORMAT", { dday, date })
   },
 }

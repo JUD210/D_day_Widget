@@ -1,3 +1,5 @@
+export const namespaced = true
+
 const d = new Date()
 let date = ""
 if (d.getUTCMonth() + 1 < 10) {
@@ -28,6 +30,7 @@ export const mutations = {
   UPDATE_EXAM_DATE(state, { index, date }) {
     state.exams[index].date = date
   },
+
   RESET_EXAMS(state, exams) {
     state.exams = [...exams]
   },
@@ -36,6 +39,19 @@ export const mutations = {
 export const actions = {
   addExam({ commit }) {
     commit("ADD_EXAM")
+  },
+  removeExam({ commit }, index) {
+    commit("REMOVE_EXAM", index)
+  },
+  updateExamTitle({ commit }, { index, title }) {
+    commit("UPDATE_EXAM_TITLE", { index, title })
+  },
+  updateExamDate({ commit }, { index, date }) {
+    commit("UPDATE_EXAM_DATE", { index, date })
+  },
+
+  resetExams({ commit }, exams) {
+    commit("RESET_EXAMS", exams)
   },
 }
 

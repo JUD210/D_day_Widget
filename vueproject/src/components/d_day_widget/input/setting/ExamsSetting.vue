@@ -18,9 +18,7 @@ export default {
   components: {
     ExamForm,
   },
-  methods: mapActions(["addExam"]),
-  computed: mapState({
-    exams: state => state.exams.exams,
-  }),
+  methods: mapActions("exams", ["addExam"]),
+  computed: mapState("exams", ["exams"]),
 }
 </script>

@@ -61,38 +61,38 @@ export default {
     },
   },
   methods: {
-    updateFontFamily(e) {
-      this.$store.commit("UPDATE_STYLE", {
+    updateFontFamily(event) {
+      this.$store.dispatch("style/updateStyle", {
         target: this.styleFor,
         attr: "font-family",
-        style: e.target.value,
+        style: event.target.value,
       })
     },
-    updateFontSize(e) {
-      this.$store.commit("UPDATE_STYLE", {
+    updateFontSize(event) {
+      this.$store.dispatch("style/updateStyle", {
         target: this.styleFor,
         attr: "font-size",
-        style: e.target.value,
+        style: event.target.value,
       })
     },
-    updateFontColor(e) {
-      this.$store.commit("UPDATE_STYLE", {
+    updateFontColor(event) {
+      this.$store.dispatch("style/updateStyle", {
         target: this.styleFor,
         attr: "color",
-        style: e.target.value,
+        style: event.target.value,
       })
     },
-    updateBGColor(e) {
-      this.$store.commit("UPDATE_STYLE", {
+    updateBGColor(event) {
+      this.$store.dispatch("style/updateStyle", {
         target: this.styleFor,
         attr: "background-color",
-        style: e.target.value,
+        style: event.target.value,
       })
     },
   },
   computed: {
-    ...mapState({ fontFamilies: state => state.style.fontFamilies }),
-    ...mapGetters(["getStyleByAttr"]),
+    ...mapState("style", ["fontFamilies"]),
+    ...mapGetters("style", ["getStyleByAttr"]),
   },
 }
 </script>

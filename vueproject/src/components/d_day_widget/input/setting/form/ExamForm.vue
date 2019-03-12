@@ -43,21 +43,21 @@ export default {
   },
   methods: {
     removeExam() {
-      this.$store.commit("REMOVE_EXAM", this.index)
+      this.$store.dispatch("exams/removeExam", this.index)
     },
     updateTitle(e) {
-      this.$store.commit("UPDATE_EXAM_TITLE", {
+      this.$store.dispatch("exams/updateExamTitle", {
         index: this.index,
         title: e.target.value,
       })
     },
     updateDate(e) {
-      this.$store.commit("UPDATE_EXAM_DATE", {
+      this.$store.dispatch("exams/updateExamDate", {
         index: this.index,
         date: e.target.value,
       })
     },
   },
-  computed: mapGetters(["getExamTitleById", "getExamDateById"]),
+  computed: mapGetters("exams", ["getExamTitleById", "getExamDateById"]),
 }
 </script>

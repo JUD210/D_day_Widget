@@ -4,7 +4,7 @@
       <div class="inputLine">
         <label>Type: </label>
 
-        <select :value="type" @change="updateType">
+        <select :value="type" @change="updateAnimationType">
           <option v-for="(type, index) in types" :value="type" :key="index">
             {{ type }}
           </option>
@@ -17,7 +17,7 @@
           type="number"
           min="1"
           :value="speed"
-          @change="updateSpeed"
+          @change="updateAnimationSpeed"
         /><span>&nbsp;sec</span>
       </div>
 
@@ -28,7 +28,7 @@
           min="0.1"
           step="0.1"
           :value="interval"
-          @change="updateInterval"
+          @change="updateAnimationInterval"
         /><span>&nbsp;sec</span>
       </div>
     </div>
@@ -36,26 +36,17 @@
 </template>
 
 <script>
-import { mapState } from "vuex"
+import { mapState, mapActions } from "vuex"
 
 export default {
   name: "AnimationSetting",
   methods: {
-    updateType(e) {
-      this.$store.commit("UPDATE_ANIMATION_TYPE", e.target.value)
-    },
-    updateSpeed(e) {
-      this.$store.commit("UPDATE_ANIMATION_SPEED", e.target.value)
-    },
-    updateInterval(e) {
-      this.$store.commit("UPDATE_ANIMATION_INTERVAL", e.target.value)
-    },
+    ...mapActions("animation", [
+      "updateAnimationType",
+      "updateAnimationSpeed",
+      "updateAnimationInterval",
+    ]),
   },
-  computed: mapState({
-    type: state => state.animation.type,
-    speed: state => state.animation.speed,
-    interval: state => state.animation.interval,
-    types: state => state.animation.types,
-  }),
+  computed: mapState("animation", ["type", "speed", "interval", "types"]),
 }
 </script>

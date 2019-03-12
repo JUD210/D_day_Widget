@@ -2,7 +2,7 @@
   <div>
     <h2>저장한 위젯 불러오기 (키 값)</h2>
     <input type="text" :value="uniqueId" @change="updateUniqueId" />
-    <button @click="newUniqueId">New</button>
+    <button @click="createUniqueId">New</button>
     <button @click="loadWidgetData">Load</button>
     <!-- // !TODO: Reset Button -->
     <!-- <button @click="">Reset</button> -->
@@ -16,8 +16,8 @@ export default {
   name: "UniqueIdLoader",
   methods: {
     ...mapActions(["loadWidgetData"]),
-    newUniqueId() {
-      this.$store.commit("NEW_UNIQUE_ID")
+    createUniqueId() {
+      this.$store.commit("CREATE_UNIQUE_ID")
     },
     updateUniqueId(e) {
       this.$store.commit("UPDATE_UNIQUE_ID", e.target.value)
@@ -25,7 +25,7 @@ export default {
   },
   computed: mapState(["uniqueId"]),
   created() {
-    this.$store.commit("NEW_UNIQUE_ID")
+    this.$store.commit("CREATE_UNIQUE_ID")
   },
 }
 </script>
