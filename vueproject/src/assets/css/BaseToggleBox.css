@@ -1,0 +1,20 @@
+.folder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+
+.folder_image {
+  width: 33px;
+  height: 33px;
+}
+
+.folder_title {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.baseToggleBox {
+  padding: 10px;
+}

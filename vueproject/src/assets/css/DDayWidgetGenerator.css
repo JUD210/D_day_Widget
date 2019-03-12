@@ -1,0 +1,10 @@
+.preview {
+  position: fixed;
+  bottom: 5%;
+  right: 5%;
+  opacity: 1;
+  text-align: center;
+  border-style: dotted;
+  border-width: 1px;
+  border-color: black;
+}

@@ -1,0 +1,67 @@
+[
+	{
+		"path": "$ROOTPATH$\\src\\components\\d_day_widget\\output\\DDayWidget.vue",
+		"bookmarks": [
+			{
+				"line": 2,
+				"column": 35,
+				"label": ""
+			},
+			{
+				"line": 8,
+				"column": 26,
+				"label": ""
+			},
+			{
+				"line": 21,
+				"column": 26,
+				"label": ""
+			},
+			{
+				"line": 53,
+				"column": 25,
+				"label": ""
+			}
+		]
+	},
+	{
+		"path": "$ROOTPATH$\\src\\components\\d_day_widget\\input\\UniqueIdLoader.vue",
+		"bookmarks": [
+			{
+				"line": 6,
+				"column": 23,
+				"label": ""
+			}
+		]
+	},
+	{
+		"path": "$ROOTPATH$\\src\\App.vue",
+		"bookmarks": [
+			{
+				"line": 4,
+				"column": 18,
+				"label": ""
+			},
+			{
+				"line": 5,
+				"column": 18,
+				"label": ""
+			}
+		]
+	},
+	{
+		"path": "$ROOTPATH$\\src\\store\\ddw_store.js",
+		"bookmarks": [
+			{
+				"line": 36,
+				"column": 16,
+				"label": ""
+			},
+			{
+				"line": 37,
+				"column": 16,
+				"label": ""
+			}
+		]
+	}
+]

@@ -1,5 +1,18 @@
+const d = new Date()
+let date = ""
+if (d.getUTCMonth() + 1 < 10) {
+  date += `${d.getUTCFullYear()}-0${d.getUTCMonth() + 1}-${d.getUTCDate()}`
+} else {
+  date += `${d.getUTCFullYear()}-${d.getUTCMonth() + 1}-${d.getUTCDate()}`
+}
+
 export const state = {
-  exams: [],
+  exams: [
+    {
+      title: "시험명",
+      date: date,
+    },
+  ],
 }
 
 export const mutations = {

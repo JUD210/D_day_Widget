@@ -61,5 +61,3 @@ export default {
   computed: mapGetters(["getExamTitleById", "getExamDateById"]),
 }
 </script>
-
-<style scoped></style>

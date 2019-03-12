@@ -4,7 +4,7 @@
       <img
         class="folder_image"
         type="image"
-        src="@/assets/down_arrow_in_circle.png"
+        src="@/assets/image/down_arrow_in_circle.png"
       />
       <span class="folder_title">&nbsp;{{ title }}</span>
     </div>
@@ -16,6 +16,8 @@
 </template>
 
 <script>
+import "@/assets/css/BaseToggleBox.css"
+
 export default {
   name: "BaseToggleBox",
   props: {
@@ -31,26 +33,3 @@ export default {
   },
 }
 </script>
-
-<style scoped>
-.folder {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 10px;
-}
-
-.folder_image {
-  width: 33px;
-  height: 33px;
-}
-
-.folder_title {
-  font-size: 30px;
-  font-weight: bold;
-}
-
-.baseToggleBox {
-  padding: 10px;
-}
-</style>
