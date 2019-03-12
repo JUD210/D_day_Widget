@@ -7,7 +7,7 @@
       <label>Font Type: </label>
       <select
         :value="getStyleByAttr(styleFor, 'font-family')"
-        @change="updateFontFamily"
+        @change="updateStyle($event, 'font-family')"
       >
         <option
           v-for="(font, index) in fontFamilies"
@@ -23,7 +23,7 @@
         type="number"
         min="1"
         :value="getStyleByAttr(styleFor, 'font-size')"
-        @change="updateFontSize"
+        @change="updateStyle($event, 'font-size')"
       /><span>&nbsp;px</span>
     </div>
     <div class="inputLine">
@@ -31,7 +31,7 @@
       <input
         type="color"
         :value="getStyleByAttr(styleFor, 'color')"
-        @change="updateFontColor"
+        @change="updateStyle($event, 'color')"
       />
     </div>
     <div class="inputLine">
@@ -39,7 +39,7 @@
       <input
         type="color"
         :value="getStyleByAttr(styleFor, 'background-color')"
-        @change="updateBGColor"
+        @change="updateStyle($event, 'background-color')"
       />
     </div>
   </div>
@@ -61,31 +61,10 @@ export default {
     },
   },
   methods: {
-    updateFontFamily(event) {
+    updateStyle(event, attr) {
       this.$store.dispatch("style/updateStyle", {
         target: this.styleFor,
-        attr: "font-family",
-        style: event.target.value,
-      })
-    },
-    updateFontSize(event) {
-      this.$store.dispatch("style/updateStyle", {
-        target: this.styleFor,
-        attr: "font-size",
-        style: event.target.value,
-      })
-    },
-    updateFontColor(event) {
-      this.$store.dispatch("style/updateStyle", {
-        target: this.styleFor,
-        attr: "color",
-        style: event.target.value,
-      })
-    },
-    updateBGColor(event) {
-      this.$store.dispatch("style/updateStyle", {
-        target: this.styleFor,
-        attr: "background-color",
+        attr: attr,
         style: event.target.value,
       })
     },

@@ -12,12 +12,13 @@
       </div>
 
       <div class="inputLine">
-        <label>Speed: </label>
+        <label>Transition: </label>
         <input
           type="number"
-          min="1"
-          :value="speed"
-          @change="updateAnimationSpeed"
+          min="0.1"
+          step="0.1"
+          :value="transition"
+          @change="updateAnimationTransition"
         /><span>&nbsp;sec</span>
       </div>
 
@@ -43,10 +44,10 @@ export default {
   methods: {
     ...mapActions("animation", [
       "updateAnimationType",
-      "updateAnimationSpeed",
+      "updateAnimationTransition",
       "updateAnimationInterval",
     ]),
   },
-  computed: mapState("animation", ["type", "speed", "interval", "types"]),
+  computed: mapState("animation", ["type", "transition", "interval", "types"]),
 }
 </script>

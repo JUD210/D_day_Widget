@@ -119,7 +119,7 @@ ${state.uniqueId}`)
         },
         animation: {
           type: state.animation.type,
-          speed: state.animation.speed,
+          transition: state.animation.transition,
           interval: state.animation.interval,
         },
       }
