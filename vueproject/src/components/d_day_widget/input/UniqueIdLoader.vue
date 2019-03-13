@@ -17,15 +17,15 @@ export default {
   methods: {
     ...mapActions(["loadWidgetData"]),
     createUniqueId() {
-      this.$store.commit("CREATE_UNIQUE_ID")
+      this.$store.dispatch("uniqueId/createUniqueId")
     },
-    updateUniqueId(e) {
-      this.$store.commit("UPDATE_UNIQUE_ID", e.target.value)
+    updateUniqueId(event) {
+      this.$store.dispatch("uniqueId/updateUniqueId", event.target.value)
     },
   },
   computed: mapState(["uniqueId"]),
   created() {
-    this.$store.commit("CREATE_UNIQUE_ID")
+    this.$store.dispatch("uniqueId/createUniqueId")
   },
 }
 </script>

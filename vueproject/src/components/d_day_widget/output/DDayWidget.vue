@@ -62,7 +62,7 @@ export default {
       indexSelector: 0,
 
       examTitle: "",
-      
+
       day: "",
       hour: "",
       min: "",
@@ -72,9 +72,6 @@ export default {
 
   // !TODO: It's NOT!
   computed: {
-    // ...mapState({
-    //   uniqueId: state => state.uniqueId.uniqueId,
-    // }),
     ...mapState("uniqueId", ["uniqueId"]),
     ...mapState("exams", ["exams"]),
     ...mapState("format", ["dday, date"]),

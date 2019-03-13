@@ -1,6 +1,8 @@
 import Vue from "vue"
 import Vuex from "vuex"
 
+import * as uniqueId from "./modules/uniqueId"
+
 import * as exams from "./modules/exams"
 import * as format from "./modules/format"
 import * as style from "./modules/style"
@@ -21,41 +23,25 @@ var database = firebase.database()
 
 export default new Vuex.Store({
   modules: {
+    uniqueId,
+
     exams,
     format,
     style,
     animation,
   },
-  state: {
-    uniqueId: "",
-  },
-  mutations: {
-    CREATE_UNIQUE_ID(state) {
-      state.uniqueId = ""
-      let possible = "abcdefghijklmnopqrstuvwxyz0123456789"
 
-      state.uniqueId = ""
-      for (let i = 0; i < 20; i++) {
-        state.uniqueId += possible.charAt(
-          Math.floor(Math.random() * possible.length),
-        )
-      }
-    },
-    UPDATE_UNIQUE_ID(state, uniqueId) {
-      state.uniqueId = uniqueId
-    },
-  },
   actions: {
     saveWidgetData({ state, getters }) {
       console.log(getters.getWidgetData)
 
       database
-        .ref(`${state.uniqueId}/d_day_widget`)
+        .ref(`${state.uniqueId.uniqueId}/d_day_widget`)
         .set(getters.getWidgetData)
         .then(() => {
           alert(
             `저장 완료! 오른쪽 URL을 복사해서 사용하시면 됩니다. : http://www.test.com/${
-              state.uniqueId
+              state.uniqueId.uniqueId
             }`,
           )
         })
@@ -64,7 +50,7 @@ export default new Vuex.Store({
         })
     },
     loadWidgetData({ state, dispatch }) {
-      if (!/^([a-z0-9]+)$/.test(state.uniqueId)) {
+      if (!/^([a-z0-9]+)$/.test(state.uniqueId.uniqueId)) {
         alert(
           "유효한 키값이 아닙니다! 키 값을 잘못 붙여넣었는지 확인해주세요. (띄어쓰기 등)",
         )
@@ -72,7 +58,7 @@ export default new Vuex.Store({
       }
 
       database
-        .ref(`${state.uniqueId}/d_day_widget`)
+        .ref(`${state.uniqueId.uniqueId}/d_day_widget`)
         .once("value")
         .then(snapshot => {
           var newData = snapshot.val()
@@ -95,7 +81,7 @@ export default new Vuex.Store({
         .catch(err => {
           alert(`입력된 키 값과 일치하는 데이터가 없습니다!
 키 값을 잘못 붙여넣었는지 확인해주세요. (띄어쓰기 등)
-${state.uniqueId}`)
+${state.uniqueId.uniqueId}`)
           console.log(err)
         })
     },
