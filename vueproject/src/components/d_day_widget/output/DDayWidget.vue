@@ -84,8 +84,8 @@ export default {
   computed: {
     ...mapState("uniqueId", ["uniqueId"]),
     ...mapState("exams", ["exams"]),
-    ...mapState("formats", ["formatDDay", "formatDate"]),
     ...mapState("styles", ["styleTitle", "styleDDay", "styleDate"]),
+    ...mapState("formats", ["formatDDay", "formatDate"]),
     ...mapState("animations", [
       "animationType",
       "animationTransition",

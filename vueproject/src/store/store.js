@@ -4,8 +4,8 @@ import Vuex from "vuex"
 import * as uniqueId from "./modules/uniqueId"
 
 import * as exams from "./modules/exams"
-import * as formats from "./modules/formats"
 import * as styles from "./modules/styles"
+import * as formats from "./modules/formats"
 import * as animations from "./modules/animations"
 
 import firebase from "firebase/app"
@@ -26,8 +26,8 @@ export default new Vuex.Store({
     uniqueId,
 
     exams,
-    formats,
     styles,
+    formats,
     animations,
   },
 
@@ -66,7 +66,6 @@ export default new Vuex.Store({
           console.log(newData)
 
           dispatch("exams/resetExams", newData.exams)
-          dispatch("formats/resetFormat", newData.formats)
           dispatch("styles/resetStyle", {
             target: "styleTitle",
             style: newData.styles.styleTitle,
@@ -79,6 +78,7 @@ export default new Vuex.Store({
             target: "styleDate",
             style: newData.styles.styleDate,
           })
+          dispatch("formats/resetFormat", newData.formats)
           dispatch("animations/resetAnimation", newData.animations)
         })
         .catch(error => {
@@ -97,14 +97,14 @@ ${state.uniqueId.uniqueId}`)
       }
       return {
         exams,
-        formats: {
-          formatDDay: state.formats.formatDDay,
-          formatDate: state.formats.formatDate,
-        },
         styles: {
           styleTitle: { ...state.styles.styleTitle },
           styleDDay: { ...state.styles.styleDDay },
           styleDate: { ...state.styles.styleDate },
+        },
+        formats: {
+          formatDDay: state.formats.formatDDay,
+          formatDate: state.formats.formatDate,
         },
         animations: {
           animationType: state.animations.animationType,
