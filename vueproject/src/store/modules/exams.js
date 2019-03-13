@@ -11,24 +11,24 @@ if (d.getUTCMonth() + 1 < 10) {
 export const state = {
   exams: [
     {
-      title: "시험명",
-      date: date,
+      examTitle: "시험명",
+      examDate: date,
     },
   ],
 }
 
 export const mutations = {
   ADD_EXAM(state) {
-    state.exams.push({ title: "", date: "" })
+    state.exams.push({ examTitle: "", examDate: "" })
+  },
+  UPDATE_EXAM(state, { index, attr, data }) {
+    console.log(index, attr, data)
+    console.log(state.exams[index][attr])
+    state.exams[index][attr] = data
+    console.log(state.exams[index][attr])
   },
   REMOVE_EXAM(state, index) {
     state.exams.splice(index, 1)
-  },
-  UPDATE_EXAM_TITLE(state, { index, title }) {
-    state.exams[index].title = title
-  },
-  UPDATE_EXAM_DATE(state, { index, date }) {
-    state.exams[index].date = date
   },
 
   RESET_EXAMS(state, exams) {
@@ -40,14 +40,13 @@ export const actions = {
   addExam({ commit }) {
     commit("ADD_EXAM")
   },
+
+  updateExam({ commit }, { index, attr, data }) {
+    commit("UPDATE_EXAM", { index, attr, data })
+  },
+
   removeExam({ commit }, index) {
     commit("REMOVE_EXAM", index)
-  },
-  updateExamTitle({ commit }, { index, title }) {
-    commit("UPDATE_EXAM_TITLE", { index, title })
-  },
-  updateExamDate({ commit }, { index, date }) {
-    commit("UPDATE_EXAM_DATE", { index, date })
   },
 
   resetExams({ commit }, exams) {
@@ -57,9 +56,9 @@ export const actions = {
 
 export const getters = {
   getExamTitleById: state => id => {
-    return state.exams[id].title
+    return state.exams[id].examTitle
   },
   getExamDateById: state => id => {
-    return state.exams[id].date
+    return state.exams[id].examDate
   },
 }

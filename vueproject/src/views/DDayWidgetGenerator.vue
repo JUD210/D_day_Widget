@@ -73,7 +73,7 @@ export default {
     showResult() {
       this.$router.push({
         name: "d-day-widget-show",
-        params: { id: this.$store.state.uniqueId },
+        params: { id: this.uniqueId },
       })
     },
     copyText() {

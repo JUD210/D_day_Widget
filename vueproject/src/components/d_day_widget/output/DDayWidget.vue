@@ -3,7 +3,7 @@
     <!-- //!TODO: Animaion, CSS 등... 추가! -->
 
     <div class="title">
-      <span>{{ examTitle }}</span>
+      <span>{{ title }}</span>
     </div>
 
     <!-- If D-Day_widget -->
@@ -61,7 +61,7 @@ export default {
     return {
       indexSelector: 0,
 
-      examTitle: "",
+      title: "",
 
       day: "",
       hour: "",
@@ -74,8 +74,8 @@ export default {
   computed: {
     ...mapState("uniqueId", ["uniqueId"]),
     ...mapState("exams", ["exams"]),
-    ...mapState("format", ["dday, date"]),
-    ...mapState("style", ["title, dday, date"]),
+    ...mapState("format", ["ddayFormat, dateFormat"]),
+    ...mapState("style", ["titleStyle, ddayStyle, dateStyle"]),
     ...mapState("animation", ["type", "transition", "interval"]),
   },
 
@@ -89,14 +89,14 @@ export default {
     },
 
     titleUpdater() {
-      this.examTitle = this.exams[this.indexSelector].title
+      this.title = this.exams[this.indexSelector].examTitle
     },
     timeUpdater() {
       const KOREAN_TIME = 1000 * 60 * 60 * 9
 
       let now = new Date().getTime() + KOREAN_TIME
 
-      let distance = new Date(this.exams[this.indexSelector].date) - now
+      let distance = new Date(this.exams[this.indexSelector].examDate) - now
 
       this.day = Math.floor(distance / (1000 * 60 * 60 * 24))
       this.hour = Math.floor(

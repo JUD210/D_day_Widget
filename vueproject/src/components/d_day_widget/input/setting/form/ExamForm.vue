@@ -13,7 +13,7 @@
         <input
           type="text"
           :value="getExamTitleById(index)"
-          @change="updateTitle"
+          @change="updateExam($event, 'examTitle')"
         />
       </div>
 
@@ -22,7 +22,7 @@
         <input
           type="date"
           :value="getExamDateById(index)"
-          @change="updateDate"
+          @change="updateExam($event, 'examDate')"
         />
       </div>
     </div>
@@ -42,20 +42,16 @@ export default {
     },
   },
   methods: {
+    updateExam(event, attr) {
+      this.$store.dispatch("exams/updateExam", {
+        index: this.index,
+        attr: attr,
+        data: event.target.value,
+      })
+    },
+
     removeExam() {
       this.$store.dispatch("exams/removeExam", this.index)
-    },
-    updateTitle(e) {
-      this.$store.dispatch("exams/updateExamTitle", {
-        index: this.index,
-        title: e.target.value,
-      })
-    },
-    updateDate(e) {
-      this.$store.dispatch("exams/updateExamDate", {
-        index: this.index,
-        date: e.target.value,
-      })
     },
   },
   computed: mapGetters("exams", ["getExamTitleById", "getExamDateById"]),

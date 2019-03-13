@@ -33,8 +33,6 @@ export default new Vuex.Store({
 
   actions: {
     saveWidgetData({ state, getters }) {
-      console.log(getters.getWidgetData)
-
       database
         .ref(`${state.uniqueId.uniqueId}/d_day_widget`)
         .set(getters.getWidgetData)
@@ -44,6 +42,8 @@ export default new Vuex.Store({
               state.uniqueId.uniqueId
             }`,
           )
+          console.log("[Success] saveWidgetData from getters.getWidgetData")
+          console.log(getters.getWidgetData)
         })
         .catch(error => {
           alert(`오류 발생! 제 연락처로 문의해주세요. ${error}`)
@@ -62,19 +62,22 @@ export default new Vuex.Store({
         .once("value")
         .then(snapshot => {
           var newData = snapshot.val()
+          console.log("[Success] loadWidgetData from snapshot.val()")
+          console.log(newData)
+
           dispatch("exams/resetExams", newData.exams)
           dispatch("format/resetFormat", newData.format)
           dispatch("style/resetStyle", {
-            target: "title",
-            style: newData.style.title,
+            target: "titleStyle",
+            style: newData.style.titleStyle,
           })
           dispatch("style/resetStyle", {
-            target: "dday",
-            style: newData.style.dday,
+            target: "ddayStyle",
+            style: newData.style.ddayStyle,
           })
           dispatch("style/resetStyle", {
-            target: "date",
-            style: newData.style.date,
+            target: "dateStyle",
+            style: newData.style.dateStyle,
           })
           dispatch("animation/resetAnimation", newData.animation)
         })
@@ -95,13 +98,13 @@ ${state.uniqueId.uniqueId}`)
       return {
         exams,
         format: {
-          dday: state.format.dday,
-          date: state.format.date,
+          ddayFormat: state.format.ddayFormat,
+          dateFormat: state.format.dateFormat,
         },
         style: {
-          title: { ...state.style.title },
-          dday: { ...state.style.dday },
-          date: { ...state.style.date },
+          titleStyle: { ...state.style.titleStyle },
+          ddayStyle: { ...state.style.ddayStyle },
+          dateStyle: { ...state.style.dateStyle },
         },
         animation: {
           type: state.animation.type,
