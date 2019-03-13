@@ -16,7 +16,7 @@
     <div class="inputLine">
       <label>Transition: </label>
       <input
-        animationType="number"
+        type="number"
         min="0.1"
         step="0.1"
         :value="animationTransition"
@@ -27,7 +27,7 @@
     <div class="inputLine">
       <label>Interval: </label>
       <input
-        animationType="number"
+        type="number"
         min="0.1"
         step="0.1"
         :value="animationInterval"
