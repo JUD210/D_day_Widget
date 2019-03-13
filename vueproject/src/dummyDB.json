@@ -4,7 +4,7 @@
       "animations" : {
         "animationInterval" : "2",
         "animationTransition" : "0.5",
-        "animationType" : "none"
+        "animationType" : "slide"
       },
       "exams" : [ {
         "examDate" : "2019-04-06",
@@ -13,33 +13,33 @@
         "examDate" : "2019-06-22",
         "examTitle" : "군무원"
       }, {
-        "examDate" : "2019-03-14",
-        "examTitle" : "테스트 1"
+        "examDate" : "2019-03-16",
+        "examTitle" : "테스트1"
       }, {
-        "examDate" : "1993-02-25",
-        "examTitle" : "테스트 2"
+        "examDate" : "2015-12-01",
+        "examTitle" : "테스트2"
       } ],
       "formats" : {
-        "formatDDay" : "D day 28 (D day %d)",
-        "formatDate" : "190219 (YYMMDD)"
+        "formatDDay" : "D-9 (D-%d)",
+        "formatDate" : "2019.2.9 (yyyy.m.d)"
       },
       "styles" : {
         "styleDDay" : {
-          "background-color" : "#ff00ff",
-          "color" : "#800040",
-          "font-family" : "verdana",
-          "font-size" : "30"
+          "background-color" : "#454545",
+          "color" : "#ff6464",
+          "font-family" : "arial",
+          "font-size" : "35"
         },
         "styleDate" : {
-          "background-color" : "#0000ff",
-          "color" : "#00ffff",
-          "font-family" : "arial",
+          "background-color" : "#454545",
+          "color" : "#ffffff",
+          "font-family" : "verdana",
           "font-size" : "20"
         },
         "styleTitle" : {
-          "background-color" : "#0080c0",
-          "color" : "#80ff80",
-          "font-family" : "georgia",
+          "background-color" : "#454545",
+          "color" : "#ffffff",
+          "font-family" : "arial",
           "font-size" : "40"
         }
       }

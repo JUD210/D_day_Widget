@@ -1,5 +1,20 @@
 [
 	{
+		"path": "$ROOTPATH$\\src\\components\\d_day_widget\\output\\DDayWidget.vue",
+		"bookmarks": [
+			{
+				"line": 95,
+				"column": 35,
+				"label": ""
+			},
+			{
+				"line": 127,
+				"column": 35,
+				"label": ""
+			}
+		]
+	},
+	{
 		"path": "$ROOTPATH$\\src\\components\\d_day_widget\\input\\UniqueIdLoader.vue",
 		"bookmarks": [
 			{

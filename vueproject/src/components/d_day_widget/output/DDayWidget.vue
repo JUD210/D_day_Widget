@@ -15,7 +15,7 @@
       :style="[styleDDay, { 'font-size': `${styleDDay['font-size']}px` }]"
     >
       <div v-if="day >= 0 && hour >= 0 && min >= 0 && sec >= 0">
-        <span>D-{{ day + 1 }}</span>
+        <span>{{ formattedDDay }}</span>
       </div>
 
       <div v-else class="expired">
@@ -27,7 +27,7 @@
       class="date"
       :style="[styleDate, { 'font-size': `${styleDate['font-size']}px` }]"
     >
-      <span>{{ exams[indexSelector].examDate }}</span>
+      <span>{{ formattedDate }}</span>
     </div>
 
     <!-- Timer_widget Sample -->
@@ -55,7 +55,7 @@
       </div>
 
       <div v-else class="expired">
-        시간 경과
+        <span>시간 경과</span>
       </div>
     </div>
   </div>
@@ -91,6 +91,96 @@ export default {
       "animationTransition",
       "animationInterval",
     ]),
+
+    formattedDDay() {
+      // !TODO: Custom Formatting 지원 (%d %dd %D %DD)
+      // : CustomFormatInput.vue
+
+      let fmDD = this.formatDDay
+      fmDD = fmDD.substring(fmDD.indexOf("(") + 1, fmDD.indexOf(")"))
+
+      // this.day is 'int' from timeUpdater
+      let d = this.day + 1
+      if (d < 10) {
+        d = `0${d}`
+      }
+
+      console.log(d)
+      try {
+        if (/%dd/i.test(fmDD)) {
+          fmDD = fmDD.replace(/%dd/i, d)
+        } else if (/%d/i.test(fmDD)) {
+          if (d < 10) {
+            d = d.slice(1)
+          }
+
+          fmDD = fmDD.replace(/%d/i, d)
+        } else {
+          throw "포맷이 잘못되었습니다. %d 또는 %dd를 사용해주세요!"
+        }
+      } catch (error) {
+        alert(error)
+      }
+
+      return fmDD
+    },
+
+    formattedDate() {
+      // !TODO: Custom Formatting 지원 (yyyy yy mm m dd d)
+      // : CustomFormatInput.vue
+
+      let eD = this.exams[this.indexSelector].examDate.split(/-/)
+      let y = eD[0]
+      let m = eD[1]
+      let d = eD[2]
+
+      let fmD = this.formatDate
+      fmD = fmD.substring(fmD.indexOf("(") + 1, fmD.indexOf(")"))
+
+      try {
+        if (/yyyy/.test(fmD)) {
+          fmD = fmD.replace(/yyyy/, y)
+        } else if (/yy/.test(fmD)) {
+          fmD = fmD.replace(/yy/, y.slice(2))
+        } else {
+          throw "포맷이 잘못되었습니다. yyyy 또는 yy를 사용해주세요! (대문자만 사용 가능)"
+        }
+      } catch (error) {
+        alert(`1${error}`)
+      }
+
+      try {
+        if (/mm/.test(fmD)) {
+          fmD = fmD.replace(/mm/, m)
+        } else if (/m/.test(fmD)) {
+          if (m < 10) {
+            m = m.slice(1)
+          }
+          fmD = fmD.replace(/m/, m)
+        } else {
+          throw "포맷이 잘못되었습니다. mm 또는 m을 사용해주세요! (대문자만 사용 가능)"
+        }
+      } catch (error) {
+        alert(`2${error}`)
+      }
+
+      try {
+        if (/dd/.test(fmD)) {
+          fmD = fmD.replace(/dd/, d)
+        } else if (/d/.test(fmD)) {
+          if (d < 10) {
+            d = d.slice(1)
+          }
+          fmD = fmD.replace(/d/, d)
+        } else {
+          throw "포맷이 잘못되었습니다. dd 또는 d을 사용해주세요! (대문자만 사용 가능)"
+        }
+      } catch (error) {
+        alert(`3${error}`)
+      }
+
+      return fmD
+    },
   },
 
   methods: {
