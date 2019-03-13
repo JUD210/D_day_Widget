@@ -4,9 +4,9 @@ import Vuex from "vuex"
 import * as uniqueId from "./modules/uniqueId"
 
 import * as exams from "./modules/exams"
-import * as format from "./modules/format"
-import * as style from "./modules/style"
-import * as animation from "./modules/animation"
+import * as formats from "./modules/formats"
+import * as styles from "./modules/styles"
+import * as animations from "./modules/animations"
 
 import firebase from "firebase/app"
 import "firebase/database"
@@ -26,9 +26,9 @@ export default new Vuex.Store({
     uniqueId,
 
     exams,
-    format,
-    style,
-    animation,
+    formats,
+    styles,
+    animations,
   },
 
   actions: {
@@ -66,20 +66,20 @@ export default new Vuex.Store({
           console.log(newData)
 
           dispatch("exams/resetExams", newData.exams)
-          dispatch("format/resetFormat", newData.format)
-          dispatch("style/resetStyle", {
-            target: "titleStyle",
-            style: newData.style.titleStyle,
+          dispatch("formats/resetFormat", newData.formats)
+          dispatch("styles/resetStyle", {
+            target: "styleTitle",
+            style: newData.styles.styleTitle,
           })
-          dispatch("style/resetStyle", {
-            target: "ddayStyle",
-            style: newData.style.ddayStyle,
+          dispatch("styles/resetStyle", {
+            target: "styleDDay",
+            style: newData.styles.styleDDay,
           })
-          dispatch("style/resetStyle", {
-            target: "dateStyle",
-            style: newData.style.dateStyle,
+          dispatch("styles/resetStyle", {
+            target: "styleDate",
+            style: newData.styles.styleDate,
           })
-          dispatch("animation/resetAnimation", newData.animation)
+          dispatch("animations/resetAnimation", newData.animations)
         })
         .catch(err => {
           alert(`입력된 키 값과 일치하는 데이터가 없습니다!
@@ -97,19 +97,19 @@ ${state.uniqueId.uniqueId}`)
       }
       return {
         exams,
-        format: {
-          ddayFormat: state.format.ddayFormat,
-          dateFormat: state.format.dateFormat,
+        formats: {
+          formatDDay: state.formats.formatDDay,
+          formatDate: state.formats.formatDate,
         },
         style: {
-          titleStyle: { ...state.style.titleStyle },
-          ddayStyle: { ...state.style.ddayStyle },
-          dateStyle: { ...state.style.dateStyle },
+          styleTitle: { ...state.styles.styleTitle },
+          styleDDay: { ...state.styles.styleDDay },
+          styleDate: { ...state.styles.styleDate },
         },
-        animation: {
-          type: state.animation.type,
-          transition: state.animation.transition,
-          interval: state.animation.interval,
+        animations: {
+          animationType: state.animations.animationType,
+          animationTransition: state.animations.animationTransition,
+          animationInterval: state.animations.animationInterval,
         },
       }
     },

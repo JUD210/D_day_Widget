@@ -2,19 +2,19 @@ export const namespaced = true
 
 export const state = {
   fontFamilies: ["arial", "verdana", "georgia"],
-  titleStyle: {
+  styleTitle: {
     "font-family": "arial",
     "font-size": 10,
     color: "#2c3e50",
     "background-color": "#ffffff",
   },
-  ddayStyle: {
+  styleDDay: {
     "font-family": "arial",
     "font-size": 10,
     color: "#2c3e50",
     "background-color": "#ffffff",
   },
-  dateStyle: {
+  styleDate: {
     "font-family": "arial",
     "font-size": 10,
     color: "#2c3e50",

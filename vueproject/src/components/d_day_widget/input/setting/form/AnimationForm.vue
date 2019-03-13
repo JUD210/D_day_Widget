@@ -2,9 +2,13 @@
   <div class="inputForm">
     <div class="inputLine">
       <label>Type: </label>
-      <select :value="type" @change="updateAnimationType">
-        <option v-for="(type, index) in types" :value="type" :key="index">
-          {{ type }}
+      <select :value="animationType" @change="updateAnimationType">
+        <option
+          v-for="(animationType, index) in animationTypes"
+          :value="animationType"
+          :key="index"
+        >
+          {{ animationType }}
         </option>
       </select>
     </div>
@@ -12,10 +16,10 @@
     <div class="inputLine">
       <label>Transition: </label>
       <input
-        type="number"
+        animationType="number"
         min="0.1"
         step="0.1"
-        :value="transition"
+        :value="animationTransition"
         @change="updateAnimationTransition"
       /><span>&nbsp;sec</span>
     </div>
@@ -23,10 +27,10 @@
     <div class="inputLine">
       <label>Interval: </label>
       <input
-        type="number"
+        animationType="number"
         min="0.1"
         step="0.1"
-        :value="interval"
+        :value="animationInterval"
         @change="updateAnimationInterval"
       /><span>&nbsp;sec</span>
     </div>
@@ -39,13 +43,18 @@ import { mapState, mapActions } from "vuex"
 export default {
   name: "AnimationForm",
   methods: {
-    ...mapActions("animation", [
+    ...mapActions("animations", [
       "updateAnimationType",
       "updateAnimationTransition",
       "updateAnimationInterval",
     ]),
   },
-  computed: mapState("animation", ["type", "transition", "interval", "types"]),
+  computed: mapState("animations", [
+    "animationType",
+    "animationTransition",
+    "animationInterval",
+    "animationTypes",
+  ]),
 }
 </script>
 

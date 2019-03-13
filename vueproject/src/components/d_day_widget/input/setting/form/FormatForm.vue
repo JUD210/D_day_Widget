@@ -2,23 +2,23 @@
   <div class="inputForm">
     <div class="inputLine">
       <label>D-day Format: </label>
-      <select :value="ddayFormat" @change="updateFormatDDay">
+      <select :value="formatDDay" @change="upformatDateDDay">
         <option
-          v-for="(format, index) in ddayFormats"
-          :value="format"
+          v-for="(formats, index) in formatDDays"
+          :value="formats"
           :key="index"
-          >{{ format }}</option
+          >{{ formats }}</option
         >
       </select>
     </div>
     <div class="inputLine">
       <label>Date Format: </label>
-      <select :value="dateFormat" @change="updateFormatDate">
+      <select :value="formatDate" @change="upformatDateDate">
         <option
-          v-for="(format, index) in dateFormats"
-          :value="format"
+          v-for="(formats, index) in formatDates"
+          :value="formats"
           :key="index"
-          >{{ format }}</option
+          >{{ formats }}</option
         >
       </select>
     </div>
@@ -30,18 +30,18 @@ import { mapState } from "vuex"
 
 export default {
   methods: {
-    updateFormatDDay(event) {
-      this.$store.dispatch("format/updateFormatDDay", event.target.value)
+    upformatDateDDay(event) {
+      this.$store.dispatch("formats/upformatDateDDay", event.target.value)
     },
-    updateFormatDate(event) {
-      this.$store.dispatch("format/updateFormatDate", event.target.value)
+    upformatDateDate(event) {
+      this.$store.dispatch("formats/upformatDateDate", event.target.value)
     },
   },
-  computed: mapState("format", [
-    "ddayFormat",
-    "dateFormat",
-    "ddayFormats",
-    "dateFormats",
+  computed: mapState("formats", [
+    "formatDDay",
+    "formatDate",
+    "formatDDays",
+    "formatDates",
   ]),
 }
 </script>

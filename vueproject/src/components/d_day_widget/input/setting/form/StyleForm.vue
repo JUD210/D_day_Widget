@@ -66,7 +66,7 @@ export default {
   },
   methods: {
     updateStyle(event, attr) {
-      this.$store.dispatch("style/updateStyle", {
+      this.$store.dispatch("styles/updateStyle", {
         target: this.styleFor,
         attr: attr,
         style: event.target.value,
@@ -74,8 +74,8 @@ export default {
     },
   },
   computed: {
-    ...mapState("style", ["fontFamilies"]),
-    ...mapGetters("style", ["getStyleByAttr"]),
+    ...mapState("styles", ["fontFamilies"]),
+    ...mapGetters("styles", ["getStyleByAttr"]),
   },
 }
 </script>

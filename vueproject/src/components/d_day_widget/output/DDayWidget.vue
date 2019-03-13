@@ -57,6 +57,8 @@ import { mapState } from "vuex"
 import { setInterval } from "timers"
 
 export default {
+  components: {},
+
   data() {
     return {
       indexSelector: 0,
@@ -70,13 +72,16 @@ export default {
     }
   },
 
-  // !TODO: It's NOT!
   computed: {
     ...mapState("uniqueId", ["uniqueId"]),
     ...mapState("exams", ["exams"]),
-    ...mapState("format", ["ddayFormat, dateFormat"]),
-    ...mapState("style", ["titleStyle, ddayStyle, dateStyle"]),
-    ...mapState("animation", ["type", "transition", "interval"]),
+    ...mapState("formats", ["formatDDay", "formatDate"]),
+    ...mapState("styles", ["styleTitle", "styleDDay", "styleDate"]),
+    ...mapState("animations", [
+      "animationType",
+      "animationTransition",
+      "animationInterval",
+    ]),
   },
 
   methods: {
@@ -115,6 +120,10 @@ export default {
 
     setInterval(() => {
       this.timeUpdater()
+    }, 1000)
+
+    setInterval(() => {
+      console.log(this.formatDDay)
     }, 1000)
   },
 }
