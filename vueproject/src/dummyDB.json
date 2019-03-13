@@ -20,27 +20,27 @@
         "examTitle" : "테스트 2"
       } ],
       "formats" : {
-        "formatDate" : "190219 (YYMMDD)",
-        "formatDDay" : "D day 28 (D day %d)"
+        "formatDDay" : "D day 28 (D day %d)",
+        "formatDate" : "190219 (YYMMDD)"
       },
       "styles" : {
-        "styleDate" : {
-          "background-color" : "#0000ff",
-          "color" : "#00ffff",
-          "font-family" : "arial",
-          "font-size" : "9"
-        },
         "styleDDay" : {
           "background-color" : "#ff00ff",
           "color" : "#800040",
           "font-family" : "verdana",
-          "font-size" : "99"
+          "font-size" : "30"
+        },
+        "styleDate" : {
+          "background-color" : "#0000ff",
+          "color" : "#00ffff",
+          "font-family" : "arial",
+          "font-size" : "20"
         },
         "styleTitle" : {
           "background-color" : "#0080c0",
           "color" : "#80ff80",
           "font-family" : "georgia",
-          "font-size" : "999"
+          "font-size" : "40"
         }
       }
     }

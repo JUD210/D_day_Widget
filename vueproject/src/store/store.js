@@ -101,7 +101,7 @@ ${state.uniqueId.uniqueId}`)
           formatDDay: state.formats.formatDDay,
           formatDate: state.formats.formatDate,
         },
-        style: {
+        styles: {
           styleTitle: { ...state.styles.styleTitle },
           styleDDay: { ...state.styles.styleDDay },
           styleDate: { ...state.styles.styleDate },

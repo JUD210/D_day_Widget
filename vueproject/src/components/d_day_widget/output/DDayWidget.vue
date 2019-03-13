@@ -3,11 +3,11 @@
     <!-- //!TODO: Animaion, CSS 등... 추가! -->
 
     <div class="title">
-      <span>{{ title }}</span>
+      <span>{{ exams[indexSelector].examTitle }}</span>
     </div>
 
     <!-- If D-Day_widget -->
-    <div class="time">
+    <div class="dday">
       <div v-if="day >= 0 && hour >= 0 && min >= 0 && sec >= 0">
         <div class="day">
           <span class="number">D-{{ day + 1 }}</span>
@@ -19,7 +19,7 @@
       </div>
     </div>
 
-    <!-- If Timer_widget -->
+    <!-- Timer_widget Sample -->
     <div class="time">
       <div v-if="day >= 0 && hour >= 0 && min >= 0 && sec >= 0">
         <div class="day">
@@ -63,8 +63,6 @@ export default {
     return {
       indexSelector: 0,
 
-      title: "",
-
       day: "",
       hour: "",
       min: "",
@@ -93,9 +91,6 @@ export default {
       }
     },
 
-    titleUpdater() {
-      this.title = this.exams[this.indexSelector].examTitle
-    },
     timeUpdater() {
       const KOREAN_TIME = 1000 * 60 * 60 * 9
 
@@ -115,7 +110,6 @@ export default {
   mounted() {
     setInterval(() => {
       this.indexSelectorUpdater()
-      this.titleUpdater()
     }, 3000)
 
     setInterval(() => {
@@ -123,7 +117,7 @@ export default {
     }, 1000)
 
     setInterval(() => {
-      console.log(this.formatDDay)
+      console.log(this.exams)
     }, 1000)
   },
 }
