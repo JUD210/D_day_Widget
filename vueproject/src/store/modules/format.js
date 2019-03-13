@@ -14,33 +14,33 @@ export const state = {
     "19-02-19 (YY-MM-DD)",
     "190219 (YYMMDD)",
   ],
-  dday: "D-28 (D-%d)",
-  date: "2019.02.19 (YYYY.MM.DD)",
+  ddayFormat: "D-28 (D-%d)",
+  dateFormat: "2019.02.19 (YYYY.MM.DD)",
 }
 
 export const mutations = {
-  UPDATE_FORMAT_DDAY(state, dday) {
-    state.dday = dday
+  UPDATE_FORMAT_DDAY(state, ddayFormat) {
+    state.ddayFormat = ddayFormat
   },
-  UPDATE_FORMAT_DATE(state, date) {
-    state.date = date
+  UPDATE_FORMAT_DATE(state, dateFormat) {
+    state.dateFormat = dateFormat
   },
 
-  RESET_FORMAT(state, { dday, date }) {
-    state.dday = dday
-    state.date = date
+  RESET_FORMAT(state, { ddayFormat, dateFormat }) {
+    state.ddayFormat = ddayFormat
+    state.dateFormat = dateFormat
   },
 }
 
 export const actions = {
-  updateFormatDDay({ commit }, dday) {
-    commit("UPDATE_FORMAT_DDAY", dday)
+  updateFormatDDay({ commit }, ddayFormat) {
+    commit("UPDATE_FORMAT_DDAY", ddayFormat)
   },
-  updateFormatDate({ commit }, date) {
-    commit("UPDATE_FORMAT_DATE", date)
+  updateFormatDate({ commit }, dateFormat) {
+    commit("UPDATE_FORMAT_DATE", dateFormat)
   },
 
-  resetFormat({ commit }, { dday, date }) {
-    commit("RESET_FORMAT", { dday, date })
+  resetFormat({ commit }, { ddayFormat, dateFormat }) {
+    commit("RESET_FORMAT", { ddayFormat, dateFormat })
   },
 }

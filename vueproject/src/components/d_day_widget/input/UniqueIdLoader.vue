@@ -23,7 +23,7 @@ export default {
       this.$store.dispatch("uniqueId/updateUniqueId", event.target.value)
     },
   },
-  computed: mapState(["uniqueId"]),
+  computed: mapState("uniqueId", ["uniqueId"]),
   created() {
     this.$store.dispatch("uniqueId/createUniqueId")
   },

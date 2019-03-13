@@ -1,10 +1,10 @@
 <template>
   <BaseToggleBox title="Style">
-    <StyleForm title="Exam Title" styleFor="title"></StyleForm>
+    <StyleForm title="Exam Title" styleFor="titleStyle"></StyleForm>
     <br />
-    <StyleForm title="Exam D-day" styleFor="dday"></StyleForm>
+    <StyleForm title="Exam D-day" styleFor="ddayStyle"></StyleForm>
     <br />
-    <StyleForm title="Exam Date" styleFor="date"></StyleForm>
+    <StyleForm title="Exam Date" styleFor="dateStyle"></StyleForm>
     <br />
   </BaseToggleBox>
 </template>

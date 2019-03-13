@@ -107,16 +107,6 @@ export default {
     },
   },
 
-  created() {
-    console.log(
-      this.uniqueId,
-      this.exams,
-      this.format,
-      this.style,
-      this.animation,
-    )
-  },
-
   mounted() {
     setInterval(() => {
       this.indexSelectorUpdater()

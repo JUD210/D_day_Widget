@@ -3,7 +3,7 @@
     <div class="inputForm">
       <div class="inputLine">
         <label>D-day Format: </label>
-        <select :value="dday" @change="updateFormatDDay">
+        <select :value="ddayFormat" @change="updateFormatDDay">
           <option
             v-for="(format, index) in ddayFormats"
             :value="format"
@@ -14,7 +14,7 @@
       </div>
       <div class="inputLine">
         <label>Date Format: </label>
-        <select :value="date" @change="updateFormatDate">
+        <select :value="dateFormat" @change="updateFormatDate">
           <option
             v-for="(format, index) in dateFormats"
             :value="format"
@@ -40,6 +40,11 @@ export default {
       this.$store.dispatch("format/updateFormatDate", event.target.value)
     },
   },
-  computed: mapState("format", ["dday", "date", "ddayFormats", "dateFormats"]),
+  computed: mapState("format", [
+    "ddayFormat",
+    "dateFormat",
+    "ddayFormats",
+    "dateFormats",
+  ]),
 }
 </script>
