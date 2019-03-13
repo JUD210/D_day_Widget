@@ -63,7 +63,7 @@ export default {
   },
 
   computed: {
-    ...mapState(["uniqueId"]),
+    ...mapState("uniqueId", ["uniqueId"]),
     url() {
       return `http://www.gongbanghelper.com/${this.uniqueId}`
     },

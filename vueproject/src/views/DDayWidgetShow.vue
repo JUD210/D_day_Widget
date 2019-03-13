@@ -25,7 +25,10 @@ export default {
   },
 
   created() {
-    this.$store.commit("UPDATE_UNIQUE_ID", this.$route.fullPath.split("/")[1])
+    this.$store.dispatch(
+      "uniqueId/updateUniqueId",
+      this.$route.fullPath.split("/")[1],
+    )
     this.loadWidgetData()
   },
 }
