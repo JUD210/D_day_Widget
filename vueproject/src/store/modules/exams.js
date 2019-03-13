@@ -22,10 +22,7 @@ export const mutations = {
     state.exams.push({ examTitle: "", examDate: "" })
   },
   UPDATE_EXAM(state, { index, attr, data }) {
-    console.log(index, attr, data)
-    console.log(state.exams[index][attr])
     state.exams[index][attr] = data
-    console.log(state.exams[index][attr])
   },
   REMOVE_EXAM(state, index) {
     state.exams.splice(index, 1)

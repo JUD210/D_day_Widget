@@ -1,5 +1,5 @@
 <template>
-  <BaseToggleBox title="Formatting">
+  <BaseToggleBox title="Format">
     <FormatForm></FormatForm>
   </BaseToggleBox>
 </template>

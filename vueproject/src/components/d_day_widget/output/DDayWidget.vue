@@ -2,21 +2,32 @@
   <div class="dDayWidget">
     <!-- //!TODO: Animaion, CSS 등... 추가! -->
 
-    <div class="title">
+    <div
+      class="title"
+      :style="[styleTitle, { 'font-size': `${styleTitle['font-size']}px` }]"
+    >
       <span>{{ exams[indexSelector].examTitle }}</span>
     </div>
 
     <!-- If D-Day_widget -->
-    <div class="dday">
+    <div
+      class="dday"
+      :style="[styleDDay, { 'font-size': `${styleDDay['font-size']}px` }]"
+    >
       <div v-if="day >= 0 && hour >= 0 && min >= 0 && sec >= 0">
-        <div class="day">
-          <span class="number">D-{{ day + 1 }}</span>
-        </div>
+        <span>D-{{ day + 1 }}</span>
       </div>
 
       <div v-else class="expired">
-        시간 경과
+        <span>시간 경과</span>
       </div>
+    </div>
+
+    <div
+      class="date"
+      :style="[styleDate, { 'font-size': `${styleDate['font-size']}px` }]"
+    >
+      <span>{{ exams[indexSelector].examDate }}</span>
     </div>
 
     <!-- Timer_widget Sample -->
@@ -114,10 +125,6 @@ export default {
 
     setInterval(() => {
       this.timeUpdater()
-    }, 1000)
-
-    setInterval(() => {
-      console.log(this.exams)
     }, 1000)
   },
 }

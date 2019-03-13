@@ -4,19 +4,19 @@ export const state = {
   fontFamilies: ["arial", "verdana", "georgia"],
   styleTitle: {
     "font-family": "arial",
-    "font-size": 10,
+    "font-size": "10",
     color: "#2c3e50",
     "background-color": "#ffffff",
   },
   styleDDay: {
     "font-family": "arial",
-    "font-size": 10,
+    "font-size": "10",
     color: "#2c3e50",
     "background-color": "#ffffff",
   },
   styleDate: {
     "font-family": "arial",
-    "font-size": 10,
+    "font-size": "10",
     color: "#2c3e50",
     "background-color": "#ffffff",
   },

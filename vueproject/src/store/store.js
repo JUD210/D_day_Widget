@@ -81,11 +81,11 @@ export default new Vuex.Store({
           })
           dispatch("animations/resetAnimation", newData.animations)
         })
-        .catch(err => {
+        .catch(error => {
           alert(`입력된 키 값과 일치하는 데이터가 없습니다!
 키 값을 잘못 붙여넣었는지 확인해주세요. (띄어쓰기 등)
 ${state.uniqueId.uniqueId}`)
-          console.log(err)
+          console.log(error)
         })
     },
   },
