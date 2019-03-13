@@ -1,52 +1,48 @@
 {
-  "exams": [
-    {
-      "title": "국가직 시험일자",
-      "date": "2019-04-06"
-    },
-
-    {
-      "title": "군무원 시험일자",
-      "date": "2019-06-21"
-    },
-
-    {
-      "title": "테스트 시험2",
-      "date": "2019-12-31"
+  "q" : {
+    "d_day_widget" : {
+      "animation" : {
+        "interval" : "2",
+        "transition" : "0.5",
+        "type" : "none"
+      },
+      "exams" : [ {
+        "examDate" : "2019-04-06",
+        "examTitle" : "국가직 9급 필기"
+      }, {
+        "examDate" : "2019-06-22",
+        "examTitle" : "군무원"
+      }, {
+        "examDate" : "2019-03-14",
+        "examTitle" : "테스트 1"
+      }, {
+        "examDate" : "1993-02-25",
+        "examTitle" : "테스트 2"
+      } ],
+      "format" : {
+        "dateFormat" : "190219 (YYMMDD)",
+        "ddayFormat" : "D day 28 (D day %d)"
+      },
+      "style" : {
+        "dateStyle" : {
+          "background-color" : "#0000ff",
+          "color" : "#00ffff",
+          "font-family" : "arial",
+          "font-size" : "9"
+        },
+        "ddayStyle" : {
+          "background-color" : "#ff00ff",
+          "color" : "#800040",
+          "font-family" : "verdana",
+          "font-size" : "99"
+        },
+        "titleStyle" : {
+          "background-color" : "#0080c0",
+          "color" : "#80ff80",
+          "font-family" : "georgia",
+          "font-size" : "999"
+        }
+      }
     }
-  ],
-
-  "format": {
-    "dday": "D-day 28 (D-%d)",
-    "date": "2019-02-19 (YYYY-MM-DD)"
-  },
-
-  "style": {
-    "title": {
-      "font-family": "arial",
-      "font-size": "10px",
-      "color": "#2c3e50",
-      "background-color": "#ffffff"
-    },
-
-    "dday": {
-      "font-family": "arial",
-      "font-size": "10px",
-      "color": "#2c3e50",
-      "background-color": "#ffffff"
-    },
-
-    "date": {
-      "font-family": "arial",
-      "font-size": "10px",
-      "color": "#2c3e50",
-      "background-color": "#ffffff"
-    }
-  },
-
-  "animation": {
-    "type": "slide",
-    "transition": "1",
-    "interval": "3"
   }
 }

@@ -3,6 +3,7 @@
     <div>
       <h3>{{ title }}</h3>
     </div>
+
     <div class="inputLine">
       <label>Font Type: </label>
       <select
@@ -17,6 +18,7 @@
         >
       </select>
     </div>
+
     <div class="inputLine">
       <label>Font Size: </label>
       <input
@@ -26,6 +28,7 @@
         @change="updateStyle($event, 'font-size')"
       /><span>&nbsp;px</span>
     </div>
+
     <div class="inputLine">
       <label>Font Color: </label>
       <input
@@ -34,6 +37,7 @@
         @change="updateStyle($event, 'color')"
       />
     </div>
+
     <div class="inputLine">
       <label>Background Color: </label>
       <input

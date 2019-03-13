@@ -1,0 +1,52 @@
+<template>
+  <div class="inputForm">
+    <div class="inputLine">
+      <label>Type: </label>
+      <select :value="type" @change="updateAnimationType">
+        <option v-for="(type, index) in types" :value="type" :key="index">
+          {{ type }}
+        </option>
+      </select>
+    </div>
+
+    <div class="inputLine">
+      <label>Transition: </label>
+      <input
+        type="number"
+        min="0.1"
+        step="0.1"
+        :value="transition"
+        @change="updateAnimationTransition"
+      /><span>&nbsp;sec</span>
+    </div>
+
+    <div class="inputLine">
+      <label>Interval: </label>
+      <input
+        type="number"
+        min="0.1"
+        step="0.1"
+        :value="interval"
+        @change="updateAnimationInterval"
+      /><span>&nbsp;sec</span>
+    </div>
+  </div>
+</template>
+
+<script>
+import { mapState, mapActions } from "vuex"
+
+export default {
+  name: "AnimationForm",
+  methods: {
+    ...mapActions("animation", [
+      "updateAnimationType",
+      "updateAnimationTransition",
+      "updateAnimationInterval",
+    ]),
+  },
+  computed: mapState("animation", ["type", "transition", "interval", "types"]),
+}
+</script>
+
+<style scoped></style>
