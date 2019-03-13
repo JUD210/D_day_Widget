@@ -3,7 +3,7 @@
     <!-- //!TODO: Animaion, CSS 등... 추가! -->
 
     <div class="title">
-      <span>{{ title }}</span>
+      <span>{{ examTitle }}</span>
     </div>
 
     <!-- If D-Day_widget -->
@@ -61,19 +61,30 @@ export default {
     return {
       indexSelector: 0,
 
-      title: "",
+      examTitle: "",
+      
       day: "",
       hour: "",
       min: "",
       sec: "",
     }
   },
+
+  // !TODO: It's NOT!
   computed: {
-    ...mapState(["uniqueId", "exams", "format", "style", "animation"]),
+    // ...mapState({
+    //   uniqueId: state => state.uniqueId.uniqueId,
+    // }),
+    ...mapState("uniqueId", ["uniqueId"]),
+    ...mapState("exams", ["exams"]),
+    ...mapState("format", ["dday, date"]),
+    ...mapState("style", ["title, dday, date"]),
+    ...mapState("animation", ["type", "transition", "interval"]),
   },
+
   methods: {
     indexSelectorUpdater() {
-      if (this.indexSelector + 1 < this.exams.exams.length) {
+      if (this.indexSelector + 1 < this.exams.length) {
         this.indexSelector += 1
       } else {
         this.indexSelector = 0
@@ -81,14 +92,14 @@ export default {
     },
 
     titleUpdater() {
-      this.title = this.exams.exams[this.indexSelector].title
+      this.examTitle = this.exams[this.indexSelector].title
     },
     timeUpdater() {
       const KOREAN_TIME = 1000 * 60 * 60 * 9
 
       let now = new Date().getTime() + KOREAN_TIME
 
-      let distance = new Date(this.exams.exams[this.indexSelector].date) - now
+      let distance = new Date(this.exams[this.indexSelector].date) - now
 
       this.day = Math.floor(distance / (1000 * 60 * 60 * 24))
       this.hour = Math.floor(
@@ -97,6 +108,16 @@ export default {
       this.min = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))
       this.sec = Math.floor((distance % (1000 * 60)) / 1000)
     },
+  },
+
+  created() {
+    console.log(
+      this.uniqueId,
+      this.exams,
+      this.format,
+      this.style,
+      this.animation,
+    )
   },
 
   mounted() {
