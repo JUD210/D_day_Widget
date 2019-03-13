@@ -35,8 +35,6 @@
 </template>
 
 <script>
-import "@/assets/css/d_day_widget/DDayWidgetGenerator.css"
-
 import NavBar from "@/components/common/NavBar.vue"
 
 import Description from "@/components/d_day_widget/intro/Description.vue"

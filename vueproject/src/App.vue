@@ -9,6 +9,7 @@
 
 <script>
 import "@/assets/css/App.css"
+import "@/assets/css/d_day_widget/DDayWidget.css"
 
 export default {
   name: "app",
