@@ -28,9 +28,14 @@
       이 버튼을 누르면 URL 주소값이 복사될 것이여
     </button>
 
+    <!-- <transition name="fade"> -->
     <div class="preview">
-      <DDayWidget></DDayWidget>
+      <button @click="showPreview = !showPreview">
+        Toggle
+      </button>
+      <DDayWidget v-if="showPreview"></DDayWidget>
     </div>
+    <!-- </transition> -->
   </div>
 </template>
 
@@ -60,6 +65,9 @@ export default {
     DDayWidget,
   },
 
+  data() {
+    return { showPreview: true }
+  },
   computed: {
     ...mapState("uniqueId", ["uniqueId"]),
     url() {
@@ -84,3 +92,32 @@ export default {
   },
 }
 </script>
+
+<style scoped>
+/*
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s ease-out;
+}
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}
+
+
+
+#slideSource {
+  opacity: 1;
+  transition: opacity 1s;
+}
+
+#slideSource.fade {
+  opacity: 0;
+}
+
+
+
+.preview > button {
+  text-align: right;
+}
+*/
+</style>

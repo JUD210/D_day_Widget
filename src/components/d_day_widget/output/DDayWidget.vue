@@ -1,7 +1,5 @@
 <template>
   <div class="dDayWidget">
-    <!-- //!TODO: Animaion, CSS 등... 추가! -->
-
     <div
       class="title"
       :style="[styleTitle, { 'font-size': `${styleTitle['font-size']}px` }]"
