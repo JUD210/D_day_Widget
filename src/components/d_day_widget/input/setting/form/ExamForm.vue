@@ -14,6 +14,7 @@
           type="text"
           :value="getExamTitleById(index)"
           @change="updateExam($event, 'examTitle')"
+          placeholder="시험명을 입력해주세요."
         />
       </div>
 

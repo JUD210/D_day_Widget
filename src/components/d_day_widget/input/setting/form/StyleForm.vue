@@ -26,6 +26,7 @@
         min="1"
         :value="getStyleByAttr(styleFor, 'font-size')"
         @change="updateStyle($event, 'font-size')"
+        placeholder="사이즈를 입력해주세요."
       /><span>&nbsp;px</span>
     </div>
 

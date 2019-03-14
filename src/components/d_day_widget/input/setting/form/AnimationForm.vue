@@ -21,6 +21,7 @@
         step="0.1"
         :value="animationTransition"
         @change="updateAnimationTransition"
+        placeholder="날짜 전환에 드는 시간을 입력해주세요."
       /><span>&nbsp;sec</span>
     </div>
 
@@ -32,6 +33,7 @@
         step="0.1"
         :value="animationInterval"
         @change="updateAnimationInterval"
+        placeholder="날짜 전환 주기를 입력해주세요."
       /><span>&nbsp;sec</span>
     </div>
   </div>
