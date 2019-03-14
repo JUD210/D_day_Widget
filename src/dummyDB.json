@@ -1,0 +1,48 @@
+{
+  "q" : {
+    "d_day_widget" : {
+      "exams" : [ {
+        "examDate" : "2019-04-06",
+        "examTitle" : "국가직 9급 필기"
+      }, {
+        "examDate" : "2019-06-22",
+        "examTitle" : "군무원"
+      }, {
+        "examDate" : "2019-03-16",
+        "examTitle" : "테스트1"
+      }, {
+        "examDate" : "2015-12-01",
+        "examTitle" : "테스트2"
+      } ],
+      "styles" : {
+        "styleDDay" : {
+          "background-color" : "#454545",
+          "color" : "#ff4a4a",
+          "font-family" : "arial",
+          "font-size" : "35"
+        },
+        "styleDate" : {
+          "background-color" : "#454545",
+          "color" : "#ffffff",
+          "font-family" : "verdana",
+          "font-size" : "20"
+        },
+        "styleTitle" : {
+          "background-color" : "#454545",
+          "color" : "#ffffff",
+          "font-family" : "arial",
+          "font-size" : "40"
+        }
+      },
+      "formats" : {
+        "formatDDay" : "D-9 (D-%d)",
+        "formatDate" : "2019.2.9 (yyyy.m.d)"
+      },
+      "animations" : {
+        "animationInterval" : "2",
+        "animationTransition" : "0.5",
+        "animationType" : "slide"
+      }
+    }
+  }
+}

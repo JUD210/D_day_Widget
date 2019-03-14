@@ -1,0 +1,15 @@
+<template>
+  <div class="main_feature">
+    <h2>주요 기능</h2>
+
+    <p>
+      ㅇ갯수 제한 없는 D-day 설정<br />
+      ㅇD-day 및 설명글 폰트/배경 설정<br />
+      ㅇD-day 전환 애니메이션 설정
+    </p>
+  </div>
+</template>
+
+<script>
+export default {}
+</script>

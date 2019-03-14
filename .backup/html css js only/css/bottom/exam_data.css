@@ -1,0 +1,9 @@
+.exam_data .group_panel .header .folder {
+  width: 30px;
+  height: 30px;
+}
+
+.exam_data .group_panel .header .title {
+  font-size: 1.5em;
+  font-weight: bold;
+}
