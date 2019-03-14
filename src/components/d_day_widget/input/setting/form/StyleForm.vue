@@ -70,7 +70,7 @@ export default {
       this.$store.dispatch("styles/updateStyle", {
         target: this.styleFor,
         attr: attr,
-        style: event.target.value,
+        styleObject: event.target.value,
       })
     },
   },

@@ -23,28 +23,28 @@ export const state = {
 }
 
 export const mutations = {
-  UPDATE_STYLE(state, { target, attr, style }) {
-    state[target][attr] = style
+  UPDATE_STYLE(state, { target, attr, styleObject }) {
+    state[target][attr] = styleObject
   },
 
-  RESET_STYLE(state, { target, style }) {
-    state[target] = { ...style }
+  RESET_STYLE(state, { target, styleObject }) {
+    state[target] = styleObject
   },
 }
 
 export const actions = {
-  updateStyle({ commit }, { target, attr, style }) {
-    commit("UPDATE_STYLE", { target, attr, style })
+  updateStyle({ commit }, { target, attr, styleObject }) {
+    commit("UPDATE_STYLE", { target, attr, styleObject })
 
     console.log(`styles/UPDATE_STYLE
-    state[${target}][${attr}] = ${style}`)
+    state[${target}][${attr}] = ${styleObject}`)
   },
 
-  resetStyle({ commit }, { target, style }) {
-    commit("RESET_STYLE", { target, style })
+  resetStyle({ commit }, { target, styleObject }) {
+    commit("RESET_STYLE", { target, styleObject })
 
     console.log(`styles/RESET_STYLE
-    state[${target}] = ${JSON.stringify({ ...style })}`)
+    state[${target}] = ${JSON.stringify(styleObject)}`)
   },
 }
 

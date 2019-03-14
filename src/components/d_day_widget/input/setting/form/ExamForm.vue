@@ -47,7 +47,7 @@ export default {
       this.$store.dispatch("exams/updateExam", {
         index: this.index,
         attr: attr,
-        data: event.target.value,
+        value: event.target.value,
       })
     },
 

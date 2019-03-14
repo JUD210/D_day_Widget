@@ -77,15 +77,15 @@ export default new Vuex.Store({
           dispatch("exams/resetExams", newData.exams)
           dispatch("styles/resetStyle", {
             target: "styleTitle",
-            style: newData.styles.styleTitle,
+            styleObject: newData.styles.styleTitle,
           })
           dispatch("styles/resetStyle", {
             target: "styleDDay",
-            style: newData.styles.styleDDay,
+            styleObject: newData.styles.styleDDay,
           })
           dispatch("styles/resetStyle", {
             target: "styleDate",
-            style: newData.styles.styleDate,
+            styleObject: newData.styles.styleDate,
           })
           dispatch("formats/resetFormat", newData.formats)
           dispatch("animations/resetAnimation", newData.animations)
