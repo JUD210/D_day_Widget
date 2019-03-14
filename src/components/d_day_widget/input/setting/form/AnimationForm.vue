@@ -2,7 +2,10 @@
   <div class="inputForm">
     <div class="inputLine">
       <label>Type: </label>
-      <select :value="animationType" @change="updateAnimationType">
+      <select
+        :value="animationType"
+        @change="updateAnimation($event, 'animationType')"
+      >
         <option
           v-for="(animationType, index) in animationTypes"
           :value="animationType"
@@ -20,7 +23,7 @@
         min="0.1"
         step="0.1"
         :value="animationTransition"
-        @change="updateAnimationTransition"
+        @change="updateAnimation($event, 'animationTransition')"
         placeholder="날짜 전환에 드는 시간을 입력해주세요."
       /><span>&nbsp;sec</span>
     </div>
@@ -32,7 +35,7 @@
         min="0.1"
         step="0.1"
         :value="animationInterval"
-        @change="updateAnimationInterval"
+        @change="updateAnimation($event, 'animationInterval')"
         placeholder="날짜 전환 주기를 입력해주세요."
       /><span>&nbsp;sec</span>
     </div>
@@ -40,16 +43,17 @@
 </template>
 
 <script>
-import { mapState, mapActions } from "vuex"
+import { mapState } from "vuex"
 
 export default {
   name: "AnimationForm",
   methods: {
-    ...mapActions("animations", [
-      "updateAnimationType",
-      "updateAnimationTransition",
-      "updateAnimationInterval",
-    ]),
+    updateAnimation(event, attr) {
+      this.$store.dispatch("animations/updateAnimation", {
+        attr: attr,
+        value: event.target.value,
+      })
+    },
   },
   computed: mapState("animations", [
     "animationType",

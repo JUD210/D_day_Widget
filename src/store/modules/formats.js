@@ -38,11 +38,8 @@ export const state = {
 }
 
 export const mutations = {
-  UPDATE_FORMAT_DDAY(state, formatDDay) {
-    state.formatDDay = formatDDay
-  },
-  UPDATE_FORMAT_DATE(state, formatDate) {
-    state.formatDate = formatDate
+  UPDATE_FORMAT(state, { attr, value }) {
+    state[attr] = value
   },
 
   RESET_FORMAT(state, { formatDDay, formatDate }) {
@@ -52,17 +49,11 @@ export const mutations = {
 }
 
 export const actions = {
-  updateFormatDDay({ commit }, formatDDay) {
-    commit("UPDATE_FORMAT_DDAY", formatDDay)
+  updateFormat({ commit }, { attr, value }) {
+    commit("UPDATE_FORMAT", { attr, value })
 
-    console.log(`formats/UPDATE_FORMAT_DDAY
-    state.formatDDay = ${formatDDay}`)
-  },
-  updateFormatDate({ commit }, formatDate) {
-    commit("UPDATE_FORMAT_DATE", formatDate)
-
-    console.log(`formats/UPDATE_FORMAT_DATE
-    state.formatDate = ${formatDate}`)
+    console.log(`formats/UPDATE_FORMAT
+    state[${attr}] = ${value}`)
   },
 
   resetFormat({ commit }, { formatDDay, formatDate }) {

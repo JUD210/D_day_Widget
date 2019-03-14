@@ -65,7 +65,7 @@ export default new Vuex.Store({
         alert(
           "유효한 키값이 아닙니다! 키 값을 잘못 붙여넣었는지 확인해주세요. (띄어쓰기 등)",
         )
-        return 0
+        return "error"
       }
 
       database
