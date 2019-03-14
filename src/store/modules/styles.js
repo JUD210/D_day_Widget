@@ -35,10 +35,16 @@ export const mutations = {
 export const actions = {
   updateStyle({ commit }, { target, attr, style }) {
     commit("UPDATE_STYLE", { target, attr, style })
+
+    console.log(`styles/UPDATE_STYLE
+    state[${target}][${attr}] = ${style}`)
   },
 
   resetStyle({ commit }, { target, style }) {
     commit("RESET_STYLE", { target, style })
+
+    console.log(`styles/RESET_STYLE
+    state[${target}] = ${JSON.stringify({ ...style })}`)
   },
 }
 

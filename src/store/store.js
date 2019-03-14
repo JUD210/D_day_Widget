@@ -31,6 +31,14 @@ export default new Vuex.Store({
     animations,
   },
 
+  state: {
+    // If I decide to change these sources to private,
+    // I'll attach below state and script to all console.logs
+    //
+    // isDebug: false,
+    // if(rootState.isDebug) { console.log ( ... )}
+  },
+
   actions: {
     saveWidgetData({ state, getters }) {
       database
@@ -42,11 +50,14 @@ export default new Vuex.Store({
               state.uniqueId.uniqueId
             }`,
           )
-          console.log("[Success] saveWidgetData from getters.getWidgetData")
-          console.log(getters.getWidgetData)
+          console.log(`store/saveWidgetData [OK]
+          ${JSON.stringify(getters.getWidgetData)}`)
         })
         .catch(error => {
           alert(`오류 발생! 제 연락처로 문의해주세요. ${error}`)
+
+          console.log(`store/saveWidgetData [ERROR]
+          ${error}`)
         })
     },
     loadWidgetData({ state, dispatch }) {
@@ -62,8 +73,6 @@ export default new Vuex.Store({
         .once("value")
         .then(snapshot => {
           var newData = snapshot.val()
-          console.log("[Success] loadWidgetData from snapshot.val()")
-          console.log(newData)
 
           dispatch("exams/resetExams", newData.exams)
           dispatch("styles/resetStyle", {
@@ -80,12 +89,17 @@ export default new Vuex.Store({
           })
           dispatch("formats/resetFormat", newData.formats)
           dispatch("animations/resetAnimation", newData.animations)
+
+          console.log(`store/loadWidgetData [OK]
+          ${JSON.stringify(newData)}`)
         })
         .catch(error => {
           alert(`입력된 키 값과 일치하는 데이터가 없습니다!
 키 값을 잘못 붙여넣었는지 확인해주세요. (띄어쓰기 등)
 ${state.uniqueId.uniqueId}`)
-          console.log(`In loadWidgetData: ${error}`)
+
+          console.log(`store/loadWidgetData [ERROR]
+          ${error}`)
         })
     },
   },

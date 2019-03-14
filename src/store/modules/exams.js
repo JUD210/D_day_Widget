@@ -19,7 +19,7 @@ export const state = {
 
 export const mutations = {
   ADD_EXAM(state) {
-    state.exams.push({ examTitle: "", examDate: "" })
+    state.exams.push({ examTitle: "시험명", examDate: date })
   },
   UPDATE_EXAM(state, { index, attr, data }) {
     state.exams[index][attr] = data
@@ -36,18 +36,28 @@ export const mutations = {
 export const actions = {
   addExam({ commit }) {
     commit("ADD_EXAM")
-  },
 
+    console.log(`exams/ADD_EXAM
+    state.exams.push({ examTitle: "시험명", examDate: ${date} })`)
+  },
   updateExam({ commit }, { index, attr, data }) {
     commit("UPDATE_EXAM", { index, attr, data })
-  },
 
+    console.log(`exams/UPDATE_EXAM
+    state.exams[${index}][${attr}] = ${data}`)
+  },
   removeExam({ commit }, index) {
     commit("REMOVE_EXAM", index)
+
+    console.log(`exams/REMOVE_EXAM
+    state.exams.splice(${index}, 1)`)
   },
 
   resetExams({ commit }, exams) {
     commit("RESET_EXAMS", exams)
+
+    console.log(`exams/RESET_EXAMS
+    state.exams = [...exams]`)
   },
 }
 

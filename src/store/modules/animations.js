@@ -11,7 +11,7 @@ export const mutations = {
   UPDATE_ANIMATION_TYPE(state, animationType) {
     state.animationType = animationType
   },
-  UPDATE_ANIMATION_SPEED(state, animationTransition) {
+  UPDATE_ANIMATION_TRANSITION(state, animationTransition) {
     state.animationTransition = animationTransition
   },
   UPDATE_ANIMATION_INTERVAL(state, animationInterval) {
@@ -31,12 +31,21 @@ export const mutations = {
 export const actions = {
   updateAnimationType({ commit }, event) {
     commit("UPDATE_ANIMATION_TYPE", event.target.value)
+
+    console.log(`animations/UPDATE_ANIMATION_TYPE
+    state.animationType = ${event.target.value}`)
   },
   updateAnimationTransition({ commit }, event) {
-    commit("UPDATE_ANIMATION_SPEED", event.target.value)
+    commit("UPDATE_ANIMATION_TRANSITION", event.target.value)
+
+    console.log(`animations/UPDATE_ANIMATION_TRANSITION
+    state.animationTransition = ${event.target.value}`)
   },
   updateAnimationInterval({ commit }, event) {
     commit("UPDATE_ANIMATION_INTERVAL", event.target.value)
+
+    console.log(`animations/UPDATE_ANIMATION_INTERVAL
+    state.animationInterval = ${event.target.value}`)
   },
 
   resetAnimation(
@@ -48,5 +57,10 @@ export const actions = {
       animationTransition,
       animationInterval,
     })
+
+    console.log(`animations/RESET_ANIMATION
+    state.animationType = ${animationType}
+    state.animationTransition = ${animationTransition}
+    state.animationInterval = ${animationInterval}`)
   },
 }
