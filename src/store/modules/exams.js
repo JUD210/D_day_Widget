@@ -11,7 +11,7 @@ if (d.getUTCMonth() + 1 < 10) {
 export const state = {
   exams: [
     {
-      examTitle: "시험명",
+      examTitle: null,
       examDate: date,
     },
   ],

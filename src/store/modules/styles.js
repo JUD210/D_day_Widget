@@ -6,19 +6,19 @@ export const state = {
     "font-family": "arial",
     "font-size": "40",
     color: "#ffffff",
-    "background-color": "#454545",
+    "background-color": "#232323",
   },
   styleDDay: {
     "font-family": "arial",
     "font-size": "35",
     color: "#ff4a4a",
-    "background-color": "#454545",
+    "background-color": "#232323",
   },
   styleDate: {
     "font-family": "arial",
     "font-size": "20",
     color: "#ffffff",
-    "background-color": "#454545",
+    "background-color": "#232323",
   },
 }
 

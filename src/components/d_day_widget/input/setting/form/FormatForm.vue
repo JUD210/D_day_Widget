@@ -4,10 +4,10 @@
       <label>D-day Format: </label>
       <select :value="formatDDay" @change="updateFormat($event, 'formatDDay')">
         <option
-          v-for="(formats, index) in formatDDays"
-          :value="formats"
+          v-for="(format, index) in formatDDays"
+          :value="format"
           :key="index"
-          >{{ formats }}</option
+          >{{ format }}</option
         >
       </select>
     </div>
@@ -16,10 +16,25 @@
       <label>Date Format: </label>
       <select :value="formatDate" @change="updateFormat($event, 'formatDate')">
         <option
-          v-for="(formats, index) in formatDates"
-          :value="formats"
+          v-for="(format, index) in formatDates"
+          :value="format"
           :key="index"
-          >{{ formats }}</option
+          >{{ format }}</option
+        >
+      </select>
+    </div>
+
+    <div class="inputLine">
+      <label>Timer String Format: </label>
+      <select
+        :value="formatTimerString"
+        @change="updateFormat($event, 'formatTimerString')"
+      >
+        <option
+          v-for="(format, index) in formatTimerStrings"
+          :value="format"
+          :key="index"
+          >{{ format }}</option
         >
       </select>
     </div>
@@ -40,10 +55,13 @@ export default {
   },
 
   computed: mapState("formats", [
-    "formatDDay",
-    "formatDate",
     "formatDDays",
     "formatDates",
+    "formatTimerStrings",
+
+    "formatDDay",
+    "formatDate",
+    "formatTimerString",
   ]),
 }
 </script>

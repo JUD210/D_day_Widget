@@ -31,22 +31,30 @@
       <div v-if="day >= 0 && hour >= 0 && min >= 0 && sec >= 0">
         <div class="day">
           <span class="number">{{ day }}</span>
-          <div class="number_str">일</div>
+          <div v-if="formatTimerString != 'None'" class="number_str">
+            {{ formatTimerString.split("/")[0] }}
+          </div>
         </div>
 
         <div class="hour">
           <span class="number">{{ hour }}</span>
-          <div class="number_str">시</div>
+          <div class="number_str">
+            {{ formatTimerString.split("/")[1] }}
+          </div>
         </div>
 
         <div class="min">
           <span class="number">{{ min }}</span>
-          <div class="number_str">분</div>
+          <div class="number_str">
+            {{ formatTimerString.split("/")[2] }}
+          </div>
         </div>
 
         <div class="sec">
           <span class="number">{{ sec }}</span>
-          <div class="number_str">초</div>
+          <div class="number_str">
+            {{ formatTimerString.split("/")[3] }}
+          </div>
         </div>
       </div>
 
@@ -81,7 +89,7 @@ export default {
     ...mapState("uniqueId", ["uniqueId"]),
     ...mapState("exams", ["exams"]),
     ...mapState("styles", ["styleTitle", "styleDDay", "styleDate"]),
-    ...mapState("formats", ["formatDDay", "formatDate"]),
+    ...mapState("formats", ["formatDDay", "formatDate", "formatTimerString"]),
     ...mapState("animations", [
       "animationType",
       "animationTransition",

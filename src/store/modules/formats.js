@@ -33,8 +33,18 @@ export const state = {
     "02.09.19 (mm.dd.yy)",
     "02-09-19 (mm-dd-yy)",
   ],
+  formatTimerStrings: [
+    "일/시/분/초",
+    "D/H/M/S",
+    "d/h/m/s",
+    "Day/Hour/Min/Sec",
+    "day/hour/min/sec",
+    "Day/Hour/Minute/Second",
+  ],
+
   formatDDay: "D-9 (D-%d)",
   formatDate: "2019.2.9 (yyyy.m.d)",
+  formatTimerString: "일/시/분/초",
 }
 
 export const mutations = {
