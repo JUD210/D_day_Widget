@@ -4,6 +4,8 @@
     <br />
     <StyleForm title="Exam D-day" styleFor="styleDDay"></StyleForm>
     <br />
+    <StyleForm title="Exam Timer" styleFor="styleDate"></StyleForm>
+    <br />
     <StyleForm title="Exam Date" styleFor="styleDate"></StyleForm>
     <br />
   </BaseToggleBox>
