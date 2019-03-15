@@ -2,10 +2,7 @@
   <div>
     <div class="inputForm">
       <div>
-        <h3>
-          Exam #{{ index }}
-          <button @click="removeExam">-</button>
-        </h3>
+        <button @click="removeExam">-</button>
       </div>
 
       <div class="inputLine">
