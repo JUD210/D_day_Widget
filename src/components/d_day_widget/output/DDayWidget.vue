@@ -7,7 +7,6 @@
       <span>{{ examTitleComputed }}</span>
     </div>
 
-    <!-- If D-Day_widget -->
     <div
       class="dday"
       :style="[styleDDay, { 'font-size': `${styleDDay['font-size']}px` }]"
@@ -28,8 +27,7 @@
       <span>{{ formattedDate }}</span>
     </div>
 
-    <!-- Timer_widget Sample -->
-    <div class="time">
+    <div class="timer">
       <div v-if="day >= 0 && hour >= 0 && min >= 0 && sec >= 0">
         <div class="day">
           <span class="number">{{ day }}</span>
@@ -60,7 +58,7 @@
 </template>
 
 <script>
-// import "@/assets/css/CHANGETOPRESET.css"
+import "@/assets/css/d_day_widget/DDayWidget.css"
 
 import { mapState } from "vuex"
 import { setInterval } from "timers"

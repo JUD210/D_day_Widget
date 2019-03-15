@@ -4,10 +4,3 @@
   border-width: 1px;
   border-color: black;
 }
-
-.preview {
-  position: fixed;
-  bottom: 5%;
-  right: 5%;
-  opacity: 1;
-}
