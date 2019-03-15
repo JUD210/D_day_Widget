@@ -28,6 +28,7 @@
       이 버튼을 누르면 URL 주소값이 복사될 것이여
     </button>
 
+    <!-- //! CONTINUE  -->
     <!-- <transition name="fade"> -->
     <div class="preview">
       <button @click="showPreview = !showPreview">

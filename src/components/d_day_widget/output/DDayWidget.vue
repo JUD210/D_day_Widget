@@ -4,7 +4,7 @@
       class="title"
       :style="[styleTitle, { 'font-size': `${styleTitle['font-size']}px` }]"
     >
-      <span>{{ exams[indexSelector].examTitle }}</span>
+      <span>{{ examTitleComputed }}</span>
     </div>
 
     <!-- If D-Day_widget -->
@@ -89,6 +89,14 @@ export default {
       "animationTransition",
       "animationInterval",
     ]),
+
+    examTitleComputed() {
+      if (this.exams[this.indexSelector].examTitle) {
+        return this.exams[this.indexSelector].examTitle
+      } else {
+        return "Sample"
+      }
+    },
 
     formattedDDay() {
       // !TODO: Custom Formatting 지원 (%d %dd %D %DD)
