@@ -21,19 +21,19 @@
         "formatDate" : "2019.2.9 (yyyy.m.d)"
       },
       "styles" : {
-        "styleDDayPartDDay" : {
+        "styleDDWDDayPartDDay" : {
           "background-color" : "#232323",
           "color" : "#0080c0",
           "font-family" : "arial",
           "font-size" : "35"
         },
-        "styleDDayPartDate" : {
+        "styleDDWDDayPartDate" : {
           "background-color" : "#232323",
           "color" : "#ffffff",
           "font-family" : "verdana",
           "font-size" : "20"
         },
-        "styleDDayPartTitle" : {
+        "styleDDWDDayPartTitle" : {
           "background-color" : "#232323",
           "color" : "#ffffff",
           "font-family" : "arial",
@@ -67,19 +67,19 @@
         "formatDate" : "2019.2.9 (yyyy.m.d)"
       },
       "styles" : {
-        "styleDDayPartDDay" : {
+        "styleDDWDDayPartDDay" : {
           "background-color" : "#454545",
           "color" : "#ff4a4a",
           "font-family" : "arial",
           "font-size" : "35"
         },
-        "styleDDayPartDate" : {
+        "styleDDWDDayPartDate" : {
           "background-color" : "#454545",
           "color" : "#ffffff",
           "font-family" : "verdana",
           "font-size" : "20"
         },
-        "styleDDayPartTitle" : {
+        "styleDDWDDayPartTitle" : {
           "background-color" : "#454545",
           "color" : "#ffffff",
           "font-family" : "arial",
@@ -117,19 +117,19 @@
         "formatDate" : "2019.2.9 (yyyy.m.d)"
       },
       "styles" : {
-        "styleDDayPartDDay" : {
+        "styleDDWDDayPartDDay" : {
           "background-color" : "#454545",
           "color" : "#ff4a4a",
           "font-family" : "arial",
           "font-size" : "35"
         },
-        "styleDDayPartDate" : {
+        "styleDDWDDayPartDate" : {
           "background-color" : "#454545",
           "color" : "#ffffff",
           "font-family" : "arial",
           "font-size" : "20"
         },
-        "styleDDayPartTitle" : {
+        "styleDDWDDayPartTitle" : {
           "background-color" : "#454545",
           "color" : "#ffffff",
           "font-family" : "arial",
@@ -163,19 +163,19 @@
         "formatDate" : "2019.2.9 (yyyy.m.d)"
       },
       "styles" : {
-        "styleDDayPartDDay" : {
+        "styleDDWDDayPartDDay" : {
           "background-color" : "#454545",
           "color" : "#ff4a4a",
           "font-family" : "arial",
           "font-size" : "39"
         },
-        "styleDDayPartDate" : {
+        "styleDDWDDayPartDate" : {
           "background-color" : "#454545",
           "color" : "#ffffff",
           "font-family" : "arial",
           "font-size" : "23"
         },
-        "styleDDayPartTitle" : {
+        "styleDDWDDayPartTitle" : {
           "background-color" : "#ff0080",
           "color" : "#ffffff",
           "font-family" : "georgia",

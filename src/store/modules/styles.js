@@ -1,70 +1,98 @@
 export const namespaced = true
 
-// Tadd: Add commented styles
+// @T apply commented styles
 export const state = {
-  styleDDayWidget: {
-    "border-style": "dotted",
-    "border-color": "black",
+  fontFamilies: ["arial", "verdana", "georgia"],
+  fontWeights: ["normal", "bold", "bolder", "lighter"],
+  borderStyles: [
+    "groove",
+    "ridge",
+    "solid",
+    "dotted",
+    "dashed",
+    "double",
+    "inset",
+    "outset",
+    "none",
+  ],
 
-    // @T edit: need getters to delete px and Edit
-    "border-radius": "5px",
-    "border-width": "1px",
+  /*--------------------------------------------------------*/
+
+  styleDDW: {
+    "border-color": "#232323",
+    opacityForBorder: 100,
+    "border-style": "solid",
+    "border-width": 1,
+    "border-radius": 5,
+
+    width: 400,
+    height: 400,
   },
 
-  styleDDayPart: {
-    "background-color": "rgb(35, 35, 35)",
-
-    "font-weight": "bold",
-    opacity: 1.0,
+  styleDDWDDayPart: {
+    "background-color": "#232323",
+    opacityForBG: 100,
 
     // @T add: Import provided BG Image
     // @T add: Custom Image
   },
 
-  styleTimerPart: {
-    "background-color": "rgb(5, 24, 36)",
-    opacity: 1.0,
+  styleDDWDDayPartTitle: {
+    "font-family": "arial",
+    "font-size": 40,
+    "font-weight": "normal",
+    color: "#ffffff",
+    opacity: 100,
+  },
+  styleDDWDDayPartDDay: {
+    "font-family": "arial",
+    "font-size": 35,
+    "font-weight": "normal",
+    color: "#ff4a4a",
+    opacity: 100,
+  },
+  styleDDWDDayPartDate: {
+    "font-family": "arial",
+    "font-size": 20,
+    "font-weight": "normal",
+    color: "#ffffff",
+    opacity: 100,
   },
 
   /*--------------------------------------------------------*/
 
-  fontFamilies: ["arial", "verdana", "georgia"],
+  styleDDWTimerPart: {
+    "background-color": "#051824",
+    opacityForBG: 100,
+  },
 
-  styleDDayPartTitle: {
+  styleDDWTimerPartNumber: {
     "font-family": "arial",
-    "font-size": "40",
+    "font-size": 20,
+    "font-weight": "normal",
     color: "#ffffff",
+    opacity: 100,
 
-    // opacity: 1.0,
-  },
-  styleDDayPartDDay: {
-    "font-family": "arial",
-    "font-size": "35",
-    color: "#ff4a4a",
-  },
-  styleDDayPartDate: {
-    "font-family": "arial",
-    "font-size": "20",
-    color: "#ffffff",
+    "background-color": "#504d4d",
+    opacityForBG: 70,
 
-    // @T edit: need getters
-    opacity: 1.0,
-  },
+    "border-color": "#232323",
+    opacityForBorder: 100,
+    "border-style": "none",
+    "border-width": 1,
+    "border-radius": 5,
 
-  styleTimerPartNumber: {
-    "font-family": "arial",
-    "font-size": "20",
-    color: "#ffffff",
-    "background-color": "rgba(80, 77, 77, 0.7)",
-    opacity: 1.0,
+    width: 55,
 
-    // @T edit: need getters to delete px and Edit
-    width: "55px",
-    "border-radius": "5px",
+    "padding-left": 5,
+    "padding-right": 5,
+    "padding-bottom": 0,
+    "padding-top": 0,
   },
-  styleTimerPartNumberString: {
+  styleDDWTimerPartNumberString: {
     "font-family": "arial",
-    "font-size": "20",
+    "font-size": 20,
+    "font-weight": "bold",
     color: "#ffffff",
     opacity: 1.0,
   },
@@ -97,7 +125,7 @@ export const actions = {
 }
 
 export const getters = {
-  getStyleByAttr: state => (target, attr) => {
+  getStyleAttr: state => (target, attr) => {
     return state[target][attr]
   },
 }

@@ -1,7 +1,7 @@
 <template>
   <div class="inputForm">
     <div class="inputLine">
-      <label>D-day Format: </label>
+      <label>D-day 형식: </label>
       <select :value="formatDDay" @change="updateFormat($event, 'formatDDay')">
         <option
           v-for="(format, index) in formatDDays"
@@ -13,7 +13,7 @@
     </div>
 
     <div class="inputLine">
-      <label>Date Format: </label>
+      <label>날짜 형식: </label>
       <select :value="formatDate" @change="updateFormat($event, 'formatDate')">
         <option
           v-for="(format, index) in formatDates"
@@ -25,7 +25,7 @@
     </div>
 
     <div class="inputLine">
-      <label>Timer String Format: </label>
+      <label>타이머 글자 형식: </label>
       <select
         :value="formatTimerString"
         @change="updateFormat($event, 'formatTimerString')"

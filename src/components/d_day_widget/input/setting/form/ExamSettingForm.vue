@@ -6,7 +6,7 @@
       </div>
 
       <div class="inputLine">
-        <label>Title: </label>
+        <label>제목</label>
         <input
           type="text"
           :value="getExamTitleById(index)"
@@ -16,7 +16,7 @@
       </div>
 
       <div class="inputLine">
-        <label>Date: </label>
+        <label>날짜</label>
         <input
           type="date"
           :value="getExamDateById(index)"

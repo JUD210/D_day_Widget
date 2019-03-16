@@ -28,7 +28,7 @@ body {
 
 h3 {
   font-size: 25px;
-  font-weight: normal;
+  font-weight: bold;
   margin: 15px;
   margin-top: 0px;
 }
@@ -60,13 +60,14 @@ textarea {
   display: inline-flex;
   font-family: "Open sans", sans-serif;
   font-size: 100%;
-  line-height: 1.15;
+  line-height: 1;
   margin: 0;
 }
 
 label {
   width: 200px;
   text-align: left;
+  font-size: 18px;
 }
 
 input,

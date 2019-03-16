@@ -1,11 +1,12 @@
 <template>
   <div class="dDayWidget">
     <div class="dDayPart">
+      <!-- //@T getstyleDDWDDayPartTitle -->
       <div
         class="title"
         :style="[
-          styleDDayPartTitle,
-          { 'font-size': `${styleDDayPartTitle['font-size']}px` },
+          styleDDWDDayPartTitle,
+          { 'font-size': `${styleDDWDDayPartTitle['font-size']}px` },
         ]"
       >
         <span>{{ examTitleComputed }}</span>
@@ -14,8 +15,8 @@
       <div
         class="dday"
         :style="[
-          styleDDayPartDDay,
-          { 'font-size': `${styleDDayPartDDay['font-size']}px` },
+          styleDDWDDayPartDDay,
+          { 'font-size': `${styleDDWDDayPartDDay['font-size']}px` },
         ]"
       >
         <div v-if="day >= 0 && hour >= 0 && min >= 0 && sec >= 0">
@@ -30,8 +31,8 @@
       <div
         class="date"
         :style="[
-          styleDDayPartDate,
-          { 'font-size': `${styleDDayPartDate['font-size']}px` },
+          styleDDWDDayPartDate,
+          { 'font-size': `${styleDDWDDayPartDate['font-size']}px` },
         ]"
       >
         <span>{{ formattedDate }}</span>
@@ -96,9 +97,14 @@ export default {
     ...mapState("uniqueId", ["uniqueId"]),
     ...mapState("exams", ["exams"]),
     ...mapState("styles", [
-      "styleDDayPartTitle",
-      "styleDDayPartDDay",
-      "styleDDayPartDate",
+      "styleDDW",
+      "styleDDWDDayPart",
+      "styleDDWDDayPartTitle",
+      "styleDDWDDayPartDDay",
+      "styleDDWDDayPartDate",
+      "styleDDWTimerPart",
+      "styleDDWTimerPartNumber",
+      "styleDDWTimerPartNumberString",
     ]),
     ...mapState("formats", ["formatDDay", "formatDate", "formatTimerString"]),
     ...mapState("animations", [
@@ -114,6 +120,36 @@ export default {
         return "Sample"
       }
     },
+
+    // @T formattedStyleObject(styleObject)
+    // formattedStyleObject(styleObject) {
+    //   let resultObject = styleObject
+
+    //   for (let attr in Object.keys(resultObject)) {
+    //     if (
+    //       attr in
+    //       ["font-size", "width", "height", "border-width", "border-radious"]
+    //     ) {
+    //       styleObject[attr] = `${styleObject[attr]}px`
+    //     } else if (attr in ["opacityForBG", "opacityForBorder"]) {
+    //       if (attr == "opacityForBG") {
+    //         styleObject[attr] = this.getHexColorWithOpacity(
+    //           styleObject["background-color"],
+    //           styleObject[attr],
+    //         )
+    //       } else if (attr == "opacityForBorder") {
+    //         styleObject[attr] = this.getHexColorWithOpacity(
+    //           styleObject["border-color"],
+    //           styleObject[attr],
+    //         )
+    //       }
+    //     } else if (attr in ["opacity"]) {
+    //       styleObject[attr] = styleObject[attr] / 100
+    //     }
+    //   }
+
+    //   return resultObject
+    // },
 
     formattedDDay() {
       // @T add: Custom Formatting (%d %dd %D %DD)

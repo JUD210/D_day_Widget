@@ -1,7 +1,7 @@
 <template>
   <div class="inputForm">
     <div class="inputLine">
-      <label>Type: </label>
+      <label>애니메이션 종류</label>
       <select
         :value="animationType"
         @change="updateAnimation($event, 'animationType')"
@@ -17,7 +17,7 @@
     </div>
 
     <div class="inputLine">
-      <label>Transition: </label>
+      <label>?애니메이션 전환?</label>
       <input
         type="number"
         min="0.1"
@@ -29,7 +29,7 @@
     </div>
 
     <div class="inputLine">
-      <label>Interval: </label>
+      <label>날짜 전환 주기</label>
       <input
         type="number"
         min="0.1"
@@ -63,5 +63,3 @@ export default {
   ]),
 }
 </script>
-
-<style scoped></style>

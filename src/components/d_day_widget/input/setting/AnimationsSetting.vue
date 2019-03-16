@@ -1,5 +1,5 @@
 <template>
-  <BaseToggleBox title="Animation">
+  <BaseToggleBox title="애니메이션 설정">
     <AnimationSettingForm></AnimationSettingForm>
   </BaseToggleBox>
 </template>
