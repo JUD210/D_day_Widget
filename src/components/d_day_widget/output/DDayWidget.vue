@@ -1,65 +1,72 @@
 <template>
   <div class="dDayWidget">
-    <div
-      class="title"
-      :style="[styleTitle, { 'font-size': `${styleTitle['font-size']}px` }]"
-    >
-      <span>{{ examTitleComputed }}</span>
-    </div>
-
-    <div
-      class="dday"
-      :style="[styleDDay, { 'font-size': `${styleDDay['font-size']}px` }]"
-    >
-      <div v-if="day >= 0 && hour >= 0 && min >= 0 && sec >= 0">
-        <span>{{ formattedDDay }}</span>
+    <div class="dDayPart">
+      <div
+        class="title"
+        :style="[
+          styleDDayPartTitle,
+          { 'font-size': `${styleDDayPartTitle['font-size']}px` },
+        ]"
+      >
+        <span>{{ examTitleComputed }}</span>
       </div>
 
-      <div v-else class="expired">
-        <span>시간 경과</span>
-      </div>
-    </div>
-
-    <div
-      class="date"
-      :style="[styleDate, { 'font-size': `${styleDate['font-size']}px` }]"
-    >
-      <span>{{ formattedDate }}</span>
-    </div>
-
-    <div class="timer">
-      <div v-if="day >= 0 && hour >= 0 && min >= 0 && sec >= 0">
-        <div class="day">
-          <span class="number">{{ day }}</span>
-          <div v-if="formatTimerString != 'None'" class="number_str">
-            {{ formatTimerString.split("/")[0] }}
-          </div>
+      <div
+        class="dday"
+        :style="[
+          styleDDayPartDDay,
+          { 'font-size': `${styleDDayPartDDay['font-size']}px` },
+        ]"
+      >
+        <div v-if="day >= 0 && hour >= 0 && min >= 0 && sec >= 0">
+          <span>{{ formattedDDay }}</span>
         </div>
 
-        <div class="hour">
-          <span class="number">{{ hour }}</span>
-          <div class="number_str">
-            {{ formatTimerString.split("/")[1] }}
-          </div>
-        </div>
-
-        <div class="min">
-          <span class="number">{{ min }}</span>
-          <div class="number_str">
-            {{ formatTimerString.split("/")[2] }}
-          </div>
-        </div>
-
-        <div class="sec">
-          <span class="number">{{ sec }}</span>
-          <div class="number_str">
-            {{ formatTimerString.split("/")[3] }}
-          </div>
+        <div v-else class="expired">
+          <span>시간 경과</span>
         </div>
       </div>
 
-      <div v-else class="expired">
-        <span>시간 경과</span>
+      <div
+        class="date"
+        :style="[
+          styleDDayPartDate,
+          { 'font-size': `${styleDDayPartDate['font-size']}px` },
+        ]"
+      >
+        <span>{{ formattedDate }}</span>
+      </div>
+    </div>
+
+    <!-- ------------------------------- -->
+
+    <div class="timerPart">
+      <div class="day">
+        <span class="number">{{ day }}</span>
+        <div v-if="formatTimerString != 'None'" class="number_str">
+          {{ formatTimerString.split("/")[0] }}
+        </div>
+      </div>
+
+      <div class="hour">
+        <span class="number">{{ hour }}</span>
+        <div class="number_str">
+          {{ formatTimerString.split("/")[1] }}
+        </div>
+      </div>
+
+      <div class="min">
+        <span class="number">{{ min }}</span>
+        <div class="number_str">
+          {{ formatTimerString.split("/")[2] }}
+        </div>
+      </div>
+
+      <div class="sec">
+        <span class="number">{{ sec }}</span>
+        <div class="number_str">
+          {{ formatTimerString.split("/")[3] }}
+        </div>
       </div>
     </div>
   </div>
@@ -88,7 +95,11 @@ export default {
   computed: {
     ...mapState("uniqueId", ["uniqueId"]),
     ...mapState("exams", ["exams"]),
-    ...mapState("styles", ["styleTitle", "styleDDay", "styleDate"]),
+    ...mapState("styles", [
+      "styleDDayPartTitle",
+      "styleDDayPartDDay",
+      "styleDDayPartDate",
+    ]),
     ...mapState("formats", ["formatDDay", "formatDate", "formatTimerString"]),
     ...mapState("animations", [
       "animationType",
@@ -105,7 +116,7 @@ export default {
     },
 
     formattedDDay() {
-      // !TODO: Custom Formatting 지원 (%d %dd %D %DD)
+      // @T add: Custom Formatting (%d %dd %D %DD)
       // : CustomFormatInput.vue
 
       let fmDD = this.formatDDay
@@ -137,7 +148,7 @@ export default {
     },
 
     formattedDate() {
-      // !TODO: Custom Formatting 지원 (yyyy yy mm m dd d)
+      // @T add: Custom Formatting (yyyy yy mm m dd d)
       // : CustomFormatInput.vue
 
       let eD = this.exams[this.indexSelector].examDate.split(/-/)

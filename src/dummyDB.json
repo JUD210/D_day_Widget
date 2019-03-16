@@ -1,38 +1,185 @@
 {
-  "q": {
-    "d_day_widget": {
-      "animations": {
-        "animationInterval": "2",
-        "animationTransition": "0.5",
-        "animationType": "slide"
+  "h" : {
+    "d_day_widget" : {
+      "animations" : {
+        "animationInterval" : "2",
+        "animationTransition" : "0.5",
+        "animationType" : "slide"
       },
-      "exams": [
-        { "examDate": "2019-04-06", "examTitle": "국가직 9급 필기" },
-        { "examDate": "2019-06-22", "examTitle": "군무원" },
-        { "examDate": "2019-03-18", "examTitle": "D-day 위젯 Beta" }
-      ],
-      "formats": {
-        "formatDDay": "D-9 (D-%d)",
-        "formatDate": "2019.2.9 (yyyy.m.d)"
+      "exams" : [ {
+        "examDate" : "2019-04-06",
+        "examTitle" : "국가직 9급 필기"
+      }, {
+        "examDate" : "2019-06-22",
+        "examTitle" : "군무원"
+      }, {
+        "examDate" : "2019-03-18",
+        "examTitle" : "D-day 위젯 Beta"
+      } ],
+      "formats" : {
+        "formatDDay" : "D-9 (D-%d)",
+        "formatDate" : "2019.2.9 (yyyy.m.d)"
       },
-      "styles": {
-        "styleDDay": {
-          "background-color": "#1b1b1b",
-          "color": "#0080c0",
-          "font-family": "arial",
-          "font-size": "35"
+      "styles" : {
+        "styleDDayPartDDay" : {
+          "background-color" : "#232323",
+          "color" : "#0080c0",
+          "font-family" : "arial",
+          "font-size" : "35"
         },
-        "styleDate": {
-          "background-color": "#1b1b1b",
-          "color": "#ffffff",
-          "font-family": "verdana",
-          "font-size": "20"
+        "styleDDayPartDate" : {
+          "background-color" : "#232323",
+          "color" : "#ffffff",
+          "font-family" : "verdana",
+          "font-size" : "20"
         },
-        "styleTitle": {
-          "background-color": "#1b1b1b",
-          "color": "#ffffff",
-          "font-family": "arial",
-          "font-size": "40"
+        "styleDDayPartTitle" : {
+          "background-color" : "#232323",
+          "color" : "#ffffff",
+          "font-family" : "arial",
+          "font-size" : "40"
+        }
+      }
+    }
+  },
+  "q" : {
+    "d_day_widget" : {
+      "animations" : {
+        "animationInterval" : "2",
+        "animationTransition" : "0.5",
+        "animationType" : "slide"
+      },
+      "exams" : [ {
+        "examDate" : "2019-04-06",
+        "examTitle" : "국가직 9급 필기"
+      }, {
+        "examDate" : "2019-06-22",
+        "examTitle" : "군무원"
+      }, {
+        "examDate" : "2019-03-16",
+        "examTitle" : "테스트1"
+      }, {
+        "examDate" : "2015-12-01",
+        "examTitle" : "테스트2"
+      } ],
+      "formats" : {
+        "formatDDay" : "D-9 (D-%d)",
+        "formatDate" : "2019.2.9 (yyyy.m.d)"
+      },
+      "styles" : {
+        "styleDDayPartDDay" : {
+          "background-color" : "#454545",
+          "color" : "#ff4a4a",
+          "font-family" : "arial",
+          "font-size" : "35"
+        },
+        "styleDDayPartDate" : {
+          "background-color" : "#454545",
+          "color" : "#ffffff",
+          "font-family" : "verdana",
+          "font-size" : "20"
+        },
+        "styleDDayPartTitle" : {
+          "background-color" : "#454545",
+          "color" : "#ffffff",
+          "font-family" : "arial",
+          "font-size" : "40"
+        }
+      }
+    }
+  },
+  "t1" : {
+    "d_day_widget" : {
+      "animations" : {
+        "animationInterval" : 3.5,
+        "animationTransition" : 0.8,
+        "animationType" : "slide"
+      },
+      "exams" : [ {
+        "examDate" : "2019-03-14",
+        "examTitle" : "e1",
+        "id" : 0
+      }, {
+        "examDate" : "2019-03-15",
+        "examTitle" : "e2",
+        "id" : 1
+      }, {
+        "examDate" : "2019-03-16",
+        "examTitle" : "e3",
+        "id" : 2
+      }, {
+        "examDate" : "2019-03-17",
+        "examTitle" : "e4",
+        "id" : 3
+      } ],
+      "formats" : {
+        "formatDDay" : "D-9 (D-%d)",
+        "formatDate" : "2019.2.9 (yyyy.m.d)"
+      },
+      "styles" : {
+        "styleDDayPartDDay" : {
+          "background-color" : "#454545",
+          "color" : "#ff4a4a",
+          "font-family" : "arial",
+          "font-size" : "35"
+        },
+        "styleDDayPartDate" : {
+          "background-color" : "#454545",
+          "color" : "#ffffff",
+          "font-family" : "arial",
+          "font-size" : "20"
+        },
+        "styleDDayPartTitle" : {
+          "background-color" : "#454545",
+          "color" : "#ffffff",
+          "font-family" : "arial",
+          "font-size" : "40"
+        }
+      }
+    }
+  },
+  "test" : {
+    "d_day_widget" : {
+      "animations" : {
+        "animationInterval" : "3.7",
+        "animationTransition" : "1",
+        "animationType" : "none"
+      },
+      "exams" : [ {
+        "examDate" : "2019-03-15",
+        "examTitle" : "e2"
+      }, {
+        "examDate" : "2020-05-15",
+        "examTitle" : "e1"
+      }, {
+        "examDate" : "2019-03-15",
+        "examTitle" : "e3"
+      }, {
+        "examDate" : "2019-03-15",
+        "examTitle" : "e4"
+      } ],
+      "formats" : {
+        "formatDDay" : "D-day 9 (D-day %d)",
+        "formatDate" : "2019.2.9 (yyyy.m.d)"
+      },
+      "styles" : {
+        "styleDDayPartDDay" : {
+          "background-color" : "#454545",
+          "color" : "#ff4a4a",
+          "font-family" : "arial",
+          "font-size" : "39"
+        },
+        "styleDDayPartDate" : {
+          "background-color" : "#454545",
+          "color" : "#ffffff",
+          "font-family" : "arial",
+          "font-size" : "23"
+        },
+        "styleDDayPartTitle" : {
+          "background-color" : "#ff0080",
+          "color" : "#ffffff",
+          "font-family" : "georgia",
+          "font-size" : "49"
         }
       }
     }

@@ -2,8 +2,8 @@
   <div id="app">
     <router-view :key="$route.fullPath" />
 
-    <!-- // !TODO: Pomodoro Timer -->
-    <!-- // !TODO: Caption -->
+    <!-- // @T add: Pomodoro Timer -->
+    <!-- // @T add: Caption -->
   </div>
 </template>
 

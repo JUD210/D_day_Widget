@@ -4,6 +4,8 @@
       <h3>{{ title }}</h3>
     </div>
 
+    <!-- // @T add: apply this. -->
+    <!-- v-if="isApplicable(styleFor, 'font-family')" -->
     <div class="inputLine">
       <label>Font Type: </label>
       <select
@@ -38,15 +40,6 @@
         @change="updateStyle($event, 'color')"
       />
     </div>
-
-    <div class="inputLine">
-      <label>Background Color: </label>
-      <input
-        type="color"
-        :value="getStyleByAttr(styleFor, 'background-color')"
-        @change="updateStyle($event, 'background-color')"
-      />
-    </div>
   </div>
 </template>
 
@@ -75,6 +68,11 @@ export default {
     },
   },
   computed: {
+    // @T add: define this.
+    // isApplicable(styleFor, styleType) {
+    // return styleType in styleFor
+    // },
+
     ...mapState("styles", ["fontFamilies"]),
     ...mapGetters("styles", ["getStyleByAttr"]),
   },

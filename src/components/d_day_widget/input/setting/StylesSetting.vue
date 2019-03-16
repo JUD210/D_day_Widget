@@ -2,20 +2,24 @@
   <BaseToggleBox title="Style">
     <StyleSettingForm
       title="Exam Title"
-      styleFor="styleTitle"
+      styleFor="styleDDayPartTitle"
     ></StyleSettingForm>
     <br />
+
     <StyleSettingForm
       title="Exam D-day"
-      styleFor="styleDDay"
+      styleFor="styleDDayPartDDay"
     ></StyleSettingForm>
     <br />
+
+    <StyleSettingForm title="Exam Date" styleFor="styleDDayPartDate">
+    </StyleSettingForm>
+    <br />
+
     <StyleSettingForm
       title="Exam Timer"
-      styleFor="styleDate"
+      styleFor="styleTimerPart"
     ></StyleSettingForm>
-    <br />
-    <StyleSettingForm title="Exam Date" styleFor="styleDate"></StyleSettingForm>
     <br />
   </BaseToggleBox>
 </template>

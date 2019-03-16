@@ -76,16 +76,16 @@ export default new Vuex.Store({
 
           dispatch("exams/resetExams", newData.exams)
           dispatch("styles/resetStyle", {
-            target: "styleTitle",
-            styleObject: newData.styles.styleTitle,
+            target: "styleDDayPartTitle",
+            styleObject: newData.styles.styleDDayPartTitle,
           })
           dispatch("styles/resetStyle", {
-            target: "styleDDay",
-            styleObject: newData.styles.styleDDay,
+            target: "styleDDayPartDDay",
+            styleObject: newData.styles.styleDDayPartDDay,
           })
           dispatch("styles/resetStyle", {
-            target: "styleDate",
-            styleObject: newData.styles.styleDate,
+            target: "styleDDayPartDate",
+            styleObject: newData.styles.styleDDayPartDate,
           })
           dispatch("formats/resetFormat", newData.formats)
           dispatch("animations/resetAnimation", newData.animations)
@@ -112,9 +112,9 @@ ${state.uniqueId.uniqueId}`)
       return {
         exams,
         styles: {
-          styleTitle: { ...state.styles.styleTitle },
-          styleDDay: { ...state.styles.styleDDay },
-          styleDate: { ...state.styles.styleDate },
+          styleDDayPartTitle: { ...state.styles.styleDDayPartTitle },
+          styleDDayPartDDay: { ...state.styles.styleDDayPartDDay },
+          styleDDayPartDate: { ...state.styles.styleDDayPartDate },
         },
         formats: {
           formatDDay: state.formats.formatDDay,

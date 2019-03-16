@@ -1,24 +1,72 @@
 export const namespaced = true
 
+// Tadd: Add commented styles
 export const state = {
+  styleDDayWidget: {
+    "border-style": "dotted",
+    "border-color": "black",
+
+    // @T edit: need getters to delete px and Edit
+    "border-radius": "5px",
+    "border-width": "1px",
+  },
+
+  styleDDayPart: {
+    "background-color": "rgb(35, 35, 35)",
+
+    "font-weight": "bold",
+    opacity: 1.0,
+
+    // @T add: Import provided BG Image
+    // @T add: Custom Image
+  },
+
+  styleTimerPart: {
+    "background-color": "rgb(5, 24, 36)",
+    opacity: 1.0,
+  },
+
+  /*--------------------------------------------------------*/
+
   fontFamilies: ["arial", "verdana", "georgia"],
-  styleTitle: {
+
+  styleDDayPartTitle: {
     "font-family": "arial",
     "font-size": "40",
     color: "#ffffff",
-    "background-color": "#232323",
+
+    // opacity: 1.0,
   },
-  styleDDay: {
+  styleDDayPartDDay: {
     "font-family": "arial",
     "font-size": "35",
     color: "#ff4a4a",
-    "background-color": "#232323",
   },
-  styleDate: {
+  styleDDayPartDate: {
     "font-family": "arial",
     "font-size": "20",
     color: "#ffffff",
-    "background-color": "#232323",
+
+    // @T edit: need getters
+    opacity: 1.0,
+  },
+
+  styleTimerPartNumber: {
+    "font-family": "arial",
+    "font-size": "20",
+    color: "#ffffff",
+    "background-color": "rgba(80, 77, 77, 0.7)",
+    opacity: 1.0,
+
+    // @T edit: need getters to delete px and Edit
+    width: "55px",
+    "border-radius": "5px",
+  },
+  styleTimerPartNumberString: {
+    "font-family": "arial",
+    "font-size": "20",
+    color: "#ffffff",
+    opacity: 1.0,
   },
 }
 
