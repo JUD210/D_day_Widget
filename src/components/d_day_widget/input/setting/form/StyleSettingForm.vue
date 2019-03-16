@@ -54,7 +54,7 @@
 import { mapState, mapGetters } from "vuex"
 
 export default {
-  name: "StyleForm",
+  name: "StyleSettingForm",
   props: {
     title: {
       type: String,

@@ -1,16 +1,16 @@
 <template>
   <BaseToggleBox title="Format">
-    <FormatForm></FormatForm>
+    <FormatSettingForm></FormatSettingForm>
   </BaseToggleBox>
 </template>
 
 <script>
-import FormatForm from "@/components/d_day_widget/input/setting/form/FormatForm.vue"
+import FormatSettingForm from "@/components/d_day_widget/input/setting/form/FormatSettingForm.vue"
 
 export default {
   name: "FormatsSetting",
   components: {
-    FormatForm,
+    FormatSettingForm,
   },
 }
 </script>

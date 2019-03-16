@@ -32,7 +32,7 @@
 import { mapGetters } from "vuex"
 
 export default {
-  name: "ExamForm",
+  name: "ExamSettingForm",
   props: {
     index: {
       type: Number,

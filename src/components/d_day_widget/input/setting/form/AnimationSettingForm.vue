@@ -46,7 +46,7 @@
 import { mapState } from "vuex"
 
 export default {
-  name: "AnimationForm",
+  name: "AnimationSettingForm",
   methods: {
     updateAnimation(event, attr) {
       this.$store.dispatch("animations/updateAnimation", {

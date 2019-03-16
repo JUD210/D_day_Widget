@@ -1,22 +1,22 @@
 <template>
   <BaseToggleBox title="Exams">
-    <ExamForm
+    <ExamSettingForm
       v-for="(exam, index) in exams"
       :key="index"
       :index="index"
-    ></ExamForm>
+    ></ExamSettingForm>
     <button @click="addExam">+</button>
   </BaseToggleBox>
 </template>
 
 <script>
-import ExamForm from "@/components/d_day_widget/input/setting/form/ExamForm.vue"
+import ExamSettingForm from "@/components/d_day_widget/input/setting/form/ExamSettingForm.vue"
 import { mapState, mapActions } from "vuex"
 
 export default {
   name: "ExamsSetting",
   components: {
-    ExamForm,
+    ExamSettingForm,
   },
   methods: mapActions("exams", ["addExam"]),
   computed: mapState("exams", ["exams"]),

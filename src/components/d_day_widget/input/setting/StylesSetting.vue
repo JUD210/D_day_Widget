@@ -1,23 +1,32 @@
 <template>
   <BaseToggleBox title="Style">
-    <StyleForm title="Exam Title" styleFor="styleTitle"></StyleForm>
+    <StyleSettingForm
+      title="Exam Title"
+      styleFor="styleTitle"
+    ></StyleSettingForm>
     <br />
-    <StyleForm title="Exam D-day" styleFor="styleDDay"></StyleForm>
+    <StyleSettingForm
+      title="Exam D-day"
+      styleFor="styleDDay"
+    ></StyleSettingForm>
     <br />
-    <StyleForm title="Exam Timer" styleFor="styleDate"></StyleForm>
+    <StyleSettingForm
+      title="Exam Timer"
+      styleFor="styleDate"
+    ></StyleSettingForm>
     <br />
-    <StyleForm title="Exam Date" styleFor="styleDate"></StyleForm>
+    <StyleSettingForm title="Exam Date" styleFor="styleDate"></StyleSettingForm>
     <br />
   </BaseToggleBox>
 </template>
 
 <script>
-import StyleForm from "@/components/d_day_widget/input/setting/form/StyleForm.vue"
+import StyleSettingForm from "@/components/d_day_widget/input/setting/form/StyleSettingForm.vue"
 
 export default {
   name: "StylesSetting",
   components: {
-    StyleForm,
+    StyleSettingForm,
   },
 }
 </script>
