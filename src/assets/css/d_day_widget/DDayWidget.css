@@ -1,4 +1,9 @@
 .dDayPart {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;
+
   text-align: center;
 }
 
@@ -7,7 +12,9 @@
   flex-direction: row;
   justify-content: center; 
   align-items: center;
-  
+
+  text-align: center;
+
 }
 
 .day, 
@@ -15,33 +22,10 @@
 .min, 
 .sec {
   margin: 5px; 
-  text-align: center;
 }
 
 .number {
   display: inline-block;
-  /* @T DELETE attibutes alreaedy exist in styles.js! */
-
-  /* font-weight: "bold"; */
-
-  padding-left: 5px;
-  padding-right: 5px;
-  
-  font-family: arial;
-  font-size: 30px;
-  color: #ffffff;
-  background-color: rgba(80, 77, 77);
-  opacity: 1.0;
-  width: 60px;
-  border-radius: 5px;
+  text-align: center;
 }
 
-
-.number_str {
-  font-weight: bold;
-  font-size: 20px;
-  opacity: 0.8;
-  color: white;
-
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-}

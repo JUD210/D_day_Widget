@@ -2,9 +2,12 @@ export const namespaced = true
 
 export const state = {
   animationTypes: ["slide", "none"],
+
+  /*--------------------------------------------------------*/
+
   animationType: "slide",
   animationTransition: 0.8,
-  animationInterval: 3.5,
+  animationInterval: 4,
 }
 
 export const mutations = {

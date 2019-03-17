@@ -28,8 +28,8 @@ export const mutations = {
     state.exams.splice(index, 1)
   },
 
-  RESET_EXAMS(state, examsObject) {
-    state.exams = examsObject
+  RESET_EXAMS(state, exams) {
+    state.exams = exams
   },
 }
 
@@ -53,11 +53,11 @@ export const actions = {
     state.exams.splice(${index}, 1)`)
   },
 
-  resetExams({ commit }, examsObject) {
-    commit("RESET_EXAMS", examsObject)
+  resetExams({ commit }, exams) {
+    commit("RESET_EXAMS", exams)
 
     console.log(`exams/RESET_EXAMS
-    state.exams = ${JSON.stringify(examsObject)}`)
+    state.exams = ${JSON.stringify(exams)}`)
   },
 }
 

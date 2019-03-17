@@ -95,32 +95,3 @@ export default {
   },
 }
 </script>
-
-<style scoped>
-/*
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.5s ease-out;
-}
-.fade-enter, .fade-leave-to {
-  opacity: 0;
-}
-
-
-
-#slideSource {
-  opacity: 1;
-  transition: opacity 1s;
-}
-
-#slideSource.fade {
-  opacity: 0;
-}
-
-
-
-.preview > button {
-  text-align: right;
-}
-*/
-</style>

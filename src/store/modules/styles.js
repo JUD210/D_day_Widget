@@ -5,12 +5,12 @@ export const state = {
   fontFamilies: ["arial", "verdana", "georgia"],
   fontWeights: ["normal", "bold", "bolder", "lighter"],
   borderStyles: [
-    "groove",
-    "ridge",
     "solid",
     "dotted",
     "dashed",
     "double",
+    "groove",
+    "ridge",
     "inset",
     "outset",
     "none",
@@ -20,112 +20,142 @@ export const state = {
 
   styleDDW: {
     "border-color": "#232323",
-    opacityForBorder: 100,
+    opacityForBorder: 1.0,
     "border-style": "solid",
-    "border-width": 4,
-    "border-radius": 5,
-
-    width: 400,
-    height: 400,
+    "border-width": "4px",
+    "border-radius": "5px",
   },
 
   styleDDWDDayPart: {
-    "background-color": "#232323",
-    opacityForBG: 100,
+    "background-color": "#232323FF",
+    opacityForBG: 1.0,
 
+    width: "400px",
+    height: "100px",
     // @T add: Import provided BG Image
     // @T add: Custom Image
   },
 
   styleDDWDDayPartTitle: {
     "font-family": "arial",
-    "font-size": 40,
+    "font-size": "40px",
     "font-weight": "normal",
-    color: "#ffffff",
-    opacity: 100,
+    color: "#ffffffFF",
+    opacityForText: 1.0,
   },
   styleDDWDDayPartDDay: {
     "font-family": "arial",
-    "font-size": 35,
+    "font-size": "35px",
     "font-weight": "normal",
-    color: "#ff4a4a",
-    opacity: 100,
+    color: "#ff4a4aFF",
+    opacityForText: 1.0,
   },
   styleDDWDDayPartDate: {
     "font-family": "arial",
-    "font-size": 20,
+    "font-size": "20px",
     "font-weight": "normal",
-    color: "#ffffff",
-    opacity: 100,
+    color: "#ffffffFF",
+    opacityForText: 1.0,
   },
 
   /*--------------------------------------------------------*/
 
   styleDDWTimerPart: {
-    "background-color": "#051824",
-    opacityForBG: 100,
+    "background-color": "#051824FF",
+    opacityForBG: 1.0,
+
+    width: "400px",
+    height: "100px",
   },
 
   styleDDWTimerPartNumber: {
     "font-family": "arial",
-    "font-size": 20,
+    "font-size": "20px",
     "font-weight": "normal",
-    color: "#ffffff",
-    opacity: 100,
+    color: "#ffffffFF",
+    opacityForText: 1.0,
 
-    "background-color": "#504d4d",
-    opacityForBG: 70,
+    "background-color": "#504d4dFF",
+    opacityForBG: 0.7,
 
-    "border-color": "#232323",
-    opacityForBorder: 100,
-    "border-style": "none",
-    "border-width": 1,
-    "border-radius": 5,
+    "border-color": "#232323FF",
+    opacityForBorder: 1.0,
+    "border-style": "solid",
+    "border-width": "1px",
+    "border-radius": "5px",
 
-    width: 55,
+    width: "55px",
 
-    "padding-left": 5,
-    "padding-right": 5,
-    "padding-bottom": 0,
-    "padding-top": 0,
+    "padding-left": "5px",
+    "padding-right": "5px",
+    "padding-bottom": "0px",
+    "padding-top": "0px",
   },
   styleDDWTimerPartNumberString: {
     "font-family": "arial",
-    "font-size": 20,
-    "font-weight": "bold",
-    color: "#ffffff",
-    opacity: 1.0,
+    "font-size": "20px",
+    "font-weight": "normal",
+    color: "#ffffffFF",
+    opacityForText: 1.0,
   },
 }
 
 export const mutations = {
-  UPDATE_STYLE(state, { target, attr, styleObject }) {
-    state[target][attr] = styleObject
+  UPDATE_STYLE(state, { target, attr, value }) {
+    state[target][attr] = value
   },
 
-  RESET_STYLE(state, { target, styleObject }) {
-    state[target] = styleObject
+  RESET_STYLE(state, styles) {
+    state.styleDDW = styles.styleDDW
+    state.styleDDWDDayPart = styles.styleDDWDDayPart
+    state.styleDDWDDayPartTitle = styles.styleDDWDDayPartTitle
+    state.styleDDWDDayPartDDay = styles.styleDDWDDayPartDDay
+    state.styleDDWDDayPartDate = styles.styleDDWDDayPartDate
+    state.styleDDWTimerPart = styles.styleDDWTimerPart
+    state.styleDDWTimerPartNumber = styles.styleDDWTimerPartNumber
+    state.styleDDWTimerPartNumberString = styles.styleDDWTimerPartNumberString
   },
 }
 
 export const actions = {
-  updateStyle({ commit }, { target, attr, styleObject }) {
-    commit("UPDATE_STYLE", { target, attr, styleObject })
+  updateStyle({ commit }, { target, attr, value }) {
+    commit("UPDATE_STYLE", { target, attr, value })
 
     console.log(`styles/UPDATE_STYLE
-    state[${target}][${attr}] = ${styleObject}`)
+    state[${target}][${attr}] = ${value}`)
   },
 
-  resetStyle({ commit }, { target, styleObject }) {
-    commit("RESET_STYLE", { target, styleObject })
+  resetStyle({ commit }, styles) {
+    commit("RESET_STYLE", styles)
 
-    console.log(`styles/RESET_STYLE
-    state[${target}] = ${JSON.stringify(styleObject)}`)
+    // @T add clg (mutation to action!)
   },
 }
 
 export const getters = {
   getStyleAttr: state => (target, attr) => {
-    return state[target][attr]
+    if (
+      [
+        "font-size",
+        "border-width",
+        "border-radius",
+        "width",
+        "height",
+        "padding-left",
+        "padding-right",
+        "padding-bottom",
+        "padding-top",
+      ].includes(attr)
+    ) {
+      return state[target][attr].split("px")[0]
+    } else if (["color", "background-color", "border-color"].includes(attr)) {
+      return state[target][attr].slice(0, 7)
+    } else if (
+      ["opacityForText", "opacityForBG", "opacityForBorder"].includes(attr)
+    ) {
+      return Math.round(state[target][attr] * 100)
+    } else {
+      return state[target][attr]
+    }
   },
 }

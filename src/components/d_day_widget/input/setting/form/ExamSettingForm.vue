@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="inputForm">
-      <div>
+      <div class="titleContainer">
         <h3>{{ title }}</h3>
         <button @click="removeExam">-</button>
       </div>
@@ -66,6 +66,13 @@ export default {
 
 <style scoped>
 h3 {
-  display: inline;
+  margin: 0;
+  margin-right: 15px;
+}
+.titleContainer {
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 </style>

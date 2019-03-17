@@ -30,11 +30,11 @@
           :value="animationTransition"
           @change="updateAnimation($event, 'animationTransition')"
           placeholder="날짜 전환에 드는 시간을 입력해주세요."
-        /><span>&nbsp;sec</span>
+        />
       </div>
 
       <div class="inputLine">
-        <label>날짜 전환 주기</label>
+        <label>?날짜 전환 주기?</label>
         <input
           type="number"
           min="0.1"
@@ -42,7 +42,7 @@
           :value="animationInterval"
           @change="updateAnimation($event, 'animationInterval')"
           placeholder="날짜 전환 주기를 입력해주세요."
-        /><span>&nbsp;sec</span>
+        />
       </div>
     </div>
   </div>

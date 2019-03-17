@@ -4,7 +4,7 @@
       v-for="(exam, index) in exams"
       :key="index"
       :index="index"
-      :title="`#${index}`"
+      :title="`#${index + 1}`"
     ></ExamSettingForm>
     <button @click="addExam">+</button>
   </BaseToggleBox>

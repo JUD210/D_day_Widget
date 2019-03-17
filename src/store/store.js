@@ -75,18 +75,7 @@ export default new Vuex.Store({
           var newData = snapshot.val()
 
           dispatch("exams/resetExams", newData.exams)
-          dispatch("styles/resetStyle", {
-            target: "styleDDWDDayPartTitle",
-            styleDDWObject: newData.styles.styleDDayPartTitle,
-          })
-          dispatch("styles/resetStyle", {
-            target: "styleDDWDDayPartDDay",
-            styleDDWObject: newData.styles.styleDDayPartDDay,
-          })
-          dispatch("styles/resetStyle", {
-            target: "styleDDWDDayPartDate",
-            styleDDWObject: newData.styles.styleDDayPartDate,
-          })
+          dispatch("styles/resetStyle", newData.styles)
           dispatch("formats/resetFormat", newData.formats)
           dispatch("animations/resetAnimation", newData.animations)
 
@@ -105,20 +94,27 @@ ${state.uniqueId.uniqueId}`)
   },
   getters: {
     getWidgetData(state) {
-      var exams = []
-      for (let i in state.exams.exams) {
-        exams.push({ ...state.exams.exams[i] })
-      }
+      // var exams = []
+      // for (let i in state.exams.exams) {
+      //   exams.push(state.exams.exams[i])
+      // }
       return {
-        exams,
+        exams: state.exams.exams,
         styles: {
-          styleDDWDDayPartTitle: { ...state.styles.styleDDayPartTitle },
-          styleDDWDDayPartDDay: { ...state.styles.styleDDayPartDDay },
-          styleDDWDDayPartDate: { ...state.styles.styleDDayPartDate },
+          styleDDW: state.styles.styleDDW,
+          styleDDWDDayPart: state.styles.styleDDWDDayPart,
+          styleDDWDDayPartTitle: state.styles.styleDDWDDayPartTitle,
+          styleDDWDDayPartDDay: state.styles.styleDDWDDayPartDDay,
+          styleDDWDDayPartDate: state.styles.styleDDWDDayPartDate,
+          styleDDWTimerPart: state.styles.styleDDWTimerPart,
+          styleDDWTimerPartNumber: state.styles.styleDDWTimerPartNumber,
+          styleDDWTimerPartNumberString:
+            state.styles.styleDDWTimerPartNumberString,
         },
         formats: {
           formatDDay: state.formats.formatDDay,
           formatDate: state.formats.formatDate,
+          formatTimerString: state.formats.formatTimerString,
         },
         animations: {
           animationType: state.animations.animationType,

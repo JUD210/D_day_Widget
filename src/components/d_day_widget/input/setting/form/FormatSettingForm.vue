@@ -6,7 +6,7 @@
 
     <div class="inputLinesContainer">
       <div class="inputLine">
-        <label>D-day 형식: </label>
+        <label>D-day 형식</label>
         <select
           :value="formatDDay"
           @change="updateFormat($event, 'formatDDay')"
@@ -21,7 +21,7 @@
       </div>
 
       <div class="inputLine">
-        <label>날짜 형식: </label>
+        <label>날짜 형식</label>
         <select
           :value="formatDate"
           @change="updateFormat($event, 'formatDate')"
@@ -36,7 +36,7 @@
       </div>
 
       <div class="inputLine">
-        <label>타이머 글자 형식: </label>
+        <label>타이머 글자 형식</label>
         <select
           :value="formatTimerString"
           @change="updateFormat($event, 'formatTimerString')"

@@ -1,71 +1,62 @@
 <template>
-  <div class="dDayWidget">
-    <div class="dDayPart">
-      <!-- //@T getstyleDDWDDayPartTitle -->
-      <div
-        class="title"
-        :style="[
-          styleDDWDDayPartTitle,
-          { 'font-size': `${styleDDWDDayPartTitle['font-size']}px` },
-        ]"
-      >
+  <div class="dDayWidget" :style="styleDDW">
+    <div class="dDayPart" :style="styleDDWDDayPart">
+      <div class="title" :style="styleDDWDDayPartTitle">
         <span>{{ examTitleComputed }}</span>
       </div>
 
-      <div
-        class="dday"
-        :style="[
-          styleDDWDDayPartDDay,
-          { 'font-size': `${styleDDWDDayPartDDay['font-size']}px` },
-        ]"
-      >
-        <div v-if="day >= 0 && hour >= 0 && min >= 0 && sec >= 0">
-          <span>{{ formattedDDay }}</span>
-        </div>
-
-        <div v-else class="expired">
-          <span>시간 경과</span>
-        </div>
+      <div class="dday" :style="styleDDWDDayPartDDay">
+        <span>{{ formattedDDay }}</span>
       </div>
 
-      <div
-        class="date"
-        :style="[
-          styleDDWDDayPartDate,
-          { 'font-size': `${styleDDWDDayPartDate['font-size']}px` },
-        ]"
-      >
+      <div class="date" :style="styleDDWDDayPartDate">
         <span>{{ formattedDate }}</span>
       </div>
     </div>
 
     <!-- ------------------------------- -->
 
-    <div class="timerPart">
+    <div class="timerPart" :style="styleDDWTimerPart">
       <div class="day">
-        <span class="number">{{ day }}</span>
-        <div v-if="formatTimerString != 'None'" class="number_str">
+        <span class="number" :style="styleDDWTimerPartNumber">{{ day }}</span>
+        <div
+          v-if="formatTimerString != 'None'"
+          class="number_str"
+          :style="styleDDWTimerPartNumberString"
+        >
           {{ formatTimerString.split("/")[0] }}
         </div>
       </div>
 
       <div class="hour">
-        <span class="number">{{ hour }}</span>
-        <div class="number_str">
+        <span class="number" :style="styleDDWTimerPartNumber">{{ hour }}</span>
+        <div
+          v-if="formatTimerString != 'None'"
+          class="number_str"
+          :style="styleDDWTimerPartNumberString"
+        >
           {{ formatTimerString.split("/")[1] }}
         </div>
       </div>
 
       <div class="min">
-        <span class="number">{{ min }}</span>
-        <div class="number_str">
+        <span class="number" :style="styleDDWTimerPartNumber">{{ min }}</span>
+        <div
+          v-if="formatTimerString != 'None'"
+          class="number_str"
+          :style="styleDDWTimerPartNumberString"
+        >
           {{ formatTimerString.split("/")[2] }}
         </div>
       </div>
 
       <div class="sec">
-        <span class="number">{{ sec }}</span>
-        <div class="number_str">
+        <span class="number" :style="styleDDWTimerPartNumber">{{ sec }}</span>
+        <div
+          v-if="formatTimerString != 'None'"
+          class="number_str"
+          :style="styleDDWTimerPartNumberString"
+        >
           {{ formatTimerString.split("/")[3] }}
         </div>
       </div>
@@ -121,35 +112,7 @@ export default {
       }
     },
 
-    // @T formattedStyleObject(styleObject)
-    // formattedStyleObject(styleObject) {
-    //   let resultObject = styleObject
-
-    //   for (let attr in Object.keys(resultObject)) {
-    //     if (
-    //       attr in
-    //       ["font-size", "width", "height", "border-width", "border-radious"]
-    //     ) {
-    //       styleObject[attr] = `${styleObject[attr]}px`
-    //     } else if (attr in ["opacityForBG", "opacityForBorder"]) {
-    //       if (attr == "opacityForBG") {
-    //         styleObject[attr] = this.getHexColorWithOpacity(
-    //           styleObject["background-color"],
-    //           styleObject[attr],
-    //         )
-    //       } else if (attr == "opacityForBorder") {
-    //         styleObject[attr] = this.getHexColorWithOpacity(
-    //           styleObject["border-color"],
-    //           styleObject[attr],
-    //         )
-    //       }
-    //     } else if (attr in ["opacity"]) {
-    //       styleObject[attr] = styleObject[attr] / 100
-    //     }
-    //   }
-
-    //   return resultObject
-    // },
+    // ! @T CONTINUE
 
     formattedDDay() {
       // @T add: Custom Formatting (%d %dd %D %DD)
@@ -268,8 +231,10 @@ export default {
 
   mounted() {
     setInterval(() => {
+      // ! @T CONTINUE!
+      console.log(this.animationInterval)
       this.indexSelectorUpdater()
-    }, 5000)
+    }, this.animationInterval * 1000)
 
     setInterval(() => {
       this.timeUpdater()

@@ -42,6 +42,8 @@ export const state = {
     "Day/Hour/Minute/Second",
   ],
 
+  /*--------------------------------------------------------*/
+
   formatDDay: "D-9 (D-%d)",
   formatDate: "2019.2.9 (yyyy.m.d)",
   formatTimerString: "일/시/분/초",
@@ -52,9 +54,10 @@ export const mutations = {
     state[attr] = value
   },
 
-  RESET_FORMAT(state, { formatDDay, formatDate }) {
+  RESET_FORMAT(state, { formatDDay, formatDate, formatTimerString }) {
     state.formatDDay = formatDDay
     state.formatDate = formatDate
+    state.formatTimerString = formatTimerString
   },
 }
 
@@ -66,11 +69,12 @@ export const actions = {
     state[${attr}] = ${value}`)
   },
 
-  resetFormat({ commit }, { formatDDay, formatDate }) {
-    commit("RESET_FORMAT", { formatDDay, formatDate })
+  resetFormat({ commit }, { formatDDay, formatDate, formatTimerString }) {
+    commit("RESET_FORMAT", { formatDDay, formatDate, formatTimerString })
 
     console.log(`formats/RESET_FORMAT
     state.formatDDay = ${formatDDay}
-    state.formatDate = ${formatDate}`)
+    state.formatDate = ${formatDate}
+    state.formatTimerString = ${formatTimerString}`)
   },
 }
