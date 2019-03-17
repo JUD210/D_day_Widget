@@ -34,7 +34,7 @@
       </div>
 
       <div class="inputLine">
-        <label>?날짜 전환 주기?</label>
+        <label>날짜 전환 주기</label>
         <input
           type="number"
           min="0.1"

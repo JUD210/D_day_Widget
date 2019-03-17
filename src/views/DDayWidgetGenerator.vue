@@ -31,10 +31,13 @@
     <!-- //! CONTINUE  -->
     <!-- <transition name="fade"> -->
     <div class="preview">
-      <button @click="showPreview = !showPreview">
-        Toggle
+      <button v-if="showPreview" @click="showPreview = !showPreview">
+        숨기기
       </button>
-      <DDayWidget v-if="showPreview"></DDayWidget>
+      <button v-if="!showPreview" @click="showPreview = !showPreview">
+        보이기
+      </button>
+      <DDayWidget v-show="showPreview"></DDayWidget>
     </div>
     <!-- </transition> -->
   </div>

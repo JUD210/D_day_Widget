@@ -11,9 +11,15 @@ if (d.getUTCMonth() + 1 < 10) {
 export const state = {
   indexSelector: 0,
 
+  /*--------------------------------------------------------*/
+
   exams: [
     {
-      examTitle: null,
+      examTitle: 1,
+      examDate: date,
+    },
+    {
+      examTitle: 2,
       examDate: date,
     },
   ],
@@ -73,7 +79,7 @@ export const actions = {
   },
 
   updateIndexSelector({ commit }, cmd) {
-    commit("UPDATE_INDEXSELECTOR"), cmd
+    commit("UPDATE_INDEXSELECTOR", cmd)
 
     console.log(`exams/UPDATE_INDEXSELECTOR
     ${cmd} state.indexSelector`)

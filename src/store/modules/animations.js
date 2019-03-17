@@ -2,6 +2,7 @@ export const namespaced = true
 
 export const state = {
   animationTypes: ["slide", "none"],
+  isIntervalChanged: true,
 
   /*--------------------------------------------------------*/
 
@@ -13,6 +14,7 @@ export const state = {
 export const mutations = {
   UPDATE_ANIMATION(state, { attr, value }) {
     state[attr] = value
+    state.isIntervalChanged = true
   },
 
   RESET_ANIMATION(
@@ -23,6 +25,10 @@ export const mutations = {
     state.animationTransition = animationTransition
     state.animationInterval = animationInterval
   },
+
+  UPDATE_ISINTERVALCHANGED(state, bool) {
+    state.isIntervalChanged = bool
+  },
 }
 
 export const actions = {
@@ -30,7 +36,8 @@ export const actions = {
     commit("UPDATE_ANIMATION", { attr, value })
 
     console.log(`animations/UPDATE_ANIMATION
-    state[${attr}] = ${value}`)
+    state[${attr}] = ${value}
+    state.isIntervalChanged = true`)
   },
 
   resetAnimation(
@@ -47,5 +54,12 @@ export const actions = {
     state.animationType = ${animationType}
     state.animationTransition = ${animationTransition}
     state.animationInterval = ${animationInterval}`)
+  },
+
+  updateIsIntervalChanged({ commit }, bool) {
+    commit("UPDATE_ISINTERVALCHANGED", bool)
+
+    console.log(`animations/UPDATE_ISINTERVALCHANGED
+    state.isIntervalChanged = ${bool}`)
   },
 }

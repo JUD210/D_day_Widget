@@ -31,13 +31,13 @@ export default new Vuex.Store({
     animations,
   },
 
-  state: {
-    // If I decide to change these sources to private,
-    // I'll attach below state and script to all console.logs
-    //
-    // isDebug: false,
-    // if(rootState.isDebug) { console.log ( ... )}
-  },
+  // state: {
+  // If I decide to change these sources to private,
+  // I'll attach below state and script to all console.logs
+  //
+  // isDebug: false,
+  // if(rootState.isDebug) { console.log ( ... )}
+  // },
 
   actions: {
     saveWidgetData({ state, getters }) {

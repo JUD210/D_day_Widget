@@ -102,6 +102,7 @@ export default {
       "animationType",
       "animationTransition",
       "animationInterval",
+      "isIntervalChanged",
     ]),
 
     examTitleComputed() {
@@ -242,11 +243,22 @@ export default {
   },
 
   mounted() {
+    var activated = 0
+
     setInterval(() => {
-      // ! @T CONTINUE!
-      console.log(this.animationInterval)
-      this.indexSelectorUpdater()
-    }, this.animationInterval * 1000)
+      if (this.isIntervalChanged) {
+        // I don't know why but, vue imports "timers" to use setInterval().
+        // The imported setInterval() returns a Object not a integer
+        // {"_id": integer}
+        window.clearInterval(activated["_id"])
+
+        activated = setInterval(() => {
+          this.indexSelectorUpdater()
+        }, this.animationInterval * 1000)
+
+        this.$store.dispatch("animations/updateIsIntervalChanged", false)
+      }
+    }, 100)
 
     setInterval(() => {
       this.timeUpdater()
