@@ -1,5 +1,5 @@
 <template>
-  <BaseToggleBox title="스타일 설정">
+  <BaseToggleBox class="toggleBox" title="스타일 설정">
     <StyleSettingForm title="위젯" styleFor="styleDDW"></StyleSettingForm>
     <br />
 

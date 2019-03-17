@@ -22,7 +22,7 @@ export const state = {
     "border-color": "#232323",
     opacityForBorder: 100,
     "border-style": "solid",
-    "border-width": 1,
+    "border-width": 4,
     "border-radius": 5,
 
     width: 400,

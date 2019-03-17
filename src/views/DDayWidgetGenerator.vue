@@ -25,7 +25,7 @@
     />
 
     <button @click="copyText">
-      이 버튼을 누르면 URL 주소값이 복사될 것이여
+      URL 주소값 복사하기
     </button>
 
     <!-- //! CONTINUE  -->

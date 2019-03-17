@@ -1,9 +1,10 @@
 <template>
-  <BaseToggleBox title="시험 설정">
+  <BaseToggleBox class="toggleBox" title="시험 설정">
     <ExamSettingForm
       v-for="(exam, index) in exams"
       :key="index"
       :index="index"
+      :title="`#${index}`"
     ></ExamSettingForm>
     <button @click="addExam">+</button>
   </BaseToggleBox>

@@ -1,43 +1,49 @@
 <template>
   <div class="inputForm">
-    <div class="inputLine">
-      <label>애니메이션 종류</label>
-      <select
-        :value="animationType"
-        @change="updateAnimation($event, 'animationType')"
-      >
-        <option
-          v-for="(animationType, index) in animationTypes"
+    <div>
+      <h3>{{ title }}</h3>
+    </div>
+
+    <div class="inputLinesContainer">
+      <div class="inputLine">
+        <label>애니메이션 종류</label>
+        <select
           :value="animationType"
-          :key="index"
+          @change="updateAnimation($event, 'animationType')"
         >
-          {{ animationType }}
-        </option>
-      </select>
-    </div>
+          <option
+            v-for="(animationType, index) in animationTypes"
+            :value="animationType"
+            :key="index"
+          >
+            {{ animationType }}
+          </option>
+        </select>
+      </div>
 
-    <div class="inputLine">
-      <label>?애니메이션 전환?</label>
-      <input
-        type="number"
-        min="0.1"
-        step="0.1"
-        :value="animationTransition"
-        @change="updateAnimation($event, 'animationTransition')"
-        placeholder="날짜 전환에 드는 시간을 입력해주세요."
-      /><span>&nbsp;sec</span>
-    </div>
+      <div class="inputLine">
+        <label>?애니메이션 전환?</label>
+        <input
+          type="number"
+          min="0.1"
+          step="0.1"
+          :value="animationTransition"
+          @change="updateAnimation($event, 'animationTransition')"
+          placeholder="날짜 전환에 드는 시간을 입력해주세요."
+        /><span>&nbsp;sec</span>
+      </div>
 
-    <div class="inputLine">
-      <label>날짜 전환 주기</label>
-      <input
-        type="number"
-        min="0.1"
-        step="0.1"
-        :value="animationInterval"
-        @change="updateAnimation($event, 'animationInterval')"
-        placeholder="날짜 전환 주기를 입력해주세요."
-      /><span>&nbsp;sec</span>
+      <div class="inputLine">
+        <label>날짜 전환 주기</label>
+        <input
+          type="number"
+          min="0.1"
+          step="0.1"
+          :value="animationInterval"
+          @change="updateAnimation($event, 'animationInterval')"
+          placeholder="날짜 전환 주기를 입력해주세요."
+        /><span>&nbsp;sec</span>
+      </div>
     </div>
   </div>
 </template>
@@ -47,6 +53,13 @@ import { mapState } from "vuex"
 
 export default {
   name: "AnimationSettingForm",
+  props: {
+    title: {
+      type: String,
+      default: "",
+    },
+  },
+
   methods: {
     updateAnimation(event, attr) {
       this.$store.dispatch("animations/updateAnimation", {

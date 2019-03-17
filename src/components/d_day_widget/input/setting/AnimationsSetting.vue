@@ -1,6 +1,6 @@
 <template>
-  <BaseToggleBox title="애니메이션 설정">
-    <AnimationSettingForm></AnimationSettingForm>
+  <BaseToggleBox class="toggleBox" title="애니메이션 설정">
+    <AnimationSettingForm title="날짜 전환"></AnimationSettingForm>
   </BaseToggleBox>
 </template>
 
