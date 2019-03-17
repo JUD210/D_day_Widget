@@ -57,7 +57,9 @@ export default {
     },
 
     removeExam() {
-      this.$store.dispatch("exams/removeExam", this.index)
+      this.index != 0
+        ? this.$store.dispatch("exams/removeExam", this.index)
+        : alert("최소 한 개의 시험 데이터는 있어야 합니다!")
     },
   },
   computed: mapGetters("exams", ["getExamTitleById", "getExamDateById"]),

@@ -1,5 +1,5 @@
 <template>
-  <BaseToggleBox class="toggleBox" title="글자 형식 설정">
+  <BaseToggleBox class="toggleBox" title="글자 형식">
     <FormatSettingForm title="형식"></FormatSettingForm>
   </BaseToggleBox>
 </template>

@@ -9,6 +9,7 @@ if (d.getUTCMonth() + 1 < 10) {
 }
 
 export const state = {
+  // @T indexSelector
   exams: [
     {
       examTitle: null,

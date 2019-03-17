@@ -1,5 +1,5 @@
 <template>
-  <BaseToggleBox class="toggleBox" title="애니메이션 설정">
+  <BaseToggleBox class="toggleBox" title="애니메이션">
     <AnimationSettingForm title="날짜 전환"></AnimationSettingForm>
   </BaseToggleBox>
 </template>
