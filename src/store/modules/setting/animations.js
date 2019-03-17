@@ -1,14 +1,14 @@
 export const namespaced = true
 
 export const state = {
-  animationTypes: ["slide", "none"],
+  animationTypes: ["fade", "slide-fade", "slide", "none"],
   isIntervalChanged: true,
 
   /*--------------------------------------------------------*/
 
-  animationType: "slide",
-  animationTransition: 0.8,
-  animationInterval: 4,
+  animationType: "fade",
+  animationDuration: 0.8,
+  animationInterval: 3,
 }
 
 export const mutations = {
@@ -19,10 +19,10 @@ export const mutations = {
 
   RESET_ANIMATION(
     state,
-    { animationType, animationTransition, animationInterval },
+    { animationType, animationDuration, animationInterval },
   ) {
     state.animationType = animationType
-    state.animationTransition = animationTransition
+    state.animationDuration = animationDuration
     state.animationInterval = animationInterval
   },
 
@@ -42,17 +42,17 @@ export const actions = {
 
   resetAnimations(
     { commit },
-    { animationType, animationTransition, animationInterval },
+    { animationType, animationDuration, animationInterval },
   ) {
     commit("RESET_ANIMATION", {
       animationType,
-      animationTransition,
+      animationDuration,
       animationInterval,
     })
 
     console.log(`animations/RESET_ANIMATION
     state.animationType = ${animationType}
-    state.animationTransition = ${animationTransition}
+    state.animationDuration = ${animationDuration}
     state.animationInterval = ${animationInterval}`)
   },
 
@@ -63,3 +63,9 @@ export const actions = {
     state.isIntervalChanged = ${bool}`)
   },
 }
+
+// export const getters = {
+//   getAnimationObject() {
+//     return { transition: "opacity 1s" }
+//   },
+// }

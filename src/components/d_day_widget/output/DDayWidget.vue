@@ -1,101 +1,108 @@
 <template>
-  <!-- //! CONTINUE  -->
-  <!-- <transition name="fade"> -->
+  <transition :name="animationType">
+    <div v-show="showWidget" class="dDayWidget" :style="styleDDW">
+      <div v-if="useDDWDDayPart" class="dDayPart" :style="styleDDWDDayPart">
+        <div
+          v-if="useDDWDDayPartTitle"
+          class="title"
+          :style="styleDDWDDayPartTitle"
+        >
+          <span>{{ examTitleComputed }}</span>
+        </div>
 
-  <div class="dDayWidget" :style="styleDDW">
-    <div v-if="useDDWDDayPart" class="dDayPart" :style="styleDDWDDayPart">
-      <div
-        v-if="useDDWDDayPartTitle"
-        class="title"
-        :style="styleDDWDDayPartTitle"
-      >
-        <span>{{ examTitleComputed }}</span>
+        <div
+          v-if="useDDWDDayPartDDay"
+          class="dday"
+          :style="styleDDWDDayPartDDay"
+        >
+          <span>{{ formattedDDay }}</span>
+        </div>
+
+        <div
+          v-if="useDDWDDayPartDate"
+          class="date"
+          :style="styleDDWDDayPartDate"
+        >
+          <span>{{ formattedDate }}</span>
+        </div>
       </div>
 
-      <div v-if="useDDWDDayPartDDay" class="dday" :style="styleDDWDDayPartDDay">
-        <span>{{ formattedDDay }}</span>
-      </div>
+      <!-- ------------------------------- -->
 
-      <div v-if="useDDWDDayPartDate" class="date" :style="styleDDWDDayPartDate">
-        <span>{{ formattedDate }}</span>
+      <div v-if="useDDWTimerPart" class="timerPart" :style="styleDDWTimerPart">
+        <div class="day">
+          <span
+            v-if="useDDWTimerPartNumber"
+            class="number"
+            :style="styleDDWTimerPartNumber"
+            >{{ day }}</span
+          >
+          <div
+            v-if="useDDWTimerPartNumberString"
+            class="number_str"
+            :style="styleDDWTimerPartNumberString"
+          >
+            {{ formatTimerString.split("/")[0] }}
+          </div>
+        </div>
+
+        <div class="hour">
+          <span
+            v-if="useDDWTimerPartNumber"
+            class="number"
+            :style="styleDDWTimerPartNumber"
+            >{{ hour }}</span
+          >
+          <div
+            v-if="useDDWTimerPartNumberString"
+            class="number_str"
+            :style="styleDDWTimerPartNumberString"
+          >
+            {{ formatTimerString.split("/")[1] }}
+          </div>
+        </div>
+
+        <div class="min">
+          <span
+            v-if="useDDWTimerPartNumber"
+            class="number"
+            :style="styleDDWTimerPartNumber"
+            >{{ min }}</span
+          >
+          <div
+            v-if="useDDWTimerPartNumberString"
+            class="number_str"
+            :style="styleDDWTimerPartNumberString"
+          >
+            {{ formatTimerString.split("/")[2] }}
+          </div>
+        </div>
+
+        <div class="sec">
+          <span
+            v-if="useDDWTimerPartNumber"
+            class="number"
+            :style="styleDDWTimerPartNumber"
+            >{{ sec }}</span
+          >
+          <div
+            v-if="useDDWTimerPartNumberString"
+            class="number_str"
+            :style="styleDDWTimerPartNumberString"
+          >
+            {{ formatTimerString.split("/")[3] }}
+          </div>
+        </div>
       </div>
     </div>
-
-    <!-- ------------------------------- -->
-
-    <div v-if="useDDWTimerPart" class="timerPart" :style="styleDDWTimerPart">
-      <div class="day">
-        <span
-          v-if="useDDWTimerPartNumber"
-          class="number"
-          :style="styleDDWTimerPartNumber"
-          >{{ day }}</span
-        >
-        <div
-          v-if="useDDWTimerPartNumberString"
-          class="number_str"
-          :style="styleDDWTimerPartNumberString"
-        >
-          {{ formatTimerString.split("/")[0] }}
-        </div>
-      </div>
-
-      <div class="hour">
-        <span
-          v-if="useDDWTimerPartNumber"
-          class="number"
-          :style="styleDDWTimerPartNumber"
-          >{{ hour }}</span
-        >
-        <div
-          v-if="useDDWTimerPartNumberString"
-          class="number_str"
-          :style="styleDDWTimerPartNumberString"
-        >
-          {{ formatTimerString.split("/")[1] }}
-        </div>
-      </div>
-
-      <div class="min">
-        <span
-          v-if="useDDWTimerPartNumber"
-          class="number"
-          :style="styleDDWTimerPartNumber"
-          >{{ min }}</span
-        >
-        <div
-          v-if="useDDWTimerPartNumberString"
-          class="number_str"
-          :style="styleDDWTimerPartNumberString"
-        >
-          {{ formatTimerString.split("/")[2] }}
-        </div>
-      </div>
-
-      <div class="sec">
-        <span
-          v-if="useDDWTimerPartNumber"
-          class="number"
-          :style="styleDDWTimerPartNumber"
-          >{{ sec }}</span
-        >
-        <div
-          v-if="useDDWTimerPartNumberString"
-          class="number_str"
-          :style="styleDDWTimerPartNumberString"
-        >
-          {{ formatTimerString.split("/")[3] }}
-        </div>
-      </div>
-    </div>
-  </div>
+  </transition>
 </template>
 
 <script>
 import "@/assets/css/d_day_widget/DDayWidget.css"
 
-import { mapState } from "vuex"
-import { setInterval } from "timers"
+import { mapState, mapGetters } from "vuex"
+import { setInterval, setTimeout } from "timers"
 
 export default {
   components: {},
@@ -108,6 +115,8 @@ export default {
       hour: "",
       min: "",
       sec: "",
+
+      showWidget: true,
     }
   },
 
@@ -137,10 +146,12 @@ export default {
     ...mapState("formats", ["formatDDay", "formatDate", "formatTimerString"]),
     ...mapState("animations", [
       "animationType",
-      "animationTransition",
+      "animationDuration",
       "animationInterval",
       "isIntervalChanged",
     ]),
+
+    ...mapGetters("animations", ["getAnimationObject"]),
 
     examTitleComputed() {
       if (this.exams[this.indexSelector].examTitle) {
@@ -279,17 +290,35 @@ export default {
   },
 
   mounted() {
-    var activated = 0
+    var activateAnimation = 0
 
     setInterval(() => {
       if (this.isIntervalChanged) {
         // I don't know why but, vue imports "timers" to use setInterval().
         // The imported setInterval() returns a Object not a integer
         // {"_id": integer}
-        window.clearInterval(activated["_id"])
+        window.clearInterval(activateAnimation["_id"])
 
-        activated = setInterval(() => {
+        activateAnimation = setInterval(() => {
           this.indexSelectorUpdater()
+
+          // @T Need to change interval to some meaningful input value
+          if (this.animationType == "fade") {
+            this.showWidget = false
+            setTimeout(() => {
+              this.showWidget = true
+            }, 50)
+          } else if (this.animationType == "slide") {
+            this.showWidget = false
+            setTimeout(() => {
+              this.showWidget = true
+            }, 100)
+          } else if (this.animationType == "slide-fade") {
+            this.showWidget = false
+            setTimeout(() => {
+              this.showWidget = true
+            }, 50)
+          }
         }, this.animationInterval * 1000)
 
         this.$store.dispatch("animations/updateIsIntervalChanged", false)
@@ -302,3 +331,39 @@ export default {
   },
 }
 </script>
+
+<style scoped>
+/* //@T Need to Implement more efficient animations! */
+
+/* .fade-leave-active, */
+.fade-enter-active {
+  transition: opacity 1s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
+
+/* .slide-leave-active, */
+.slide-enter-active {
+  transition: 0.6s;
+}
+.slide-enter {
+  transform: translate(50%, 0);
+}
+/* .slide-leave-to { */
+/* transform: translate(-100%, 0); */
+/* } */
+
+/* .slide-fade-leave-active { */
+/* transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1); */
+/* } */
+.slide-fade-enter-active {
+  transition: all 0.8s ease;
+}
+
+/* .slide-fade-leave-to, */
+.slide-fade-enter {
+  transform: translateX(50%);
+  opacity: 0;
+}
+</style>

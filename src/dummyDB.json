@@ -3,7 +3,7 @@
     "d_day_widget" : {
       "animations" : {
         "animationInterval" : 4,
-        "animationTransition" : 0.8,
+        "animationDuration" : 0.8,
         "animationType" : "slide"
       },
       "exams" : [ {
@@ -99,7 +99,7 @@
     "d_day_widget" : {
       "animations" : {
         "animationInterval" : 4,
-        "animationTransition" : 0.8,
+        "animationDuration" : 0.8,
         "animationType" : "slide"
       },
       "exams" : [ {

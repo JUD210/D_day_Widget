@@ -21,17 +21,18 @@
         </select>
       </div>
 
-      <div class="inputLine">
+      <!-- // @T CONTINUE! -->
+      <!-- <div class="inputLine">
         <label>?애니메이션 전환?</label>
         <input
           type="number"
           min="0.1"
           step="0.1"
-          :value="animationTransition"
-          @change="updateAnimation($event, 'animationTransition')"
+          :value="animationDuration"
+          @change="updateAnimation($event, 'animationDuration')"
           placeholder="날짜 전환에 드는 시간을 입력해주세요."
         />
-      </div>
+      </div> -->
 
       <div class="inputLine">
         <label>날짜 전환 주기</label>
@@ -70,7 +71,7 @@ export default {
   },
   computed: mapState("animations", [
     "animationType",
-    "animationTransition",
+    "animationDuration",
     "animationInterval",
     "animationTypes",
   ]),

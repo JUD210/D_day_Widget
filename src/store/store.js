@@ -119,7 +119,7 @@ ${state.uniqueId.uniqueId}`)
         },
         animations: {
           animationType: state.animations.animationType,
-          animationTransition: state.animations.animationTransition,
+          animationDuration: state.animations.animationDuration,
           animationInterval: state.animations.animationInterval,
         },
       }
