@@ -1,26 +1,38 @@
 <template>
+  <!-- //! CONTINUE  -->
+  <!-- <transition name="fade"> -->
+
   <div class="dDayWidget" :style="styleDDW">
-    <div class="dDayPart" :style="styleDDWDDayPart">
-      <div class="title" :style="styleDDWDDayPartTitle">
+    <div v-if="useDDWDDayPart" class="dDayPart" :style="styleDDWDDayPart">
+      <div
+        v-if="useDDWDDayPartTitle"
+        class="title"
+        :style="styleDDWDDayPartTitle"
+      >
         <span>{{ examTitleComputed }}</span>
       </div>
 
-      <div class="dday" :style="styleDDWDDayPartDDay">
+      <div v-if="useDDWDDayPartDDay" class="dday" :style="styleDDWDDayPartDDay">
         <span>{{ formattedDDay }}</span>
       </div>
 
-      <div class="date" :style="styleDDWDDayPartDate">
+      <div v-if="useDDWDDayPartDate" class="date" :style="styleDDWDDayPartDate">
         <span>{{ formattedDate }}</span>
       </div>
     </div>
 
     <!-- ------------------------------- -->
 
-    <div class="timerPart" :style="styleDDWTimerPart">
+    <div v-if="useDDWTimerPart" class="timerPart" :style="styleDDWTimerPart">
       <div class="day">
-        <span class="number" :style="styleDDWTimerPartNumber">{{ day }}</span>
+        <span
+          v-if="useDDWTimerPartNumber"
+          class="number"
+          :style="styleDDWTimerPartNumber"
+          >{{ day }}</span
+        >
         <div
-          v-if="formatTimerString != 'None'"
+          v-if="useDDWTimerPartNumberString"
           class="number_str"
           :style="styleDDWTimerPartNumberString"
         >
@@ -29,9 +41,14 @@
       </div>
 
       <div class="hour">
-        <span class="number" :style="styleDDWTimerPartNumber">{{ hour }}</span>
+        <span
+          v-if="useDDWTimerPartNumber"
+          class="number"
+          :style="styleDDWTimerPartNumber"
+          >{{ hour }}</span
+        >
         <div
-          v-if="formatTimerString != 'None'"
+          v-if="useDDWTimerPartNumberString"
           class="number_str"
           :style="styleDDWTimerPartNumberString"
         >
@@ -40,9 +57,14 @@
       </div>
 
       <div class="min">
-        <span class="number" :style="styleDDWTimerPartNumber">{{ min }}</span>
+        <span
+          v-if="useDDWTimerPartNumber"
+          class="number"
+          :style="styleDDWTimerPartNumber"
+          >{{ min }}</span
+        >
         <div
-          v-if="formatTimerString != 'None'"
+          v-if="useDDWTimerPartNumberString"
           class="number_str"
           :style="styleDDWTimerPartNumberString"
         >
@@ -51,9 +73,14 @@
       </div>
 
       <div class="sec">
-        <span class="number" :style="styleDDWTimerPartNumber">{{ sec }}</span>
+        <span
+          v-if="useDDWTimerPartNumber"
+          class="number"
+          :style="styleDDWTimerPartNumber"
+          >{{ sec }}</span
+        >
         <div
-          v-if="formatTimerString != 'None'"
+          v-if="useDDWTimerPartNumberString"
           class="number_str"
           :style="styleDDWTimerPartNumberString"
         >
@@ -86,7 +113,17 @@ export default {
 
   computed: {
     ...mapState("uniqueId", ["uniqueId"]),
+
     ...mapState("exams", ["exams", "indexSelector"]),
+    ...mapState("onOffSwitches", [
+      "useDDWDDayPart",
+      "useDDWDDayPartTitle",
+      "useDDWDDayPartDDay",
+      "useDDWDDayPartDate",
+      "useDDWTimerPart",
+      "useDDWTimerPartNumber",
+      "useDDWTimerPartNumberString",
+    ]),
     ...mapState("styles", [
       "styleDDW",
       "styleDDWDDayPart",
@@ -123,7 +160,6 @@ export default {
         .substring(fmDD.indexOf("(") + 1, fmDD.indexOf(")"))
         .replace("-", "")
 
-      // this.day is 'int' from timeUpdater
       let d = 0
       this.timeDistance >= 0 ? (d = this.day + 1) : (d = this.day)
       if (d < 10) {
@@ -132,14 +168,14 @@ export default {
 
       try {
         if (/%dd/i.test(fmDD)) {
-          this.timeDistance >= 0
+          this.timeDistance > 0
             ? (fmDD = fmDD.replace(/%dd/i, `-${d}`))
-            : (fmDD = fmDD.replace(/%dd/i, `+${d}`))
+            : (fmDD = fmDD.replace(/%dd/i, `++${d}`))
         } else if (/%d/i.test(fmDD)) {
           if (d < 10) {
             d = d.slice(1)
           }
-          this.timeDistance >= 0
+          this.timeDistance > 0
             ? (fmDD = fmDD.replace(/%d/i, `-${d}`))
             : (fmDD = fmDD.replace(/%d/i, `+${d}`))
         } else {

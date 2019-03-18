@@ -40,7 +40,7 @@ export const actions = {
     state.isIntervalChanged = true`)
   },
 
-  resetAnimation(
+  resetAnimations(
     { commit },
     { animationType, animationTransition, animationInterval },
   ) {

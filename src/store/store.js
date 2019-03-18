@@ -3,10 +3,11 @@ import Vuex from "vuex"
 
 import * as uniqueId from "./modules/uniqueId"
 
-import * as exams from "./modules/exams"
-import * as styles from "./modules/styles"
-import * as formats from "./modules/formats"
-import * as animations from "./modules/animations"
+import * as exams from "./modules/setting/exams"
+import * as onOffSwitches from "./modules/setting/onOffSwitches"
+import * as styles from "./modules/setting/styles"
+import * as formats from "./modules/setting/formats"
+import * as animations from "./modules/setting/animations"
 
 import firebase from "firebase/app"
 import "firebase/database"
@@ -26,18 +27,11 @@ export default new Vuex.Store({
     uniqueId,
 
     exams,
+    onOffSwitches,
     styles,
     formats,
     animations,
   },
-
-  // state: {
-  // If I decide to change these sources to private,
-  // I'll attach below state and script to all console.logs
-  //
-  // isDebug: false,
-  // if(rootState.isDebug) { console.log ( ... )}
-  // },
 
   actions: {
     saveWidgetData({ state, getters }) {
@@ -75,9 +69,10 @@ export default new Vuex.Store({
           var newData = snapshot.val()
 
           dispatch("exams/resetExams", newData.exams)
-          dispatch("styles/resetStyle", newData.styles)
-          dispatch("formats/resetFormat", newData.formats)
-          dispatch("animations/resetAnimation", newData.animations)
+          dispatch("onOffSwitches/resetUses", newData.onOffSwitches)
+          dispatch("styles/resetStyles", newData.styles)
+          dispatch("formats/resetFormats", newData.formats)
+          dispatch("animations/resetAnimations", newData.animations)
 
           console.log(`store/loadWidgetData [OK]
           ${JSON.stringify(newData)}`)
@@ -94,12 +89,18 @@ ${state.uniqueId.uniqueId}`)
   },
   getters: {
     getWidgetData(state) {
-      // var exams = []
-      // for (let i in state.exams.exams) {
-      //   exams.push(state.exams.exams[i])
-      // }
       return {
         exams: state.exams.exams,
+        onOffSwitches: {
+          useDDWDDayPart: state.onOffSwitches.useDDWDDayPart,
+          useDDWDDayPartTitle: state.onOffSwitches.useDDWDDayPartTitle,
+          useDDWDDayPartDDay: state.onOffSwitches.useDDWDDayPartDDay,
+          useDDWDDayPartDate: state.onOffSwitches.useDDWDDayPartDate,
+          useDDWTimerPart: state.onOffSwitches.useDDWTimerPart,
+          useDDWTimerPartNumber: state.onOffSwitches.useDDWTimerPartNumber,
+          useDDWTimerPartNumberString:
+            state.onOffSwitches.useDDWTimerPartNumberString,
+        },
         styles: {
           styleDDW: state.styles.styleDDW,
           styleDDWDDayPart: state.styles.styleDDWDDayPart,

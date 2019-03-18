@@ -20,7 +20,7 @@ export const state = {
     },
     {
       examTitle: 2,
-      examDate: date,
+      examDate: "2020" + date.slice(4),
     },
   ],
 }

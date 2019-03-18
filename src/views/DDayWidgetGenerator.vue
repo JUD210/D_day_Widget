@@ -12,7 +12,7 @@
     <div class="d_day_widget input">
       <SettingList></SettingList>
       <button @click="saveWidgetData()">Save</button>
-      <br /><br />
+
       <button @click="showResult()">Show</button>
     </div>
 
@@ -28,16 +28,105 @@
       URL 주소값 복사하기
     </button>
 
-    <!-- //! CONTINUE  -->
-    <!-- <transition name="fade"> -->
-    <div class="preview">
-      <button v-if="showPreview" @click="showPreview = !showPreview">
+    <div class="switchesContainer" v-if="showSwitches">
+      <button class="hideButton" @click="showSwitches = !showSwitches">
         숨기기
       </button>
-      <button v-if="!showPreview" @click="showPreview = !showPreview">
+
+      <p>ON / OFF</p>
+
+      <div class="switch-main">
+        <input
+          type="checkbox"
+          @click="updateUse('useDDWDDayPart')"
+          :checked="useDDWDDayPart"
+        />
+        <label>D-Day</label>
+
+        <div>
+          <div class="switch-sub">
+            <input
+              type="checkbox"
+              @click="updateUse('useDDWDDayPartTitle')"
+              :checked="useDDWDDayPartTitle"
+            />
+            <label>제목</label>
+          </div>
+
+          <div class="switch-sub">
+            <input
+              type="checkbox"
+              @click="updateUse('useDDWDDayPartDDay')"
+              :checked="useDDWDDayPartDDay"
+            />
+            <label>일수</label>
+          </div>
+
+          <div class="switch-sub">
+            <input
+              type="checkbox"
+              @click="updateUse('useDDWDDayPartDate')"
+              :checked="useDDWDDayPartDate"
+            />
+            <label>날짜</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="switch-main">
+        <input
+          type="checkbox"
+          @click="updateUse('useDDWTimerPart')"
+          :checked="useDDWTimerPart"
+        />
+        <label>타이머</label>
+
+        <div>
+          <div class="switch-sub">
+            <input
+              type="checkbox"
+              @click="updateUse('useDDWTimerPartNumber')"
+              :checked="useDDWTimerPartNumber"
+            />
+            <label>숫자</label>
+          </div>
+
+          <div class="switch-sub">
+            <input
+              type="checkbox"
+              @click="updateUse('useDDWTimerPartNumberString')"
+              :checked="useDDWTimerPartNumberString"
+            />
+            <label>글자</label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="switchesContainer" v-if="!showSwitches">
+      <button class="showButton" @click="showSwitches = !showSwitches">
         보이기
       </button>
-      <DDayWidget v-show="showPreview"></DDayWidget>
+    </div>
+
+    <div class="preview">
+      <button
+        class="hideButton"
+        v-if="showPreview"
+        @click="showPreview = !showPreview"
+      >
+        숨기기
+      </button>
+
+      <button
+        class="showButton"
+        v-if="!showPreview"
+        @click="showPreview = !showPreview"
+      >
+        보이기
+      </button>
+
+      <DDayWidget class="widget" v-show="showPreview"></DDayWidget>
     </div>
     <!-- </transition> -->
   </div>
@@ -72,10 +161,20 @@ export default {
   },
 
   data() {
-    return { showPreview: true }
+    return { showPreview: true, showSwitches: true }
   },
   computed: {
     ...mapState("uniqueId", ["uniqueId"]),
+    ...mapState("onOffSwitches", [
+      "useDDWDDayPart",
+      "useDDWDDayPartTitle",
+      "useDDWDDayPartDDay",
+      "useDDWDDayPartDate",
+      "useDDWTimerPart",
+      "useDDWTimerPartNumber",
+      "useDDWTimerPartNumberString",
+    ]),
+
     url() {
       return `http://www.gongbanghelper.com/${this.uniqueId}`
     },
@@ -93,6 +192,18 @@ export default {
       copyText.select()
       document.execCommand("copy")
       alert("Copied the text: " + copyText.value)
+    },
+
+    formattedUse(bool) {
+      if (bool) {
+        return "O"
+      } else {
+        return "X"
+      }
+    },
+
+    updateUse(attr) {
+      this.$store.dispatch("onOffSwitches/updateUse", { attr })
     },
     ...mapActions(["saveWidgetData"]),
   },

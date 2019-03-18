@@ -1,9 +1,105 @@
 {
+  "1" : {
+    "d_day_widget" : {
+      "animations" : {
+        "animationInterval" : 4,
+        "animationTransition" : 0.8,
+        "animationType" : "slide"
+      },
+      "exams" : [ {
+        "examDate" : "2019-03-18"
+      }, {
+        "examDate" : "2020-03-18"
+      } ],
+      "formats" : {
+        "formatDDay" : "D-9 (D-%d)",
+        "formatDate" : "2019.2.9 (yyyy.m.d)",
+        "formatTimerString" : "D/H/M/S"
+      },
+      "onOffSwitches" : {
+        "useDDWDDayPart" : true,
+        "useDDWDDayPartDDay" : true,
+        "useDDWDDayPartDate" : true,
+        "useDDWDDayPartTitle" : true,
+        "useDDWTimerPart" : true,
+        "useDDWTimerPartNumber" : true,
+        "useDDWTimerPartNumberString" : true
+      },
+      "styles" : {
+        "styleDDW" : {
+          "border-color" : "#9f9f9fFF",
+          "border-radius" : "10px",
+          "border-style" : "groove",
+          "border-width" : "4px",
+          "opacityForBorder" : 1
+        },
+        "styleDDWDDayPart" : {
+          "background-color" : "#232323FF",
+          "height" : "130px",
+          "opacityForBG" : 1,
+          "width" : "400px"
+        },
+        "styleDDWDDayPartDDay" : {
+          "color" : "#0080c0FF",
+          "font-family" : "arial",
+          "font-size" : "40px",
+          "font-weight" : "normal",
+          "opacityForText" : 1
+        },
+        "styleDDWDDayPartDate" : {
+          "color" : "#ffffffFF",
+          "font-family" : "arial",
+          "font-size" : "20px",
+          "font-weight" : "normal",
+          "opacityForText" : 1
+        },
+        "styleDDWDDayPartTitle" : {
+          "color" : "#ffffffFF",
+          "font-family" : "arial",
+          "font-size" : "40px",
+          "font-weight" : "normal",
+          "opacityForText" : 1
+        },
+        "styleDDWTimerPart" : {
+          "background-color" : "#072130FF",
+          "height" : "80px",
+          "opacityForBG" : 1,
+          "width" : "400px"
+        },
+        "styleDDWTimerPartNumber" : {
+          "background-color" : "#504d4dB3",
+          "border-color" : "#232323FF",
+          "border-radius" : "5px",
+          "border-style" : "solid",
+          "border-width" : "1px",
+          "color" : "#ffffffFF",
+          "font-family" : "verdana",
+          "font-size" : "25px",
+          "font-weight" : "normal",
+          "opacityForBG" : 0.7,
+          "opacityForBorder" : 1,
+          "opacityForText" : 1,
+          "padding-bottom" : "0px",
+          "padding-left" : "8px",
+          "padding-right" : "8px",
+          "padding-top" : "0px",
+          "width" : "60px"
+        },
+        "styleDDWTimerPartNumberString" : {
+          "color" : "#ffffffFF",
+          "font-family" : "arial",
+          "font-size" : "20px",
+          "font-weight" : "normal",
+          "opacityForText" : 1
+        }
+      }
+    }
+  },
   "h" : {
     "d_day_widget" : {
       "animations" : {
-        "animationInterval" : "2",
-        "animationTransition" : "0.5",
+        "animationInterval" : 4,
+        "animationTransition" : 0.8,
         "animationType" : "slide"
       },
       "exams" : [ {
@@ -18,168 +114,84 @@
       } ],
       "formats" : {
         "formatDDay" : "D-9 (D-%d)",
-        "formatDate" : "2019.2.9 (yyyy.m.d)"
+        "formatDate" : "2019.2.9 (yyyy.m.d)",
+        "formatTimerString" : "D/H/M/S"
+      },
+      "onOffSwitches" : {
+        "useDDWDDayPart" : true,
+        "useDDWDDayPartDDay" : true,
+        "useDDWDDayPartDate" : true,
+        "useDDWDDayPartTitle" : true,
+        "useDDWTimerPart" : true,
+        "useDDWTimerPartNumber" : true,
+        "useDDWTimerPartNumberString" : true
       },
       "styles" : {
+        "styleDDW" : {
+          "border-color" : "#9f9f9fFF",
+          "border-radius" : "10px",
+          "border-style" : "groove",
+          "border-width" : "4px",
+          "opacityForBorder" : 1
+        },
+        "styleDDWDDayPart" : {
+          "background-color" : "#232323FF",
+          "height" : "130px",
+          "opacityForBG" : 1,
+          "width" : "400px"
+        },
         "styleDDWDDayPartDDay" : {
-          "background-color" : "#232323",
-          "color" : "#0080c0",
+          "color" : "#0080c0FF",
           "font-family" : "arial",
-          "font-size" : "35"
+          "font-size" : "40px",
+          "font-weight" : "normal",
+          "opacityForText" : 1
         },
         "styleDDWDDayPartDate" : {
-          "background-color" : "#232323",
-          "color" : "#ffffff",
+          "color" : "#ffffffFF",
+          "font-family" : "arial",
+          "font-size" : "20px",
+          "font-weight" : "normal",
+          "opacityForText" : 1
+        },
+        "styleDDWDDayPartTitle" : {
+          "color" : "#ffffffFF",
+          "font-family" : "arial",
+          "font-size" : "40px",
+          "font-weight" : "normal",
+          "opacityForText" : 1
+        },
+        "styleDDWTimerPart" : {
+          "background-color" : "#072130FF",
+          "height" : "80px",
+          "opacityForBG" : 1,
+          "width" : "400px"
+        },
+        "styleDDWTimerPartNumber" : {
+          "background-color" : "#504d4dB3",
+          "border-color" : "#232323FF",
+          "border-radius" : "5px",
+          "border-style" : "solid",
+          "border-width" : "1px",
+          "color" : "#ffffffFF",
           "font-family" : "verdana",
-          "font-size" : "20"
+          "font-size" : "25px",
+          "font-weight" : "normal",
+          "opacityForBG" : 0.7,
+          "opacityForBorder" : 1,
+          "opacityForText" : 1,
+          "padding-bottom" : "0px",
+          "padding-left" : "8px",
+          "padding-right" : "8px",
+          "padding-top" : "0px",
+          "width" : "60px"
         },
-        "styleDDWDDayPartTitle" : {
-          "background-color" : "#232323",
-          "color" : "#ffffff",
+        "styleDDWTimerPartNumberString" : {
+          "color" : "#ffffffFF",
           "font-family" : "arial",
-          "font-size" : "40"
-        }
-      }
-    }
-  },
-  "q" : {
-    "d_day_widget" : {
-      "animations" : {
-        "animationInterval" : "2",
-        "animationTransition" : "0.5",
-        "animationType" : "slide"
-      },
-      "exams" : [ {
-        "examDate" : "2019-04-06",
-        "examTitle" : "국가직 9급 필기"
-      }, {
-        "examDate" : "2019-06-22",
-        "examTitle" : "군무원"
-      }, {
-        "examDate" : "2019-03-16",
-        "examTitle" : "테스트1"
-      }, {
-        "examDate" : "2015-12-01",
-        "examTitle" : "테스트2"
-      } ],
-      "formats" : {
-        "formatDDay" : "D-9 (D-%d)",
-        "formatDate" : "2019.2.9 (yyyy.m.d)"
-      },
-      "styles" : {
-        "styleDDWDDayPartDDay" : {
-          "background-color" : "#454545",
-          "color" : "#ff4a4a",
-          "font-family" : "arial",
-          "font-size" : "35"
-        },
-        "styleDDWDDayPartDate" : {
-          "background-color" : "#454545",
-          "color" : "#ffffff",
-          "font-family" : "verdana",
-          "font-size" : "20"
-        },
-        "styleDDWDDayPartTitle" : {
-          "background-color" : "#454545",
-          "color" : "#ffffff",
-          "font-family" : "arial",
-          "font-size" : "40"
-        }
-      }
-    }
-  },
-  "t1" : {
-    "d_day_widget" : {
-      "animations" : {
-        "animationInterval" : 3.5,
-        "animationTransition" : 0.8,
-        "animationType" : "slide"
-      },
-      "exams" : [ {
-        "examDate" : "2019-03-14",
-        "examTitle" : "e1",
-        "id" : 0
-      }, {
-        "examDate" : "2019-03-15",
-        "examTitle" : "e2",
-        "id" : 1
-      }, {
-        "examDate" : "2019-03-16",
-        "examTitle" : "e3",
-        "id" : 2
-      }, {
-        "examDate" : "2019-03-17",
-        "examTitle" : "e4",
-        "id" : 3
-      } ],
-      "formats" : {
-        "formatDDay" : "D-9 (D-%d)",
-        "formatDate" : "2019.2.9 (yyyy.m.d)"
-      },
-      "styles" : {
-        "styleDDWDDayPartDDay" : {
-          "background-color" : "#454545",
-          "color" : "#ff4a4a",
-          "font-family" : "arial",
-          "font-size" : "35"
-        },
-        "styleDDWDDayPartDate" : {
-          "background-color" : "#454545",
-          "color" : "#ffffff",
-          "font-family" : "arial",
-          "font-size" : "20"
-        },
-        "styleDDWDDayPartTitle" : {
-          "background-color" : "#454545",
-          "color" : "#ffffff",
-          "font-family" : "arial",
-          "font-size" : "40"
-        }
-      }
-    }
-  },
-  "test" : {
-    "d_day_widget" : {
-      "animations" : {
-        "animationInterval" : "3.7",
-        "animationTransition" : "1",
-        "animationType" : "none"
-      },
-      "exams" : [ {
-        "examDate" : "2019-03-15",
-        "examTitle" : "e2"
-      }, {
-        "examDate" : "2020-05-15",
-        "examTitle" : "e1"
-      }, {
-        "examDate" : "2019-03-15",
-        "examTitle" : "e3"
-      }, {
-        "examDate" : "2019-03-15",
-        "examTitle" : "e4"
-      } ],
-      "formats" : {
-        "formatDDay" : "D-day 9 (D-day %d)",
-        "formatDate" : "2019.2.9 (yyyy.m.d)"
-      },
-      "styles" : {
-        "styleDDWDDayPartDDay" : {
-          "background-color" : "#454545",
-          "color" : "#ff4a4a",
-          "font-family" : "arial",
-          "font-size" : "39"
-        },
-        "styleDDWDDayPartDate" : {
-          "background-color" : "#454545",
-          "color" : "#ffffff",
-          "font-family" : "arial",
-          "font-size" : "23"
-        },
-        "styleDDWDDayPartTitle" : {
-          "background-color" : "#ff0080",
-          "color" : "#ffffff",
-          "font-family" : "georgia",
-          "font-size" : "49"
+          "font-size" : "20px",
+          "font-weight" : "normal",
+          "opacityForText" : 1
         }
       }
     }

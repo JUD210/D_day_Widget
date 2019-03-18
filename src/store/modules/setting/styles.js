@@ -125,10 +125,20 @@ export const actions = {
     state[${target}][${attr}] = ${value}`)
   },
 
-  resetStyle({ commit }, styles) {
+  resetStyles({ commit }, styles) {
     commit("RESET_STYLE", styles)
 
-    // @T add clg (mutation to action!)
+    console.log(`styles/RESET_STYLE
+    state.styleDDW = ${styles.styleDDW}
+    state.styleDDWDDayPart = ${styles.styleDDWDDayPart}
+    state.styleDDWDDayPartTitle = ${styles.styleDDWDDayPartTitle}
+    state.styleDDWDDayPartDDay = ${styles.styleDDWDDayPartDDay}
+    state.styleDDWDDayPartDate = ${styles.styleDDWDDayPartDate}
+    state.styleDDWTimerPart = ${styles.styleDDWTimerPart}
+    state.styleDDWTimerPartNumber = ${styles.styleDDWTimerPartNumber}
+    state.styleDDWTimerPartNumberString = ${
+      styles.styleDDWTimerPartNumberString
+    }`)
   },
 }
 

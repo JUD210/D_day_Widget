@@ -59,7 +59,7 @@ export const actions = {
     state[${attr}] = ${value}`)
   },
 
-  resetFormat({ commit }, { formatDDay, formatDate, formatTimerString }) {
+  resetFormats({ commit }, { formatDDay, formatDate, formatTimerString }) {
     commit("RESET_FORMAT", { formatDDay, formatDate, formatTimerString })
 
     console.log(`formats/RESET_FORMAT
