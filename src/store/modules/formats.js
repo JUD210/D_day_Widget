@@ -1,17 +1,7 @@
 export const namespaced = true
 
 export const state = {
-  formatDDays: [
-    "D-9 (D-%d)",
-    "D 9 (D %d)",
-    "D-day 9 (D-day %d)",
-    "D day 9 (D day %d)",
-
-    "D-09 (D-%dd)",
-    "D 09 (D %dd)",
-    "D-day 09 (D-day %dd)",
-    "D day 09 (D day %dd)",
-  ],
+  formatDDays: ["D-9 (D-%d)", "D-09 (D-%dd)"],
   formatDates: [
     "2019.2.9 (yyyy.m.d)",
     "2019-2-9 (yyyy-m-d)",

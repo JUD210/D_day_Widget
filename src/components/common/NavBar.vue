@@ -6,8 +6,7 @@
       <router-link :to="{ name: 'd-day-widget-generator' }"
         >D-day 위젯</router-link
       >
-      <a onclick="alert('제작중입니다.')">(제작중) 타이머</a>
-      <a onclick="alert('제작중입니다.')">(제작중) 자막</a>
+      <a onclick="alert('제작중입니다.')">(제작중) 뽀모도로 타이머</a>
     </nav>
   </div>
 </template>

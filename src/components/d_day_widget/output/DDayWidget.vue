@@ -77,6 +77,8 @@ export default {
     return {
       indexSelector: 0,
 
+      timeDistance: 0,
+
       day: "",
       hour: "",
       min: "",
@@ -117,25 +119,30 @@ export default {
     formattedDDay() {
       // @T add: Custom Formatting (%d %dd %D %DD)
       // : CustomFormatInput.vue
-
       let fmDD = this.formatDDay
-      fmDD = fmDD.substring(fmDD.indexOf("(") + 1, fmDD.indexOf(")"))
+      fmDD = fmDD
+        .substring(fmDD.indexOf("(") + 1, fmDD.indexOf(")"))
+        .replace("-", "")
 
       // this.day is 'int' from timeUpdater
-      let d = this.day + 1
+      let d = 0
+      this.timeDistance >= 0 ? (d = this.day + 1) : (d = this.day)
       if (d < 10) {
         d = `0${d}`
       }
 
       try {
         if (/%dd/i.test(fmDD)) {
-          fmDD = fmDD.replace(/%dd/i, d)
+          this.timeDistance >= 0
+            ? (fmDD = fmDD.replace(/%dd/i, `-${d}`))
+            : (fmDD = fmDD.replace(/%dd/i, `+${d}`))
         } else if (/%d/i.test(fmDD)) {
           if (d < 10) {
             d = d.slice(1)
           }
-
-          fmDD = fmDD.replace(/%d/i, d)
+          this.timeDistance >= 0
+            ? (fmDD = fmDD.replace(/%d/i, `-${d}`))
+            : (fmDD = fmDD.replace(/%d/i, `+${d}`))
         } else {
           throw "포맷이 잘못되었습니다. %d 또는 %dd를 사용해주세요!"
         }
@@ -218,14 +225,21 @@ export default {
 
       let now = new Date().getTime() + KOREAN_TIME
 
-      let distance = new Date(this.exams[this.indexSelector].examDate) - now
+      let timeDistance = new Date(this.exams[this.indexSelector].examDate) - now
+      this.timeDistance = timeDistance
 
-      this.day = Math.floor(distance / (1000 * 60 * 60 * 24))
-      this.hour = Math.floor(
-        (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
+      let day = Math.floor(timeDistance / (1000 * 60 * 60 * 24))
+      let hour = Math.floor(
+        (timeDistance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
       )
-      this.min = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))
-      this.sec = Math.floor((distance % (1000 * 60)) / 1000)
+
+      let min = Math.floor((timeDistance % (1000 * 60 * 60)) / (1000 * 60))
+      let sec = Math.floor((timeDistance % (1000 * 60)) / 1000)
+
+      day >= 0 ? (this.day = day) : (this.day = -day - 1)
+      hour >= 0 ? (this.hour = hour) : (this.hour = -hour - 1)
+      min >= 0 ? (this.min = min) : (this.min = -min - 1)
+      sec >= 0 ? (this.sec = sec) : (this.sec = -sec - 1)
     },
   },
 

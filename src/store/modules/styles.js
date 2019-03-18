@@ -31,7 +31,7 @@ export const state = {
     opacityForBG: 1.0,
 
     width: "400px",
-    height: "100px",
+    height: "130px",
     // @T add: Import provided BG Image
     // @T add: Custom Image
   },
@@ -65,7 +65,7 @@ export const state = {
     opacityForBG: 1.0,
 
     width: "400px",
-    height: "100px",
+    height: "80px",
   },
 
   styleDDWTimerPartNumber: {
