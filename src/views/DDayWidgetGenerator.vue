@@ -4,7 +4,7 @@
       <NavBar></NavBar>
     </div>
 
-    <div class="d_day_widget intro">
+    <div class="d_day_widget d_day_widget_intro intro">
       <Description></Description>
       <UniqueIdLoader></UniqueIdLoader>
     </div>
@@ -126,7 +126,9 @@
         보이기
       </button>
 
-      <DDayWidget class="widget" v-show="showPreview"></DDayWidget>
+      <div v-show="showPreview">
+        <DDayWidget class="widget"></DDayWidget>
+      </div>
     </div>
     <!-- </transition> -->
   </div>
@@ -176,7 +178,7 @@ export default {
     ]),
 
     url() {
-      return `http://www.gongbanghelper.com/${this.uniqueId}`
+      return `https://jud210.github.io/GongBangHelper/${this.uniqueId}/ddw`
     },
   },
 

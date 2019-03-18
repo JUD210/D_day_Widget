@@ -1,96 +1,102 @@
 <template>
   <transition :name="animationType">
-    <div v-show="showWidget" class="dDayWidget" :style="styleDDW">
-      <div v-if="useDDWDDayPart" class="dDayPart" :style="styleDDWDDayPart">
-        <div
-          v-if="useDDWDDayPartTitle"
-          class="title"
-          :style="styleDDWDDayPartTitle"
-        >
-          <span>{{ examTitleComputed }}</span>
-        </div>
-
-        <div
-          v-if="useDDWDDayPartDDay"
-          class="dday"
-          :style="styleDDWDDayPartDDay"
-        >
-          <span>{{ formattedDDay }}</span>
-        </div>
-
-        <div
-          v-if="useDDWDDayPartDate"
-          class="date"
-          :style="styleDDWDDayPartDate"
-        >
-          <span>{{ formattedDate }}</span>
-        </div>
-      </div>
-
-      <!-- ------------------------------- -->
-
-      <div v-if="useDDWTimerPart" class="timerPart" :style="styleDDWTimerPart">
-        <div class="day">
-          <span
-            v-if="useDDWTimerPartNumber"
-            class="number"
-            :style="styleDDWTimerPartNumber"
-            >{{ day }}</span
-          >
+    <div v-show="showWidget" class="dDayWidget">
+      <div :style="styleDDW">
+        <div v-if="useDDWDDayPart" class="dDayPart" :style="styleDDWDDayPart">
           <div
-            v-if="useDDWTimerPartNumberString"
-            class="number_str"
-            :style="styleDDWTimerPartNumberString"
+            v-if="useDDWDDayPartTitle"
+            class="title"
+            :style="styleDDWDDayPartTitle"
           >
-            {{ formatTimerString.split("/")[0] }}
+            <span>{{ examTitleComputed }}</span>
+          </div>
+
+          <div
+            v-if="useDDWDDayPartDDay"
+            class="dday"
+            :style="styleDDWDDayPartDDay"
+          >
+            <span>{{ formattedDDay }}</span>
+          </div>
+
+          <div
+            v-if="useDDWDDayPartDate"
+            class="date"
+            :style="styleDDWDDayPartDate"
+          >
+            <span>{{ formattedDate }}</span>
           </div>
         </div>
 
-        <div class="hour">
-          <span
-            v-if="useDDWTimerPartNumber"
-            class="number"
-            :style="styleDDWTimerPartNumber"
-            >{{ hour }}</span
-          >
-          <div
-            v-if="useDDWTimerPartNumberString"
-            class="number_str"
-            :style="styleDDWTimerPartNumberString"
-          >
-            {{ formatTimerString.split("/")[1] }}
-          </div>
-        </div>
+        <!-- ------------------------------- -->
 
-        <div class="min">
-          <span
-            v-if="useDDWTimerPartNumber"
-            class="number"
-            :style="styleDDWTimerPartNumber"
-            >{{ min }}</span
-          >
-          <div
-            v-if="useDDWTimerPartNumberString"
-            class="number_str"
-            :style="styleDDWTimerPartNumberString"
-          >
-            {{ formatTimerString.split("/")[2] }}
+        <div
+          v-if="useDDWTimerPart"
+          class="timerPart"
+          :style="styleDDWTimerPart"
+        >
+          <div class="day">
+            <span
+              v-if="useDDWTimerPartNumber"
+              class="number"
+              :style="styleDDWTimerPartNumber"
+              >{{ day }}</span
+            >
+            <div
+              v-if="useDDWTimerPartNumberString"
+              class="number_str"
+              :style="styleDDWTimerPartNumberString"
+            >
+              {{ formatTimerString.split("/")[0] }}
+            </div>
           </div>
-        </div>
 
-        <div class="sec">
-          <span
-            v-if="useDDWTimerPartNumber"
-            class="number"
-            :style="styleDDWTimerPartNumber"
-            >{{ sec }}</span
-          >
-          <div
-            v-if="useDDWTimerPartNumberString"
-            class="number_str"
-            :style="styleDDWTimerPartNumberString"
-          >
-            {{ formatTimerString.split("/")[3] }}
+          <div class="hour">
+            <span
+              v-if="useDDWTimerPartNumber"
+              class="number"
+              :style="styleDDWTimerPartNumber"
+              >{{ hour }}</span
+            >
+            <div
+              v-if="useDDWTimerPartNumberString"
+              class="number_str"
+              :style="styleDDWTimerPartNumberString"
+            >
+              {{ formatTimerString.split("/")[1] }}
+            </div>
+          </div>
+
+          <div class="min">
+            <span
+              v-if="useDDWTimerPartNumber"
+              class="number"
+              :style="styleDDWTimerPartNumber"
+              >{{ min }}</span
+            >
+            <div
+              v-if="useDDWTimerPartNumberString"
+              class="number_str"
+              :style="styleDDWTimerPartNumberString"
+            >
+              {{ formatTimerString.split("/")[2] }}
+            </div>
+          </div>
+
+          <div class="sec">
+            <span
+              v-if="useDDWTimerPartNumber"
+              class="number"
+              :style="styleDDWTimerPartNumber"
+              >{{ sec }}</span
+            >
+            <div
+              v-if="useDDWTimerPartNumberString"
+              class="number_str"
+              :style="styleDDWTimerPartNumberString"
+            >
+              {{ formatTimerString.split("/")[3] }}
+            </div>
           </div>
         </div>
       </div>
@@ -172,6 +178,7 @@ export default {
         .replace("-", "")
 
       let d = 0
+
       this.timeDistance >= 0 ? (d = this.day + 1) : (d = this.day)
       if (d < 10) {
         d = `0${d}`
@@ -181,7 +188,7 @@ export default {
         if (/%dd/i.test(fmDD)) {
           this.timeDistance > 0
             ? (fmDD = fmDD.replace(/%dd/i, `-${d}`))
-            : (fmDD = fmDD.replace(/%dd/i, `++${d}`))
+            : (fmDD = fmDD.replace(/%dd/i, `+${d}`))
         } else if (/%d/i.test(fmDD)) {
           if (d < 10) {
             d = d.slice(1)
@@ -294,12 +301,17 @@ export default {
 
     setInterval(() => {
       if (this.isIntervalChanged) {
+        console.log("IN setInterval")
+        console.log(this.animationInterval)
+
         // I don't know why but, vue imports "timers" to use setInterval().
         // The imported setInterval() returns a Object not a integer
         // {"_id": integer}
         window.clearInterval(activateAnimation["_id"])
 
         activateAnimation = setInterval(() => {
+          console.log("IN activateAnimation")
+          console.log(this.animationInterval)
           this.indexSelectorUpdater()
 
           // @T Need to change interval to some meaningful input value
@@ -328,42 +340,10 @@ export default {
     setInterval(() => {
       this.timeUpdater()
     }, 1)
+
+    setTimeout(() => {
+      this.$store.dispatch("animations/updateIsIntervalChanged", true)
+    }, 1000)
   },
 }
 </script>
-
-<style scoped>
-/* //@T Need to Implement more efficient animations! */
-
-/* .fade-leave-active, */
-.fade-enter-active {
-  transition: opacity 1s;
-}
-.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
-  opacity: 0;
-}
-
-/* .slide-leave-active, */
-.slide-enter-active {
-  transition: 0.6s;
-}
-.slide-enter {
-  transform: translate(50%, 0);
-}
-/* .slide-leave-to { */
-/* transform: translate(-100%, 0); */
-/* } */
-
-/* .slide-fade-leave-active { */
-/* transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1); */
-/* } */
-.slide-fade-enter-active {
-  transition: all 0.8s ease;
-}
-
-/* .slide-fade-leave-to, */
-.slide-fade-enter {
-  transform: translateX(50%);
-  opacity: 0;
-}
-</style>

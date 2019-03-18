@@ -40,9 +40,9 @@ export default new Vuex.Store({
         .set(getters.getWidgetData)
         .then(() => {
           alert(
-            `저장 완료! 오른쪽 URL을 복사해서 사용하시면 됩니다. : http://www.gongbanghelper.com/${
+            `저장 완료! 오른쪽 URL을 복사해서 사용하시면 됩니다. : https://jud210.github.io/GongBangHelper/${
               state.uniqueId.uniqueId
-            }`,
+            }/ddw`,
           )
           console.log(`store/saveWidgetData [OK]
           ${JSON.stringify(getters.getWidgetData)}`)

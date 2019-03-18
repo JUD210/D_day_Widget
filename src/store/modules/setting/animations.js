@@ -1,14 +1,14 @@
 export const namespaced = true
 
 export const state = {
-  animationTypes: ["fade", "slide-fade", "slide", "none"],
+  animationTypes: ["none", "fade", "slide-fade", "slide"],
   isIntervalChanged: true,
 
   /*--------------------------------------------------------*/
 
-  animationType: "fade",
+  animationType: "none",
   animationDuration: 0.8,
-  animationInterval: 3,
+  animationInterval: 5,
 }
 
 export const mutations = {
