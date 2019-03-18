@@ -258,11 +258,11 @@ export default {
 
         this.$store.dispatch("animations/updateIsIntervalChanged", false)
       }
-    }, 100)
+    }, 1)
 
     setInterval(() => {
       this.timeUpdater()
-    }, 1000)
+    }, 1)
   },
 }
 </script>
