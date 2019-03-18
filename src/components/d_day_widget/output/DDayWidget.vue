@@ -75,8 +75,6 @@ export default {
 
   data() {
     return {
-      indexSelector: 0,
-
       timeDistance: 0,
 
       day: "",
@@ -88,7 +86,7 @@ export default {
 
   computed: {
     ...mapState("uniqueId", ["uniqueId"]),
-    ...mapState("exams", ["exams"]),
+    ...mapState("exams", ["exams", "indexSelector"]),
     ...mapState("styles", [
       "styleDDW",
       "styleDDWDDayPart",
@@ -214,9 +212,9 @@ export default {
   methods: {
     indexSelectorUpdater() {
       if (this.indexSelector + 1 < this.exams.length) {
-        this.indexSelector += 1
+        this.$store.dispatch("exams/updateIndexSelector", "next")
       } else {
-        this.indexSelector = 0
+        this.$store.dispatch("exams/updateIndexSelector", "reset")
       }
     },
 

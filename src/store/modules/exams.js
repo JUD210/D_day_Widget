@@ -9,7 +9,8 @@ if (d.getUTCMonth() + 1 < 10) {
 }
 
 export const state = {
-  // @T indexSelector
+  indexSelector: 0,
+
   exams: [
     {
       examTitle: null,
@@ -26,11 +27,21 @@ export const mutations = {
     state.exams[index][attr] = value
   },
   REMOVE_EXAM(state, index) {
+    state.indexSelector = 0
     state.exams.splice(index, 1)
   },
 
   RESET_EXAMS(state, exams) {
+    state.indexSelector = 0
     state.exams = exams
+  },
+
+  UPDATE_INDEXSELECTOR(state, cmd) {
+    if (cmd == "next") {
+      state.indexSelector += 1
+    } else if (cmd == "reset") {
+      state.indexSelector = 0
+    }
   },
 }
 
@@ -59,6 +70,13 @@ export const actions = {
 
     console.log(`exams/RESET_EXAMS
     state.exams = ${JSON.stringify(exams)}`)
+  },
+
+  updateIndexSelector({ commit }, cmd) {
+    commit("UPDATE_INDEXSELECTOR"), cmd
+
+    console.log(`exams/UPDATE_INDEXSELECTOR
+    ${cmd} state.indexSelector`)
   },
 }
 
