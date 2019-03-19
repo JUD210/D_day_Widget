@@ -2,14 +2,12 @@
   <div class="how_to_use">
     <h2>사용법</h2>
 
-    <p>
-      1. Exams Title/Date 값 입력<br />
-      2. Preset 선택<br />
-      3. Font & Background, Animation 옵션 설정<br />
-      4. Create Widget 에서 '생성' 버튼을 눌러서 위젯 URL 생성<br />
-      5. 해당 URL 복사하여 ManyCam / OBS / Xsplit 등의 프로그램에 브라우저 소스
-      붙여넣기
-    </p>
+    <ol>
+      <li>시험 정보 -> 스타일 -> 글자 형식 -> 애니메이션 설정</li>
+      <li>Save (URL이 자동으로 복사 됩니다.)</li>
+      <li>ManyCam / OBS / Xsplit 등의 프로그램 실행</li>
+      <li>웹/브라우저 소스의 URL부분에 복사된 URL 붙여넣기</li>
+    </ol>
   </div>
 </template>
 

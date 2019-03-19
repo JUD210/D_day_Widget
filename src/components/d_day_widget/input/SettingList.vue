@@ -1,9 +1,9 @@
 <template>
-  <div>
+  <div class="setting_list">
     <ExamsSetting></ExamsSetting>
     <!-- // @T RIGHT NOW! -->
-    <div style="font-size: 30px;color:red;">TODO! ON/OFF Setting</div>
-    <div style="font-size: 30px;color:red;">TODO! Presets Setting</div>
+    <!-- <div style="font-size: 30px;color:red;">TODO! ON/OFF Setting</div> -->
+    <!-- <div style="font-size: 30px;color:red;">TODO! Presets Setting</div> -->
     <StylesSetting></StylesSetting>
     <FormatsSetting></FormatsSetting>
     <AnimationsSetting></AnimationsSetting>

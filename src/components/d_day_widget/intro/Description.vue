@@ -1,8 +1,11 @@
 <template>
   <div>
     <AboutDDayWidget></AboutDDayWidget>
+    <br />
     <MainFeatures></MainFeatures>
+    <br />
     <HowToUse></HowToUse>
+    <br />
   </div>
 </template>
 

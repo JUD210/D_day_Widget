@@ -1,3 +1,10 @@
+
+.baseToggleBox {
+  width: 100%;
+  border-style: groove;
+  border-width: 4px;
+}
+
 .folder {
   display: flex;
   justify-content: center;

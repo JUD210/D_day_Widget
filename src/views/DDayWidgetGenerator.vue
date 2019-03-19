@@ -6,27 +6,22 @@
 
     <div class="d_day_widget d_day_widget_intro intro">
       <Description></Description>
+
+      <!-- // @T Seperate UniqueIdLoader -->
+      <br />
+      <br />
       <UniqueIdLoader></UniqueIdLoader>
     </div>
 
-    <div class="d_day_widget input">
+    <div class="d_day_widget d_day_widget_input input">
       <SettingList></SettingList>
-      <button @click="saveWidgetData()">Save</button>
 
-      <button @click="showResult()">Show</button>
+      <button class="saveButton" @click="saveAndCopyUrl()">Save</button>
+
+      <!-- <button @click="showResult()">Show</button> -->
     </div>
 
-    <input
-      type="text"
-      id="copy_url"
-      :value="url"
-      style="width: 100%;"
-      readonly
-    />
-
-    <button @click="copyText">
-      URL 주소값 복사하기
-    </button>
+    <input type="text" id="copy_url" :value="url" readonly />
 
     <div class="switchesContainer" v-if="showSwitches">
       <button class="hideButton" @click="showSwitches = !showSwitches">
@@ -183,17 +178,14 @@ export default {
   },
 
   methods: {
-    showResult() {
-      this.$router.push({
-        name: "d-day-widget-show",
-        params: { id: this.uniqueId },
-      })
+    saveAndCopyUrl() {
+      this.saveWidgetData()
+      this.copyText()
     },
     copyText() {
       var copyText = document.querySelector("#copy_url")
       copyText.select()
       document.execCommand("copy")
-      alert("Copied the text: " + copyText.value)
     },
 
     formattedUse(bool) {
@@ -208,6 +200,13 @@ export default {
       this.$store.dispatch("onOffSwitches/updateUse", { attr })
     },
     ...mapActions(["saveWidgetData"]),
+
+    // showResult() {
+    //   this.$router.push({
+    //     name: "d-day-widget-show",
+    //     params: { id: this.uniqueId },
+    //   })
+    // },
   },
 }
 </script>

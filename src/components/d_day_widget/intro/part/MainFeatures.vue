@@ -2,14 +2,21 @@
   <div class="main_feature">
     <h2>주요 기능</h2>
 
-    <p>
-      ㅇ갯수 제한 없는 D-day 설정<br />
-      ㅇD-day 및 설명글 폰트/배경 설정<br />
-      ㅇD-day 전환 애니메이션 설정
-    </p>
+    <ul>
+      <h4>D-day / 타이머 제공</h4>
+      <li>시험 제목 및 날짜</li>
+      <li>세세한 스타일</li>
+      <li>글자 형식</li>
+      <li>애니메이션</li>
+    </ul>
   </div>
 </template>
 
 <script>
 export default {}
 </script>
+
+<style scoped>
+h4 {
+}
+</style>

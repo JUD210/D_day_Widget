@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <router-view :key="$route.fullPath" />
+    <router-view class="pageRoutered" :key="$route.fullPath" />
 
     <!-- // @T add: Pomodoro Timer -->
     <!-- // @T add: Caption -->

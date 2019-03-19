@@ -1,6 +1,6 @@
 <template>
   <div class="baseToggleBox">
-    <div class="folder" @click="isOpen = !isOpen">
+    <div class="folder" @click="changeIsOpen()">
       <img
         class="folder_image"
         type="image"
@@ -30,6 +30,11 @@ export default {
     return {
       isOpen: true,
     }
+  },
+  methods: {
+    changeIsOpen() {
+      this.isOpen = !this.isOpen
+    },
   },
 }
 </script>

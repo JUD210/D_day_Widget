@@ -2,7 +2,18 @@ export const namespaced = true
 
 // @T apply commented styles
 export const state = {
-  fontFamilies: ["arial", "verdana", "georgia"],
+  fontFamilies: [
+    "Jeju Gothic",
+    "Hanna",
+    "Nanum Gothic",
+    "Nanum Gothic Coding",
+    "Nanum Myeongjo",
+    "Nanum Brush Script",
+    "Noto Sans KR",
+    "arial",
+    "verdana",
+    "georgia",
+  ],
   fontWeights: ["normal", "bold", "bolder", "lighter"],
   borderStyles: [
     "solid",
@@ -37,21 +48,21 @@ export const state = {
   },
 
   styleDDWDDayPartTitle: {
-    "font-family": "arial",
+    "font-family": "Jeju Gothic",
     "font-size": "40px",
     "font-weight": "normal",
     color: "#ffffffFF",
     opacityForText: 1.0,
   },
   styleDDWDDayPartDDay: {
-    "font-family": "arial",
+    "font-family": "Jeju Gothic",
     "font-size": "35px",
     "font-weight": "normal",
     color: "#ff4a4aFF",
     opacityForText: 1.0,
   },
   styleDDWDDayPartDate: {
-    "font-family": "arial",
+    "font-family": "Jeju Gothic",
     "font-size": "20px",
     "font-weight": "normal",
     color: "#ffffffFF",
@@ -69,7 +80,7 @@ export const state = {
   },
 
   styleDDWTimerPartNumber: {
-    "font-family": "arial",
+    "font-family": "Jeju Gothic",
     "font-size": "20px",
     "font-weight": "normal",
     color: "#ffffffFF",
@@ -92,7 +103,7 @@ export const state = {
     "padding-top": "0px",
   },
   styleDDWTimerPartNumberString: {
-    "font-family": "arial",
+    "font-family": "Jeju Gothic",
     "font-size": "20px",
     "font-weight": "normal",
     color: "#ffffffFF",

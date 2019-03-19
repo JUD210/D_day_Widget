@@ -39,11 +39,15 @@ export default new Vuex.Store({
         .ref(`${state.uniqueId.uniqueId}/d_day_widget`)
         .set(getters.getWidgetData)
         .then(() => {
-          alert(
-            `저장 완료! 오른쪽 URL을 복사해서 사용하시면 됩니다. : https://jud210.github.io/GongBangHelper/${
-              state.uniqueId.uniqueId
-            }/ddw`,
-          )
+          // @T 가로 세로 비율
+          // @T [ManyCam 위젯 크기 추천]  가로: 400px
+
+          alert(`URL복사 및 데이터 저장 완료!) 
+Ctrl+V 로 웹 소스 URL에 붙여넣으시면 됩니다 😃👍
+-------------------------------------
+[저장된 위젯 크기]  가로: ${getters.getVisualWidth}  |  세로: ${
+            getters.getVisualHeight
+          }`)
           console.log(`store/saveWidgetData [OK]
           ${JSON.stringify(getters.getWidgetData)}`)
         })
@@ -57,7 +61,7 @@ export default new Vuex.Store({
     loadWidgetData({ state, dispatch }) {
       if (!/^([a-z0-9]+)$/.test(state.uniqueId.uniqueId)) {
         alert(
-          "유효한 키값이 아닙니다! 키 값을 잘못 붙여넣었는지 확인해주세요. (띄어쓰기 등)",
+          "유효한 키 값이 아닙니다! 키 값을 잘못 붙여넣었는지 확인해주세요. (띄어쓰기 등)",
         )
         return "error"
       }
@@ -123,6 +127,37 @@ ${state.uniqueId.uniqueId}`)
           animationInterval: state.animations.animationInterval,
         },
       }
+    },
+    getVisualWidth: state => {
+      let arr = []
+      if (state.onOffSwitches.useDDWDDayPart) {
+        arr.push(
+          Number(state.styles.styleDDWDDayPart.width.split("px")[0]) +
+            Number(state.styles.styleDDW["border-width"].split("px")[0] * 2),
+        )
+      }
+
+      if (state.onOffSwitches.useDDWTimerPart) {
+        arr.push(
+          Number(state.styles.styleDDWTimerPart.width.split("px")[0]) +
+            Number(state.styles.styleDDW["border-width"].split("px")[0] * 2),
+        )
+      }
+
+      return `${Math.max(...arr)}px`
+    },
+
+    getVisualHeight: state => {
+      let sum = 0
+      if (state.onOffSwitches.useDDWDDayPart) {
+        sum += Number(state.styles.styleDDWDDayPart.height.split("px")[0])
+      }
+      if (state.onOffSwitches.useDDWTimerPart) {
+        sum += Number(state.styles.styleDDWTimerPart.height.split("px")[0])
+      }
+      sum += Number(state.styles.styleDDW["border-width"].split("px")[0] * 2)
+
+      return `${sum}px`
     },
   },
 })

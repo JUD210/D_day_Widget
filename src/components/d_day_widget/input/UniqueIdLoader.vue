@@ -1,8 +1,8 @@
 <template>
-  <div>
+  <div class="unique_id_loader">
     <h2>저장한 위젯 불러오기 (키 값)</h2>
-    <input type="text" :value="uniqueId" @change="updateUniqueId" />
     <button @click="createUniqueId">New</button>
+    <input type="text" :value="uniqueId" @change="updateUniqueId" />
     <button @click="loadWidgetData">Load</button>
     <!-- // @T add: Reset Button -->
     <!-- <button @click="">Reset</button> -->
