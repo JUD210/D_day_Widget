@@ -315,21 +315,25 @@ export default {
           this.indexSelectorUpdater()
 
           // @T Need to change interval to some meaningful input value
-          if (this.animationType == "fade") {
-            this.showWidget = false
-            setTimeout(() => {
-              this.showWidget = true
-            }, 50)
-          } else if (this.animationType == "slide") {
+          if (
+            [
+              "fade",
+              "fade-short",
+              "fade-long",
+              "fade-strong",
+              "fade-short-strong",
+              "fade-long-strong",
+            ].includes(this.animationType)
+          ) {
             this.showWidget = false
             setTimeout(() => {
               this.showWidget = true
             }, 100)
-          } else if (this.animationType == "slide-fade") {
+          } else if (["slide", "slide-fade"].includes(this.animationType)) {
             this.showWidget = false
             setTimeout(() => {
               this.showWidget = true
-            }, 50)
+            }, 100)
           }
         }, this.animationInterval * 1000)
 

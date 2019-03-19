@@ -4,15 +4,27 @@ export const namespaced = true
 export const state = {
   fontFamilies: [
     "Jeju Gothic",
+    "Jeju Hallasan",
+    "Jeju Myeongjo",
+
     "Hanna",
+
     "Nanum Gothic",
     "Nanum Gothic Coding",
-    "Nanum Myeongjo",
     "Nanum Brush Script",
+    "Nanum Pen Script",
+    "Nanum Myeongjo",
+
+    "KoPub Batang",
+
     "Noto Sans KR",
-    "arial",
-    "verdana",
-    "georgia",
+
+    "Arial",
+    "Helvetica",
+    "Helvetica Neue",
+    "sans-serif",
+    "Verdana",
+    "Georgia",
   ],
   fontWeights: ["normal", "bold", "bolder", "lighter"],
   borderStyles: [

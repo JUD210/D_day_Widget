@@ -1,12 +1,23 @@
 export const namespaced = true
 
 export const state = {
-  animationTypes: ["none", "fade", "slide-fade", "slide"],
+  animationTypes: [
+    "fade",
+    "fade-short",
+    "fade-long",
+    "fade-strong",
+    "fade-short-strong",
+    "fade-long-strong",
+    "slide-fade",
+    "slide",
+    "none",
+  ],
   isIntervalChanged: true,
 
   /*--------------------------------------------------------*/
 
-  animationType: "none",
+  animationType: "fade",
+  // @T NEED CONFIGURE!
   animationDuration: 0.8,
   animationInterval: 5,
 }
