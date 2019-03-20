@@ -47,13 +47,13 @@ export const state = {
     "border-style": "solid",
     "border-width": "4px",
     "border-radius": "5px",
+    width: "400px",
   },
 
   styleDDWDDayPart: {
     "background-color": "#232323FF",
     opacityForBG: 1.0,
 
-    width: "400px",
     height: "130px",
     // @T add: Import provided BG Image
     // @T add: Custom Image
@@ -87,7 +87,6 @@ export const state = {
     "background-color": "#051824FF",
     opacityForBG: 1.0,
 
-    width: "400px",
     height: "80px",
   },
 
@@ -108,6 +107,7 @@ export const state = {
     "border-radius": "5px",
 
     width: "55px",
+    height: "30px",
 
     "padding-left": "5px",
     "padding-right": "5px",

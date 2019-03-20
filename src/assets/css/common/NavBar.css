@@ -29,6 +29,10 @@
 }
 
 .navBar > .links > a:hover {
-  background: #ddd;
+  background: #7c7c7c;
+}
+
+.navBar > .links > .activated {
+  background: #dddddd;
   color: black;
 }

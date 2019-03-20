@@ -160,7 +160,10 @@
       </div>
     </div>
 
-    <div v-if="isApplicable('width')" class="inputLinesContainer">
+    <div
+      v-if="isApplicable('width') || isApplicable('height')"
+      class="inputLinesContainer"
+    >
       <div v-if="isApplicable('width')" class="inputLine">
         <label>가로 길이 (px)</label>
         <input
@@ -188,7 +191,10 @@
       </div>
     </div>
 
-    <div v-if="isApplicable('padding-left')" class="inputLinesContainer">
+    <div
+      v-if="isApplicable('padding-left') || isApplicable('padding-bottom')"
+      class="inputLinesContainer"
+    >
       <div v-if="isApplicable('padding-left')" class="inputLine">
         <label>패딩 왼쪽 (px)</label>
         <input
@@ -262,6 +268,11 @@ export default {
 
   methods: {
     isApplicable(attr) {
+      // if (attr === "height")
+      // console.log(
+      // `${attr} in ${this.styleFor} : ${attr in
+      // this.$store.state.styles[this.styleFor]}`,
+      // )
       return attr in this.$store.state.styles[this.styleFor]
     },
 
