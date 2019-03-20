@@ -57,8 +57,11 @@
 
 .preview {
   position: fixed;
-  bottom: 50px;
-  right: 50px;
+  bottom: 10px;
+  right: 10px;
+
+  /* position: sticky; */
+  /* bottom: 0; */
 }
 
 /*--------------------------------------------------------*/
@@ -76,6 +79,7 @@
   border-style: groove;
   border-color: rgb(28, 43, 20);
   margin: 30px;
+  margin-bottom: 300px;
 }
 
 #copy_url {
@@ -94,7 +98,7 @@
 .switchesContainer {
   position: fixed;
   bottom: 50%;
-  right: 5%;
+  right: 10px;
   border: 5px;
   border-style: groove;
   border-color: rgb(28, 43, 20);

@@ -35,7 +35,7 @@
       <li>
         <a
           href="https://www.youtube.com/channel/UCYPWzViA-uq9sBop7ssYaEg?sub_confirmation=1"
-          >[📺] YouTube : 공부 방송</a
+          >[📺] YouTube : 매일 08:00~22:30 개발/공부 방송</a
         >
       </li>
       <li>[📠] judicious210@gmail.com</li>

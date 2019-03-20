@@ -43,7 +43,7 @@ export const state = {
 
   styleDDW: {
     "border-color": "#00000099",
-    opacityForBorder: 1.0,
+    opacityForBorder: 0.6,
     "border-style": "double",
     "border-width": "5px",
     "border-radius": "5px",
