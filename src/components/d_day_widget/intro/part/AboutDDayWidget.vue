@@ -15,7 +15,7 @@
 
     <ul>
       <li>
-        <a href="https://github.com/JUD210/D_day_Widget"
+        <a href="https://github.com/JUD210/gongbang-helper"
           >[👨‍💻] GitHub : 소스 파일</a
         >
       </li>

@@ -6,13 +6,14 @@
   width: 100%;
 }
 
-.navBar > .title {
+.navBar>.title {
   color: white;
   text-align: center;
   line-height: 10px;
   font-size: 40px;
 }
-.navBar > .links {
+
+.navBar>.links {
   border-top-style: solid;
   border-top-color: rgb(221, 221, 221);
   border-top-width: 1px;
@@ -20,7 +21,7 @@
   text-align: center;
 }
 
-.navBar > .links > a {
+.navBar>.links>a {
   display: inline-block;
   color: #f2f2f2;
   padding: 14px 16px;
@@ -28,11 +29,11 @@
   font-size: 20px;
 }
 
-.navBar > .links > a:hover {
+.navBar>.links>a:hover {
   background: #7c7c7c;
 }
 
-.navBar > .links > .activated {
+.navBar>.links>.activated {
   background: #dddddd;
   color: black;
 }

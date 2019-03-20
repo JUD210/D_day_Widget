@@ -15,11 +15,11 @@ export const state = {
 
   exams: [
     {
-      examTitle: 1,
+      examTitle: null,
       examDate: date,
     },
     {
-      examTitle: 2,
+      examTitle: null,
       examDate: "2020" + date.slice(4),
     },
   ],
