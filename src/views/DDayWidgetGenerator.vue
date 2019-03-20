@@ -173,7 +173,7 @@ export default {
     ]),
 
     url() {
-      return `https://jud210.github.io/GongBangHelper/${this.uniqueId}/ddw`
+      return `https://jud210.github.io/gongbang-helper/#/ddw/${this.uniqueId}`
     },
   },
 
