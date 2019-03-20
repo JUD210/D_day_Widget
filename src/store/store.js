@@ -46,17 +46,17 @@ export default new Vuex.Store({
           // @T 가로 세로 비율
           // @T [ManyCam 위젯 크기 추천]  가로: 400px
 
-          alert(`URL복사 및 데이터 저장 완료!) 
-Ctrl+V 로 웹 소스 URL에 붙여넣으시면 됩니다 😃👍
+          alert(`URL복사 및 데이터 저장 완료!
+Ctrl+V 로 웹 소스 URL에 붙여넣으시면 됩니다.
+😃👍
 -------------------------------------
-[저장된 위젯 크기]  가로: ${getters.getVisualWidth}  |  세로: ${
-            getters.getVisualHeight
-          }`)
+[저장된 위젯 크기]
+가로: ${getters.getVisualWidth}  |  세로: ${getters.getVisualHeight}`)
           // console.log(`store/saveWidgetData [OK]
           // ${JSON.stringify(getters.getWidgetData)}`)
         })
         .catch(error => {
-          alert(`오류 발생! 제 연락처로 문의해주세요. ${error}`)
+          alert(`오류 발생! 사진을 찍어서 연락처로 문의해주세요. ${error}`)
 
           // console.log(`store/saveWidgetData [ERROR]
           // ${error}`)
@@ -85,7 +85,7 @@ Ctrl+V 로 웹 소스 URL에 붙여넣으시면 됩니다 😃👍
           // console.log(`store/loadWidgetData [OK]
           // ${JSON.stringify(newData)}`)
         })
-        .catch(error => {
+        .catch(() => {
           alert(`입력된 키 값과 일치하는 데이터가 없습니다!
 키 값을 잘못 붙여넣었는지 확인해주세요. (띄어쓰기 등)
 ${state.uniqueId.uniqueId}`)

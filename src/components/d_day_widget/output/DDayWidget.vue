@@ -312,7 +312,7 @@ export default {
         activateAnimation = setInterval(() => {
           // console.log("IN activateAnimation")
           // console.log(this.animationInterval)
-          
+
           this.indexSelectorUpdater()
 
           // @T Need to change interval to some meaningful input value

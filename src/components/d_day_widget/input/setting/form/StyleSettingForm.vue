@@ -268,76 +268,93 @@ export default {
     updateStyle(event, attr) {
       let target = this.styleFor
       let value = event.target.value
+      let maxValue = event.target.max
+      let minValue = event.target.min
 
-      if (
-        [
-          "font-size",
-          "border-width",
-          "border-radius",
-          "width",
-          "height",
-          "padding-left",
-          "padding-right",
-          "padding-bottom",
-          "padding-top",
-        ].includes(attr)
-      ) {
-        value = `${value}px`
-      } else if (
-        ["opacityForText", "opacityForBG", "opacityForBorder"].includes(attr)
-      ) {
-        value = value / 100
+      value = Number(value) ? Number(value) : value
+      maxValue = Number(maxValue) ? Number(maxValue) : maxValue
+      minValue = Number(minValue) ? Number(minValue) : minValue
 
-        if (attr == "opacityForText") {
-          this.$store.dispatch("styles/updateStyle", {
-            target: target,
-            attr: "color",
-            value: this.getHexColorWithOpacity(
-              this.$store.state.styles[target]["color"],
-              value,
-            ),
-          })
-        } else if (attr == "opacityForBG") {
-          this.$store.dispatch("styles/updateStyle", {
-            target: target,
-            attr: "background-color",
-            value: this.getHexColorWithOpacity(
-              this.$store.state.styles[target]["background-color"],
-              value,
-            ),
-          })
-        } else if (attr == "opacityForBorder") {
-          this.$store.dispatch("styles/updateStyle", {
-            target: target,
-            attr: "border-color",
-            value: this.getHexColorWithOpacity(
-              this.$store.state.styles[target]["border-color"],
-              value,
-            ),
-          })
-        }
-      } else if (attr == "color") {
-        value = this.getHexColorWithOpacity(
-          value,
-          this.$store.state.styles[target]["opacityForText"],
-        )
-      } else if (attr == "background-color") {
-        value = this.getHexColorWithOpacity(
-          value,
-          this.$store.state.styles[target]["opacityForBG"],
-        )
-      } else if (attr == "border-color") {
-        value = this.getHexColorWithOpacity(
-          value,
-          this.$store.state.styles[target]["opacityForBorder"],
-        )
+      if (typeof value != "string" && (value > maxValue || value < minValue)) {
+        alert(`${minValue} ~ ${maxValue} 사이의 값을 입력해주세요!
+(입력값: ${value})`)
+
+        return 9
       }
 
-      this.$store.dispatch("styles/updateStyle", {
-        target,
-        attr,
-        value,
-      })
+      try {
+        if (
+          [
+            "font-size",
+            "border-width",
+            "border-radius",
+            "width",
+            "height",
+            "padding-left",
+            "padding-right",
+            "padding-bottom",
+            "padding-top",
+          ].includes(attr)
+        ) {
+          value = `${value}px`
+        } else if (
+          ["opacityForText", "opacityForBG", "opacityForBorder"].includes(attr)
+        ) {
+          value = value / 100
+
+          if (attr == "opacityForText") {
+            this.$store.dispatch("styles/updateStyle", {
+              target: target,
+              attr: "color",
+              value: this.getHexColorWithOpacity(
+                this.$store.state.styles[target]["color"],
+                value,
+              ),
+            })
+          } else if (attr == "opacityForBG") {
+            this.$store.dispatch("styles/updateStyle", {
+              target: target,
+              attr: "background-color",
+              value: this.getHexColorWithOpacity(
+                this.$store.state.styles[target]["background-color"],
+                value,
+              ),
+            })
+          } else if (attr == "opacityForBorder") {
+            this.$store.dispatch("styles/updateStyle", {
+              target: target,
+              attr: "border-color",
+              value: this.getHexColorWithOpacity(
+                this.$store.state.styles[target]["border-color"],
+                value,
+              ),
+            })
+          }
+        } else if (attr == "color") {
+          value = this.getHexColorWithOpacity(
+            value,
+            this.$store.state.styles[target]["opacityForText"],
+          )
+        } else if (attr == "background-color") {
+          value = this.getHexColorWithOpacity(
+            value,
+            this.$store.state.styles[target]["opacityForBG"],
+          )
+        } else if (attr == "border-color") {
+          value = this.getHexColorWithOpacity(
+            value,
+            this.$store.state.styles[target]["opacityForBorder"],
+          )
+        }
+
+        this.$store.dispatch("styles/updateStyle", {
+          target,
+          attr,
+          value,
+        })
+      } catch (error) {
+        alert(`오류 발생! 사진을 찍어서 연락처로 문의해주세요. ${error}`)
+      }
     },
 
     getHexColorWithOpacity(hexColor, opacity) {
