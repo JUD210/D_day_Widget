@@ -42,10 +42,10 @@ export const state = {
   /*--------------------------------------------------------*/
 
   styleDDW: {
-    "border-color": "#232323",
+    "border-color": "#00000099",
     opacityForBorder: 1.0,
-    "border-style": "solid",
-    "border-width": "4px",
+    "border-style": "double",
+    "border-width": "5px",
     "border-radius": "5px",
     width: "400px",
   },

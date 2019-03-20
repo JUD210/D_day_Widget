@@ -56,10 +56,11 @@ Ctrl+V 로 웹 소스 URL에 붙여넣으시면 됩니다.
           // ${JSON.stringify(getters.getWidgetData)}`)
         })
         .catch(error => {
-          alert(`오류 발생! 사진을 찍어서 연락처로 문의해주세요. ${error}`)
+          alert(`오류 발생! 제 연락처로 문의해주세요. 
+          store -> ${error}`)
 
-          // console.log(`store/saveWidgetData [ERROR]
-          // ${error}`)
+          console.log(`store/saveWidgetData [ERROR]
+          ${error}`)
         })
     },
     loadWidgetData({ state, dispatch }) {
@@ -133,22 +134,10 @@ ${state.uniqueId.uniqueId}`)
       }
     },
     getVisualWidth: state => {
-      let arr = []
-      if (state.onOffSwitches.useDDWDDayPart) {
-        arr.push(
-          Number(state.styles.styleDDWDDayPart.width.split("px")[0]) +
-            Number(state.styles.styleDDW["border-width"].split("px")[0] * 2),
-        )
-      }
-
-      if (state.onOffSwitches.useDDWTimerPart) {
-        arr.push(
-          Number(state.styles.styleDDWTimerPart.width.split("px")[0]) +
-            Number(state.styles.styleDDW["border-width"].split("px")[0] * 2),
-        )
-      }
-
-      return `${Math.max(...arr)}px`
+      return (
+        Number(state.styles.styleDDW.width.split("px")[0]) +
+        Number(state.styles.styleDDW["border-width"].split("px")[0] * 2)
+      )
     },
 
     getVisualHeight: state => {

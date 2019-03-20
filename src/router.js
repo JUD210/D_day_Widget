@@ -1,8 +1,8 @@
 import Vue from "vue"
 import Router from "vue-router"
 
-import DDayWidgetGenerator from "@/views/DDayWidgetGenerator.vue"
-import DDayWidgetShow from "@/views/DDayWidgetShow.vue"
+// import DDayWidgetGenerator from "@/views/DDayWidgetGenerator.vue"
+// import DDayWidgetShow from "@/views/DDayWidgetShow.vue"
 
 Vue.use(Router)
 
@@ -21,12 +21,12 @@ export default new Router({
     {
       path: "/",
       name: "d-day-widget-generator",
-      component: DDayWidgetGenerator,
+      component: () => import("@/views/DDayWidgetGenerator.vue"),
     },
     {
       path: "/ddw/:id",
       name: "d-day-widget-show",
-      component: DDayWidgetShow,
+      component: () => import("@/views/DDayWidgetShow.vue"),
       props: true,
     },
   ],
