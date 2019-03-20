@@ -44,8 +44,8 @@ export const actions = {
   updateUse({ commit }, { attr }) {
     commit("UPDATE_USE", { attr })
 
-    console.log(`onOffSwitches/UPDATE_USE
-    state[${attr}] = ${!state[attr]}`)
+    // console.log(`onOffSwitches/UPDATE_USE
+    // state[${attr}] = ${!state[attr]}`)
   },
 
   resetUses(
@@ -72,14 +72,14 @@ export const actions = {
       useDDWTimerPartNumberString,
     })
 
-    console.log(`onOffSwitches/RESET_USE
-    state.useDDWDDayPart = ${useDDWDDayPart}
-    state.useDDWDDayPartTitle = ${useDDWDDayPartTitle}
-    state.useDDWDDayPartDDay = ${useDDWDDayPartDDay}
-    state.useDDWDDayPartDate = ${useDDWDDayPartDate}
+    // console.log(`onOffSwitches/RESET_USE
+    // state.useDDWDDayPart = ${useDDWDDayPart}
+    // state.useDDWDDayPartTitle = ${useDDWDDayPartTitle}
+    // state.useDDWDDayPartDDay = ${useDDWDDayPartDDay}
+    // state.useDDWDDayPartDate = ${useDDWDDayPartDate}
 
-    state.useDDWTimerPart = ${useDDWTimerPart}
-    state.useDDWTimerPartNumber = ${useDDWTimerPartNumber}
-    state.useDDWTimerPartNumberString = ${useDDWTimerPartNumberString}`)
+    // state.useDDWTimerPart = ${useDDWTimerPart}
+    // state.useDDWTimerPartNumber = ${useDDWTimerPartNumber}
+    // state.useDDWTimerPartNumberString = ${useDDWTimerPartNumberString}`)
   },
 }

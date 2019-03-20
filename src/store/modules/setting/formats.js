@@ -55,16 +55,16 @@ export const actions = {
   updateFormat({ commit }, { attr, value }) {
     commit("UPDATE_FORMAT", { attr, value })
 
-    console.log(`formats/UPDATE_FORMAT
-    state[${attr}] = ${value}`)
+    // console.log(`formats/UPDATE_FORMAT
+    // state[${attr}] = ${value}`)
   },
 
   resetFormats({ commit }, { formatDDay, formatDate, formatTimerString }) {
     commit("RESET_FORMAT", { formatDDay, formatDate, formatTimerString })
 
-    console.log(`formats/RESET_FORMAT
-    state.formatDDay = ${formatDDay}
-    state.formatDate = ${formatDate}
-    state.formatTimerString = ${formatTimerString}`)
+    // console.log(`formats/RESET_FORMAT
+    // state.formatDDay = ${formatDDay}
+    // state.formatDate = ${formatDate}
+    // state.formatTimerString = ${formatTimerString}`)
   },
 }

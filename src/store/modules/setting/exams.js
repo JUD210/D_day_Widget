@@ -55,34 +55,34 @@ export const actions = {
   addExam({ commit }) {
     commit("ADD_EXAM")
 
-    console.log(`exams/ADD_EXAM
-    state.exams.push({ examTitle: null, examDate: ${date} })`)
+    // console.log(`exams/ADD_EXAM
+    // state.exams.push({ examTitle: null, examDate: ${date} })`)
   },
   updateExam({ commit }, { index, attr, value }) {
     commit("UPDATE_EXAM", { index, attr, value })
 
-    console.log(`exams/UPDATE_EXAM
-    state.exams[${index}][${attr}] = ${value}`)
+    // console.log(`exams/UPDATE_EXAM
+    // state.exams[${index}][${attr}] = ${value}`)
   },
   removeExam({ commit }, index) {
     commit("REMOVE_EXAM", index)
 
-    console.log(`exams/REMOVE_EXAM
-    state.exams.splice(${index}, 1)`)
+    // console.log(`exams/REMOVE_EXAM
+    // state.exams.splice(${index}, 1)`)
   },
 
   resetExams({ commit }, exams) {
     commit("RESET_EXAMS", exams)
 
-    console.log(`exams/RESET_EXAMS
-    state.exams = ${JSON.stringify(exams)}`)
+    // console.log(`exams/RESET_EXAMS
+    // state.exams = ${JSON.stringify(exams)}`)
   },
 
   updateIndexSelector({ commit }, cmd) {
     commit("UPDATE_INDEXSELECTOR", cmd)
 
-    console.log(`exams/UPDATE_INDEXSELECTOR
-    ${cmd} state.indexSelector`)
+    // console.log(`exams/UPDATE_INDEXSELECTOR
+    // ${cmd} state.indexSelector`)
   },
 }
 

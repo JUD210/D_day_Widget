@@ -144,24 +144,24 @@ export const actions = {
   updateStyle({ commit }, { target, attr, value }) {
     commit("UPDATE_STYLE", { target, attr, value })
 
-    console.log(`styles/UPDATE_STYLE
-    state[${target}][${attr}] = ${value}`)
+    // console.log(`styles/UPDATE_STYLE
+    // state[${target}][${attr}] = ${value}`)
   },
 
   resetStyles({ commit }, styles) {
     commit("RESET_STYLE", styles)
 
-    console.log(`styles/RESET_STYLE
-    state.styleDDW = ${styles.styleDDW}
-    state.styleDDWDDayPart = ${styles.styleDDWDDayPart}
-    state.styleDDWDDayPartTitle = ${styles.styleDDWDDayPartTitle}
-    state.styleDDWDDayPartDDay = ${styles.styleDDWDDayPartDDay}
-    state.styleDDWDDayPartDate = ${styles.styleDDWDDayPartDate}
-    state.styleDDWTimerPart = ${styles.styleDDWTimerPart}
-    state.styleDDWTimerPartNumber = ${styles.styleDDWTimerPartNumber}
-    state.styleDDWTimerPartNumberString = ${
-      styles.styleDDWTimerPartNumberString
-    }`)
+    // console.log(`styles/RESET_STYLE
+    // state.styleDDW = ${styles.styleDDW}
+    // state.styleDDWDDayPart = ${styles.styleDDWDDayPart}
+    // state.styleDDWDDayPartTitle = ${styles.styleDDWDDayPartTitle}
+    // state.styleDDWDDayPartDDay = ${styles.styleDDWDDayPartDDay}
+    // state.styleDDWDDayPartDate = ${styles.styleDDWDDayPartDate}
+    // state.styleDDWTimerPart = ${styles.styleDDWTimerPart}
+    // state.styleDDWTimerPartNumber = ${styles.styleDDWTimerPartNumber}
+    // state.styleDDWTimerPartNumberString = ${
+    //   styles.styleDDWTimerPartNumberString
+    // }`)
   },
 }
 

@@ -46,9 +46,9 @@ export const actions = {
   updateAnimation({ commit }, { attr, value }) {
     commit("UPDATE_ANIMATION", { attr, value })
 
-    console.log(`animations/UPDATE_ANIMATION
-    state[${attr}] = ${value}
-    state.isIntervalChanged = true`)
+    // console.log(`animations/UPDATE_ANIMATION
+    // state[${attr}] = ${value}
+    // state.isIntervalChanged = true`)
   },
 
   resetAnimations(
@@ -61,17 +61,17 @@ export const actions = {
       animationInterval,
     })
 
-    console.log(`animations/RESET_ANIMATION
-    state.animationType = ${animationType}
-    state.animationDuration = ${animationDuration}
-    state.animationInterval = ${animationInterval}`)
+    // console.log(`animations/RESET_ANIMATION
+    // state.animationType = ${animationType}
+    // state.animationDuration = ${animationDuration}
+    // state.animationInterval = ${animationInterval}`)
   },
 
   updateIsIntervalChanged({ commit }, bool) {
     commit("UPDATE_ISINTERVALCHANGED", bool)
 
-    console.log(`animations/UPDATE_ISINTERVALCHANGED
-    state.isIntervalChanged = ${bool}`)
+    // console.log(`animations/UPDATE_ISINTERVALCHANGED
+    // state.isIntervalChanged = ${bool}`)
   },
 }
 

@@ -301,8 +301,8 @@ export default {
 
     setInterval(() => {
       if (this.isIntervalChanged) {
-        console.log("IN setInterval")
-        console.log(this.animationInterval)
+        // console.log("IN setInterval")
+        // console.log(this.animationInterval)
 
         // I don't know why but, vue imports "timers" to use setInterval().
         // The imported setInterval() returns a Object not a integer
@@ -310,8 +310,9 @@ export default {
         window.clearInterval(activateAnimation["_id"])
 
         activateAnimation = setInterval(() => {
-          console.log("IN activateAnimation")
-          console.log(this.animationInterval)
+          // console.log("IN activateAnimation")
+          // console.log(this.animationInterval)
+          
           this.indexSelectorUpdater()
 
           // @T Need to change interval to some meaningful input value

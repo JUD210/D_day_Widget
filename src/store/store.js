@@ -33,6 +33,10 @@ export default new Vuex.Store({
     animations,
   },
 
+  states: {
+    isDebug: false,
+  },
+
   actions: {
     saveWidgetData({ state, getters }) {
       database
@@ -48,14 +52,14 @@ Ctrl+V 로 웹 소스 URL에 붙여넣으시면 됩니다 😃👍
 [저장된 위젯 크기]  가로: ${getters.getVisualWidth}  |  세로: ${
             getters.getVisualHeight
           }`)
-          console.log(`store/saveWidgetData [OK]
-          ${JSON.stringify(getters.getWidgetData)}`)
+          // console.log(`store/saveWidgetData [OK]
+          // ${JSON.stringify(getters.getWidgetData)}`)
         })
         .catch(error => {
           alert(`오류 발생! 제 연락처로 문의해주세요. ${error}`)
 
-          console.log(`store/saveWidgetData [ERROR]
-          ${error}`)
+          // console.log(`store/saveWidgetData [ERROR]
+          // ${error}`)
         })
     },
     loadWidgetData({ state, dispatch }) {
@@ -78,16 +82,16 @@ Ctrl+V 로 웹 소스 URL에 붙여넣으시면 됩니다 😃👍
           dispatch("formats/resetFormats", newData.formats)
           dispatch("animations/resetAnimations", newData.animations)
 
-          console.log(`store/loadWidgetData [OK]
-          ${JSON.stringify(newData)}`)
+          // console.log(`store/loadWidgetData [OK]
+          // ${JSON.stringify(newData)}`)
         })
         .catch(error => {
           alert(`입력된 키 값과 일치하는 데이터가 없습니다!
 키 값을 잘못 붙여넣었는지 확인해주세요. (띄어쓰기 등)
 ${state.uniqueId.uniqueId}`)
 
-          console.log(`store/loadWidgetData [ERROR]
-          ${error}`)
+          // console.log(`store/loadWidgetData [ERROR]
+          // ${error}`)
         })
     },
   },

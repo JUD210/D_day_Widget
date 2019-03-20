@@ -25,13 +25,13 @@ export const actions = {
   createUniqueId({ commit }) {
     commit("CREATE_UNIQUE_ID")
 
-    console.log(`uniqueId/CREATE_UNIQUE_ID
-    state.uniqueId = ${state.uniqueId}`)
+    // console.log(`uniqueId/CREATE_UNIQUE_ID
+    // state.uniqueId = ${state.uniqueId}`)
   },
   updateUniqueId({ commit }, uniqueId) {
     commit("UPDATE_UNIQUE_ID", uniqueId)
 
-    console.log(`uniqueId/UPDATE_UNIQUE_ID
-    state.uniqueId = ${uniqueId}`)
+    // console.log(`uniqueId/UPDATE_UNIQUE_ID
+    // state.uniqueId = ${uniqueId}`)
   },
 }
