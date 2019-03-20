@@ -1,5 +1,6 @@
 <template>
   <div>
+    <h1>test</h1>
     <DDayWidget></DDayWidget>
   </div>
 </template>
@@ -25,9 +26,11 @@ export default {
   },
 
   created() {
+    let p = this.$route.fullPath
+
     this.$store.dispatch(
       "uniqueId/updateUniqueId",
-      this.$route.fullPath.split("/")[1],
+      p.slice(p.indexOf("/ddw/") + 5),
     )
     this.loadWidgetData()
   },
