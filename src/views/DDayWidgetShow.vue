@@ -1,6 +1,5 @@
 <template>
   <div>
-    <h1>test</h1>
     <DDayWidget></DDayWidget>
   </div>
 </template>
