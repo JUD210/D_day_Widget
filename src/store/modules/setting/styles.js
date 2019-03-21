@@ -1,3 +1,5 @@
+import { rgbaToHex, rgbaToArray } from "hex-and-rgba"
+
 export const namespaced = true
 
 // @T apply commented styles
@@ -42,7 +44,7 @@ export const state = {
   /*--------------------------------------------------------*/
 
   styleDDW: {
-    "border-color": "#00000099",
+    "border-color": "rgba(0, 0, 0, 0.6)",
     opacityForBorder: 0.6,
     "border-style": "double",
     "border-width": "5px",
@@ -51,7 +53,7 @@ export const state = {
   },
 
   styleDDWDDayPart: {
-    "background-color": "#232323FF",
+    "background-color": "rgba(35, 35, 35, 1.0)",
     opacityForBG: 1.0,
 
     height: "130px",
@@ -63,28 +65,28 @@ export const state = {
     "font-family": "Jeju Gothic",
     "font-size": "40px",
     "font-weight": "normal",
-    color: "#ffffffFF",
+    color: "rgba(255, 255, 255, 1.0)",
     opacityForText: 1.0,
   },
   styleDDWDDayPartDDay: {
     "font-family": "Jeju Gothic",
     "font-size": "35px",
     "font-weight": "normal",
-    color: "#ff4a4aFF",
+    color: "rgba(255, 74, 74, 1.0)",
     opacityForText: 1.0,
   },
   styleDDWDDayPartDate: {
     "font-family": "Jeju Gothic",
     "font-size": "20px",
     "font-weight": "normal",
-    color: "#ffffffFF",
+    color: "rgba(255, 255, 255, 1.0)",
     opacityForText: 1.0,
   },
 
   /*--------------------------------------------------------*/
 
   styleDDWTimerPart: {
-    "background-color": "#051824FF",
+    "background-color": "rgba(5, 24, 36, 1.0)",
     opacityForBG: 1.0,
 
     height: "80px",
@@ -94,13 +96,13 @@ export const state = {
     "font-family": "Jeju Gothic",
     "font-size": "20px",
     "font-weight": "normal",
-    color: "#ffffffFF",
+    color: "rgba(255, 255, 255, 1.0)",
     opacityForText: 1.0,
 
-    "background-color": "#504d4dFF",
+    "background-color": "rgba(80, 77, 77, 1.0)",
     opacityForBG: 0.7,
 
-    "border-color": "#232323FF",
+    "border-color": "rgba(35, 35, 35, 1)",
     opacityForBorder: 1.0,
     "border-style": "solid",
     "border-width": "1px",
@@ -118,7 +120,7 @@ export const state = {
     "font-family": "Jeju Gothic",
     "font-size": "20px",
     "font-weight": "normal",
-    color: "#ffffffFF",
+    color: "rgba(255, 255, 255, 1.0)",
     opacityForText: 1.0,
   },
 }
@@ -182,10 +184,11 @@ export const getters = {
     ) {
       return state[target][attr].split("px")[0]
     } else if (["color", "background-color", "border-color"].includes(attr)) {
-      return state[target][attr].slice(0, 7)
+      return rgbaToHex(rgbaToArray(state[target][attr])).slice(0, 7)
     } else if (
       ["opacityForText", "opacityForBG", "opacityForBorder"].includes(attr)
     ) {
+      console.log(`round ${Math.round(state[target][attr] * 100)}`)
       return Math.round(state[target][attr] * 100)
     } else {
       return state[target][attr]
