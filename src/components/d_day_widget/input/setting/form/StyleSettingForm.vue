@@ -4,7 +4,16 @@
       <h3>{{ title }}</h3>
     </div>
 
-    <div v-if="isApplicable('font-family')" class="inputLinesContainer">
+    <div
+      v-if="
+        isApplicable('font-family') ||
+          isApplicable('font-size') ||
+          isApplicable('font-weight') ||
+          isApplicable('color') ||
+          isApplicable('opacityForText')
+      "
+      class="inputLinesContainer"
+    >
       <div v-if="isApplicable('font-family')" class="inputLine">
         <label>글꼴</label>
         <select
@@ -72,7 +81,10 @@
       </div>
     </div>
 
-    <div v-if="isApplicable('background-color')" class="inputLinesContainer">
+    <div
+      v-if="isApplicable('background-color') || isApplicable('opacityForBG')"
+      class="inputLinesContainer"
+    >
       <div v-if="isApplicable('background-color')" class="inputLine">
         <label>배경 색</label>
         <input
@@ -97,7 +109,16 @@
       </div>
     </div>
 
-    <div v-if="isApplicable('border-color')" class="inputLinesContainer">
+    <div
+      v-if="
+        isApplicable('border-color') ||
+          isApplicable('opacityForBorder') ||
+          isApplicable('border-style') ||
+          isApplicable('border-width') ||
+          isApplicable('border-radius')
+      "
+      class="inputLinesContainer"
+    >
       <div v-if="isApplicable('border-color')" class="inputLine">
         <label>테두리 색</label>
         <input
@@ -195,7 +216,12 @@
     </div>
 
     <div
-      v-if="isApplicable('padding-left') || isApplicable('padding-bottom')"
+      v-if="
+        isApplicable('padding-left') ||
+          isApplicable('padding-right') ||
+          isApplicable('padding-bottom') ||
+          isApplicable('padding-top')
+      "
       class="inputLinesContainer"
     >
       <div v-if="isApplicable('padding-left')" class="inputLine">

@@ -55,6 +55,7 @@ export const state = {
   styleDDWDDayPart: {
     "background-color": "rgba(35, 35, 35, 1.0)",
     opacityForBG: 1.0,
+    "border-radius": "0px",
 
     height: "130px",
     // @T add: Import provided BG Image
@@ -88,6 +89,7 @@ export const state = {
   styleDDWTimerPart: {
     "background-color": "rgba(5, 24, 36, 1.0)",
     opacityForBG: 1.0,
+    "border-radius": "0px",
 
     height: "80px",
   },
