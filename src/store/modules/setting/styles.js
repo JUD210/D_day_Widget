@@ -29,6 +29,7 @@ export const state = {
     "Georgia",
   ],
   fontWeights: ["normal", "bold", "bolder", "lighter"],
+  textAligns: ["center", "left", "right"],
   borderStyles: [
     "solid",
     "dotted",
@@ -49,6 +50,11 @@ export const state = {
     "border-style": "double",
     "border-width": "5px",
     "border-radius": "5px",
+    "border-top-left-radius": "0px",
+    "border-top-right-radius": "0px",
+    "border-bottom-left-radius": "0px",
+    "border-bottom-right-radius": "0px",
+
     width: "400px",
   },
 
@@ -56,6 +62,13 @@ export const state = {
     "background-color": "rgba(35, 35, 35, 1.0)",
     opacityForBG: 1.0,
     "border-radius": "0px",
+    "border-top-left-radius": "0px",
+    "border-top-right-radius": "0px",
+    "border-bottom-left-radius": "0px",
+    "border-bottom-right-radius": "0px",
+
+    left: "0px",
+    bottom: "0px",
 
     height: "130px",
     // @T add: Import provided BG Image
@@ -66,22 +79,34 @@ export const state = {
     "font-family": "Jeju Gothic",
     "font-size": "40px",
     "font-weight": "normal",
+    "text-align": "center",
     color: "rgba(255, 255, 255, 1.0)",
     opacityForText: 1.0,
+
+    left: "0px",
+    bottom: "0px",
   },
   styleDDWDDayPartDDay: {
     "font-family": "Jeju Gothic",
     "font-size": "35px",
     "font-weight": "normal",
+    "text-align": "center",
     color: "rgba(255, 74, 74, 1.0)",
     opacityForText: 1.0,
+
+    left: "0px",
+    bottom: "0px",
   },
   styleDDWDDayPartDate: {
     "font-family": "Jeju Gothic",
     "font-size": "20px",
     "font-weight": "normal",
+    "text-align": "center",
     color: "rgba(255, 255, 255, 1.0)",
     opacityForText: 1.0,
+
+    left: "0px",
+    bottom: "0px",
   },
 
   /*--------------------------------------------------------*/
@@ -90,14 +115,22 @@ export const state = {
     "background-color": "rgba(5, 24, 36, 1.0)",
     opacityForBG: 1.0,
     "border-radius": "0px",
+    "border-top-left-radius": "0px",
+    "border-top-right-radius": "0px",
+    "border-bottom-left-radius": "0px",
+    "border-bottom-right-radius": "0px",
 
     height: "80px",
+
+    left: "0px",
+    bottom: "0px",
   },
 
   styleDDWTimerPartNumber: {
     "font-family": "Jeju Gothic",
     "font-size": "20px",
     "font-weight": "normal",
+    "text-align": "center",
     color: "rgba(255, 255, 255, 1.0)",
     opacityForText: 1.0,
 
@@ -109,9 +142,16 @@ export const state = {
     "border-style": "solid",
     "border-width": "1px",
     "border-radius": "5px",
+    "border-top-left-radius": "0px",
+    "border-top-right-radius": "0px",
+    "border-bottom-left-radius": "0px",
+    "border-bottom-right-radius": "0px",
 
     width: "55px",
     height: "30px",
+
+    left: "0px",
+    bottom: "0px",
 
     "padding-left": "5px",
     "padding-right": "5px",
@@ -122,8 +162,12 @@ export const state = {
     "font-family": "Jeju Gothic",
     "font-size": "20px",
     "font-weight": "normal",
+    "text-align": "center",
     color: "rgba(255, 255, 255, 1.0)",
     opacityForText: 1.0,
+
+    left: "0px",
+    bottom: "0px",
   },
 }
 
@@ -174,10 +218,21 @@ export const getters = {
     if (
       [
         "font-size",
+
         "border-width",
+
         "border-radius",
+        "border-top-left-radius",
+        "border-top-right-radius",
+        "border-bottom-left-radius",
+        "border-bottom-right-radius",
+
+        "left",
+        "bottom",
+
         "width",
         "height",
+
         "padding-left",
         "padding-right",
         "padding-bottom",
@@ -190,7 +245,6 @@ export const getters = {
     } else if (
       ["opacityForText", "opacityForBG", "opacityForBorder"].includes(attr)
     ) {
-      console.log(`round ${Math.round(state[target][attr] * 100)}`)
       return Math.round(state[target][attr] * 100)
     } else {
       return state[target][attr]

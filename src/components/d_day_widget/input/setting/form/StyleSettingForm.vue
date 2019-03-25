@@ -9,6 +9,7 @@
         isApplicable('font-family') ||
           isApplicable('font-size') ||
           isApplicable('font-weight') ||
+          isApplicable('text-align') ||
           isApplicable('color') ||
           isApplicable('opacityForText')
       "
@@ -53,6 +54,21 @@
             :value="fontWeight"
             :key="index"
             >{{ fontWeight }}</option
+          >
+        </select>
+      </div>
+
+      <div v-if="isApplicable('text-align')" class="inputLine">
+        <label>글자 정렬</label>
+        <select
+          :value="getStyleAttr(styleFor, 'text-align')"
+          @change="updateStyle($event, 'text-align')"
+        >
+          <option
+            v-for="(textAlign, index) in textAligns"
+            :value="textAlign"
+            :key="index"
+            >{{ textAlign }}</option
           >
         </select>
       </div>
@@ -171,7 +187,7 @@
       </div>
 
       <div v-if="isApplicable('border-radius')" class="inputLine">
-        <label>테두리 다듬기 (px)</label>
+        <label>테두리 다듬기 - ALL (px)</label>
         <input
           type="number"
           min="0"
@@ -179,6 +195,55 @@
           step="1"
           :value="getStyleAttr(styleFor, 'border-radius')"
           @change="updateStyle($event, 'border-radius')"
+          placeholder="값을 입력해주세요."
+        />
+      </div>
+
+      <div v-if="isApplicable('border-top-left-radius')" class="inputLine">
+        <label>테두리 다듬기 - ↖ (px)</label>
+        <input
+          type="number"
+          min="0"
+          max="1000"
+          step="1"
+          :value="getStyleAttr(styleFor, 'border-top-left-radius')"
+          @change="updateStyle($event, 'border-top-left-radius')"
+          placeholder="값을 입력해주세요."
+        />
+      </div>
+      <div v-if="isApplicable('border-top-right-radius')" class="inputLine">
+        <label>테두리 다듬기 - ↗ (px)</label>
+        <input
+          type="number"
+          min="0"
+          max="1000"
+          step="1"
+          :value="getStyleAttr(styleFor, 'border-top-right-radius')"
+          @change="updateStyle($event, 'border-top-right-radius')"
+          placeholder="값을 입력해주세요."
+        />
+      </div>
+      <div v-if="isApplicable('border-bottom-left-radius')" class="inputLine">
+        <label>테두리 다듬기 - ↙ (px)</label>
+        <input
+          type="number"
+          min="0"
+          max="1000"
+          step="1"
+          :value="getStyleAttr(styleFor, 'border-bottom-left-radius')"
+          @change="updateStyle($event, 'border-bottom-left-radius')"
+          placeholder="값을 입력해주세요."
+        />
+      </div>
+      <div v-if="isApplicable('border-bottom-right-radius')" class="inputLine">
+        <label>테두리 다듬기 - ↘ (px)</label>
+        <input
+          type="number"
+          min="0"
+          max="1000"
+          step="1"
+          :value="getStyleAttr(styleFor, 'border-bottom-right-radius')"
+          @change="updateStyle($event, 'border-bottom-right-radius')"
           placeholder="값을 입력해주세요."
         />
       </div>
@@ -211,6 +276,37 @@
           :value="getStyleAttr(styleFor, 'height')"
           @change="updateStyle($event, 'height')"
           placeholder="길이를 입력해주세요."
+        />
+      </div>
+    </div>
+
+    <div
+      v-if="isApplicable('left') || isApplicable('bottom')"
+      class="inputLinesContainer"
+    >
+      <div v-if="isApplicable('left')" class="inputLine">
+        <label>수평 위치 (px)</label>
+        <input
+          type="number"
+          min="-2000"
+          max="2000"
+          step="1"
+          :value="getStyleAttr(styleFor, 'left')"
+          @change="updateStyle($event, 'left')"
+          placeholder="위치를 입력해주세요."
+        />
+      </div>
+
+      <div v-if="isApplicable('bottom')" class="inputLine">
+        <label>수직 위치 (px)</label>
+        <input
+          type="number"
+          min="-2000"
+          max="2000"
+          step="1"
+          :value="getStyleAttr(styleFor, 'bottom')"
+          @change="updateStyle($event, 'bottom')"
+          placeholder="위치를 입력해주세요."
         />
       </div>
     </div>
@@ -327,10 +423,21 @@ export default {
         if (
           [
             "font-size",
+
             "border-width",
+
             "border-radius",
+            "border-top-left-radius",
+            "border-top-right-radius",
+            "border-bottom-left-radius",
+            "border-bottom-right-radius",
+
+            "left",
+            "bottom",
+
             "width",
             "height",
+
             "padding-left",
             "padding-right",
             "padding-bottom",
@@ -423,7 +530,12 @@ export default {
     },
   },
   computed: {
-    ...mapState("styles", ["fontFamilies", "fontWeights", "borderStyles"]),
+    ...mapState("styles", [
+      "fontFamilies",
+      "fontWeights",
+      "textAligns",
+      "borderStyles",
+    ]),
     ...mapGetters("styles", ["getStyleAttr"]),
   },
 }

@@ -117,20 +117,22 @@
 
 /*--------------------------------------------------------*/
 
-.dDayWidget {
-  display: flex;
+/* .dDayWidget {
+  display: grid;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  text-align: left;
-}
+  text-align: center;
+} */
 
 .dDayPart {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  text-align: center;
+  /* align-items: center; */
+  position: relative;
+
+  
 }
 
 .timerPart {
@@ -139,17 +141,25 @@
   justify-content: center;
   align-items: center;
   text-align: center;
+  position: relative;
+}
+
+.title, .dday, .date {
+  position: relative;
 }
 
 .day, .hour, .min, .sec {
   margin: 5px;
+  position: relative;
 }
 
 .number {
   display: grid;
   align-items: center;
+  position: relative;
 }
 
 .number_str {
   padding-top: 2px;
+  position: relative;
 }

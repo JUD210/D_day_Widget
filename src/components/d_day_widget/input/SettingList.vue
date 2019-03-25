@@ -1,8 +1,7 @@
 <template>
   <div class="setting_list">
     <ExamsSetting></ExamsSetting>
-    <!-- // @T RIGHT NOW! -->
-    <!-- <div style="font-size: 30px;color:red;">TODO! ON/OFF Setting</div> -->
+    // @T TODO! PRESETS
     <!-- <div style="font-size: 30px;color:red;">TODO! Presets Setting</div> -->
     <StylesSetting></StylesSetting>
     <FormatsSetting></FormatsSetting>
