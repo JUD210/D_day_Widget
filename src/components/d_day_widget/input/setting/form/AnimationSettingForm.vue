@@ -40,7 +40,7 @@
           type="number"
           min="0.1"
           step="0.1"
-          :value="animationInterval"
+          :value="Number(animationInterval)"
           @change="updateAnimation($event, 'animationInterval')"
           placeholder="날짜 전환 주기를 입력해주세요."
         />
@@ -50,7 +50,7 @@
 </template>
 
 <script>
-import { mapState } from "vuex"
+import { mapState, mapGetters } from "vuex"
 
 export default {
   name: "AnimationSettingForm",
@@ -69,11 +69,15 @@ export default {
       })
     },
   },
-  computed: mapState("animations", [
-    "animationType",
-    "animationDuration",
-    "animationInterval",
-    "animationTypes",
-  ]),
+
+  computed: {
+    ...mapState("animations", [
+      "animationType",
+      "animationDuration",
+      "animationInterval",
+      "animationTypes",
+    ]),
+    ...mapGetters("animations", ["getAnimationAttr"]),
+  },
 }
 </script>

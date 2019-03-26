@@ -1,7 +1,7 @@
 <template>
   <BaseToggleBox class="toggleBox" title="시험 정보">
     <ExamSettingForm
-      v-for="(exam, index) in exams"
+      v-for="(exam, index) in examsData"
       :key="index"
       :index="index"
       :title="`#${index + 1}`"
@@ -20,6 +20,6 @@ export default {
     ExamSettingForm,
   },
   methods: mapActions("exams", ["addExam"]),
-  computed: mapState("exams", ["exams"]),
+  computed: mapState("exams", ["examsData"]),
 }
 </script>

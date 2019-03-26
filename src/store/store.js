@@ -83,7 +83,7 @@ Ctrl+V 로 웹 소스 URL에 붙여넣으시면 됩니다.
           dispatch("formats/resetFormats", newData.formats)
           dispatch("animations/resetAnimations", newData.animations)
 
-          // console.log(`store/loadWidgetData [OK]
+          console.log(`store/loadWidgetData [OK]
           // ${JSON.stringify(newData)}`)
         })
         .catch(() => {
@@ -98,53 +98,41 @@ ${state.uniqueId.uniqueId}`)
   },
   getters: {
     getWidgetData(state) {
-      return {
-        exams: state.exams.exams,
-        onOffSwitches: {
-          useDDWDDayPart: state.onOffSwitches.useDDWDDayPart,
-          useDDWDDayPartTitle: state.onOffSwitches.useDDWDDayPartTitle,
-          useDDWDDayPartDDay: state.onOffSwitches.useDDWDDayPartDDay,
-          useDDWDDayPartDate: state.onOffSwitches.useDDWDDayPartDate,
-          useDDWTimerPart: state.onOffSwitches.useDDWTimerPart,
-          useDDWTimerPartNumber: state.onOffSwitches.useDDWTimerPartNumber,
-          useDDWTimerPartNumberString:
-            state.onOffSwitches.useDDWTimerPartNumberString,
-        },
-        styles: {
-          styleDDW: state.styles.styleDDW,
-          styleDDWDDayPart: state.styles.styleDDWDDayPart,
-          styleDDWDDayPartTitle: state.styles.styleDDWDDayPartTitle,
-          styleDDWDDayPartDDay: state.styles.styleDDWDDayPartDDay,
-          styleDDWDDayPartDate: state.styles.styleDDWDDayPartDate,
-          styleDDWTimerPart: state.styles.styleDDWTimerPart,
-          styleDDWTimerPartNumber: state.styles.styleDDWTimerPartNumber,
-          styleDDWTimerPartNumberString:
-            state.styles.styleDDWTimerPartNumberString,
-        },
-        formats: {
-          formatDDay: state.formats.formatDDay,
-          formatDate: state.formats.formatDate,
-          formatTimerString: state.formats.formatTimerString,
-        },
-        animations: {
-          animationType: state.animations.animationType,
-          animationDuration: state.animations.animationDuration,
-          animationInterval: state.animations.animationInterval,
-        },
+      let result = {}
+
+      console.log(result)
+      console.log("↓")
+      // @T NOW
+      for (let mod in state) {
+        for (let target in state[mod]) {
+          if (
+            ![
+              "fontFamilies",
+              "fontWeights",
+              "textAligns",
+              "borderStyles",
+
+              "formatDDays",
+              "formatDates",
+              "formatTimerStrings",
+
+              "indexSelector",
+
+              "animationTypes",
+              "isIntervalChanged",
+            ].includes(target)
+          ) {
+            let temp = {}
+            temp[target] = state[mod][target]
+
+            result[mod] = { ...result[mod], ...temp }
+            console.log(result)
+          }
+        }
       }
 
-      // return {
+      // result = {
       //   exams: state.exams.exams,
-      //   onOffSwitches: {
-      //     useDDWDDayPart: state.onOffSwitches.useDDWDDayPart,
-      //     useDDWDDayPartTitle: state.onOffSwitches.useDDWDDayPartTitle,
-      //     useDDWDDayPartDDay: state.onOffSwitches.useDDWDDayPartDDay,
-      //     useDDWDDayPartDate: state.onOffSwitches.useDDWDDayPartDate,
-      //     useDDWTimerPart: state.onOffSwitches.useDDWTimerPart,
-      //     useDDWTimerPartNumber: state.onOffSwitches.useDDWTimerPartNumber,
-      //     useDDWTimerPartNumberString:
-      //       state.onOffSwitches.useDDWTimerPartNumberString,
-      //   },
       //   styles: {
       //     styleDDW: state.styles.styleDDW,
       //     styleDDWDDayPart: state.styles.styleDDWDDayPart,
@@ -167,6 +155,8 @@ ${state.uniqueId.uniqueId}`)
       //     animationInterval: state.animations.animationInterval,
       //   },
       // }
+
+      return result
     },
     getVisualWidth: state => {
       return (
@@ -189,3 +179,38 @@ ${state.uniqueId.uniqueId}`)
     },
   },
 })
+
+// return {
+//   exams: state.exams.exams,
+//   onOffSwitches: {
+//     useDDWDDayPart: state.onOffSwitches.useDDWDDayPart,
+//     useDDWDDayPartTitle: state.onOffSwitches.useDDWDDayPartTitle,
+//     useDDWDDayPartDDay: state.onOffSwitches.useDDWDDayPartDDay,
+//     useDDWDDayPartDate: state.onOffSwitches.useDDWDDayPartDate,
+//     useDDWTimerPart: state.onOffSwitches.useDDWTimerPart,
+//     useDDWTimerPartNumber: state.onOffSwitches.useDDWTimerPartNumber,
+//     useDDWTimerPartNumberString:
+//       state.onOffSwitches.useDDWTimerPartNumberString,
+//   },
+//   styles: {
+//     styleDDW: state.styles.styleDDW,
+//     styleDDWDDayPart: state.styles.styleDDWDDayPart,
+//     styleDDWDDayPartTitle: state.styles.styleDDWDDayPartTitle,
+//     styleDDWDDayPartDDay: state.styles.styleDDWDDayPartDDay,
+//     styleDDWDDayPartDate: state.styles.styleDDWDDayPartDate,
+//     styleDDWTimerPart: state.styles.styleDDWTimerPart,
+//     styleDDWTimerPartNumber: state.styles.styleDDWTimerPartNumber,
+//     styleDDWTimerPartNumberString:
+//       state.styles.styleDDWTimerPartNumberString,
+//   },
+//   formats: {
+//     formatDDay: state.formats.formatDDay,
+//     formatDate: state.formats.formatDate,
+//     formatTimerString: state.formats.formatTimerString,
+//   },
+//   animations: {
+//     animationType: state.animations.animationType,
+//     animationDuration: state.animations.animationDuration,
+//     animationInterval: state.animations.animationInterval,
+//   },
+// }

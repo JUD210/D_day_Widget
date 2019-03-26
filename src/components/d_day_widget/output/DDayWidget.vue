@@ -129,7 +129,7 @@ export default {
   computed: {
     ...mapState("uniqueId", ["uniqueId"]),
 
-    ...mapState("exams", ["exams", "indexSelector"]),
+    ...mapState("exams", ["examsData", "indexSelector"]),
     ...mapState("onOffSwitches", [
       "useDDWDDayPart",
       "useDDWDDayPartTitle",
@@ -160,8 +160,8 @@ export default {
     ...mapGetters("animations", ["getAnimationObject"]),
 
     examTitleComputed() {
-      if (this.exams[this.indexSelector].examTitle) {
-        return this.exams[this.indexSelector].examTitle
+      if (this.examsData[this.indexSelector].examTitle) {
+        return this.examsData[this.indexSelector].examTitle
       } else {
         return "Sample"
       }
@@ -210,7 +210,7 @@ export default {
       // @T add: Custom Formatting (yyyy yy mm m dd d)
       // : CustomFormatInput.vue
 
-      let eD = this.exams[this.indexSelector].examDate.split(/-/)
+      let eD = this.examsData[this.indexSelector].examDate.split(/-/)
       let y = eD[0]
       let m = eD[1]
       let d = eD[2]
@@ -266,7 +266,7 @@ export default {
 
   methods: {
     indexSelectorUpdater() {
-      if (this.indexSelector + 1 < this.exams.length) {
+      if (this.indexSelector + 1 < this.examsData.length) {
         this.$store.dispatch("exams/updateIndexSelector", "next")
       } else {
         this.$store.dispatch("exams/updateIndexSelector", "reset")
@@ -278,7 +278,8 @@ export default {
 
       let now = new Date().getTime() + KOREAN_TIME
 
-      let timeDistance = new Date(this.exams[this.indexSelector].examDate) - now
+      let timeDistance =
+        new Date(this.examsData[this.indexSelector].examDate) - now
       this.timeDistance = timeDistance
 
       let day = Math.floor(timeDistance / (1000 * 60 * 60 * 24))
@@ -305,7 +306,7 @@ export default {
         // console.log(this.animationInterval)
 
         // I don't know why but, vue imports "timers" to use setInterval().
-        // The imported setInterval() returns a Object not a integer
+        // The imported setInterval() returns an Object not a integer
         // {"_id": integer}
         window.clearInterval(activateAnimation["_id"])
 

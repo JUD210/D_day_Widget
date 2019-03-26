@@ -57,7 +57,7 @@ export default {
     },
 
     removeExam() {
-      this.$store.state.exams["exams"].length != 1
+      this.$store.state.exams["examsData"].length != 1
         ? this.$store.dispatch("exams/removeExam", this.index)
         : alert("최소 한 개의 시험 데이터는 있어야 합니다!")
     },

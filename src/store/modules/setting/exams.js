@@ -9,37 +9,38 @@ if (d.getUTCMonth() + 1 < 10) {
 }
 
 export const state = {
+  // @T __ 붙여서 사용해!
   indexSelector: 0,
 
   /*--------------------------------------------------------*/
 
-  exams: [
+  examsData: [
     {
       examTitle: null,
       examDate: date,
     },
     {
       examTitle: null,
-      examDate: "2020" + date.slice(4),
+      examDate: `${Number(date.slice(0, 4)) + 1}${date.slice(4)}`,
     },
   ],
 }
 
 export const mutations = {
   ADD_EXAM(state) {
-    state.exams.push({ examTitle: null, examDate: date })
+    state.examsData.push({ examTitle: null, examDate: date })
   },
   UPDATE_EXAM(state, { index, attr, value }) {
-    state.exams[index][attr] = value
+    state.examsData[index][attr] = value
   },
   REMOVE_EXAM(state, index) {
     state.indexSelector = 0
-    state.exams.splice(index, 1)
+    state.examsData.splice(index, 1)
   },
 
   RESET_EXAMS(state, exams) {
     state.indexSelector = 0
-    state.exams = exams
+    state.examsData = exams.examsData
   },
 
   UPDATE_INDEXSELECTOR(state, cmd) {
@@ -56,26 +57,26 @@ export const actions = {
     commit("ADD_EXAM")
 
     // console.log(`exams/ADD_EXAM
-    // state.exams.push({ examTitle: null, examDate: ${date} })`)
+    // state.examsData.push({ examTitle: null, examDate: ${date} })`)
   },
   updateExam({ commit }, { index, attr, value }) {
     commit("UPDATE_EXAM", { index, attr, value })
 
     // console.log(`exams/UPDATE_EXAM
-    // state.exams[${index}][${attr}] = ${value}`)
+    // state.examsData[${index}][${attr}] = ${value}`)
   },
   removeExam({ commit }, index) {
     commit("REMOVE_EXAM", index)
 
     // console.log(`exams/REMOVE_EXAM
-    // state.exams.splice(${index}, 1)`)
+    // state.examsData.splice(${index}, 1)`)
   },
 
   resetExams({ commit }, exams) {
     commit("RESET_EXAMS", exams)
 
     // console.log(`exams/RESET_EXAMS
-    // state.exams = ${JSON.stringify(exams)}`)
+    // state.examsData = ${JSON.stringify(exams)}`)
   },
 
   updateIndexSelector({ commit }, cmd) {
@@ -88,9 +89,9 @@ export const actions = {
 
 export const getters = {
   getExamTitleById: state => id => {
-    return state.exams[id].examTitle
+    return state.examsData[id].examTitle
   },
   getExamDateById: state => id => {
-    return state.exams[id].examDate
+    return state.examsData[id].examDate
   },
 }
