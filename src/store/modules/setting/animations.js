@@ -35,6 +35,8 @@ export const mutations = {
     state.animationType = animationType
     state.animationDuration = animationDuration
     state.animationInterval = animationInterval
+
+    state.isIntervalChanged = true
   },
 
   UPDATE_ISINTERVALCHANGED(state, bool) {
