@@ -132,6 +132,41 @@ ${state.uniqueId.uniqueId}`)
           animationInterval: state.animations.animationInterval,
         },
       }
+
+      // return {
+      //   exams: state.exams.exams,
+      //   onOffSwitches: {
+      //     useDDWDDayPart: state.onOffSwitches.useDDWDDayPart,
+      //     useDDWDDayPartTitle: state.onOffSwitches.useDDWDDayPartTitle,
+      //     useDDWDDayPartDDay: state.onOffSwitches.useDDWDDayPartDDay,
+      //     useDDWDDayPartDate: state.onOffSwitches.useDDWDDayPartDate,
+      //     useDDWTimerPart: state.onOffSwitches.useDDWTimerPart,
+      //     useDDWTimerPartNumber: state.onOffSwitches.useDDWTimerPartNumber,
+      //     useDDWTimerPartNumberString:
+      //       state.onOffSwitches.useDDWTimerPartNumberString,
+      //   },
+      //   styles: {
+      //     styleDDW: state.styles.styleDDW,
+      //     styleDDWDDayPart: state.styles.styleDDWDDayPart,
+      //     styleDDWDDayPartTitle: state.styles.styleDDWDDayPartTitle,
+      //     styleDDWDDayPartDDay: state.styles.styleDDWDDayPartDDay,
+      //     styleDDWDDayPartDate: state.styles.styleDDWDDayPartDate,
+      //     styleDDWTimerPart: state.styles.styleDDWTimerPart,
+      //     styleDDWTimerPartNumber: state.styles.styleDDWTimerPartNumber,
+      //     styleDDWTimerPartNumberString:
+      //       state.styles.styleDDWTimerPartNumberString,
+      //   },
+      //   formats: {
+      //     formatDDay: state.formats.formatDDay,
+      //     formatDate: state.formats.formatDate,
+      //     formatTimerString: state.formats.formatTimerString,
+      //   },
+      //   animations: {
+      //     animationType: state.animations.animationType,
+      //     animationDuration: state.animations.animationDuration,
+      //     animationInterval: state.animations.animationInterval,
+      //   },
+      // }
     },
     getVisualWidth: state => {
       return (

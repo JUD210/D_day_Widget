@@ -1,7 +1,7 @@
 <template>
   <div class="setting_list">
     <ExamsSetting></ExamsSetting>
-    // @T TODO! PRESETS
+    <!-- // @T TODO! PRESETS -->
     <!-- <div style="font-size: 30px;color:red;">TODO! Presets Setting</div> -->
     <StylesSetting></StylesSetting>
     <FormatsSetting></FormatsSetting>

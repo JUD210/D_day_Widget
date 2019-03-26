@@ -131,7 +131,10 @@
           isApplicable('opacityForBorder') ||
           isApplicable('border-style') ||
           isApplicable('border-width') ||
-          isApplicable('border-radius')
+          isApplicable('border-top-left-radius') ||
+          isApplicable('border-top-right-radius') ||
+          isApplicable('border-bottom-left-radius') ||
+          isApplicable('border-bottom-right-radius')
       "
       class="inputLinesContainer"
     >
@@ -183,19 +186,6 @@
           :value="getStyleAttr(styleFor, 'border-width')"
           @change="updateStyle($event, 'border-width')"
           placeholder="길이를 입력해주세요."
-        />
-      </div>
-
-      <div v-if="isApplicable('border-radius')" class="inputLine">
-        <label>테두리 다듬기 - ALL (px)</label>
-        <input
-          type="number"
-          min="0"
-          max="1000"
-          step="1"
-          :value="getStyleAttr(styleFor, 'border-radius')"
-          @change="updateStyle($event, 'border-radius')"
-          placeholder="값을 입력해주세요."
         />
       </div>
 
@@ -426,7 +416,6 @@ export default {
 
             "border-width",
 
-            "border-radius",
             "border-top-left-radius",
             "border-top-right-radius",
             "border-bottom-left-radius",

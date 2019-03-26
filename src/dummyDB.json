@@ -28,7 +28,6 @@
       "styles" : {
         "styleDDW" : {
           "border-color" : "#9f9f9fFF",
-          "border-radius" : "10px",
           "border-style" : "groove",
           "border-width" : "4px",
           "opacityForBorder" : 1
@@ -69,7 +68,6 @@
         "styleDDWTimerPartNumber" : {
           "background-color" : "#504d4dB3",
           "border-color" : "#232323FF",
-          "border-radius" : "5px",
           "border-style" : "solid",
           "border-width" : "1px",
           "color" : "#ffffffFF",
@@ -129,7 +127,6 @@
       "styles" : {
         "styleDDW" : {
           "border-color" : "#9f9f9fFF",
-          "border-radius" : "10px",
           "border-style" : "groove",
           "border-width" : "4px",
           "opacityForBorder" : 1
@@ -170,7 +167,6 @@
         "styleDDWTimerPartNumber" : {
           "background-color" : "#504d4dB3",
           "border-color" : "#232323FF",
-          "border-radius" : "5px",
           "border-style" : "solid",
           "border-width" : "1px",
           "color" : "#ffffffFF",

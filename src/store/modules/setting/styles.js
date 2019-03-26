@@ -49,21 +49,19 @@ export const state = {
     opacityForBorder: 0.6,
     "border-style": "double",
     "border-width": "5px",
-    "border-radius": "5px",
-    "border-top-left-radius": "0px",
-    "border-top-right-radius": "0px",
-    "border-bottom-left-radius": "0px",
-    "border-bottom-right-radius": "0px",
+    "border-top-left-radius": "20px",
+    "border-top-right-radius": "20px",
+    "border-bottom-left-radius": "20px",
+    "border-bottom-right-radius": "20px",
 
     width: "400px",
   },
 
   styleDDWDDayPart: {
-    "background-color": "rgba(35, 35, 35, 1.0)",
-    opacityForBG: 1.0,
-    "border-radius": "0px",
-    "border-top-left-radius": "0px",
-    "border-top-right-radius": "0px",
+    "background-color": "rgba(35, 35, 35, 0.95)",
+    opacityForBG: 0.95,
+    "border-top-left-radius": "10px",
+    "border-top-right-radius": "10px",
     "border-bottom-left-radius": "0px",
     "border-bottom-right-radius": "0px",
 
@@ -112,13 +110,12 @@ export const state = {
   /*--------------------------------------------------------*/
 
   styleDDWTimerPart: {
-    "background-color": "rgba(5, 24, 36, 1.0)",
-    opacityForBG: 1.0,
-    "border-radius": "0px",
+    "background-color": "rgba(5, 24, 36, 0.95)",
+    opacityForBG: 0.95,
     "border-top-left-radius": "0px",
     "border-top-right-radius": "0px",
-    "border-bottom-left-radius": "0px",
-    "border-bottom-right-radius": "0px",
+    "border-bottom-left-radius": "10px",
+    "border-bottom-right-radius": "10px",
 
     height: "80px",
 
@@ -137,15 +134,14 @@ export const state = {
     "background-color": "rgba(80, 77, 77, 1.0)",
     opacityForBG: 0.7,
 
-    "border-color": "rgba(35, 35, 35, 1)",
-    opacityForBorder: 1.0,
+    "border-color": "rgba(35, 35, 35, 0.5)",
+    opacityForBorder: 0.5,
     "border-style": "solid",
-    "border-width": "1px",
-    "border-radius": "5px",
-    "border-top-left-radius": "0px",
-    "border-top-right-radius": "0px",
-    "border-bottom-left-radius": "0px",
-    "border-bottom-right-radius": "0px",
+    "border-width": "2px",
+    "border-top-left-radius": "10px",
+    "border-top-right-radius": "10px",
+    "border-bottom-left-radius": "10px",
+    "border-bottom-right-radius": "10px",
 
     width: "55px",
     height: "30px",
@@ -170,6 +166,8 @@ export const state = {
     bottom: "0px",
   },
 }
+
+/*--------------------------------------------------------*/
 
 export const mutations = {
   UPDATE_STYLE(state, { target, attr, value }) {
@@ -221,7 +219,6 @@ export const getters = {
 
         "border-width",
 
-        "border-radius",
         "border-top-left-radius",
         "border-top-right-radius",
         "border-bottom-left-radius",
