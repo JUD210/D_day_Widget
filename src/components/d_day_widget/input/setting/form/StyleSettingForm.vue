@@ -22,7 +22,7 @@
           @change="updateStyle($event, 'font-family')"
         >
           <option
-            v-for="(fontFamily, index) in fontFamilies"
+            v-for="(fontFamily, index) in __fontFamilies"
             :value="fontFamily"
             :key="index"
             >{{ fontFamily }}</option
@@ -50,7 +50,7 @@
           @change="updateStyle($event, 'font-weight')"
         >
           <option
-            v-for="(fontWeight, index) in fontWeights"
+            v-for="(fontWeight, index) in __fontWeights"
             :value="fontWeight"
             :key="index"
             >{{ fontWeight }}</option
@@ -65,7 +65,7 @@
           @change="updateStyle($event, 'text-align')"
         >
           <option
-            v-for="(textAlign, index) in textAligns"
+            v-for="(textAlign, index) in __textAligns"
             :value="textAlign"
             :key="index"
             >{{ textAlign }}</option
@@ -168,7 +168,7 @@
           @change="updateStyle($event, 'border-style')"
         >
           <option
-            v-for="(borderStyle, index) in borderStyles"
+            v-for="(borderStyle, index) in __borderStyles"
             :value="borderStyle"
             :key="index"
             >{{ borderStyle }}</option
@@ -520,10 +520,10 @@ export default {
   },
   computed: {
     ...mapState("styles", [
-      "fontFamilies",
-      "fontWeights",
-      "textAligns",
-      "borderStyles",
+      "__fontFamilies",
+      "__fontWeights",
+      "__textAligns",
+      "__borderStyles",
     ]),
     ...mapGetters("styles", ["getStyleAttr"]),
   },

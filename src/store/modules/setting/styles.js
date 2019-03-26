@@ -4,7 +4,7 @@ export const namespaced = true
 
 // @T apply commented styles
 export const state = {
-  fontFamilies: [
+  __fontFamilies: [
     "Jeju Gothic",
     "Jeju Hallasan",
     "Jeju Myeongjo",
@@ -28,9 +28,9 @@ export const state = {
     "Verdana",
     "Georgia",
   ],
-  fontWeights: ["normal", "bold", "bolder", "lighter"],
-  textAligns: ["center", "left", "right"],
-  borderStyles: [
+  __fontWeights: ["normal", "bold", "bolder", "lighter"],
+  __textAligns: ["center", "left", "right"],
+  __borderStyles: [
     "solid",
     "dotted",
     "dashed",

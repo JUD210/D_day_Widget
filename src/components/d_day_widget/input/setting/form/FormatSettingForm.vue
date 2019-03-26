@@ -12,7 +12,7 @@
           @change="updateFormat($event, 'formatDDay')"
         >
           <option
-            v-for="(format, index) in formatDDays"
+            v-for="(format, index) in __formatDDays"
             :value="format"
             :key="index"
             >{{ format }}</option
@@ -27,7 +27,7 @@
           @change="updateFormat($event, 'formatDate')"
         >
           <option
-            v-for="(format, index) in formatDates"
+            v-for="(format, index) in __formatDates"
             :value="format"
             :key="index"
             >{{ format }}</option
@@ -42,7 +42,7 @@
           @change="updateFormat($event, 'formatTimerString')"
         >
           <option
-            v-for="(format, index) in formatTimerStrings"
+            v-for="(format, index) in __formatTimerStrings"
             :value="format"
             :key="index"
             >{{ format }}</option
@@ -75,9 +75,9 @@ export default {
   },
 
   computed: mapState("formats", [
-    "formatDDays",
-    "formatDates",
-    "formatTimerStrings",
+    "__formatDDays",
+    "__formatDates",
+    "__formatTimerStrings",
 
     "formatDDay",
     "formatDate",

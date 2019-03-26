@@ -12,7 +12,7 @@
           @change="updateAnimation($event, 'animationType')"
         >
           <option
-            v-for="(animationType, index) in animationTypes"
+            v-for="(animationType, index) in __animationTypes"
             :value="animationType"
             :key="index"
           >
@@ -75,7 +75,7 @@ export default {
       "animationType",
       "animationDuration",
       "animationInterval",
-      "animationTypes",
+      "__animationTypes",
     ]),
     ...mapGetters("animations", ["getAnimationAttr"]),
   },

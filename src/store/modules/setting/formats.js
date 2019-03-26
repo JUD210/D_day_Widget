@@ -1,8 +1,8 @@
 export const namespaced = true
 
 export const state = {
-  formatDDays: ["D-9 (D-%d)", "D-09 (D-%dd)"],
-  formatDates: [
+  __formatDDays: ["D-9 (D-%d)", "D-09 (D-%dd)"],
+  __formatDates: [
     "2019.2.9 (yyyy.m.d)",
     "2019-2-9 (yyyy-m-d)",
     "19.2.9 (yy.m.d)",
@@ -23,7 +23,7 @@ export const state = {
     "02.09.19 (mm.dd.yy)",
     "02-09-19 (mm-dd-yy)",
   ],
-  formatTimerStrings: [
+  __formatTimerStrings: [
     "일/시/분/초",
     "D/H/M/S",
     "d/h/m/s",

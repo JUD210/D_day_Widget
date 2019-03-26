@@ -129,7 +129,7 @@ export default {
   computed: {
     ...mapState("uniqueId", ["uniqueId"]),
 
-    ...mapState("exams", ["examsData", "indexSelector"]),
+    ...mapState("exams", ["examsData", "__indexSelector"]),
     ...mapState("onOffSwitches", [
       "useDDWDDayPart",
       "useDDWDDayPartTitle",
@@ -154,14 +154,14 @@ export default {
       "animationType",
       "animationDuration",
       "animationInterval",
-      "isIntervalChanged",
+      "__isIntervalChanged",
     ]),
 
     ...mapGetters("animations", ["getAnimationObject"]),
 
     examTitleComputed() {
-      if (this.examsData[this.indexSelector].examTitle) {
-        return this.examsData[this.indexSelector].examTitle
+      if (this.examsData[this.__indexSelector].examTitle) {
+        return this.examsData[this.__indexSelector].examTitle
       } else {
         return "Sample"
       }
@@ -210,7 +210,7 @@ export default {
       // @T add: Custom Formatting (yyyy yy mm m dd d)
       // : CustomFormatInput.vue
 
-      let eD = this.examsData[this.indexSelector].examDate.split(/-/)
+      let eD = this.examsData[this.__indexSelector].examDate.split(/-/)
       let y = eD[0]
       let m = eD[1]
       let d = eD[2]
@@ -266,7 +266,7 @@ export default {
 
   methods: {
     indexSelectorUpdater() {
-      if (this.indexSelector + 1 < this.examsData.length) {
+      if (this.__indexSelector + 1 < this.examsData.length) {
         this.$store.dispatch("exams/updateIndexSelector", "next")
       } else {
         this.$store.dispatch("exams/updateIndexSelector", "reset")
@@ -279,7 +279,7 @@ export default {
       let now = new Date().getTime() + KOREAN_TIME
 
       let timeDistance =
-        new Date(this.examsData[this.indexSelector].examDate) - now
+        new Date(this.examsData[this.__indexSelector].examDate) - now
       this.timeDistance = timeDistance
 
       let day = Math.floor(timeDistance / (1000 * 60 * 60 * 24))
@@ -301,7 +301,7 @@ export default {
     var activateAnimation = 0
 
     setInterval(() => {
-      if (this.isIntervalChanged) {
+      if (this.__isIntervalChanged) {
         // console.log("IN setInterval")
         // console.log(this.animationInterval)
 

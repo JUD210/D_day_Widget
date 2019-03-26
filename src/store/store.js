@@ -107,19 +107,19 @@ ${state.uniqueId.uniqueId}`)
         for (let target in state[mod]) {
           if (
             ![
-              "fontFamilies",
-              "fontWeights",
-              "textAligns",
-              "borderStyles",
+              "__fontFamilies",
+              "__fontWeights",
+              "__textAligns",
+              "__borderStyles",
 
-              "formatDDays",
-              "formatDates",
-              "formatTimerStrings",
+              "__formatDDays",
+              "__formatDates",
+              "__formatTimerStrings",
 
-              "indexSelector",
+              "__indexSelector",
 
-              "animationTypes",
-              "isIntervalChanged",
+              "__animationTypes",
+              "__isIntervalChanged",
             ].includes(target)
           ) {
             let temp = {}

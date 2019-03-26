@@ -10,7 +10,7 @@ if (d.getUTCMonth() + 1 < 10) {
 
 export const state = {
   // @T __ 붙여서 사용해!
-  indexSelector: 0,
+  __indexSelector: 0,
 
   /*--------------------------------------------------------*/
 
@@ -34,20 +34,20 @@ export const mutations = {
     state.examsData[index][attr] = value
   },
   REMOVE_EXAM(state, index) {
-    state.indexSelector = 0
+    state.__indexSelector = 0
     state.examsData.splice(index, 1)
   },
 
   RESET_EXAMS(state, exams) {
-    state.indexSelector = 0
+    state.__indexSelector = 0
     state.examsData = exams.examsData
   },
 
   UPDATE_INDEXSELECTOR(state, cmd) {
     if (cmd == "next") {
-      state.indexSelector += 1
+      state.__indexSelector += 1
     } else if (cmd == "reset") {
-      state.indexSelector = 0
+      state.__indexSelector = 0
     }
   },
 }
@@ -83,7 +83,7 @@ export const actions = {
     commit("UPDATE_INDEXSELECTOR", cmd)
 
     // console.log(`exams/UPDATE_INDEXSELECTOR
-    // ${cmd} state.indexSelector`)
+    // ${cmd} state.__indexSelector`)
   },
 }
 
