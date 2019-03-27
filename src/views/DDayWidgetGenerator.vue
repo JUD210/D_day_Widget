@@ -143,6 +143,9 @@ import DDayWidget from "@/components/d_day_widget/output/DDayWidget.vue"
 
 import { mapState, mapActions } from "vuex"
 
+import firebase from "firebase/app"
+import "firebase/database"
+
 export default {
   name: "app",
 
@@ -199,7 +202,7 @@ export default {
     updateOnOffSwitches(attr) {
       this.$store.dispatch("onOffSwitches/updateOnOffSwitches", { attr })
     },
-    ...mapActions(["saveWidgetData"]),
+    ...mapActions(["saveWidgetData", "loadWidgetData"]),
 
     // showResult() {
     //   this.$router.push({
@@ -207,6 +210,22 @@ export default {
     //     params: { id: this.uniqueId },
     //   })
     // },
+  },
+
+  mounted() {
+    if (localStorage["uniqueId"] !== undefined) {
+      firebase
+        .database()
+        .ref()
+        .once("value")
+        .then(snapshot => {
+          var newData = snapshot.val()
+
+          if (newData[localStorage["uniqueId"]] !== undefined) {
+            this.loadWidgetData()
+          }
+        })
+    }
   },
 }
 </script>

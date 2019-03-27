@@ -2,22 +2,32 @@ export const namespaced = "true"
 
 export const state = {
   uniqueId: "",
+  // if) not cached
+  // 1. CREATE_UNIQUE_ID
+  // 2.
 }
 
 export const mutations = {
   CREATE_UNIQUE_ID(state) {
-    state.uniqueId = ""
     let possible = "abcdefghijklmnopqrstuvwxyz0123456789"
 
-    state.uniqueId = ""
-    for (let i = 0; i < 20; i++) {
-      state.uniqueId += possible.charAt(
-        Math.floor(Math.random() * possible.length),
-      )
+    if (localStorage["uniqueId"] === undefined) {
+      alert(`nothing: ${localStorage["uniqueId"]}`)
+
+      let uniqueId = ""
+      for (let i = 0; i < 20; i++) {
+        uniqueId += possible.charAt(Math.floor(Math.random() * possible.length))
+      }
+
+      state.uniqueId = uniqueId
+      localStorage["uniqueId"] = uniqueId
+    } else {
+      state.uniqueId = localStorage["uniqueId"]
     }
   },
   UPDATE_UNIQUE_ID(state, uniqueId) {
     state.uniqueId = uniqueId
+    localStorage["uniqueId"] = uniqueId
   },
 }
 
