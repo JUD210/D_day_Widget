@@ -384,10 +384,9 @@ export default {
 
   methods: {
     isApplicable(attr) {
-      // if (attr === "height")
       // console.log(
-      // `${attr} in ${this.styleFor} : ${attr in
-      // this.$store.state.styles[this.styleFor]}`,
+      //   `${attr} in ${this.styleFor} : ${attr in
+      //     this.$store.state.styles[this.styleFor]}`,
       // )
       return attr in this.$store.state.styles[this.styleFor]
     },
@@ -439,7 +438,7 @@ export default {
         ) {
           value = (value / 100).toFixed(2)
 
-          if (attr == "opacityForText") {
+          if (attr === "opacityForText") {
             this.$store.dispatch("styles/updateStyle", {
               target: target,
               attr: "color",
@@ -448,7 +447,7 @@ export default {
                 value,
               ),
             })
-          } else if (attr == "opacityForBG") {
+          } else if (attr === "opacityForBG") {
             this.$store.dispatch("styles/updateStyle", {
               target: target,
               attr: "background-color",
@@ -457,7 +456,7 @@ export default {
                 value,
               ),
             })
-          } else if (attr == "opacityForBorder") {
+          } else if (attr === "opacityForBorder") {
             this.$store.dispatch("styles/updateStyle", {
               target: target,
               attr: "border-color",
@@ -467,19 +466,19 @@ export default {
               ),
             })
           }
-        } else if (attr == "color") {
+        } else if (attr === "color") {
           value = hexToRgba(value).toString()
           value = this.getColorWithOpacity(
             value,
             this.$store.state.styles[target]["opacityForText"],
           )
-        } else if (attr == "background-color") {
+        } else if (attr === "background-color") {
           value = hexToRgba(value).toString()
           value = this.getColorWithOpacity(
             value,
             this.$store.state.styles[target]["opacityForBG"],
           )
-        } else if (attr == "border-color") {
+        } else if (attr === "border-color") {
           value = hexToRgba(value).toString()
           value = this.getColorWithOpacity(
             value,
@@ -500,7 +499,7 @@ export default {
 
     getColorWithOpacity(color, opacity) {
       let type = color.slice(0, color.indexOf("("))
-      console.log(`opa:${opacity}`)
+      // console.log(`opa:${opacity}`)
 
       if (type === "rgba") {
         let result = color.replace(
@@ -508,12 +507,12 @@ export default {
           `${opacity})`,
         )
 
-        console.log(`return color: ${result}`)
+        // console.log(`return color: ${result}`)
         return result
       } else if (type === "rgb") {
         let result = color.replace("rgb", "rgba").replace(")", `,${opacity})`)
 
-        console.log(`return color: ${result}`)
+        // console.log(`return color: ${result}`)
         return result
       }
     },

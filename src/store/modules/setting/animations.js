@@ -28,15 +28,28 @@ export const mutations = {
     state.__isIntervalChanged = true
   },
 
-  RESET_ANIMATION(
-    state,
-    { animationType, animationDuration, animationInterval },
-  ) {
-    state.animationType = animationType
-    state.animationDuration = animationDuration
-    state.animationInterval = animationInterval
-
+  RESET_ANIMATION(state, animations) {
     state.__isIntervalChanged = true
+
+    for (let target in state) {
+      if (target.slice(0, 2) !== "__") {
+        if (state[target].constructor === Object) {
+          for (let attr in state[target]) {
+            if (animations[target][attr] !== undefined) {
+              state[target][attr] = animations[target][attr]
+            }
+          }
+        } else {
+          if (animations[target] !== undefined) {
+            state[target] = animations[target]
+          }
+        }
+      }
+    }
+
+    // state.animationType = animations.animationType
+    // state.animationDuration = animations.animationDuration
+    // state.animationInterval = animations.animationInterval
   },
 
   UPDATE_ISINTERVALCHANGED(state, bool) {
@@ -53,15 +66,8 @@ export const actions = {
     // state.__isIntervalChanged = true`)
   },
 
-  resetAnimations(
-    { commit },
-    { animationType, animationDuration, animationInterval },
-  ) {
-    commit("RESET_ANIMATION", {
-      animationType,
-      animationDuration,
-      animationInterval,
-    })
+  resetAnimations({ commit }, animations) {
+    commit("RESET_ANIMATION", animations)
 
     // console.log(`animations/RESET_ANIMATION
     // state.animationType = ${animationType}

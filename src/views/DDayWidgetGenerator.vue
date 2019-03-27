@@ -33,7 +33,7 @@
       <div class="switch-main">
         <input
           type="checkbox"
-          @click="updateUse('useDDWDDayPart')"
+          @click="updateOnOffSwitches('useDDWDDayPart')"
           :checked="useDDWDDayPart"
         />
         <label>D-Day</label>
@@ -42,7 +42,7 @@
           <div class="switch-sub">
             <input
               type="checkbox"
-              @click="updateUse('useDDWDDayPartTitle')"
+              @click="updateOnOffSwitches('useDDWDDayPartTitle')"
               :checked="useDDWDDayPartTitle"
             />
             <label>제목</label>
@@ -51,7 +51,7 @@
           <div class="switch-sub">
             <input
               type="checkbox"
-              @click="updateUse('useDDWDDayPartDDay')"
+              @click="updateOnOffSwitches('useDDWDDayPartDDay')"
               :checked="useDDWDDayPartDDay"
             />
             <label>일수</label>
@@ -60,7 +60,7 @@
           <div class="switch-sub">
             <input
               type="checkbox"
-              @click="updateUse('useDDWDDayPartDate')"
+              @click="updateOnOffSwitches('useDDWDDayPartDate')"
               :checked="useDDWDDayPartDate"
             />
             <label>날짜</label>
@@ -71,7 +71,7 @@
       <div class="switch-main">
         <input
           type="checkbox"
-          @click="updateUse('useDDWTimerPart')"
+          @click="updateOnOffSwitches('useDDWTimerPart')"
           :checked="useDDWTimerPart"
         />
         <label>타이머</label>
@@ -80,7 +80,7 @@
           <div class="switch-sub">
             <input
               type="checkbox"
-              @click="updateUse('useDDWTimerPartNumber')"
+              @click="updateOnOffSwitches('useDDWTimerPartNumber')"
               :checked="useDDWTimerPartNumber"
             />
             <label>숫자</label>
@@ -89,7 +89,7 @@
           <div class="switch-sub">
             <input
               type="checkbox"
-              @click="updateUse('useDDWTimerPartNumberString')"
+              @click="updateOnOffSwitches('useDDWTimerPartNumberString')"
               :checked="useDDWTimerPartNumberString"
             />
             <label>글자</label>
@@ -196,8 +196,8 @@ export default {
       }
     },
 
-    updateUse(attr) {
-      this.$store.dispatch("onOffSwitches/updateUse", { attr })
+    updateOnOffSwitches(attr) {
+      this.$store.dispatch("onOffSwitches/updateOnOffSwitches", { attr })
     },
     ...mapActions(["saveWidgetData"]),
 

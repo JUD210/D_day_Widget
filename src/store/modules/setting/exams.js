@@ -40,13 +40,30 @@ export const mutations = {
 
   RESET_EXAMS(state, exams) {
     state.__indexSelector = 0
-    state.examsData = exams.examsData
+
+    for (let target in state) {
+      if (target.slice(0, 2) !== "__") {
+        if (state[target].constructor === Object) {
+          for (let attr in state[target]) {
+            if (exams[target][attr] !== undefined) {
+              state[target][attr] = exams[target][attr]
+            }
+          }
+        } else {
+          if (exams[target] !== undefined) {
+            state[target] = exams[target]
+          }
+        }
+      }
+    }
+
+    // state.examsData = exams.examsData
   },
 
   UPDATE_INDEXSELECTOR(state, cmd) {
-    if (cmd == "next") {
+    if (cmd === "next") {
       state.__indexSelector += 1
-    } else if (cmd == "reset") {
+    } else if (cmd === "reset") {
       state.__indexSelector = 0
     }
   },
@@ -75,8 +92,8 @@ export const actions = {
   resetExams({ commit }, exams) {
     commit("RESET_EXAMS", exams)
 
-    // console.log(`exams/RESET_EXAMS
-    // state.examsData = ${JSON.stringify(exams)}`)
+    console.log(`exams/RESET_EXAMS
+    state.examsData = ${JSON.stringify(exams)}`)
   },
 
   updateIndexSelector({ commit }, cmd) {

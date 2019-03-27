@@ -12,67 +12,50 @@ export const state = {
 }
 
 export const mutations = {
-  UPDATE_USE(state, { attr }) {
+  UPDATE_ONOFFSWITCHES(state, { attr }) {
     state[attr] = !state[attr]
   },
 
-  RESET_USE(
-    state,
-    {
-      useDDWDDayPart,
-      useDDWDDayPartTitle,
-      useDDWDDayPartDDay,
-      useDDWDDayPartDate,
+  RESET_ONOFFSWITCHES(state, onOffSwitches) {
+    for (let target in state) {
+      if (target.slice(0, 2) !== "__") {
+        if (state[target].constructor === Object) {
+          for (let attr in state[target]) {
+            if (onOffSwitches[target][attr] !== undefined) {
+              state[target][attr] = onOffSwitches[target][attr]
+            }
+          }
+        } else {
+          if (onOffSwitches[target] !== undefined) {
+            state[target] = onOffSwitches[target]
+          }
+        }
+      }
+    }
 
-      useDDWTimerPart,
-      useDDWTimerPartNumber,
-      useDDWTimerPartNumberString,
-    },
-  ) {
-    state.useDDWDDayPart = useDDWDDayPart
-    state.useDDWDDayPartTitle = useDDWDDayPartTitle
-    state.useDDWDDayPartDDay = useDDWDDayPartDDay
-    state.useDDWDDayPartDate = useDDWDDayPartDate
+    // state.useDDWDDayPart = useDDWDDayPart
+    // state.useDDWDDayPartTitle = useDDWDDayPartTitle
+    // state.useDDWDDayPartDDay = useDDWDDayPartDDay
+    // state.useDDWDDayPartDate = useDDWDDayPartDate
 
-    state.useDDWTimerPart = useDDWTimerPart
-    state.useDDWTimerPartNumber = useDDWTimerPartNumber
-    state.useDDWTimerPartNumberString = useDDWTimerPartNumberString
+    // state.useDDWTimerPart = useDDWTimerPart
+    // state.useDDWTimerPartNumber = useDDWTimerPartNumber
+    // state.useDDWTimerPartNumberString = useDDWTimerPartNumberString
   },
 }
 
 export const actions = {
-  updateUse({ commit }, { attr }) {
-    commit("UPDATE_USE", { attr })
+  updateOnOffSwitches({ commit }, { attr }) {
+    commit("UPDATE_ONOFFSWITCHES", { attr })
 
-    // console.log(`onOffSwitches/UPDATE_USE
+    // console.log(`onOffSwitches/UPDATE_ONOFFSWITCHES
     // state[${attr}] = ${!state[attr]}`)
   },
 
-  resetUses(
-    { commit },
-    {
-      useDDWDDayPart,
-      useDDWDDayPartTitle,
-      useDDWDDayPartDDay,
-      useDDWDDayPartDate,
+  resetOnOffSwitches({ commit }, onOffSwitches) {
+    commit("RESET_ONOFFSWITCHES", onOffSwitches)
 
-      useDDWTimerPart,
-      useDDWTimerPartNumber,
-      useDDWTimerPartNumberString,
-    },
-  ) {
-    commit("RESET_USE", {
-      useDDWDDayPart,
-      useDDWDDayPartTitle,
-      useDDWDDayPartDDay,
-      useDDWDDayPartDate,
-
-      useDDWTimerPart,
-      useDDWTimerPartNumber,
-      useDDWTimerPartNumberString,
-    })
-
-    // console.log(`onOffSwitches/RESET_USE
+    // console.log(`onOffSwitches/RESET_ONOFFSWITCHES
     // state.useDDWDDayPart = ${useDDWDDayPart}
     // state.useDDWDDayPartTitle = ${useDDWDDayPartTitle}
     // state.useDDWDDayPartDDay = ${useDDWDDayPartDDay}

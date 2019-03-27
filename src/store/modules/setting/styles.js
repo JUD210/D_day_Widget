@@ -175,14 +175,33 @@ export const mutations = {
   },
 
   RESET_STYLE(state, styles) {
-    state.styleDDW = styles.styleDDW
-    state.styleDDWDDayPart = styles.styleDDWDDayPart
-    state.styleDDWDDayPartTitle = styles.styleDDWDDayPartTitle
-    state.styleDDWDDayPartDDay = styles.styleDDWDDayPartDDay
-    state.styleDDWDDayPartDate = styles.styleDDWDDayPartDate
-    state.styleDDWTimerPart = styles.styleDDWTimerPart
-    state.styleDDWTimerPartNumber = styles.styleDDWTimerPartNumber
-    state.styleDDWTimerPartNumberString = styles.styleDDWTimerPartNumberString
+    for (let target in state) {
+      if (target.slice(0, 2) !== "__") {
+        if (state[target].constructor === Object) {
+          for (let attr in state[target]) {
+            if (styles[target][attr] !== undefined) {
+              state[target][attr] = styles[target][attr]
+            }
+          }
+        } else {
+          // @T Continue: Styles -> exams -> ... all
+          // @T ADD UNDEFINED
+
+          if (styles[target] !== undefined) {
+            state[target] = styles[target]
+          }
+        }
+      }
+    }
+
+    // state.styleDDW = styles.styleDDW
+    // state.styleDDWDDayPart = styles.styleDDWDDayPart
+    // state.styleDDWDDayPartTitle = styles.styleDDWDDayPartTitle
+    // state.styleDDWDDayPartDDay = styles.styleDDWDDayPartDDay
+    // state.styleDDWDDayPartDate = styles.styleDDWDDayPartDate
+    // state.styleDDWTimerPart = styles.styleDDWTimerPart
+    // state.styleDDWTimerPartNumber = styles.styleDDWTimerPartNumber
+    // state.styleDDWTimerPartNumberString = styles.styleDDWTimerPartNumberString
   },
 }
 

@@ -44,10 +44,26 @@ export const mutations = {
     state[attr] = value
   },
 
-  RESET_FORMAT(state, { formatDDay, formatDate, formatTimerString }) {
-    state.formatDDay = formatDDay
-    state.formatDate = formatDate
-    state.formatTimerString = formatTimerString
+  RESET_FORMAT(state, formats) {
+    for (let target in state) {
+      if (target.slice(0, 2) !== "__") {
+        if (state[target].constructor === Object) {
+          for (let attr in state[target]) {
+            if (formats[target][attr] !== undefined) {
+              state[target][attr] = formats[target][attr]
+            }
+          }
+        } else {
+          if (formats[target] !== undefined) {
+            state[target] = formats[target]
+          }
+        }
+      }
+    }
+
+    // state.formatDDay = formatDDay
+    // state.formatDate = formatDate
+    // state.formatTimerString = formatTimerString
   },
 }
 
@@ -59,8 +75,8 @@ export const actions = {
     // state[${attr}] = ${value}`)
   },
 
-  resetFormats({ commit }, { formatDDay, formatDate, formatTimerString }) {
-    commit("RESET_FORMAT", { formatDDay, formatDate, formatTimerString })
+  resetFormats({ commit }, formats) {
+    commit("RESET_FORMAT", formats)
 
     // console.log(`formats/RESET_FORMAT
     // state.formatDDay = ${formatDDay}

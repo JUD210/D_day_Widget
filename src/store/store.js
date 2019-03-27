@@ -78,7 +78,7 @@ Ctrl+V 로 웹 소스 URL에 붙여넣으시면 됩니다.
           var newData = snapshot.val()
 
           dispatch("exams/resetExams", newData.exams)
-          dispatch("onOffSwitches/resetUses", newData.onOffSwitches)
+          dispatch("onOffSwitches/resetOnOffSwitches", newData.onOffSwitches)
           dispatch("styles/resetStyles", newData.styles)
           dispatch("formats/resetFormats", newData.formats)
           dispatch("animations/resetAnimations", newData.animations)
@@ -86,13 +86,13 @@ Ctrl+V 로 웹 소스 URL에 붙여넣으시면 됩니다.
           console.log(`store/loadWidgetData [OK]
           // ${JSON.stringify(newData)}`)
         })
-        .catch(() => {
+        .catch(error => {
           alert(`입력된 키 값과 일치하는 데이터가 없습니다!
 키 값을 잘못 붙여넣었는지 확인해주세요. (띄어쓰기 등)
 ${state.uniqueId.uniqueId}`)
 
-          // console.log(`store/loadWidgetData [ERROR]
-          // ${error}`)
+          console.log(`store/loadWidgetData [ERROR]
+          ${error}`)
         })
     },
   },
@@ -100,28 +100,9 @@ ${state.uniqueId.uniqueId}`)
     getWidgetData(state) {
       let result = {}
 
-      console.log(result)
-      console.log("↓")
-      // @T NOW
       for (let mod in state) {
         for (let target in state[mod]) {
-          if (
-            ![
-              "__fontFamilies",
-              "__fontWeights",
-              "__textAligns",
-              "__borderStyles",
-
-              "__formatDDays",
-              "__formatDates",
-              "__formatTimerStrings",
-
-              "__indexSelector",
-
-              "__animationTypes",
-              "__isIntervalChanged",
-            ].includes(target)
-          ) {
+          if (target.slice(0, 2) !== "__") {
             let temp = {}
             temp[target] = state[mod][target]
 
@@ -130,31 +111,6 @@ ${state.uniqueId.uniqueId}`)
           }
         }
       }
-
-      // result = {
-      //   exams: state.exams.exams,
-      //   styles: {
-      //     styleDDW: state.styles.styleDDW,
-      //     styleDDWDDayPart: state.styles.styleDDWDDayPart,
-      //     styleDDWDDayPartTitle: state.styles.styleDDWDDayPartTitle,
-      //     styleDDWDDayPartDDay: state.styles.styleDDWDDayPartDDay,
-      //     styleDDWDDayPartDate: state.styles.styleDDWDDayPartDate,
-      //     styleDDWTimerPart: state.styles.styleDDWTimerPart,
-      //     styleDDWTimerPartNumber: state.styles.styleDDWTimerPartNumber,
-      //     styleDDWTimerPartNumberString:
-      //       state.styles.styleDDWTimerPartNumberString,
-      //   },
-      //   formats: {
-      //     formatDDay: state.formats.formatDDay,
-      //     formatDate: state.formats.formatDate,
-      //     formatTimerString: state.formats.formatTimerString,
-      //   },
-      //   animations: {
-      //     animationType: state.animations.animationType,
-      //     animationDuration: state.animations.animationDuration,
-      //     animationInterval: state.animations.animationInterval,
-      //   },
-      // }
 
       return result
     },
