@@ -4,6 +4,10 @@
     <button @click="createUniqueId">New</button>
     <input type="text" :value="uniqueId" @change="updateUniqueId" />
     <button @click="loadWidgetData">Load</button>
+    <p>
+      위젯이 제대로 작동하지 않을 경우<br />
+      새로고침을 해주세요!
+    </p>
     <!-- // @T add: Reset Button -->
     <!-- <button @click="">Reset</button> -->
   </div>
@@ -29,3 +33,9 @@ export default {
   },
 }
 </script>
+
+<style>
+p {
+  text-align: center;
+}
+</style>

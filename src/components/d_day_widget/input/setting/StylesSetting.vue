@@ -1,8 +1,5 @@
 <template>
   <BaseToggleBox class="toggleBox" title="스타일">
-    <StyleSettingForm title="위젯" styleFor="styleDDW"></StyleSettingForm>
-    <br />
-
     <StyleSettingForm
       title="D-day 배경"
       styleFor="styleDDWDDayPart"

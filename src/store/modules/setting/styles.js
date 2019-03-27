@@ -44,33 +44,32 @@ export const state = {
 
   /*--------------------------------------------------------*/
 
-  styleDDW: {
-    "border-color": "rgba(0, 0, 0, 0.6)",
-    opacityForBorder: 0.6,
-    "border-style": "double",
-    "border-width": "5px",
-    "border-top-left-radius": "20px",
-    "border-top-right-radius": "20px",
-    "border-bottom-left-radius": "20px",
-    "border-bottom-right-radius": "20px",
-
-    width: "400px",
-  },
-
   styleDDWDDayPart: {
     "background-color": "rgba(35, 35, 35, 0.95)",
     opacityForBG: 0.95,
+
+    // @T add: Import provided BG Image
+    // @T add: Custom Image
+
+    "border-color": "rgba(0, 0, 0, 0.6)",
+    opacityForBorder: 0.6,
+    "border-style": "double",
+
+    "border-left-width": "5px",
+    "border-right-width": "5px",
+    "border-top-width": "5px",
+    "border-bottom-width": "5px",
+
     "border-top-left-radius": "10px",
     "border-top-right-radius": "10px",
     "border-bottom-left-radius": "0px",
     "border-bottom-right-radius": "0px",
 
+    width: "400px",
+    height: "130px",
+
     left: "0px",
     bottom: "0px",
-
-    height: "130px",
-    // @T add: Import provided BG Image
-    // @T add: Custom Image
   },
 
   styleDDWDDayPartTitle: {
@@ -80,6 +79,20 @@ export const state = {
     "text-align": "center",
     color: "rgba(255, 255, 255, 1.0)",
     opacityForText: 1.0,
+
+    "border-color": "rgba(0, 0, 0, 0)",
+    opacityForBorder: 0,
+    "border-style": "double",
+
+    "border-left-width": "0px",
+    "border-right-width": "0px",
+    "border-top-width": "0px",
+    "border-bottom-width": "0px",
+
+    "border-top-left-radius": "0px",
+    "border-top-right-radius": "0px",
+    "border-bottom-left-radius": "0px",
+    "border-bottom-right-radius": "0px",
 
     left: "0px",
     bottom: "0px",
@@ -92,6 +105,20 @@ export const state = {
     color: "rgba(255, 74, 74, 1.0)",
     opacityForText: 1.0,
 
+    "border-color": "rgba(0, 0, 0, 0)",
+    opacityForBorder: 0,
+    "border-style": "double",
+
+    "border-left-width": "0px",
+    "border-right-width": "0px",
+    "border-top-width": "0px",
+    "border-bottom-width": "0px",
+
+    "border-top-left-radius": "0px",
+    "border-top-right-radius": "0px",
+    "border-bottom-left-radius": "0px",
+    "border-bottom-right-radius": "0px",
+
     left: "0px",
     bottom: "0px",
   },
@@ -103,6 +130,20 @@ export const state = {
     color: "rgba(255, 255, 255, 1.0)",
     opacityForText: 1.0,
 
+    "border-color": "rgba(0, 0, 0, 0)",
+    opacityForBorder: 0,
+    "border-style": "double",
+
+    "border-left-width": "0px",
+    "border-right-width": "0px",
+    "border-top-width": "0px",
+    "border-bottom-width": "0px",
+
+    "border-top-left-radius": "0px",
+    "border-top-right-radius": "0px",
+    "border-bottom-left-radius": "0px",
+    "border-bottom-right-radius": "0px",
+
     left: "0px",
     bottom: "0px",
   },
@@ -112,11 +153,25 @@ export const state = {
   styleDDWTimerPart: {
     "background-color": "rgba(5, 24, 36, 0.95)",
     opacityForBG: 0.95,
+
+    // @T add: Import provided BG Image
+    // @T add: Custom Image
+
+    "border-color": "rgba(0, 0, 0, 0.6)",
+    opacityForBorder: 0.6,
+    "border-style": "double",
+
+    "border-left-width": "5px",
+    "border-right-width": "5px",
+    "border-top-width": "5px",
+    "border-bottom-width": "5px",
+
     "border-top-left-radius": "0px",
     "border-top-right-radius": "0px",
     "border-bottom-left-radius": "10px",
     "border-bottom-right-radius": "10px",
 
+    width: "400px",
     height: "80px",
 
     left: "0px",
@@ -137,7 +192,12 @@ export const state = {
     "border-color": "rgba(35, 35, 35, 0.5)",
     opacityForBorder: 0.5,
     "border-style": "solid",
-    "border-width": "2px",
+
+    "border-left-width": "2px",
+    "border-right-width": "2px",
+    "border-top-width": "2px",
+    "border-bottom-width": "2px",
+
     "border-top-left-radius": "10px",
     "border-top-right-radius": "10px",
     "border-bottom-left-radius": "10px",
@@ -161,6 +221,23 @@ export const state = {
     "text-align": "center",
     color: "rgba(255, 255, 255, 1.0)",
     opacityForText: 1.0,
+
+    "background-color": "rgba(80, 77, 77, 0)",
+    opacityForBG: 0,
+
+    "border-color": "rgba(35, 35, 35, 0.5)",
+    opacityForBorder: 0.5,
+    "border-style": "solid",
+
+    "border-left-width": "0px",
+    "border-right-width": "0px",
+    "border-top-width": "0px",
+    "border-bottom-width": "0px",
+
+    "border-top-left-radius": "0px",
+    "border-top-right-radius": "0px",
+    "border-bottom-left-radius": "0px",
+    "border-bottom-right-radius": "0px",
 
     left: "0px",
     bottom: "0px",
@@ -194,7 +271,6 @@ export const mutations = {
       }
     }
 
-    // state.styleDDW = styles.styleDDW
     // state.styleDDWDDayPart = styles.styleDDWDDayPart
     // state.styleDDWDDayPartTitle = styles.styleDDWDDayPartTitle
     // state.styleDDWDDayPartDDay = styles.styleDDWDDayPartDDay
@@ -217,7 +293,6 @@ export const actions = {
     commit("RESET_STYLE", styles)
 
     // console.log(`styles/RESET_STYLE
-    // state.styleDDW = ${styles.styleDDW}
     // state.styleDDWDDayPart = ${styles.styleDDWDDayPart}
     // state.styleDDWDDayPartTitle = ${styles.styleDDWDDayPartTitle}
     // state.styleDDWDDayPartDDay = ${styles.styleDDWDDayPartDDay}
@@ -236,7 +311,10 @@ export const getters = {
       [
         "font-size",
 
-        "border-width",
+        "border-left-width",
+        "border-right-width",
+        "border-top-width",
+        "border-bottom-width",
 
         "border-top-left-radius",
         "border-top-right-radius",

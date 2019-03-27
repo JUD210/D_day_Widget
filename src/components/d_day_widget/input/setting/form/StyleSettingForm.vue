@@ -130,7 +130,10 @@
         isApplicable('border-color') ||
           isApplicable('opacityForBorder') ||
           isApplicable('border-style') ||
-          isApplicable('border-width') ||
+          isApplicable('border-left-width') ||
+          isApplicable('border-right-width') ||
+          isApplicable('border-top-width') ||
+          isApplicable('border-bottom-width') ||
           isApplicable('border-top-left-radius') ||
           isApplicable('border-top-right-radius') ||
           isApplicable('border-bottom-left-radius') ||
@@ -176,15 +179,51 @@
         </select>
       </div>
 
-      <div v-if="isApplicable('border-width')" class="inputLine">
-        <label>테두리 폭 (px)</label>
+      <div v-if="isApplicable('border-left-width')" class="inputLine">
+        <label>테두리 폭 - ← (px)</label>
         <input
           type="number"
           min="0"
           max="1000"
           step="1"
-          :value="getStyleAttr(styleFor, 'border-width')"
-          @change="updateStyle($event, 'border-width')"
+          :value="getStyleAttr(styleFor, 'border-left-width')"
+          @change="updateStyle($event, 'border-left-width')"
+          placeholder="길이를 입력해주세요."
+        />
+      </div>
+      <div v-if="isApplicable('border-right-width')" class="inputLine">
+        <label>테두리 폭 - → (px)</label>
+        <input
+          type="number"
+          min="0"
+          max="1000"
+          step="1"
+          :value="getStyleAttr(styleFor, 'border-right-width')"
+          @change="updateStyle($event, 'border-right-width')"
+          placeholder="길이를 입력해주세요."
+        />
+      </div>
+      <div v-if="isApplicable('border-top-width')" class="inputLine">
+        <label>테두리 폭 - ↑ (px)</label>
+        <input
+          type="number"
+          min="0"
+          max="1000"
+          step="1"
+          :value="getStyleAttr(styleFor, 'border-top-width')"
+          @change="updateStyle($event, 'border-top-width')"
+          placeholder="길이를 입력해주세요."
+        />
+      </div>
+      <div v-if="isApplicable('border-bottom-width')" class="inputLine">
+        <label>테두리 폭 - ↓ (px)</label>
+        <input
+          type="number"
+          min="0"
+          max="1000"
+          step="1"
+          :value="getStyleAttr(styleFor, 'border-bottom-width')"
+          @change="updateStyle($event, 'border-bottom-width')"
           placeholder="길이를 입력해주세요."
         />
       </div>
@@ -413,7 +452,10 @@ export default {
           [
             "font-size",
 
-            "border-width",
+            "border-left-width",
+            "border-right-width",
+            "border-top-width",
+            "border-bottom-width",
 
             "border-top-left-radius",
             "border-top-right-radius",

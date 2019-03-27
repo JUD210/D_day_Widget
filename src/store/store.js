@@ -43,15 +43,15 @@ export default new Vuex.Store({
         .ref(`${state.uniqueId.uniqueId}/d_day_widget`)
         .set(getters.getWidgetData)
         .then(() => {
-          // @T 가로 세로 비율
-          // @T [ManyCam 위젯 크기 추천]  가로: 400px
+          // @T Left 세로 비율
+          // @T [ManyCam 위젯 크기 추천]  Left: 400px
 
           alert(`URL복사 및 데이터 저장 완료!
 Ctrl+V 로 웹 소스 URL에 붙여넣으시면 됩니다.
 😃👍
 -------------------------------------
 [저장된 위젯 크기]
-가로: ${getters.getVisualWidth}  |  세로: ${getters.getVisualHeight}`)
+Left: ${getters.getVisualWidth}  |  세로: ${getters.getVisualHeight}`)
           console.log(`store/saveWidgetData [OK]
           ${JSON.stringify(getters.getWidgetData)}`)
         })
@@ -122,24 +122,46 @@ ${state.uniqueId.uniqueId}`)
 
       return result
     },
+
     getVisualWidth: state => {
-      return (
-        Number(state.styles.styleDDW.width.split("px")[0]) +
-        Number(state.styles.styleDDW["border-width"].split("px")[0] * 2)
-      )
+      // @T
+      let result = 0
+      console.log(state)
+      // let ddayPartLeftDistance = 0
+      // let timerPartLeftDistance = 0
+
+      // if (state.onOffSwitches.useDDWDDayPart) {
+      //   ddayPartLeftDistance = Math.abs(
+      //     state.styles.styleDDWDDayPart.left.split("px")[0],
+      //   )
+      // }
+      // if (state.onOffSwitches.useDDWTimerPart) {
+      //   timerPartLeftDistance = Math.abs(
+      //     state.styles.styleDDWTimerPart.left.split("px")[0],
+      //   )
+      // }
+
+      // result += Number(state.styles.styleDDW.width.split("px")[0])
+      // result += Number(state.styles.styleDDW["border-width"].split("px")[0] * 2)
+      // result += Math.max(ddayPartLeftDistance, timerPartLeftDistance)
+
+      return `${result}px`
     },
 
     getVisualHeight: state => {
-      let sum = 0
-      if (state.onOffSwitches.useDDWDDayPart) {
-        sum += Number(state.styles.styleDDWDDayPart.height.split("px")[0])
-      }
-      if (state.onOffSwitches.useDDWTimerPart) {
-        sum += Number(state.styles.styleDDWTimerPart.height.split("px")[0])
-      }
-      sum += Number(state.styles.styleDDW["border-width"].split("px")[0] * 2)
+      // @T
+      let result = 0
+      console.log(state)
 
-      return `${sum}px`
+      // if (state.onOffSwitches.useDDWDDayPart) {
+      //   result += Number(state.styles.styleDDWDDayPart.height.split("px")[0])
+      // }
+      // if (state.onOffSwitches.useDDWTimerPart) {
+      //   result += Number(state.styles.styleDDWTimerPart.height.split("px")[0])
+      // }
+      // result += Number(state.styles.styleDDW["border-width"].split("px")[0] * 2)
+
+      return `${result}px`
     },
   },
 })
@@ -157,7 +179,6 @@ ${state.uniqueId.uniqueId}`)
 //       state.onOffSwitches.useDDWTimerPartNumberString,
 //   },
 //   styles: {
-//     styleDDW: state.styles.styleDDW,
 //     styleDDWDDayPart: state.styles.styleDDWDDayPart,
 //     styleDDWDDayPartTitle: state.styles.styleDDWDDayPartTitle,
 //     styleDDWDDayPartDDay: state.styles.styleDDWDDayPartDDay,
