@@ -222,6 +222,7 @@ export default {
           var newData = snapshot.val()
 
           if (newData[localStorage["uniqueId"]] !== undefined) {
+            localStorage["requireReloadWhenLoading"] = "no"
             this.loadWidgetData()
           }
         })

@@ -33,10 +33,6 @@ export default new Vuex.Store({
     animations,
   },
 
-  states: {
-    isDebug: false,
-  },
-
   actions: {
     saveWidgetData({ state, getters }) {
       database
@@ -82,8 +78,9 @@ Left: ${getters.getVisualWidth}  |  세로: ${getters.getVisualHeight}`)
           dispatch("formats/resetFormats", newData.formats)
           dispatch("animations/resetAnimations", newData.animations)
 
-          console.log(`store/loadWidgetData [OK]
-          ${JSON.stringify(newData)}`)
+          if (localStorage["requireReloadWhenLoading"] === "yes") {
+            location.reload()
+          }
         })
         .catch(error => {
           alert(`입력된/저장된 키 값과 일치하는 데이터가 없습니다!

@@ -12,8 +12,6 @@ export const mutations = {
     let possible = "abcdefghijklmnopqrstuvwxyz0123456789"
 
     if (localStorage["uniqueId"] === undefined) {
-      alert(`nothing: ${localStorage["uniqueId"]}`)
-
       let uniqueId = ""
       for (let i = 0; i < 20; i++) {
         uniqueId += possible.charAt(Math.floor(Math.random() * possible.length))
@@ -21,6 +19,8 @@ export const mutations = {
 
       state.uniqueId = uniqueId
       localStorage["uniqueId"] = uniqueId
+
+      location.reload()
     } else {
       state.uniqueId = localStorage["uniqueId"]
     }
