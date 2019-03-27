@@ -52,8 +52,8 @@ Ctrl+V 로 웹 소스 URL에 붙여넣으시면 됩니다.
 -------------------------------------
 [저장된 위젯 크기]
 가로: ${getters.getVisualWidth}  |  세로: ${getters.getVisualHeight}`)
-          // console.log(`store/saveWidgetData [OK]
-          // ${JSON.stringify(getters.getWidgetData)}`)
+          console.log(`store/saveWidgetData [OK]
+          ${JSON.stringify(getters.getWidgetData)}`)
         })
         .catch(error => {
           alert(`오류 발생! 제 연락처로 문의해주세요. 
@@ -76,7 +76,6 @@ Ctrl+V 로 웹 소스 URL에 붙여넣으시면 됩니다.
         .once("value")
         .then(snapshot => {
           var newData = snapshot.val()
-
           dispatch("exams/resetExams", newData.exams)
           dispatch("onOffSwitches/resetOnOffSwitches", newData.onOffSwitches)
           dispatch("styles/resetStyles", newData.styles)
@@ -84,7 +83,7 @@ Ctrl+V 로 웹 소스 URL에 붙여넣으시면 됩니다.
           dispatch("animations/resetAnimations", newData.animations)
 
           console.log(`store/loadWidgetData [OK]
-          // ${JSON.stringify(newData)}`)
+          ${JSON.stringify(newData)}`)
         })
         .catch(error => {
           alert(`입력된 키 값과 일치하는 데이터가 없습니다!
@@ -101,13 +100,22 @@ ${state.uniqueId.uniqueId}`)
       let result = {}
 
       for (let mod in state) {
-        for (let target in state[mod]) {
-          if (target.slice(0, 2) !== "__") {
-            let temp = {}
-            temp[target] = state[mod][target]
+        if (
+          [
+            "exams",
+            "onOffSwitches",
+            "styles",
+            "formats",
+            "animations",
+          ].includes(mod)
+        ) {
+          for (let target in state[mod]) {
+            if (target.slice(0, 2) !== "__") {
+              let temp = {}
+              temp[target] = state[mod][target]
 
-            result[mod] = { ...result[mod], ...temp }
-            console.log(result)
+              result[mod] = { ...result[mod], ...temp }
+            }
           }
         }
       }

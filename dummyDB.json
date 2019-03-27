@@ -1,0 +1,3876 @@
+{
+  "04hf9ajel6zvmn1abu3r" : {
+    "d_day_widget" : {
+      "animations" : {
+        "animationDuration" : 0.8,
+        "animationInterval" : 5,
+        "animationType" : "fade"
+      },
+      "exams" : {
+        "examsData" : [ {
+          "examDate" : "2019-03-26"
+        }, {
+          "examDate" : "2020-03-26"
+        } ]
+      },
+      "formats" : {
+        "formatDDay" : "D-9 (D-%d)",
+        "formatDate" : "2019.2.9 (yyyy.m.d)",
+        "formatTimerString" : "일/시/분/초"
+      },
+      "onOffSwitches" : {
+        "useDDWDDayPart" : true,
+        "useDDWDDayPartDDay" : true,
+        "useDDWDDayPartDate" : true,
+        "useDDWDDayPartTitle" : true,
+        "useDDWTimerPart" : true,
+        "useDDWTimerPartNumber" : true,
+        "useDDWTimerPartNumberString" : true
+      },
+      "styles" : {
+        "styleDDW" : {
+          "border-bottom-left-radius" : "20px",
+          "border-bottom-right-radius" : "20px",
+          "border-color" : "rgba(0, 0, 0, 0.6)",
+          "border-style" : "double",
+          "border-top-left-radius" : "20px",
+          "border-top-right-radius" : "20px",
+          "border-width" : "5px",
+          "opacityForBorder" : 0.6,
+          "width" : "400px"
+        },
+        "styleDDWDDayPart" : {
+          "background-color" : "rgba(35, 35, 35, 0.95)",
+          "border-bottom-left-radius" : "0px",
+          "border-bottom-right-radius" : "0px",
+          "border-top-left-radius" : "10px",
+          "border-top-right-radius" : "10px",
+          "bottom" : "0px",
+          "height" : "130px",
+          "left" : "0px",
+          "opacityForBG" : 0.95
+        },
+        "styleDDWDDayPartDDay" : {
+          "bottom" : "0px",
+          "color" : "rgba(255, 74, 74, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "35px",
+          "font-weight" : "normal",
+          "left" : "0px",
+          "opacityForText" : 1,
+          "text-align" : "center"
+        },
+        "styleDDWDDayPartDate" : {
+          "bottom" : "0px",
+          "color" : "rgba(255, 255, 255, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "20px",
+          "font-weight" : "normal",
+          "left" : "0px",
+          "opacityForText" : 1,
+          "text-align" : "center"
+        },
+        "styleDDWDDayPartTitle" : {
+          "bottom" : "0px",
+          "color" : "rgba(255, 255, 255, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "40px",
+          "font-weight" : "normal",
+          "left" : "0px",
+          "opacityForText" : 1,
+          "text-align" : "center"
+        },
+        "styleDDWTimerPart" : {
+          "background-color" : "rgba(5, 24, 36, 0.95)",
+          "border-bottom-left-radius" : "10px",
+          "border-bottom-right-radius" : "10px",
+          "border-top-left-radius" : "0px",
+          "border-top-right-radius" : "0px",
+          "bottom" : "0px",
+          "height" : "80px",
+          "left" : "0px",
+          "opacityForBG" : 0.95
+        },
+        "styleDDWTimerPartNumber" : {
+          "background-color" : "rgba(80, 77, 77, 1.0)",
+          "border-bottom-left-radius" : "10px",
+          "border-bottom-right-radius" : "10px",
+          "border-color" : "rgba(35, 35, 35, 0.5)",
+          "border-style" : "solid",
+          "border-top-left-radius" : "10px",
+          "border-top-right-radius" : "10px",
+          "border-width" : "2px",
+          "bottom" : "0px",
+          "color" : "rgba(255, 255, 255, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "20px",
+          "font-weight" : "normal",
+          "height" : "30px",
+          "left" : "0px",
+          "opacityForBG" : 0.7,
+          "opacityForBorder" : 0.5,
+          "opacityForText" : 1,
+          "padding-bottom" : "0px",
+          "padding-left" : "5px",
+          "padding-right" : "5px",
+          "padding-top" : "0px",
+          "text-align" : "center",
+          "width" : "55px"
+        },
+        "styleDDWTimerPartNumberString" : {
+          "bottom" : "0px",
+          "color" : "rgba(255, 255, 255, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "20px",
+          "font-weight" : "normal",
+          "left" : "0px",
+          "opacityForText" : 1,
+          "text-align" : "center"
+        }
+      },
+      "uniqueId" : {
+        "uniqueId" : "04hf9ajel6zvmn1abu3r"
+      }
+    }
+  },
+  "46oat6wrc9j0zz2um7zr" : {
+    "d_day_widget" : {
+      "animations" : {
+        "animationDuration" : 0.8,
+        "animationInterval" : 5,
+        "animationType" : "fade",
+        "animationTypes" : [ "fade", "fade-short", "fade-long", "fade-strong", "fade-short-strong", "fade-long-strong", "slide-fade", "slide", "none" ],
+        "isIntervalChanged" : false
+      },
+      "exams" : {
+        "exams" : [ {
+          "examDate" : "2019-03-26"
+        }, {
+          "examDate" : "2020-03-26"
+        } ],
+        "indexSelector" : 0
+      },
+      "formats" : {
+        "formatDDay" : "D-9 (D-%d)",
+        "formatDDays" : [ "D-9 (D-%d)", "D-09 (D-%dd)" ],
+        "formatDate" : "2019.2.9 (yyyy.m.d)",
+        "formatDates" : [ "2019.2.9 (yyyy.m.d)", "2019-2-9 (yyyy-m-d)", "19.2.9 (yy.m.d)", "19-2-9 (yy-m-d)", "2.9.2019 (m.d.yyyy)", "2-9-2019 (m-d-yyyy)", "2.9.19 (m.d.yy)", "2-9-19 (m-d-yy)", "2019.02.09 (yyyy.mm.dd)", "2019-02-09 (yyyy-mm-dd)", "19.02.09 (yy.mm.dd)", "19-02-09 (yy-mm-dd)", "02.09.2019 (mm.dd.yyyy)", "02-09-2019 (mm-dd-yyyy)", "02.09.19 (mm.dd.yy)", "02-09-19 (mm-dd-yy)" ],
+        "formatTimerString" : "일/시/분/초",
+        "formatTimerStrings" : [ "일/시/분/초", "D/H/M/S", "d/h/m/s", "Day/Hour/Min/Sec", "day/hour/min/sec", "Day/Hour/Minute/Second" ]
+      },
+      "onOffSwitches" : {
+        "useDDWDDayPart" : true,
+        "useDDWDDayPartDDay" : true,
+        "useDDWDDayPartDate" : true,
+        "useDDWDDayPartTitle" : true,
+        "useDDWTimerPart" : true,
+        "useDDWTimerPartNumber" : true,
+        "useDDWTimerPartNumberString" : true
+      },
+      "styles" : {
+        "borderStyles" : [ "solid", "dotted", "dashed", "double", "groove", "ridge", "inset", "outset", "none" ],
+        "fontFamilies" : [ "Jeju Gothic", "Jeju Hallasan", "Jeju Myeongjo", "Hanna", "Nanum Gothic", "Nanum Gothic Coding", "Nanum Brush Script", "Nanum Pen Script", "Nanum Myeongjo", "KoPub Batang", "Noto Sans KR", "Arial", "Helvetica", "Helvetica Neue", "sans-serif", "Verdana", "Georgia" ],
+        "fontWeights" : [ "normal", "bold", "bolder", "lighter" ],
+        "styleDDW" : {
+          "border-bottom-left-radius" : "20px",
+          "border-bottom-right-radius" : "20px",
+          "border-color" : "rgba(0, 0, 0, 0.6)",
+          "border-style" : "double",
+          "border-top-left-radius" : "20px",
+          "border-top-right-radius" : "20px",
+          "border-width" : "5px",
+          "opacityForBorder" : 0.6,
+          "width" : "400px"
+        },
+        "styleDDWDDayPart" : {
+          "background-color" : "rgba(35, 35, 35, 0.95)",
+          "border-bottom-left-radius" : "0px",
+          "border-bottom-right-radius" : "0px",
+          "border-top-left-radius" : "10px",
+          "border-top-right-radius" : "10px",
+          "bottom" : "0px",
+          "height" : "130px",
+          "left" : "0px",
+          "opacityForBG" : 0.95
+        },
+        "styleDDWDDayPartDDay" : {
+          "bottom" : "0px",
+          "color" : "rgba(255, 74, 74, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "35px",
+          "font-weight" : "normal",
+          "left" : "0px",
+          "opacityForText" : 1,
+          "text-align" : "center"
+        },
+        "styleDDWDDayPartDate" : {
+          "bottom" : "0px",
+          "color" : "rgba(255, 255, 255, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "20px",
+          "font-weight" : "normal",
+          "left" : "0px",
+          "opacityForText" : 1,
+          "text-align" : "center"
+        },
+        "styleDDWDDayPartTitle" : {
+          "bottom" : "0px",
+          "color" : "rgba(255, 255, 255, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "40px",
+          "font-weight" : "normal",
+          "left" : "0px",
+          "opacityForText" : 1,
+          "text-align" : "center"
+        },
+        "styleDDWTimerPart" : {
+          "background-color" : "rgba(5, 24, 36, 0.95)",
+          "border-bottom-left-radius" : "10px",
+          "border-bottom-right-radius" : "10px",
+          "border-top-left-radius" : "0px",
+          "border-top-right-radius" : "0px",
+          "bottom" : "0px",
+          "height" : "80px",
+          "left" : "0px",
+          "opacityForBG" : 0.95
+        },
+        "styleDDWTimerPartNumber" : {
+          "background-color" : "rgba(80, 77, 77, 1.0)",
+          "border-bottom-left-radius" : "10px",
+          "border-bottom-right-radius" : "10px",
+          "border-color" : "rgba(35, 35, 35, 0.5)",
+          "border-style" : "solid",
+          "border-top-left-radius" : "10px",
+          "border-top-right-radius" : "10px",
+          "border-width" : "2px",
+          "bottom" : "0px",
+          "color" : "rgba(255, 255, 255, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "20px",
+          "font-weight" : "normal",
+          "height" : "30px",
+          "left" : "0px",
+          "opacityForBG" : 0.7,
+          "opacityForBorder" : 0.5,
+          "opacityForText" : 1,
+          "padding-bottom" : "0px",
+          "padding-left" : "5px",
+          "padding-right" : "5px",
+          "padding-top" : "0px",
+          "text-align" : "center",
+          "width" : "55px"
+        },
+        "styleDDWTimerPartNumberString" : {
+          "bottom" : "0px",
+          "color" : "rgba(255, 255, 255, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "20px",
+          "font-weight" : "normal",
+          "left" : "0px",
+          "opacityForText" : 1,
+          "text-align" : "center"
+        },
+        "textAligns" : [ "center", "left", "right" ]
+      },
+      "uniqueId" : {
+        "uniqueId" : "46oat6wrc9j0zz2um7zr"
+      }
+    }
+  },
+  "54i2j2bo5mdgn8ebsvvb" : {
+    "d_day_widget" : {
+      "animations" : {
+        "animationDuration" : 0.8,
+        "animationInterval" : 5,
+        "animationType" : "fade-short-strong"
+      },
+      "exams" : [ {
+        "examDate" : "2019-05-01",
+        "examTitle" : "V I V A"
+      }, {
+        "examDate" : "2019-03-26",
+        "examTitle" : "H A R D B O U N D"
+      } ],
+      "formats" : {
+        "formatDDay" : "D-09 (D-%dd)",
+        "formatDate" : "2019.02.09 (yyyy.mm.dd)",
+        "formatTimerString" : "일/시/분/초"
+      },
+      "onOffSwitches" : {
+        "useDDWDDayPart" : true,
+        "useDDWDDayPartDDay" : true,
+        "useDDWDDayPartDate" : true,
+        "useDDWDDayPartTitle" : true,
+        "useDDWTimerPart" : true,
+        "useDDWTimerPartNumber" : true,
+        "useDDWTimerPartNumberString" : true
+      },
+      "styles" : {
+        "styleDDW" : {
+          "border-color" : "rgba(74,74,74,0.6)",
+          "border-radius" : "5px",
+          "border-style" : "groove",
+          "border-width" : "5px",
+          "opacityForBorder" : 0.6,
+          "width" : "300px"
+        },
+        "styleDDWDDayPart" : {
+          "background-color" : "rgba(0,0,0,1)",
+          "height" : "130px",
+          "opacityForBG" : 1
+        },
+        "styleDDWDDayPartDDay" : {
+          "color" : "rgba(255, 74, 74,1.00)",
+          "font-family" : "Nanum Pen Script",
+          "font-size" : "35px",
+          "font-weight" : "bold",
+          "opacityForText" : "1.00"
+        },
+        "styleDDWDDayPartDate" : {
+          "color" : "rgba(255, 255, 255, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "15px",
+          "font-weight" : "normal",
+          "opacityForText" : 1
+        },
+        "styleDDWDDayPartTitle" : {
+          "color" : "rgba(255, 255, 255, 1.0)",
+          "font-family" : "Nanum Gothic Coding",
+          "font-size" : "30px",
+          "font-weight" : "normal",
+          "opacityForText" : 1
+        },
+        "styleDDWTimerPart" : {
+          "background-color" : "rgba(22,22,22,1)",
+          "height" : "80px",
+          "opacityForBG" : 1
+        },
+        "styleDDWTimerPartNumber" : {
+          "background-color" : "rgba(80, 77, 77, 1.0)",
+          "border-color" : "rgba(35, 35, 35,1.00)",
+          "border-radius" : "5px",
+          "border-style" : "solid",
+          "border-width" : "1px",
+          "color" : "rgba(255, 255, 255, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "20px",
+          "font-weight" : "normal",
+          "height" : "30px",
+          "opacityForBG" : 0.7,
+          "opacityForBorder" : "1.00",
+          "opacityForText" : 1,
+          "padding-bottom" : "0px",
+          "padding-left" : "2px",
+          "padding-right" : "2px",
+          "padding-top" : "0px",
+          "width" : "40px"
+        },
+        "styleDDWTimerPartNumberString" : {
+          "color" : "rgba(255, 255, 255, 1.0)",
+          "font-family" : "Noto Sans KR",
+          "font-size" : "10px",
+          "font-weight" : "normal",
+          "opacityForText" : 1
+        }
+      }
+    }
+  },
+  "5g4pgas7vep79difcjmx" : {
+    "d_day_widget" : {
+      "animations" : {
+        "animationDuration" : 0.8,
+        "animationInterval" : 5,
+        "animationType" : "fade"
+      },
+      "exams" : [ {
+        "examDate" : "2019-03-26"
+      }, {
+        "examDate" : "2020-03-26"
+      } ],
+      "formats" : {
+        "formatDDay" : "D-9 (D-%d)",
+        "formatDate" : "2019.2.9 (yyyy.m.d)",
+        "formatTimerString" : "일/시/분/초"
+      },
+      "onOffSwitches" : {
+        "useDDWDDayPart" : true,
+        "useDDWDDayPartDDay" : true,
+        "useDDWDDayPartDate" : true,
+        "useDDWDDayPartTitle" : true,
+        "useDDWTimerPart" : true,
+        "useDDWTimerPartNumber" : true,
+        "useDDWTimerPartNumberString" : true
+      },
+      "styles" : {
+        "styleDDW" : {
+          "border-bottom-left-radius" : "20px",
+          "border-bottom-right-radius" : "20px",
+          "border-color" : "rgba(0, 0, 0, 0.6)",
+          "border-style" : "double",
+          "border-top-left-radius" : "20px",
+          "border-top-right-radius" : "20px",
+          "border-width" : "5px",
+          "opacityForBorder" : 0.6,
+          "width" : "400px"
+        },
+        "styleDDWDDayPart" : {
+          "background-color" : "rgba(35, 35, 35, 0.95)",
+          "border-bottom-left-radius" : "0px",
+          "border-bottom-right-radius" : "0px",
+          "border-top-left-radius" : "10px",
+          "border-top-right-radius" : "10px",
+          "bottom" : "0px",
+          "height" : "130px",
+          "left" : "0px",
+          "opacityForBG" : 0.95
+        },
+        "styleDDWDDayPartDDay" : {
+          "bottom" : "0px",
+          "color" : "rgba(255, 74, 74, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "35px",
+          "font-weight" : "normal",
+          "left" : "0px",
+          "opacityForText" : 1,
+          "text-align" : "center"
+        },
+        "styleDDWDDayPartDate" : {
+          "bottom" : "0px",
+          "color" : "rgba(255, 255, 255, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "20px",
+          "font-weight" : "normal",
+          "left" : "0px",
+          "opacityForText" : 1,
+          "text-align" : "center"
+        },
+        "styleDDWDDayPartTitle" : {
+          "bottom" : "0px",
+          "color" : "rgba(255, 255, 255, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "40px",
+          "font-weight" : "normal",
+          "left" : "0px",
+          "opacityForText" : 1,
+          "text-align" : "center"
+        },
+        "styleDDWTimerPart" : {
+          "background-color" : "rgba(5, 24, 36, 0.95)",
+          "border-bottom-left-radius" : "10px",
+          "border-bottom-right-radius" : "10px",
+          "border-top-left-radius" : "0px",
+          "border-top-right-radius" : "0px",
+          "bottom" : "0px",
+          "height" : "80px",
+          "left" : "0px",
+          "opacityForBG" : 0.95
+        },
+        "styleDDWTimerPartNumber" : {
+          "background-color" : "rgba(80, 77, 77, 1.0)",
+          "border-bottom-left-radius" : "10px",
+          "border-bottom-right-radius" : "10px",
+          "border-color" : "rgba(35, 35, 35, 0.5)",
+          "border-style" : "solid",
+          "border-top-left-radius" : "10px",
+          "border-top-right-radius" : "10px",
+          "border-width" : "2px",
+          "bottom" : "0px",
+          "color" : "rgba(255, 255, 255, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "20px",
+          "font-weight" : "normal",
+          "height" : "30px",
+          "left" : "0px",
+          "opacityForBG" : 0.7,
+          "opacityForBorder" : 0.5,
+          "opacityForText" : 1,
+          "padding-bottom" : "0px",
+          "padding-left" : "5px",
+          "padding-right" : "5px",
+          "padding-top" : "0px",
+          "text-align" : "center",
+          "width" : "55px"
+        },
+        "styleDDWTimerPartNumberString" : {
+          "bottom" : "0px",
+          "color" : "rgba(255, 255, 255, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "20px",
+          "font-weight" : "normal",
+          "left" : "0px",
+          "opacityForText" : 1,
+          "text-align" : "center"
+        }
+      }
+    }
+  },
+  "5zpebysf6uvbqg81o8ny" : {
+    "d_day_widget" : {
+      "animations" : {
+        "animationDuration" : 0.8,
+        "animationInterval" : 5,
+        "animationType" : "fade"
+      },
+      "exams" : [ {
+        "examDate" : "2019-03-25"
+      }, {
+        "examDate" : "2020-03-25"
+      } ],
+      "formats" : {
+        "formatDDay" : "D-9 (D-%d)",
+        "formatDate" : "2019.2.9 (yyyy.m.d)",
+        "formatTimerString" : "일/시/분/초"
+      },
+      "onOffSwitches" : {
+        "useDDWDDayPart" : true,
+        "useDDWDDayPartDDay" : true,
+        "useDDWDDayPartDate" : true,
+        "useDDWDDayPartTitle" : true,
+        "useDDWTimerPart" : true,
+        "useDDWTimerPartNumber" : true,
+        "useDDWTimerPartNumberString" : true
+      },
+      "styles" : {
+        "styleDDW" : {
+          "border-bottom-left-radius" : "0px",
+          "border-bottom-right-radius" : "0px",
+          "border-color" : "rgba(0, 0, 0, 0.6)",
+          "border-radius" : "5px",
+          "border-style" : "double",
+          "border-top-left-radius" : "51px",
+          "border-top-right-radius" : "0px",
+          "border-width" : "5px",
+          "opacityForBorder" : 0.6,
+          "width" : "400px"
+        },
+        "styleDDWDDayPart" : {
+          "background-color" : "rgba(35, 35, 35, 1.0)",
+          "border-bottom-left-radius" : "30px",
+          "border-bottom-right-radius" : "80px",
+          "border-radius" : "0px",
+          "border-top-left-radius" : "88px",
+          "border-top-right-radius" : "50px",
+          "bottom" : "0px",
+          "height" : "130px",
+          "left" : "0px",
+          "opacityForBG" : 1
+        },
+        "styleDDWDDayPartDDay" : {
+          "bottom" : "0px",
+          "color" : "rgba(255, 74, 74, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "35px",
+          "font-weight" : "normal",
+          "left" : "0px",
+          "opacityForText" : 1,
+          "text-align" : "center"
+        },
+        "styleDDWDDayPartDate" : {
+          "bottom" : "0px",
+          "color" : "rgba(255, 255, 255, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "20px",
+          "font-weight" : "normal",
+          "left" : "0px",
+          "opacityForText" : 1,
+          "text-align" : "center"
+        },
+        "styleDDWDDayPartTitle" : {
+          "bottom" : "0px",
+          "color" : "rgba(255, 255, 255, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "40px",
+          "font-weight" : "normal",
+          "left" : "0px",
+          "opacityForText" : 1,
+          "text-align" : "center"
+        },
+        "styleDDWTimerPart" : {
+          "background-color" : "rgba(5, 24, 36, 1.0)",
+          "border-bottom-left-radius" : "0px",
+          "border-bottom-right-radius" : "0px",
+          "border-radius" : "0px",
+          "border-top-left-radius" : "0px",
+          "border-top-right-radius" : "0px",
+          "bottom" : "0px",
+          "height" : "80px",
+          "left" : "0px",
+          "opacityForBG" : 1
+        },
+        "styleDDWTimerPartNumber" : {
+          "background-color" : "rgba(80, 77, 77, 1.0)",
+          "border-bottom-left-radius" : "0px",
+          "border-bottom-right-radius" : "0px",
+          "border-color" : "rgba(35, 35, 35, 1)",
+          "border-radius" : "5px",
+          "border-style" : "solid",
+          "border-top-left-radius" : "0px",
+          "border-top-right-radius" : "0px",
+          "border-width" : "1px",
+          "bottom" : "0px",
+          "color" : "rgba(255, 255, 255, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "20px",
+          "font-weight" : "normal",
+          "height" : "30px",
+          "left" : "0px",
+          "opacityForBG" : 0.7,
+          "opacityForBorder" : 1,
+          "opacityForText" : 1,
+          "padding-bottom" : "0px",
+          "padding-left" : "5px",
+          "padding-right" : "5px",
+          "padding-top" : "0px",
+          "text-align" : "center",
+          "width" : "55px"
+        },
+        "styleDDWTimerPartNumberString" : {
+          "bottom" : "0px",
+          "color" : "rgba(255, 255, 255, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "20px",
+          "font-weight" : "normal",
+          "left" : "0px",
+          "opacityForText" : 1,
+          "text-align" : "center"
+        }
+      }
+    }
+  },
+  "6s4mkepwxpifi1b6wa2s" : {
+    "d_day_widget" : {
+      "animations" : {
+        "animationDuration" : 0.8,
+        "animationInterval" : 5,
+        "animationType" : "fade"
+      },
+      "exams" : {
+        "exams" : [ {
+          "examDate" : "2019-03-26"
+        }, {
+          "examDate" : "2020-03-26"
+        } ]
+      },
+      "formats" : {
+        "formatDDay" : "D-9 (D-%d)",
+        "formatDate" : "2019.2.9 (yyyy.m.d)",
+        "formatTimerString" : "일/시/분/초"
+      },
+      "onOffSwitches" : {
+        "useDDWDDayPart" : true,
+        "useDDWDDayPartDDay" : true,
+        "useDDWDDayPartDate" : true,
+        "useDDWDDayPartTitle" : true,
+        "useDDWTimerPart" : true,
+        "useDDWTimerPartNumber" : true,
+        "useDDWTimerPartNumberString" : true
+      },
+      "styles" : {
+        "styleDDW" : {
+          "border-bottom-left-radius" : "20px",
+          "border-bottom-right-radius" : "20px",
+          "border-color" : "rgba(0, 0, 0, 0.6)",
+          "border-style" : "double",
+          "border-top-left-radius" : "20px",
+          "border-top-right-radius" : "20px",
+          "border-width" : "5px",
+          "opacityForBorder" : 0.6,
+          "width" : "400px"
+        },
+        "styleDDWDDayPart" : {
+          "background-color" : "rgba(35, 35, 35, 0.95)",
+          "border-bottom-left-radius" : "0px",
+          "border-bottom-right-radius" : "0px",
+          "border-top-left-radius" : "10px",
+          "border-top-right-radius" : "10px",
+          "bottom" : "0px",
+          "height" : "130px",
+          "left" : "0px",
+          "opacityForBG" : 0.95
+        },
+        "styleDDWDDayPartDDay" : {
+          "bottom" : "0px",
+          "color" : "rgba(255, 74, 74, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "35px",
+          "font-weight" : "normal",
+          "left" : "0px",
+          "opacityForText" : 1,
+          "text-align" : "center"
+        },
+        "styleDDWDDayPartDate" : {
+          "bottom" : "0px",
+          "color" : "rgba(255, 255, 255, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "20px",
+          "font-weight" : "normal",
+          "left" : "0px",
+          "opacityForText" : 1,
+          "text-align" : "center"
+        },
+        "styleDDWDDayPartTitle" : {
+          "bottom" : "0px",
+          "color" : "rgba(255, 255, 255, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "40px",
+          "font-weight" : "normal",
+          "left" : "0px",
+          "opacityForText" : 1,
+          "text-align" : "center"
+        },
+        "styleDDWTimerPart" : {
+          "background-color" : "rgba(5, 24, 36, 0.95)",
+          "border-bottom-left-radius" : "10px",
+          "border-bottom-right-radius" : "10px",
+          "border-top-left-radius" : "0px",
+          "border-top-right-radius" : "0px",
+          "bottom" : "0px",
+          "height" : "80px",
+          "left" : "0px",
+          "opacityForBG" : 0.95
+        },
+        "styleDDWTimerPartNumber" : {
+          "background-color" : "rgba(80, 77, 77, 1.0)",
+          "border-bottom-left-radius" : "10px",
+          "border-bottom-right-radius" : "10px",
+          "border-color" : "rgba(35, 35, 35, 0.5)",
+          "border-style" : "solid",
+          "border-top-left-radius" : "10px",
+          "border-top-right-radius" : "10px",
+          "border-width" : "2px",
+          "bottom" : "0px",
+          "color" : "rgba(255, 255, 255, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "20px",
+          "font-weight" : "normal",
+          "height" : "30px",
+          "left" : "0px",
+          "opacityForBG" : 0.7,
+          "opacityForBorder" : 0.5,
+          "opacityForText" : 1,
+          "padding-bottom" : "0px",
+          "padding-left" : "5px",
+          "padding-right" : "5px",
+          "padding-top" : "0px",
+          "text-align" : "center",
+          "width" : "55px"
+        },
+        "styleDDWTimerPartNumberString" : {
+          "bottom" : "0px",
+          "color" : "rgba(255, 255, 255, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "20px",
+          "font-weight" : "normal",
+          "left" : "0px",
+          "opacityForText" : 1,
+          "text-align" : "center"
+        }
+      },
+      "uniqueId" : {
+        "uniqueId" : "6s4mkepwxpifi1b6wa2s"
+      }
+    }
+  },
+  "8hnqqq4lpgh1ouo1p55s" : {
+    "d_day_widget" : {
+      "animations" : {
+        "animationDuration" : 0.8,
+        "animationInterval" : 5,
+        "animationType" : "fade"
+      },
+      "exams" : [ {
+        "examDate" : "2019-03-26"
+      }, {
+        "examDate" : "2020-03-26"
+      } ],
+      "formats" : {
+        "formatDDay" : "D-9 (D-%d)",
+        "formatDate" : "2019.2.9 (yyyy.m.d)",
+        "formatTimerString" : "일/시/분/초"
+      },
+      "onOffSwitches" : {
+        "useDDWDDayPart" : true,
+        "useDDWDDayPartDDay" : true,
+        "useDDWDDayPartDate" : true,
+        "useDDWDDayPartTitle" : true,
+        "useDDWTimerPart" : true,
+        "useDDWTimerPartNumber" : true,
+        "useDDWTimerPartNumberString" : true
+      },
+      "styles" : {
+        "styleDDW" : {
+          "border-bottom-left-radius" : "20px",
+          "border-bottom-right-radius" : "20px",
+          "border-color" : "rgba(0, 0, 0, 0.6)",
+          "border-style" : "double",
+          "border-top-left-radius" : "20px",
+          "border-top-right-radius" : "20px",
+          "border-width" : "5px",
+          "opacityForBorder" : 0.6,
+          "width" : "400px"
+        },
+        "styleDDWDDayPart" : {
+          "background-color" : "rgba(35, 35, 35, 0.95)",
+          "border-bottom-left-radius" : "0px",
+          "border-bottom-right-radius" : "0px",
+          "border-top-left-radius" : "10px",
+          "border-top-right-radius" : "10px",
+          "bottom" : "0px",
+          "height" : "130px",
+          "left" : "0px",
+          "opacityForBG" : 0.95
+        },
+        "styleDDWDDayPartDDay" : {
+          "bottom" : "0px",
+          "color" : "rgba(255, 74, 74, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "35px",
+          "font-weight" : "normal",
+          "left" : "0px",
+          "opacityForText" : 1,
+          "text-align" : "center"
+        },
+        "styleDDWDDayPartDate" : {
+          "bottom" : "0px",
+          "color" : "rgba(255, 255, 255, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "20px",
+          "font-weight" : "normal",
+          "left" : "0px",
+          "opacityForText" : 1,
+          "text-align" : "center"
+        },
+        "styleDDWDDayPartTitle" : {
+          "bottom" : "0px",
+          "color" : "rgba(255, 255, 255, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "40px",
+          "font-weight" : "normal",
+          "left" : "0px",
+          "opacityForText" : 1,
+          "text-align" : "center"
+        },
+        "styleDDWTimerPart" : {
+          "background-color" : "rgba(5, 24, 36, 0.95)",
+          "border-bottom-left-radius" : "10px",
+          "border-bottom-right-radius" : "10px",
+          "border-top-left-radius" : "0px",
+          "border-top-right-radius" : "0px",
+          "bottom" : "0px",
+          "height" : "80px",
+          "left" : "0px",
+          "opacityForBG" : 0.95
+        },
+        "styleDDWTimerPartNumber" : {
+          "background-color" : "rgba(80, 77, 77, 1.0)",
+          "border-bottom-left-radius" : "10px",
+          "border-bottom-right-radius" : "10px",
+          "border-color" : "rgba(35, 35, 35, 0.5)",
+          "border-style" : "solid",
+          "border-top-left-radius" : "10px",
+          "border-top-right-radius" : "10px",
+          "border-width" : "2px",
+          "bottom" : "0px",
+          "color" : "rgba(255, 255, 255, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "20px",
+          "font-weight" : "normal",
+          "height" : "30px",
+          "left" : "0px",
+          "opacityForBG" : 0.7,
+          "opacityForBorder" : 0.5,
+          "opacityForText" : 1,
+          "padding-bottom" : "0px",
+          "padding-left" : "5px",
+          "padding-right" : "5px",
+          "padding-top" : "0px",
+          "text-align" : "center",
+          "width" : "55px"
+        },
+        "styleDDWTimerPartNumberString" : {
+          "bottom" : "0px",
+          "color" : "rgba(255, 255, 255, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "20px",
+          "font-weight" : "normal",
+          "left" : "0px",
+          "opacityForText" : 1,
+          "text-align" : "center"
+        }
+      }
+    }
+  },
+  "8vzoaue7ed8jdx25nivb" : {
+    "d_day_widget" : {
+      "animations" : {
+        "animationDuration" : 0.8,
+        "animationInterval" : 5,
+        "animationType" : "fade"
+      },
+      "exams" : [ {
+        "examDate" : "2019-03-25"
+      }, {
+        "examDate" : "2020-03-25"
+      } ],
+      "formats" : {
+        "formatDDay" : "D-9 (D-%d)",
+        "formatDate" : "2019.2.9 (yyyy.m.d)",
+        "formatTimerString" : "일/시/분/초"
+      },
+      "onOffSwitches" : {
+        "useDDWDDayPart" : true,
+        "useDDWDDayPartDDay" : true,
+        "useDDWDDayPartDate" : true,
+        "useDDWDDayPartTitle" : true,
+        "useDDWTimerPart" : true,
+        "useDDWTimerPartNumber" : true,
+        "useDDWTimerPartNumberString" : true
+      },
+      "styles" : {
+        "styleDDW" : {
+          "border-bottom-left-radius" : "0px",
+          "border-bottom-right-radius" : "0px",
+          "border-color" : "rgba(0, 0, 0, 0.6)",
+          "border-end-end-radius" : "0px",
+          "border-end-start-radius" : "0px",
+          "border-radius" : "5px",
+          "border-start-end-radius" : "0px",
+          "border-start-start-radius" : "0px",
+          "border-style" : "double",
+          "border-top-left-radius" : "0px",
+          "border-top-right-radius" : "0px",
+          "border-width" : "5px",
+          "opacityForBorder" : 0.6,
+          "width" : "400px"
+        },
+        "styleDDWDDayPart" : {
+          "background-color" : "rgba(35, 35, 35, 1.0)",
+          "border-bottom-left-radius" : "24px",
+          "border-bottom-right-radius" : "90px",
+          "border-end-end-radius" : "0px",
+          "border-end-start-radius" : "0px",
+          "border-radius" : "0px",
+          "border-start-end-radius" : "0px",
+          "border-start-start-radius" : "0px",
+          "border-top-left-radius" : "32px",
+          "border-top-right-radius" : "43px",
+          "bottom" : "0px",
+          "height" : "130px",
+          "left" : "0px",
+          "opacityForBG" : 1
+        },
+        "styleDDWDDayPartDDay" : {
+          "bottom" : "0px",
+          "color" : "rgba(255, 74, 74, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "35px",
+          "font-weight" : "normal",
+          "left" : "0px",
+          "opacityForText" : 1,
+          "text-align" : "center"
+        },
+        "styleDDWDDayPartDate" : {
+          "bottom" : "0px",
+          "color" : "rgba(255, 255, 255, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "20px",
+          "font-weight" : "normal",
+          "left" : "0px",
+          "opacityForText" : 1,
+          "text-align" : "center"
+        },
+        "styleDDWDDayPartTitle" : {
+          "bottom" : "0px",
+          "color" : "rgba(255, 255, 255, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "40px",
+          "font-weight" : "normal",
+          "left" : "0px",
+          "opacityForText" : 1,
+          "text-align" : "center"
+        },
+        "styleDDWTimerPart" : {
+          "background-color" : "rgba(5, 24, 36, 1.0)",
+          "border-bottom-left-radius" : "0px",
+          "border-bottom-right-radius" : "0px",
+          "border-end-end-radius" : "0px",
+          "border-end-start-radius" : "0px",
+          "border-radius" : "0px",
+          "border-start-end-radius" : "0px",
+          "border-start-start-radius" : "0px",
+          "border-top-left-radius" : "0px",
+          "border-top-right-radius" : "0px",
+          "bottom" : "0px",
+          "height" : "80px",
+          "left" : "0px",
+          "opacityForBG" : 1
+        },
+        "styleDDWTimerPartNumber" : {
+          "background-color" : "rgba(80, 77, 77, 1.0)",
+          "border-bottom-left-radius" : "0px",
+          "border-bottom-right-radius" : "0px",
+          "border-color" : "rgba(35, 35, 35, 1)",
+          "border-end-end-radius" : "0px",
+          "border-end-start-radius" : "0px",
+          "border-radius" : "5px",
+          "border-start-end-radius" : "0px",
+          "border-start-start-radius" : "0px",
+          "border-style" : "solid",
+          "border-top-left-radius" : "0px",
+          "border-top-right-radius" : "0px",
+          "border-width" : "1px",
+          "bottom" : "0px",
+          "color" : "rgba(255, 255, 255, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "20px",
+          "font-weight" : "normal",
+          "height" : "30px",
+          "left" : "0px",
+          "opacityForBG" : 0.7,
+          "opacityForBorder" : 1,
+          "opacityForText" : 1,
+          "padding-bottom" : "0px",
+          "padding-left" : "5px",
+          "padding-right" : "5px",
+          "padding-top" : "0px",
+          "width" : "55px"
+        },
+        "styleDDWTimerPartNumberString" : {
+          "bottom" : "0px",
+          "color" : "rgba(255, 255, 255, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "20px",
+          "font-weight" : "normal",
+          "left" : "0px",
+          "opacityForText" : 1
+        }
+      }
+    }
+  },
+  "a31bmrne8vvuodc5uovh" : {
+    "d_day_widget" : {
+      "animations" : {
+        "animationDuration" : 0.8,
+        "animationInterval" : 5,
+        "animationType" : "fade"
+      },
+      "exams" : [ {
+        "examDate" : "2019-03-25"
+      }, {
+        "examDate" : "2020-03-25"
+      } ],
+      "formats" : {
+        "formatDDay" : "D-9 (D-%d)",
+        "formatDate" : "2019.2.9 (yyyy.m.d)",
+        "formatTimerString" : "일/시/분/초"
+      },
+      "onOffSwitches" : {
+        "useDDWDDayPart" : true,
+        "useDDWDDayPartDDay" : true,
+        "useDDWDDayPartDate" : true,
+        "useDDWDDayPartTitle" : true,
+        "useDDWTimerPart" : true,
+        "useDDWTimerPartNumber" : true,
+        "useDDWTimerPartNumberString" : true
+      },
+      "onOffSwitches2" : {
+        "useDDWDDayPart" : true,
+        "useDDWDDayPartDDay" : true,
+        "useDDWDDayPartDate" : true,
+        "useDDWDDayPartTitle" : true,
+        "useDDWTimerPart" : true,
+        "useDDWTimerPartNumber" : true,
+        "useDDWTimerPartNumberString" : true
+      },
+      "styles" : {
+        "styleDDW" : {
+          "border-color" : "rgba(0, 0, 0, 0.6)",
+          "border-radius" : "5px",
+          "border-style" : "double",
+          "border-width" : "5px",
+          "opacityForBorder" : 0.6,
+          "width" : "400px"
+        },
+        "styleDDWDDayPart" : {
+          "background-color" : "rgba(35, 35, 35, 1.0)",
+          "height" : "130px",
+          "opacityForBG" : 1
+        },
+        "styleDDWDDayPartDDay" : {
+          "color" : "rgba(255, 74, 74, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "35px",
+          "font-weight" : "normal",
+          "opacityForText" : 1
+        },
+        "styleDDWDDayPartDate" : {
+          "color" : "rgba(255, 255, 255, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "20px",
+          "font-weight" : "normal",
+          "opacityForText" : 1
+        },
+        "styleDDWDDayPartTitle" : {
+          "color" : "rgba(255, 255, 255, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "40px",
+          "font-weight" : "normal",
+          "opacityForText" : 1
+        },
+        "styleDDWTimerPart" : {
+          "background-color" : "rgba(5, 24, 36, 1.0)",
+          "height" : "80px",
+          "opacityForBG" : 1
+        },
+        "styleDDWTimerPartNumber" : {
+          "background-color" : "rgba(80, 77, 77, 1.0)",
+          "border-color" : "rgba(35, 35, 35, 1)",
+          "border-radius" : "5px",
+          "border-style" : "solid",
+          "border-width" : "1px",
+          "color" : "rgba(255, 255, 255, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "20px",
+          "font-weight" : "normal",
+          "height" : "30px",
+          "opacityForBG" : 0.7,
+          "opacityForBorder" : 1,
+          "opacityForText" : 1,
+          "padding-bottom" : "0px",
+          "padding-left" : "5px",
+          "padding-right" : "5px",
+          "padding-top" : "0px",
+          "width" : "55px"
+        },
+        "styleDDWTimerPartNumberString" : {
+          "color" : "rgba(255, 255, 255, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "20px",
+          "font-weight" : "normal",
+          "opacityForText" : 1
+        }
+      }
+    }
+  },
+  "bf5tp2qsuw9zrhweeejl" : {
+    "d_day_widget" : {
+      "animations" : {
+        "animationDuration" : 0.8,
+        "animationInterval" : 5,
+        "animationType" : "fade"
+      },
+      "exams" : [ {
+        "examDate" : "2019-03-26"
+      }, {
+        "examDate" : "2020-03-26"
+      } ],
+      "formats" : {
+        "formatDDay" : "D-9 (D-%d)",
+        "formatDate" : "2019.2.9 (yyyy.m.d)",
+        "formatTimerString" : "일/시/분/초"
+      },
+      "onOffSwitches" : {
+        "useDDWDDayPart" : true,
+        "useDDWDDayPartDDay" : true,
+        "useDDWDDayPartDate" : true,
+        "useDDWDDayPartTitle" : true,
+        "useDDWTimerPart" : true,
+        "useDDWTimerPartNumber" : true,
+        "useDDWTimerPartNumberString" : true
+      },
+      "styles" : {
+        "styleDDW" : {
+          "border-bottom-left-radius" : "20px",
+          "border-bottom-right-radius" : "20px",
+          "border-color" : "rgba(0, 0, 0, 0.6)",
+          "border-style" : "double",
+          "border-top-left-radius" : "20px",
+          "border-top-right-radius" : "20px",
+          "border-width" : "5px",
+          "opacityForBorder" : 0.6,
+          "width" : "400px"
+        },
+        "styleDDWDDayPart" : {
+          "background-color" : "rgba(35, 35, 35, 0.95)",
+          "border-bottom-left-radius" : "0px",
+          "border-bottom-right-radius" : "0px",
+          "border-top-left-radius" : "10px",
+          "border-top-right-radius" : "10px",
+          "bottom" : "0px",
+          "height" : "130px",
+          "left" : "0px",
+          "opacityForBG" : 0.95
+        },
+        "styleDDWDDayPartDDay" : {
+          "bottom" : "0px",
+          "color" : "rgba(255, 74, 74, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "35px",
+          "font-weight" : "normal",
+          "left" : "0px",
+          "opacityForText" : 1,
+          "text-align" : "center"
+        },
+        "styleDDWDDayPartDate" : {
+          "bottom" : "0px",
+          "color" : "rgba(255, 255, 255, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "20px",
+          "font-weight" : "normal",
+          "left" : "0px",
+          "opacityForText" : 1,
+          "text-align" : "center"
+        },
+        "styleDDWDDayPartTitle" : {
+          "bottom" : "0px",
+          "color" : "rgba(255, 255, 255, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "40px",
+          "font-weight" : "normal",
+          "left" : "0px",
+          "opacityForText" : 1,
+          "text-align" : "center"
+        },
+        "styleDDWTimerPart" : {
+          "background-color" : "rgba(5, 24, 36, 0.95)",
+          "border-bottom-left-radius" : "10px",
+          "border-bottom-right-radius" : "10px",
+          "border-top-left-radius" : "0px",
+          "border-top-right-radius" : "0px",
+          "bottom" : "0px",
+          "height" : "80px",
+          "left" : "0px",
+          "opacityForBG" : 0.95
+        },
+        "styleDDWTimerPartNumber" : {
+          "background-color" : "rgba(80, 77, 77, 1.0)",
+          "border-bottom-left-radius" : "10px",
+          "border-bottom-right-radius" : "10px",
+          "border-color" : "rgba(35, 35, 35, 0.5)",
+          "border-style" : "solid",
+          "border-top-left-radius" : "10px",
+          "border-top-right-radius" : "10px",
+          "border-width" : "2px",
+          "bottom" : "0px",
+          "color" : "rgba(255, 255, 255, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "20px",
+          "font-weight" : "normal",
+          "height" : "30px",
+          "left" : "0px",
+          "opacityForBG" : 0.7,
+          "opacityForBorder" : 0.5,
+          "opacityForText" : 1,
+          "padding-bottom" : "0px",
+          "padding-left" : "5px",
+          "padding-right" : "5px",
+          "padding-top" : "0px",
+          "text-align" : "center",
+          "width" : "55px"
+        },
+        "styleDDWTimerPartNumberString" : {
+          "bottom" : "0px",
+          "color" : "rgba(255, 255, 255, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "20px",
+          "font-weight" : "normal",
+          "left" : "0px",
+          "opacityForText" : 1,
+          "text-align" : "center"
+        }
+      }
+    }
+  },
+  "bx1scdw5hq9zao5lz2n0" : {
+    "d_day_widget" : {
+      "animations" : {
+        "animationDuration" : 0.8,
+        "animationInterval" : 5,
+        "animationType" : "fade"
+      },
+      "exams" : [ {
+        "examDate" : "2019-03-25"
+      }, {
+        "examDate" : "2020-03-25"
+      } ],
+      "formats" : {
+        "formatDDay" : "D-9 (D-%d)",
+        "formatDate" : "2019.2.9 (yyyy.m.d)",
+        "formatTimerString" : "일/시/분/초"
+      },
+      "onOffSwitches" : {
+        "useDDWDDayPart" : true,
+        "useDDWDDayPartDDay" : true,
+        "useDDWDDayPartDate" : true,
+        "useDDWDDayPartTitle" : true,
+        "useDDWTimerPart" : true,
+        "useDDWTimerPartNumber" : true,
+        "useDDWTimerPartNumberString" : true
+      },
+      "styles" : {
+        "styleDDW" : {
+          "border-bottom-left-radius" : "0px",
+          "border-bottom-right-radius" : "0px",
+          "border-color" : "rgba(0, 0, 0, 0.6)",
+          "border-end-end-radius" : "0px",
+          "border-end-start-radius" : "0px",
+          "border-radius" : "5px",
+          "border-start-end-radius" : "0px",
+          "border-start-start-radius" : "0px",
+          "border-style" : "double",
+          "border-top-left-radius" : "65px",
+          "border-top-right-radius" : "0px",
+          "border-width" : "5px",
+          "opacityForBorder" : 0.6,
+          "width" : "400px"
+        },
+        "styleDDWDDayPart" : {
+          "background-color" : "rgba(35, 35, 35, 1.0)",
+          "border-bottom-left-radius" : "50px",
+          "border-bottom-right-radius" : "50px",
+          "border-end-end-radius" : "0px",
+          "border-end-start-radius" : "0px",
+          "border-radius" : "0px",
+          "border-start-end-radius" : "0px",
+          "border-start-start-radius" : "0px",
+          "border-top-left-radius" : "100px",
+          "border-top-right-radius" : "60px",
+          "bottom" : "0px",
+          "height" : "130px",
+          "left" : "0px",
+          "opacityForBG" : 1
+        },
+        "styleDDWDDayPartDDay" : {
+          "bottom" : "0px",
+          "color" : "rgba(255, 74, 74, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "35px",
+          "font-weight" : "normal",
+          "left" : "0px",
+          "opacityForText" : 1,
+          "text-align" : "center"
+        },
+        "styleDDWDDayPartDate" : {
+          "bottom" : "0px",
+          "color" : "rgba(255, 255, 255, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "20px",
+          "font-weight" : "normal",
+          "left" : "0px",
+          "opacityForText" : 1,
+          "text-align" : "center"
+        },
+        "styleDDWDDayPartTitle" : {
+          "bottom" : "0px",
+          "color" : "rgba(255, 255, 255, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "40px",
+          "font-weight" : "normal",
+          "left" : "0px",
+          "opacityForText" : 1,
+          "text-align" : "center"
+        },
+        "styleDDWTimerPart" : {
+          "background-color" : "rgba(5, 24, 36, 1.0)",
+          "border-bottom-left-radius" : "0px",
+          "border-bottom-right-radius" : "0px",
+          "border-end-end-radius" : "0px",
+          "border-end-start-radius" : "0px",
+          "border-radius" : "0px",
+          "border-start-end-radius" : "0px",
+          "border-start-start-radius" : "0px",
+          "border-top-left-radius" : "0px",
+          "border-top-right-radius" : "0px",
+          "bottom" : "0px",
+          "height" : "80px",
+          "left" : "0px",
+          "opacityForBG" : 1
+        },
+        "styleDDWTimerPartNumber" : {
+          "background-color" : "rgba(80, 77, 77, 1.0)",
+          "border-bottom-left-radius" : "0px",
+          "border-bottom-right-radius" : "0px",
+          "border-color" : "rgba(35, 35, 35, 1)",
+          "border-end-end-radius" : "0px",
+          "border-end-start-radius" : "0px",
+          "border-radius" : "5px",
+          "border-start-end-radius" : "0px",
+          "border-start-start-radius" : "0px",
+          "border-style" : "solid",
+          "border-top-left-radius" : "0px",
+          "border-top-right-radius" : "0px",
+          "border-width" : "1px",
+          "bottom" : "0px",
+          "color" : "rgba(255, 255, 255, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "20px",
+          "font-weight" : "normal",
+          "height" : "30px",
+          "left" : "0px",
+          "opacityForBG" : 0.7,
+          "opacityForBorder" : 1,
+          "opacityForText" : 1,
+          "padding-bottom" : "0px",
+          "padding-left" : "5px",
+          "padding-right" : "5px",
+          "padding-top" : "0px",
+          "width" : "55px"
+        },
+        "styleDDWTimerPartNumberString" : {
+          "bottom" : "0px",
+          "color" : "rgba(255, 255, 255, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "20px",
+          "font-weight" : "normal",
+          "left" : "0px",
+          "opacityForText" : 1
+        }
+      }
+    }
+  },
+  "ch2u8mjm66q6000lj4ms" : {
+    "d_day_widget" : {
+      "animations" : {
+        "target" : 5
+      },
+      "exams" : {
+        "target" : [ {
+          "examDate" : "2019-03-26"
+        }, {
+          "examDate" : "2020-03-26"
+        } ]
+      },
+      "formats" : {
+        "target" : "일/시/분/초"
+      },
+      "onOffSwitches" : {
+        "target" : true
+      },
+      "styles" : {
+        "target" : {
+          "bottom" : "0px",
+          "color" : "rgba(255, 255, 255, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "20px",
+          "font-weight" : "normal",
+          "left" : "0px",
+          "opacityForText" : 1,
+          "text-align" : "center"
+        }
+      },
+      "uniqueId" : {
+        "target" : "ch2u8mjm66q6000lj4ms"
+      }
+    }
+  },
+  "dhv4dnb4qtegr1pas5a4" : {
+    "d_day_widget" : {
+      "animations" : {
+        "animationDuration" : 0.8,
+        "animationInterval" : 5,
+        "animationType" : "fade"
+      },
+      "exams" : [ {
+        "examDate" : "2019-03-26"
+      }, {
+        "examDate" : "2020-03-26"
+      } ],
+      "formats" : {
+        "formatDDay" : "D-9 (D-%d)",
+        "formatDate" : "2019.2.9 (yyyy.m.d)",
+        "formatTimerString" : "일/시/분/초"
+      },
+      "onOffSwitches" : {
+        "useDDWDDayPart" : true,
+        "useDDWDDayPartDDay" : true,
+        "useDDWDDayPartDate" : true,
+        "useDDWDDayPartTitle" : true,
+        "useDDWTimerPart" : true,
+        "useDDWTimerPartNumber" : true,
+        "useDDWTimerPartNumberString" : true
+      },
+      "styles" : {
+        "styleDDW" : {
+          "border-bottom-left-radius" : "20px",
+          "border-bottom-right-radius" : "20px",
+          "border-color" : "rgba(0, 0, 0, 0.6)",
+          "border-style" : "double",
+          "border-top-left-radius" : "20px",
+          "border-top-right-radius" : "20px",
+          "border-width" : "5px",
+          "opacityForBorder" : 0.6,
+          "width" : "400px"
+        },
+        "styleDDWDDayPart" : {
+          "background-color" : "rgba(35, 35, 35, 0.95)",
+          "border-bottom-left-radius" : "0px",
+          "border-bottom-right-radius" : "0px",
+          "border-top-left-radius" : "10px",
+          "border-top-right-radius" : "10px",
+          "bottom" : "0px",
+          "height" : "130px",
+          "left" : "0px",
+          "opacityForBG" : 0.95
+        },
+        "styleDDWDDayPartDDay" : {
+          "bottom" : "0px",
+          "color" : "rgba(255, 74, 74, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "35px",
+          "font-weight" : "normal",
+          "left" : "0px",
+          "opacityForText" : 1,
+          "text-align" : "center"
+        },
+        "styleDDWDDayPartDate" : {
+          "bottom" : "0px",
+          "color" : "rgba(255, 255, 255, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "20px",
+          "font-weight" : "normal",
+          "left" : "0px",
+          "opacityForText" : 1,
+          "text-align" : "center"
+        },
+        "styleDDWDDayPartTitle" : {
+          "bottom" : "0px",
+          "color" : "rgba(255, 255, 255, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "40px",
+          "font-weight" : "normal",
+          "left" : "0px",
+          "opacityForText" : 1,
+          "text-align" : "center"
+        },
+        "styleDDWTimerPart" : {
+          "background-color" : "rgba(5, 24, 36, 0.95)",
+          "border-bottom-left-radius" : "10px",
+          "border-bottom-right-radius" : "10px",
+          "border-top-left-radius" : "0px",
+          "border-top-right-radius" : "0px",
+          "bottom" : "0px",
+          "height" : "80px",
+          "left" : "0px",
+          "opacityForBG" : 0.95
+        },
+        "styleDDWTimerPartNumber" : {
+          "background-color" : "rgba(80, 77, 77, 1.0)",
+          "border-bottom-left-radius" : "10px",
+          "border-bottom-right-radius" : "10px",
+          "border-color" : "rgba(35, 35, 35, 0.5)",
+          "border-style" : "solid",
+          "border-top-left-radius" : "10px",
+          "border-top-right-radius" : "10px",
+          "border-width" : "2px",
+          "bottom" : "0px",
+          "color" : "rgba(255, 255, 255, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "20px",
+          "font-weight" : "normal",
+          "height" : "30px",
+          "left" : "0px",
+          "opacityForBG" : 0.7,
+          "opacityForBorder" : 0.5,
+          "opacityForText" : 1,
+          "padding-bottom" : "0px",
+          "padding-left" : "5px",
+          "padding-right" : "5px",
+          "padding-top" : "0px",
+          "text-align" : "center",
+          "width" : "55px"
+        },
+        "styleDDWTimerPartNumberString" : {
+          "bottom" : "0px",
+          "color" : "rgba(255, 255, 255, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "20px",
+          "font-weight" : "normal",
+          "left" : "0px",
+          "opacityForText" : 1,
+          "text-align" : "center"
+        }
+      }
+    }
+  },
+  "fjkyk7i02ktpxawuw6ek" : {
+    "d_day_widget" : {
+      "animations" : {
+        "animationDuration" : 0.8,
+        "animationInterval" : 5,
+        "animationType" : "fade"
+      },
+      "exams" : [ {
+        "examDate" : "2019-04-03",
+        "examTitle" : "My birthday"
+      } ],
+      "formats" : {
+        "formatDDay" : "D-9 (D-%d)",
+        "formatDate" : "2019.2.9 (yyyy.m.d)",
+        "formatTimerString" : "일/시/분/초"
+      },
+      "onOffSwitches" : {
+        "useDDWDDayPart" : true,
+        "useDDWDDayPartDDay" : true,
+        "useDDWDDayPartDate" : true,
+        "useDDWDDayPartTitle" : true,
+        "useDDWTimerPart" : true,
+        "useDDWTimerPartNumber" : true,
+        "useDDWTimerPartNumberString" : true
+      },
+      "styles" : {
+        "styleDDW" : {
+          "border-color" : "rgba(255,255,0,0.6)",
+          "border-radius" : "5px",
+          "border-style" : "double",
+          "border-width" : "5px",
+          "opacityForBorder" : 0.6,
+          "width" : "400px"
+        },
+        "styleDDWDDayPart" : {
+          "background-color" : "rgba(0,0,0,1)",
+          "height" : "130px",
+          "opacityForBG" : 1
+        },
+        "styleDDWDDayPartDDay" : {
+          "color" : "rgba(255, 74, 74, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "35px",
+          "font-weight" : "normal",
+          "opacityForText" : 1
+        },
+        "styleDDWDDayPartDate" : {
+          "color" : "rgba(255, 255, 255, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "20px",
+          "font-weight" : "normal",
+          "opacityForText" : 1
+        },
+        "styleDDWDDayPartTitle" : {
+          "color" : "rgba(255, 255, 255, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "40px",
+          "font-weight" : "normal",
+          "opacityForText" : 1
+        },
+        "styleDDWTimerPart" : {
+          "background-color" : "rgba(5, 24, 36, 1.0)",
+          "height" : "80px",
+          "opacityForBG" : 1
+        },
+        "styleDDWTimerPartNumber" : {
+          "background-color" : "rgba(80, 77, 77, 1.0)",
+          "border-color" : "rgba(35, 35, 35, 1)",
+          "border-radius" : "5px",
+          "border-style" : "solid",
+          "border-width" : "1px",
+          "color" : "rgba(255, 255, 255, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "20px",
+          "font-weight" : "normal",
+          "height" : "30px",
+          "opacityForBG" : 0.7,
+          "opacityForBorder" : 1,
+          "opacityForText" : 1,
+          "padding-bottom" : "0px",
+          "padding-left" : "5px",
+          "padding-right" : "5px",
+          "padding-top" : "0px",
+          "width" : "55px"
+        },
+        "styleDDWTimerPartNumberString" : {
+          "color" : "rgba(255, 255, 255, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "20px",
+          "font-weight" : "normal",
+          "opacityForText" : 1
+        }
+      }
+    }
+  },
+  "h6sxhmkn627w77sb0y07" : {
+    "d_day_widget" : {
+      "animations" : {
+        "animationDuration" : 0.8,
+        "animationInterval" : 5,
+        "animationType" : "fade"
+      },
+      "exams" : [ {
+        "examDate" : "2019-03-26"
+      }, {
+        "examDate" : "2020-03-26"
+      } ],
+      "formats" : {
+        "formatDDay" : "D-9 (D-%d)",
+        "formatDate" : "2019.2.9 (yyyy.m.d)",
+        "formatTimerString" : "일/시/분/초"
+      },
+      "onOffSwitches" : {
+        "useDDWDDayPart" : true,
+        "useDDWDDayPartDDay" : true,
+        "useDDWDDayPartDate" : true,
+        "useDDWDDayPartTitle" : true,
+        "useDDWTimerPart" : true,
+        "useDDWTimerPartNumber" : true,
+        "useDDWTimerPartNumberString" : true
+      },
+      "styles" : {
+        "styleDDW" : {
+          "border-bottom-left-radius" : "20px",
+          "border-bottom-right-radius" : "20px",
+          "border-color" : "rgba(0, 0, 0, 0.6)",
+          "border-style" : "double",
+          "border-top-left-radius" : "20px",
+          "border-top-right-radius" : "20px",
+          "border-width" : "5px",
+          "opacityForBorder" : 0.6,
+          "width" : "400px"
+        },
+        "styleDDWDDayPart" : {
+          "background-color" : "rgba(35, 35, 35, 0.95)",
+          "border-bottom-left-radius" : "0px",
+          "border-bottom-right-radius" : "0px",
+          "border-top-left-radius" : "10px",
+          "border-top-right-radius" : "10px",
+          "bottom" : "0px",
+          "height" : "130px",
+          "left" : "0px",
+          "opacityForBG" : 0.95
+        },
+        "styleDDWDDayPartDDay" : {
+          "bottom" : "0px",
+          "color" : "rgba(255, 74, 74, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "35px",
+          "font-weight" : "normal",
+          "left" : "0px",
+          "opacityForText" : 1,
+          "text-align" : "center"
+        },
+        "styleDDWDDayPartDate" : {
+          "bottom" : "0px",
+          "color" : "rgba(255, 255, 255, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "20px",
+          "font-weight" : "normal",
+          "left" : "0px",
+          "opacityForText" : 1,
+          "text-align" : "center"
+        },
+        "styleDDWDDayPartTitle" : {
+          "bottom" : "0px",
+          "color" : "rgba(255, 255, 255, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "40px",
+          "font-weight" : "normal",
+          "left" : "0px",
+          "opacityForText" : 1,
+          "text-align" : "center"
+        },
+        "styleDDWTimerPart" : {
+          "background-color" : "rgba(5, 24, 36, 0.95)",
+          "border-bottom-left-radius" : "10px",
+          "border-bottom-right-radius" : "10px",
+          "border-top-left-radius" : "0px",
+          "border-top-right-radius" : "0px",
+          "bottom" : "0px",
+          "height" : "80px",
+          "left" : "0px",
+          "opacityForBG" : 0.95
+        },
+        "styleDDWTimerPartNumber" : {
+          "background-color" : "rgba(80, 77, 77, 1.0)",
+          "border-bottom-left-radius" : "10px",
+          "border-bottom-right-radius" : "10px",
+          "border-color" : "rgba(35, 35, 35, 0.5)",
+          "border-style" : "solid",
+          "border-top-left-radius" : "10px",
+          "border-top-right-radius" : "10px",
+          "border-width" : "2px",
+          "bottom" : "0px",
+          "color" : "rgba(255, 255, 255, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "20px",
+          "font-weight" : "normal",
+          "height" : "30px",
+          "left" : "0px",
+          "opacityForBG" : 0.7,
+          "opacityForBorder" : 0.5,
+          "opacityForText" : 1,
+          "padding-bottom" : "0px",
+          "padding-left" : "5px",
+          "padding-right" : "5px",
+          "padding-top" : "0px",
+          "text-align" : "center",
+          "width" : "55px"
+        },
+        "styleDDWTimerPartNumberString" : {
+          "bottom" : "0px",
+          "color" : "rgba(255, 255, 255, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "20px",
+          "font-weight" : "normal",
+          "left" : "0px",
+          "opacityForText" : 1,
+          "text-align" : "center"
+        }
+      }
+    }
+  },
+  "karp1" : {
+    "d_day_widget" : {
+      "animations" : {
+        "animationDuration" : 0.8,
+        "animationInterval" : "8",
+        "animationType" : "fade-long"
+      },
+      "exams" : [ {
+        "examDate" : "2019-04-06",
+        "examTitle" : "국가직 9급"
+      }, {
+        "examDate" : "2019-04-07",
+        "examTitle" : "공방 헬퍼 v1.00"
+      }, {
+        "examDate" : "2019-06-22",
+        "examTitle" : "군무원"
+      }, {
+        "examDate" : "2019-09-01",
+        "examTitle" : "구루미 입사"
+      } ],
+      "formats" : {
+        "formatDDay" : "D-9 (D-%d)",
+        "formatDate" : "2019.2.9 (yyyy.m.d)",
+        "formatTimerString" : "일/시/분/초"
+      },
+      "onOffSwitches" : {
+        "useDDWDDayPart" : true,
+        "useDDWDDayPartDDay" : true,
+        "useDDWDDayPartDate" : true,
+        "useDDWDDayPartTitle" : true,
+        "useDDWTimerPart" : false,
+        "useDDWTimerPartNumber" : true,
+        "useDDWTimerPartNumberString" : true
+      },
+      "styles" : {
+        "styleDDW" : {
+          "border-color" : "rgba(173,173,173,0.90)",
+          "border-radius" : "1000px",
+          "border-style" : "double",
+          "border-width" : "7px",
+          "opacityForBorder" : "0.90",
+          "width" : "250px"
+        },
+        "styleDDWDDayPart" : {
+          "background-color" : "rgba(44,44,44,0.70)",
+          "border-radius" : "1000px",
+          "height" : "250px",
+          "opacityForBG" : "0.70"
+        },
+        "styleDDWDDayPartDDay" : {
+          "color" : "rgba(0,118,236,1)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "60px",
+          "font-weight" : "normal",
+          "opacityForText" : 1
+        },
+        "styleDDWDDayPartDate" : {
+          "color" : "rgba(244,244,244,1)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "34px",
+          "font-weight" : "normal",
+          "opacityForText" : 1
+        },
+        "styleDDWDDayPartTitle" : {
+          "color" : "rgba(244,244,244,1)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "45px",
+          "font-weight" : "normal",
+          "opacityForText" : 1
+        },
+        "styleDDWTimerPart" : {
+          "background-color" : "rgba(5, 24, 36,0.00)",
+          "border-radius" : "1000px",
+          "height" : "80px",
+          "opacityForBG" : "0.00"
+        },
+        "styleDDWTimerPartNumber" : {
+          "background-color" : "rgba(43,40,40,0.7)",
+          "border-color" : "rgba(35, 35, 35, 1)",
+          "border-radius" : "5px",
+          "border-style" : "solid",
+          "border-width" : "1px",
+          "color" : "rgba(255, 255, 255, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "20px",
+          "font-weight" : "normal",
+          "height" : "30px",
+          "opacityForBG" : 0.7,
+          "opacityForBorder" : 1,
+          "opacityForText" : 1,
+          "padding-bottom" : "0px",
+          "padding-left" : "5px",
+          "padding-right" : "5px",
+          "padding-top" : "0px",
+          "width" : "55px"
+        },
+        "styleDDWTimerPartNumberString" : {
+          "color" : "rgba(255, 255, 255, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "20px",
+          "font-weight" : "normal",
+          "opacityForText" : 1
+        }
+      }
+    }
+  },
+  "karp2" : {
+    "d_day_widget" : {
+      "animations" : {
+        "animationDuration" : 0.8,
+        "animationInterval" : "2",
+        "animationType" : "fade-long"
+      },
+      "exams" : {
+        "examsData" : [ {
+          "examDate" : "2019-04-06",
+          "examTitle" : "국가직 9급"
+        }, {
+          "examDate" : "2019-04-07",
+          "examTitle" : "공방 헬퍼 v1.00"
+        }, {
+          "examDate" : "2019-06-22",
+          "examTitle" : "군무원"
+        }, {
+          "examDate" : "2019-09-01",
+          "examTitle" : "구루미 입사"
+        } ]
+      },
+      "formats" : {
+        "formatDDay" : "D-9 (D-%d)",
+        "formatDate" : "2019.2.9 (yyyy.m.d)",
+        "formatTimerString" : "일/시/분/초"
+      },
+      "onOffSwitches" : {
+        "useDDWDDayPart" : true,
+        "useDDWDDayPartDDay" : true,
+        "useDDWDDayPartDate" : true,
+        "useDDWDDayPartTitle" : true,
+        "useDDWTimerPart" : false,
+        "useDDWTimerPartNumber" : true,
+        "useDDWTimerPartNumberString" : true
+      },
+      "styles" : {
+        "styleDDW" : {
+          "border-bottom-left-radius" : "20px",
+          "border-bottom-right-radius" : "20px",
+          "border-color" : "rgba(173,173,173,0.00)",
+          "border-style" : "double",
+          "border-top-left-radius" : "20px",
+          "border-top-right-radius" : "20px",
+          "border-width" : "7px",
+          "opacityForBorder" : "0.00",
+          "width" : "250px"
+        },
+        "styleDDWDDayPart" : {
+          "background-color" : "rgba(44,44,44,0.70)",
+          "border-bottom-left-radius" : "0px",
+          "border-bottom-right-radius" : "0px",
+          "border-top-left-radius" : "10px",
+          "border-top-right-radius" : "10px",
+          "bottom" : "0px",
+          "height" : "250px",
+          "left" : "0px",
+          "opacityForBG" : "0.70"
+        },
+        "styleDDWDDayPartDDay" : {
+          "bottom" : "0px",
+          "color" : "rgba(0,118,236,1)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "60px",
+          "font-weight" : "normal",
+          "left" : "0px",
+          "opacityForText" : 1,
+          "text-align" : "center"
+        },
+        "styleDDWDDayPartDate" : {
+          "bottom" : "0px",
+          "color" : "rgba(244,244,244,1)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "34px",
+          "font-weight" : "normal",
+          "left" : "0px",
+          "opacityForText" : 1,
+          "text-align" : "center"
+        },
+        "styleDDWDDayPartTitle" : {
+          "bottom" : "0px",
+          "color" : "rgba(244,244,244,1)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "45px",
+          "font-weight" : "normal",
+          "left" : "0px",
+          "opacityForText" : 1,
+          "text-align" : "center"
+        },
+        "styleDDWTimerPart" : {
+          "background-color" : "rgba(5, 24, 36,0.00)",
+          "border-bottom-left-radius" : "10px",
+          "border-bottom-right-radius" : "10px",
+          "border-top-left-radius" : "0px",
+          "border-top-right-radius" : "0px",
+          "bottom" : "0px",
+          "height" : "80px",
+          "left" : "0px",
+          "opacityForBG" : "0.00"
+        },
+        "styleDDWTimerPartNumber" : {
+          "background-color" : "rgba(43,40,40,0.7)",
+          "border-bottom-left-radius" : "10px",
+          "border-bottom-right-radius" : "10px",
+          "border-color" : "rgba(35, 35, 35, 1)",
+          "border-style" : "solid",
+          "border-top-left-radius" : "10px",
+          "border-top-right-radius" : "10px",
+          "border-width" : "1px",
+          "bottom" : "0px",
+          "color" : "rgba(255, 255, 255, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "20px",
+          "font-weight" : "normal",
+          "height" : "30px",
+          "left" : "0px",
+          "opacityForBG" : 0.7,
+          "opacityForBorder" : 1,
+          "opacityForText" : 1,
+          "padding-bottom" : "0px",
+          "padding-left" : "5px",
+          "padding-right" : "5px",
+          "padding-top" : "0px",
+          "text-align" : "center",
+          "width" : "55px"
+        },
+        "styleDDWTimerPartNumberString" : {
+          "bottom" : "0px",
+          "color" : "rgba(255, 255, 255, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "20px",
+          "font-weight" : "normal",
+          "left" : "0px",
+          "opacityForText" : 1,
+          "text-align" : "center"
+        }
+      },
+      "uniqueId" : {
+        "uniqueId" : "karp2"
+      }
+    }
+  },
+  "kkhveaa2pbdvybgxz08o" : {
+    "d_day_widget" : {
+      "animations" : {
+        "animationDuration" : 0.8,
+        "animationInterval" : 1,
+        "animationType" : "fade"
+      },
+      "exams" : {
+        "examsData" : [ {
+          "examDate" : "2019-03-26"
+        }, {
+          "examDate" : "2020-03-26"
+        } ]
+      },
+      "formats" : {
+        "formatDDay" : "D-9 (D-%d)",
+        "formatDate" : "2019.2.9 (yyyy.m.d)",
+        "formatTimerString" : "일/시/분/초"
+      },
+      "onOffSwitches" : {
+        "useDDWDDayPart" : true,
+        "useDDWDDayPartDDay" : true,
+        "useDDWDDayPartDate" : true,
+        "useDDWDDayPartTitle" : true,
+        "useDDWTimerPart" : true,
+        "useDDWTimerPartNumber" : true,
+        "useDDWTimerPartNumberString" : true
+      },
+      "styles" : {
+        "styleDDW" : {
+          "border-bottom-left-radius" : "20px",
+          "border-bottom-right-radius" : "20px",
+          "border-color" : "rgba(0, 0, 0, 0.6)",
+          "border-style" : "double",
+          "border-top-left-radius" : "20px",
+          "border-top-right-radius" : "20px",
+          "border-width" : "5px",
+          "opacityForBorder" : 0.6,
+          "width" : "400px"
+        },
+        "styleDDWDDayPart" : {
+          "background-color" : "rgba(35, 35, 35, 0.95)",
+          "border-bottom-left-radius" : "0px",
+          "border-bottom-right-radius" : "0px",
+          "border-top-left-radius" : "10px",
+          "border-top-right-radius" : "10px",
+          "bottom" : "0px",
+          "height" : "130px",
+          "left" : "0px",
+          "opacityForBG" : 0.95
+        },
+        "styleDDWDDayPartDDay" : {
+          "bottom" : "0px",
+          "color" : "rgba(255, 74, 74, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "35px",
+          "font-weight" : "normal",
+          "left" : "0px",
+          "opacityForText" : 1,
+          "text-align" : "center"
+        },
+        "styleDDWDDayPartDate" : {
+          "bottom" : "0px",
+          "color" : "rgba(255, 255, 255, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "20px",
+          "font-weight" : "normal",
+          "left" : "0px",
+          "opacityForText" : 1,
+          "text-align" : "center"
+        },
+        "styleDDWDDayPartTitle" : {
+          "bottom" : "0px",
+          "color" : "rgba(255, 255, 255, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "40px",
+          "font-weight" : "normal",
+          "left" : "0px",
+          "opacityForText" : 1,
+          "text-align" : "center"
+        },
+        "styleDDWTimerPart" : {
+          "background-color" : "rgba(5, 24, 36, 0.95)",
+          "border-bottom-left-radius" : "10px",
+          "border-bottom-right-radius" : "10px",
+          "border-top-left-radius" : "0px",
+          "border-top-right-radius" : "0px",
+          "bottom" : "0px",
+          "height" : "80px",
+          "left" : "0px",
+          "opacityForBG" : 0.95
+        },
+        "styleDDWTimerPartNumber" : {
+          "background-color" : "rgba(80, 77, 77, 1.0)",
+          "border-bottom-left-radius" : "10px",
+          "border-bottom-right-radius" : "10px",
+          "border-color" : "rgba(35, 35, 35, 0.5)",
+          "border-style" : "solid",
+          "border-top-left-radius" : "10px",
+          "border-top-right-radius" : "10px",
+          "border-width" : "2px",
+          "bottom" : "0px",
+          "color" : "rgba(255, 255, 255, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "20px",
+          "font-weight" : "normal",
+          "height" : "30px",
+          "left" : "0px",
+          "opacityForBG" : 0.7,
+          "opacityForBorder" : 0.5,
+          "opacityForText" : 1,
+          "padding-bottom" : "0px",
+          "padding-left" : "5px",
+          "padding-right" : "5px",
+          "padding-top" : "0px",
+          "text-align" : "center",
+          "width" : "55px"
+        },
+        "styleDDWTimerPartNumberString" : {
+          "bottom" : "0px",
+          "color" : "rgba(255, 255, 255, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "20px",
+          "font-weight" : "normal",
+          "left" : "0px",
+          "opacityForText" : 1,
+          "text-align" : "center"
+        }
+      },
+      "uniqueId" : {
+        "uniqueId" : "kkhveaa2pbdvybgxz08o"
+      }
+    }
+  },
+  "m6cx8qzja472yajrbhi7" : {
+    "d_day_widget" : {
+      "animations" : {
+        "animationDuration" : 0.8,
+        "animationInterval" : 5,
+        "animationType" : "fade"
+      },
+      "exams" : [ {
+        "examDate" : "2019-03-26"
+      }, {
+        "examDate" : "2020-03-26"
+      } ],
+      "formats" : {
+        "formatDDay" : "D-9 (D-%d)",
+        "formatDate" : "2019.2.9 (yyyy.m.d)",
+        "formatTimerString" : "일/시/분/초"
+      },
+      "onOffSwitches" : {
+        "useDDWDDayPart" : true,
+        "useDDWDDayPartDDay" : true,
+        "useDDWDDayPartDate" : true,
+        "useDDWDDayPartTitle" : true,
+        "useDDWTimerPart" : true,
+        "useDDWTimerPartNumber" : true,
+        "useDDWTimerPartNumberString" : true
+      },
+      "styles" : {
+        "styleDDW" : {
+          "border-color" : "rgba(0, 0, 0, 0.6)",
+          "border-radius" : "5px",
+          "border-style" : "double",
+          "border-width" : "5px",
+          "opacityForBorder" : 0.6,
+          "width" : "400px"
+        },
+        "styleDDWDDayPart" : {
+          "background-color" : "rgba(35, 35, 35, 1.0)",
+          "height" : "130px",
+          "opacityForBG" : 1
+        },
+        "styleDDWDDayPartDDay" : {
+          "color" : "rgba(255, 74, 74, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "35px",
+          "font-weight" : "normal",
+          "opacityForText" : 1
+        },
+        "styleDDWDDayPartDate" : {
+          "color" : "rgba(255, 255, 255, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "20px",
+          "font-weight" : "normal",
+          "opacityForText" : 1
+        },
+        "styleDDWDDayPartTitle" : {
+          "color" : "rgba(255, 255, 255, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "40px",
+          "font-weight" : "normal",
+          "opacityForText" : 1
+        },
+        "styleDDWTimerPart" : {
+          "background-color" : "rgba(5, 24, 36, 1.0)",
+          "height" : "80px",
+          "opacityForBG" : 1
+        },
+        "styleDDWTimerPartNumber" : {
+          "background-color" : "rgba(80, 77, 77, 1.0)",
+          "border-color" : "rgba(35, 35, 35, 1)",
+          "border-radius" : "5px",
+          "border-style" : "solid",
+          "border-width" : "1px",
+          "color" : "rgba(255, 255, 255, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "20px",
+          "font-weight" : "normal",
+          "height" : "30px",
+          "opacityForBG" : 0.7,
+          "opacityForBorder" : 1,
+          "opacityForText" : 1,
+          "padding-bottom" : "0px",
+          "padding-left" : "5px",
+          "padding-right" : "5px",
+          "padding-top" : "0px",
+          "width" : "55px"
+        },
+        "styleDDWTimerPartNumberString" : {
+          "color" : "rgba(255, 255, 255, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "20px",
+          "font-weight" : "normal",
+          "opacityForText" : 1
+        }
+      }
+    }
+  },
+  "mqhxxfs2hcmdfhel78ac" : {
+    "d_day_widget" : {
+      "animations" : {
+        "animationDuration" : 0.8,
+        "animationInterval" : 5,
+        "animationType" : "fade"
+      },
+      "exams" : {
+        "exams" : [ {
+          "examDate" : "2019-03-26"
+        }, {
+          "examDate" : "2020-03-26"
+        } ]
+      },
+      "formats" : {
+        "formatDDay" : "D-9 (D-%d)",
+        "formatDate" : "2019.2.9 (yyyy.m.d)",
+        "formatTimerString" : "일/시/분/초"
+      },
+      "onOffSwitches" : {
+        "useDDWDDayPart" : true,
+        "useDDWDDayPartDDay" : true,
+        "useDDWDDayPartDate" : true,
+        "useDDWDDayPartTitle" : true,
+        "useDDWTimerPart" : true,
+        "useDDWTimerPartNumber" : true,
+        "useDDWTimerPartNumberString" : true
+      },
+      "styles" : {
+        "styleDDW" : {
+          "border-bottom-left-radius" : "20px",
+          "border-bottom-right-radius" : "20px",
+          "border-color" : "rgba(0, 0, 0, 0.6)",
+          "border-style" : "double",
+          "border-top-left-radius" : "20px",
+          "border-top-right-radius" : "20px",
+          "border-width" : "5px",
+          "opacityForBorder" : 0.6,
+          "width" : "400px"
+        },
+        "styleDDWDDayPart" : {
+          "background-color" : "rgba(35, 35, 35, 0.95)",
+          "border-bottom-left-radius" : "0px",
+          "border-bottom-right-radius" : "0px",
+          "border-top-left-radius" : "10px",
+          "border-top-right-radius" : "10px",
+          "bottom" : "0px",
+          "height" : "130px",
+          "left" : "0px",
+          "opacityForBG" : 0.95
+        },
+        "styleDDWDDayPartDDay" : {
+          "bottom" : "0px",
+          "color" : "rgba(255, 74, 74, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "35px",
+          "font-weight" : "normal",
+          "left" : "0px",
+          "opacityForText" : 1,
+          "text-align" : "center"
+        },
+        "styleDDWDDayPartDate" : {
+          "bottom" : "0px",
+          "color" : "rgba(255, 255, 255, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "20px",
+          "font-weight" : "normal",
+          "left" : "0px",
+          "opacityForText" : 1,
+          "text-align" : "center"
+        },
+        "styleDDWDDayPartTitle" : {
+          "bottom" : "0px",
+          "color" : "rgba(255, 255, 255, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "40px",
+          "font-weight" : "normal",
+          "left" : "0px",
+          "opacityForText" : 1,
+          "text-align" : "center"
+        },
+        "styleDDWTimerPart" : {
+          "background-color" : "rgba(5, 24, 36, 0.95)",
+          "border-bottom-left-radius" : "10px",
+          "border-bottom-right-radius" : "10px",
+          "border-top-left-radius" : "0px",
+          "border-top-right-radius" : "0px",
+          "bottom" : "0px",
+          "height" : "80px",
+          "left" : "0px",
+          "opacityForBG" : 0.95
+        },
+        "styleDDWTimerPartNumber" : {
+          "background-color" : "rgba(80, 77, 77, 1.0)",
+          "border-bottom-left-radius" : "10px",
+          "border-bottom-right-radius" : "10px",
+          "border-color" : "rgba(35, 35, 35, 0.5)",
+          "border-style" : "solid",
+          "border-top-left-radius" : "10px",
+          "border-top-right-radius" : "10px",
+          "border-width" : "2px",
+          "bottom" : "0px",
+          "color" : "rgba(255, 255, 255, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "20px",
+          "font-weight" : "normal",
+          "height" : "30px",
+          "left" : "0px",
+          "opacityForBG" : 0.7,
+          "opacityForBorder" : 0.5,
+          "opacityForText" : 1,
+          "padding-bottom" : "0px",
+          "padding-left" : "5px",
+          "padding-right" : "5px",
+          "padding-top" : "0px",
+          "text-align" : "center",
+          "width" : "55px"
+        },
+        "styleDDWTimerPartNumberString" : {
+          "bottom" : "0px",
+          "color" : "rgba(255, 255, 255, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "20px",
+          "font-weight" : "normal",
+          "left" : "0px",
+          "opacityForText" : 1,
+          "text-align" : "center"
+        }
+      },
+      "uniqueId" : {
+        "uniqueId" : "mqhxxfs2hcmdfhel78ac"
+      }
+    }
+  },
+  "oy1e060e1j563ijeuui6" : {
+    "d_day_widget" : {
+      "animations" : {
+        "animationDuration" : 0.8,
+        "animationInterval" : 5,
+        "animationType" : "fade"
+      },
+      "exams" : [ {
+        "examDate" : "2019-03-26"
+      }, {
+        "examDate" : "2020-03-26"
+      } ],
+      "formats" : {
+        "formatDDay" : "D-9 (D-%d)",
+        "formatDate" : "2019.2.9 (yyyy.m.d)",
+        "formatTimerString" : "일/시/분/초"
+      },
+      "onOffSwitches" : {
+        "useDDWDDayPart" : true,
+        "useDDWDDayPartDDay" : true,
+        "useDDWDDayPartDate" : true,
+        "useDDWDDayPartTitle" : true,
+        "useDDWTimerPart" : true,
+        "useDDWTimerPartNumber" : true,
+        "useDDWTimerPartNumberString" : true
+      },
+      "styles" : {
+        "styleDDW" : {
+          "border-bottom-left-radius" : "20px",
+          "border-bottom-right-radius" : "20px",
+          "border-color" : "rgba(0, 0, 0, 0.6)",
+          "border-style" : "double",
+          "border-top-left-radius" : "20px",
+          "border-top-right-radius" : "20px",
+          "border-width" : "5px",
+          "opacityForBorder" : 0.6,
+          "width" : "400px"
+        },
+        "styleDDWDDayPart" : {
+          "background-color" : "rgba(35, 35, 35, 0.95)",
+          "border-bottom-left-radius" : "0px",
+          "border-bottom-right-radius" : "0px",
+          "border-top-left-radius" : "10px",
+          "border-top-right-radius" : "10px",
+          "bottom" : "0px",
+          "height" : "130px",
+          "left" : "0px",
+          "opacityForBG" : 0.95
+        },
+        "styleDDWDDayPartDDay" : {
+          "bottom" : "0px",
+          "color" : "rgba(255, 74, 74, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "35px",
+          "font-weight" : "normal",
+          "left" : "0px",
+          "opacityForText" : 1,
+          "text-align" : "center"
+        },
+        "styleDDWDDayPartDate" : {
+          "bottom" : "0px",
+          "color" : "rgba(255, 255, 255, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "20px",
+          "font-weight" : "normal",
+          "left" : "0px",
+          "opacityForText" : 1,
+          "text-align" : "center"
+        },
+        "styleDDWDDayPartTitle" : {
+          "bottom" : "0px",
+          "color" : "rgba(255, 255, 255, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "40px",
+          "font-weight" : "normal",
+          "left" : "0px",
+          "opacityForText" : 1,
+          "text-align" : "center"
+        },
+        "styleDDWTimerPart" : {
+          "background-color" : "rgba(5, 24, 36, 0.95)",
+          "border-bottom-left-radius" : "10px",
+          "border-bottom-right-radius" : "10px",
+          "border-top-left-radius" : "0px",
+          "border-top-right-radius" : "0px",
+          "bottom" : "0px",
+          "height" : "80px",
+          "left" : "0px",
+          "opacityForBG" : 0.95
+        },
+        "styleDDWTimerPartNumber" : {
+          "background-color" : "rgba(80, 77, 77, 1.0)",
+          "border-bottom-left-radius" : "10px",
+          "border-bottom-right-radius" : "10px",
+          "border-color" : "rgba(35, 35, 35, 0.5)",
+          "border-style" : "solid",
+          "border-top-left-radius" : "10px",
+          "border-top-right-radius" : "10px",
+          "border-width" : "2px",
+          "bottom" : "0px",
+          "color" : "rgba(255, 255, 255, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "20px",
+          "font-weight" : "normal",
+          "height" : "30px",
+          "left" : "0px",
+          "opacityForBG" : 0.7,
+          "opacityForBorder" : 0.5,
+          "opacityForText" : 1,
+          "padding-bottom" : "0px",
+          "padding-left" : "5px",
+          "padding-right" : "5px",
+          "padding-top" : "0px",
+          "text-align" : "center",
+          "width" : "55px"
+        },
+        "styleDDWTimerPartNumberString" : {
+          "bottom" : "0px",
+          "color" : "rgba(255, 255, 255, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "20px",
+          "font-weight" : "normal",
+          "left" : "0px",
+          "opacityForText" : 1,
+          "text-align" : "center"
+        }
+      }
+    }
+  },
+  "posmsbbkblxqdzn7azyo" : {
+    "d_day_widget" : {
+      "animations" : {
+        "animationDuration" : 0.8,
+        "animationInterval" : 5,
+        "animationType" : "fade"
+      },
+      "exams" : [ {
+        "examDate" : "2019-03-26"
+      }, {
+        "examDate" : "2020-03-26"
+      } ],
+      "formats" : {
+        "formatDDay" : "D-9 (D-%d)",
+        "formatDate" : "2019.2.9 (yyyy.m.d)",
+        "formatTimerString" : "일/시/분/초"
+      },
+      "onOffSwitches" : {
+        "useDDWDDayPart" : true,
+        "useDDWDDayPartDDay" : true,
+        "useDDWDDayPartDate" : true,
+        "useDDWDDayPartTitle" : true,
+        "useDDWTimerPart" : true,
+        "useDDWTimerPartNumber" : true,
+        "useDDWTimerPartNumberString" : true
+      },
+      "styles" : {
+        "styleDDW" : {
+          "border-bottom-left-radius" : "20px",
+          "border-bottom-right-radius" : "20px",
+          "border-color" : "rgba(0, 0, 0, 0.6)",
+          "border-style" : "double",
+          "border-top-left-radius" : "20px",
+          "border-top-right-radius" : "20px",
+          "border-width" : "5px",
+          "opacityForBorder" : 0.6,
+          "width" : "400px"
+        },
+        "styleDDWDDayPart" : {
+          "background-color" : "rgba(35, 35, 35, 0.95)",
+          "border-bottom-left-radius" : "0px",
+          "border-bottom-right-radius" : "0px",
+          "border-top-left-radius" : "10px",
+          "border-top-right-radius" : "10px",
+          "bottom" : "0px",
+          "height" : "130px",
+          "left" : "0px",
+          "opacityForBG" : 0.95
+        },
+        "styleDDWDDayPartDDay" : {
+          "bottom" : "0px",
+          "color" : "rgba(255, 74, 74, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "35px",
+          "font-weight" : "normal",
+          "left" : "0px",
+          "opacityForText" : 1,
+          "text-align" : "center"
+        },
+        "styleDDWDDayPartDate" : {
+          "bottom" : "0px",
+          "color" : "rgba(255, 255, 255, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "20px",
+          "font-weight" : "normal",
+          "left" : "0px",
+          "opacityForText" : 1,
+          "text-align" : "center"
+        },
+        "styleDDWDDayPartTitle" : {
+          "bottom" : "0px",
+          "color" : "rgba(255, 255, 255, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "40px",
+          "font-weight" : "normal",
+          "left" : "0px",
+          "opacityForText" : 1,
+          "text-align" : "center"
+        },
+        "styleDDWTimerPart" : {
+          "background-color" : "rgba(5, 24, 36, 0.95)",
+          "border-bottom-left-radius" : "10px",
+          "border-bottom-right-radius" : "10px",
+          "border-top-left-radius" : "0px",
+          "border-top-right-radius" : "0px",
+          "bottom" : "0px",
+          "height" : "80px",
+          "left" : "0px",
+          "opacityForBG" : 0.95
+        },
+        "styleDDWTimerPartNumber" : {
+          "background-color" : "rgba(80, 77, 77, 1.0)",
+          "border-bottom-left-radius" : "10px",
+          "border-bottom-right-radius" : "10px",
+          "border-color" : "rgba(35, 35, 35, 0.5)",
+          "border-style" : "solid",
+          "border-top-left-radius" : "10px",
+          "border-top-right-radius" : "10px",
+          "border-width" : "2px",
+          "bottom" : "0px",
+          "color" : "rgba(255, 255, 255, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "20px",
+          "font-weight" : "normal",
+          "height" : "30px",
+          "left" : "0px",
+          "opacityForBG" : 0.7,
+          "opacityForBorder" : 0.5,
+          "opacityForText" : 1,
+          "padding-bottom" : "0px",
+          "padding-left" : "5px",
+          "padding-right" : "5px",
+          "padding-top" : "0px",
+          "text-align" : "center",
+          "width" : "55px"
+        },
+        "styleDDWTimerPartNumberString" : {
+          "bottom" : "0px",
+          "color" : "rgba(255, 255, 255, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "20px",
+          "font-weight" : "normal",
+          "left" : "0px",
+          "opacityForText" : 1,
+          "text-align" : "center"
+        }
+      }
+    }
+  },
+  "t" : {
+    "d_day_widget" : {
+      "animations" : {
+        "animationDuration" : 0.8,
+        "animationInterval" : 5,
+        "animationType" : "fade"
+      },
+      "exams" : [ {
+        "examDate" : "2019-03-26"
+      }, {
+        "examDate" : "2020-03-26"
+      } ],
+      "formats" : {
+        "formatDDay" : "D-9 (D-%d)",
+        "formatDate" : "2019.2.9 (yyyy.m.d)",
+        "formatTimerString" : "일/시/분/초"
+      },
+      "onOffSwitches" : {
+        "useDDWDDayPart" : true,
+        "useDDWDDayPartDDay" : true,
+        "useDDWDDayPartDate" : true,
+        "useDDWDDayPartTitle" : true,
+        "useDDWTimerPart" : true,
+        "useDDWTimerPartNumber" : true,
+        "useDDWTimerPartNumberString" : true
+      },
+      "styles" : {
+        "styleDDW" : {
+          "border-bottom-left-radius" : "20px",
+          "border-bottom-right-radius" : "20px",
+          "border-color" : "rgba(0, 0, 0, 0.6)",
+          "border-style" : "double",
+          "border-top-left-radius" : "20px",
+          "border-top-right-radius" : "20px",
+          "border-width" : "5px",
+          "opacityForBorder" : 0.6,
+          "width" : "400px"
+        },
+        "styleDDWDDayPart" : {
+          "background-color" : "rgba(35, 35, 35, 0.95)",
+          "border-bottom-left-radius" : "0px",
+          "border-bottom-right-radius" : "0px",
+          "border-top-left-radius" : "10px",
+          "border-top-right-radius" : "10px",
+          "bottom" : "0px",
+          "height" : "130px",
+          "left" : "0px",
+          "opacityForBG" : 0.95
+        },
+        "styleDDWDDayPartDDay" : {
+          "bottom" : "0px",
+          "color" : "rgba(255, 74, 74, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "35px",
+          "font-weight" : "normal",
+          "left" : "0px",
+          "opacityForText" : 1,
+          "text-align" : "center"
+        },
+        "styleDDWDDayPartDate" : {
+          "bottom" : "0px",
+          "color" : "rgba(255, 255, 255, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "20px",
+          "font-weight" : "normal",
+          "left" : "0px",
+          "opacityForText" : 1,
+          "text-align" : "center"
+        },
+        "styleDDWDDayPartTitle" : {
+          "bottom" : "0px",
+          "color" : "rgba(255, 255, 255, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "40px",
+          "font-weight" : "normal",
+          "left" : "0px",
+          "opacityForText" : 1,
+          "text-align" : "center"
+        },
+        "styleDDWTimerPart" : {
+          "background-color" : "rgba(5, 24, 36, 0.95)",
+          "border-bottom-left-radius" : "10px",
+          "border-bottom-right-radius" : "10px",
+          "border-top-left-radius" : "0px",
+          "border-top-right-radius" : "0px",
+          "bottom" : "0px",
+          "height" : "80px",
+          "left" : "0px",
+          "opacityForBG" : 0.95
+        },
+        "styleDDWTimerPartNumber" : {
+          "background-color" : "rgba(80, 77, 77, 1.0)",
+          "border-bottom-left-radius" : "10px",
+          "border-bottom-right-radius" : "10px",
+          "border-color" : "rgba(35, 35, 35, 0.5)",
+          "border-style" : "solid",
+          "border-top-left-radius" : "10px",
+          "border-top-right-radius" : "10px",
+          "border-width" : "2px",
+          "bottom" : "0px",
+          "color" : "rgba(255, 255, 255, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "20px",
+          "font-weight" : "normal",
+          "height" : "30px",
+          "left" : "0px",
+          "opacityForBG" : 0.7,
+          "opacityForBorder" : 0.5,
+          "opacityForText" : 1,
+          "padding-bottom" : "0px",
+          "padding-left" : "5px",
+          "padding-right" : "5px",
+          "padding-top" : "0px",
+          "text-align" : "center",
+          "width" : "55px"
+        },
+        "styleDDWTimerPartNumberString" : {
+          "bottom" : "0px",
+          "color" : "rgba(255, 255, 255, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "20px",
+          "font-weight" : "normal",
+          "left" : "0px",
+          "opacityForText" : 1,
+          "text-align" : "center"
+        }
+      }
+    }
+  },
+  "t1" : {
+    "d_day_widget" : {
+      "animations" : {
+        "animationDuration" : 0.8,
+        "animationInterval" : 8,
+        "animationType" : "fade-long"
+      },
+      "exams" : [ {
+        "examDate" : "2019-04-06",
+        "examTitle" : "국가직 9급"
+      }, {
+        "examDate" : "2019-04-07",
+        "examTitle" : "공방 헬퍼 v1.00"
+      }, {
+        "examDate" : "2019-06-22",
+        "examTitle" : "군무원"
+      }, {
+        "examDate" : "2019-09-01",
+        "examTitle" : "취직: 구루미 or Else"
+      } ],
+      "formats" : {
+        "formatDDay" : "D-9 (D-%d)",
+        "formatDate" : "2019.2.9 (yyyy.m.d)",
+        "formatTimerString" : "일/시/분/초"
+      },
+      "onOffSwitches" : {
+        "useDDWDDayPart" : true,
+        "useDDWDDayPartDDay" : true,
+        "useDDWDDayPartDate" : true,
+        "useDDWDDayPartTitle" : true,
+        "useDDWTimerPart" : false,
+        "useDDWTimerPartNumber" : true,
+        "useDDWTimerPartNumberString" : true
+      },
+      "styles" : {
+        "styleDDW" : {
+          "border-color" : "rgba(173,173,173,0.90)",
+          "border-radius" : "1000px",
+          "border-style" : "double",
+          "border-width" : "7px",
+          "opacityForBorder" : "0.90",
+          "width" : "250px"
+        },
+        "styleDDWDDayPart" : {
+          "background-color" : "rgba(44,44,44,0.70)",
+          "border-radius" : "1000px",
+          "height" : "250px",
+          "opacityForBG" : "0.70"
+        },
+        "styleDDWDDayPartDDay" : {
+          "color" : "rgba(0,118,236,1)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "60px",
+          "font-weight" : "normal",
+          "opacityForText" : 1
+        },
+        "styleDDWDDayPartDate" : {
+          "color" : "rgba(244,244,244,1)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "34px",
+          "font-weight" : "normal",
+          "opacityForText" : 1
+        },
+        "styleDDWDDayPartTitle" : {
+          "color" : "rgba(244,244,244,1)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "45px",
+          "font-weight" : "normal",
+          "opacityForText" : 1
+        },
+        "styleDDWTimerPart" : {
+          "background-color" : "rgba(5, 24, 36,0.00)",
+          "border-radius" : "1000px",
+          "height" : "80px",
+          "opacityForBG" : "0.00"
+        },
+        "styleDDWTimerPartNumber" : {
+          "background-color" : "rgba(43,40,40,0.7)",
+          "border-color" : "rgba(35, 35, 35, 1)",
+          "border-radius" : "5px",
+          "border-style" : "solid",
+          "border-width" : "1px",
+          "color" : "rgba(255, 255, 255, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "20px",
+          "font-weight" : "normal",
+          "height" : "30px",
+          "opacityForBG" : 0.7,
+          "opacityForBorder" : 1,
+          "opacityForText" : 1,
+          "padding-bottom" : "0px",
+          "padding-left" : "5px",
+          "padding-right" : "5px",
+          "padding-top" : "0px",
+          "width" : "55px"
+        },
+        "styleDDWTimerPartNumberString" : {
+          "color" : "rgba(255, 255, 255, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "20px",
+          "font-weight" : "normal",
+          "opacityForText" : 1
+        }
+      }
+    }
+  },
+  "t3" : {
+    "d_day_widget" : {
+      "animations" : {
+        "animationDuration" : 0.8,
+        "animationInterval" : "8",
+        "animationType" : "fade-long"
+      },
+      "exams" : {
+        "exams" : [ {
+          "examDate" : "2019-04-06",
+          "examTitle" : "국가직 9급"
+        }, {
+          "examDate" : "2019-04-07",
+          "examTitle" : "공방 헬퍼 v1.00"
+        }, {
+          "examDate" : "2019-06-22",
+          "examTitle" : "군무원"
+        }, {
+          "examDate" : "2019-09-01",
+          "examTitle" : "취직: 구루미 or Else"
+        } ]
+      },
+      "formats" : {
+        "formatDDay" : "D-9 (D-%d)",
+        "formatDate" : "2019.2.9 (yyyy.m.d)",
+        "formatTimerString" : "일/시/분/초"
+      },
+      "onOffSwitches" : {
+        "useDDWDDayPart" : true,
+        "useDDWDDayPartDDay" : true,
+        "useDDWDDayPartDate" : true,
+        "useDDWDDayPartTitle" : true,
+        "useDDWTimerPart" : false,
+        "useDDWTimerPartNumber" : true,
+        "useDDWTimerPartNumberString" : true
+      },
+      "styles" : {
+        "styleDDW" : {
+          "border-color" : "rgba(173,173,173,0.90)",
+          "border-radius" : "1000px",
+          "border-style" : "double",
+          "border-width" : "7px",
+          "opacityForBorder" : "0.90",
+          "width" : "250px"
+        },
+        "styleDDWDDayPart" : {
+          "background-color" : "rgba(44,44,44,0.70)",
+          "border-radius" : "1000px",
+          "height" : "250px",
+          "opacityForBG" : "0.70"
+        },
+        "styleDDWDDayPartDDay" : {
+          "color" : "rgba(0,118,236,1)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "60px",
+          "font-weight" : "normal",
+          "opacityForText" : 1
+        },
+        "styleDDWDDayPartDate" : {
+          "color" : "rgba(244,244,244,1)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "34px",
+          "font-weight" : "normal",
+          "opacityForText" : 1
+        },
+        "styleDDWDDayPartTitle" : {
+          "color" : "rgba(244,244,244,1)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "45px",
+          "font-weight" : "normal",
+          "opacityForText" : 1
+        },
+        "styleDDWTimerPart" : {
+          "background-color" : "rgba(5, 24, 36,0.00)",
+          "border-radius" : "1000px",
+          "height" : "80px",
+          "opacityForBG" : "0.00"
+        },
+        "styleDDWTimerPartNumber" : {
+          "background-color" : "rgba(43,40,40,0.7)",
+          "border-color" : "rgba(35, 35, 35, 1)",
+          "border-radius" : "5px",
+          "border-style" : "solid",
+          "border-width" : "1px",
+          "color" : "rgba(255, 255, 255, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "20px",
+          "font-weight" : "normal",
+          "height" : "30px",
+          "opacityForBG" : 0.7,
+          "opacityForBorder" : 1,
+          "opacityForText" : 1,
+          "padding-bottom" : "0px",
+          "padding-left" : "5px",
+          "padding-right" : "5px",
+          "padding-top" : "0px",
+          "width" : "55px"
+        },
+        "styleDDWTimerPartNumberString" : {
+          "color" : "rgba(255, 255, 255, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "20px",
+          "font-weight" : "normal",
+          "opacityForText" : 1
+        }
+      },
+      "uniqueId" : {
+        "uniqueId" : "t3"
+      }
+    }
+  },
+  "vsici9kniuynexrp46mu" : {
+    "d_day_widget" : {
+      "animations" : {
+        "animationDuration" : 0.8,
+        "animationInterval" : "15",
+        "animationType" : "fade"
+      },
+      "exams" : [ {
+        "examDate" : "2019-11-14",
+        "examTitle" : "대학수학능력시험"
+      }, {
+        "examDate" : "2019-08-17",
+        "examTitle" : "국가직 7급"
+      }, {
+        "examDate" : "2019-04-06",
+        "examTitle" : "국가직 9급"
+      }, {
+        "examDate" : "2019-06-22",
+        "examTitle" : "외교관후보자 2차"
+      }, {
+        "examDate" : "2019-06-22",
+        "examTitle" : "5급 행정 2차"
+      }, {
+        "examDate" : "2019-07-02",
+        "examTitle" : "5급 기술 2차"
+      }, {
+        "examDate" : "2019-04-27",
+        "examTitle" : "경찰공무원 1차"
+      }, {
+        "examDate" : "2019-05-04",
+        "examTitle" : "세무사 1차"
+      }, {
+        "examDate" : "2019-06-01",
+        "examTitle" : "노무사 1차"
+      }, {
+        "examDate" : "2019-06-15",
+        "examTitle" : "서울시 9급"
+      }, {
+        "examDate" : "2019-06-22",
+        "examTitle" : "관세사 2차"
+      }, {
+        "examDate" : "2019-06-29",
+        "examTitle" : "회계사 2차"
+      }, {
+        "examDate" : "2019-07-27",
+        "examTitle" : "변리사 2차"
+      }, {
+        "examDate" : "2019-08-31",
+        "examTitle" : "노무사 2차"
+      }, {
+        "examDate" : "2019-08-31",
+        "examTitle" : "경찰공무원 2차"
+      }, {
+        "examDate" : "2019-09-01",
+        "examTitle" : "노무사 2차"
+      }, {
+        "examDate" : "2019-10-12",
+        "examTitle" : "서울시 7급"
+      }, {
+        "examDate" : "2019-08-17",
+        "examTitle" : "세무사 2차"
+      }, {
+        "examDate" : "2019-11-23",
+        "examTitle" : "중등교원 임용"
+      }, {
+        "examDate" : "2019-11-10",
+        "examTitle" : "초등교원 임용"
+      }, {
+        "examDate" : "2019-08-18",
+        "examTitle" : "2020 PEET"
+      }, {
+        "examDate" : "2019-07-14",
+        "examTitle" : "2020 LEET"
+      }, {
+        "examDate" : "2019-05-04",
+        "examTitle" : "국회 8급"
+      } ],
+      "formats" : {
+        "formatDDay" : "D-9 (D-%d)",
+        "formatDate" : "2019.2.9 (yyyy.m.d)",
+        "formatTimerString" : "일/시/분/초"
+      },
+      "onOffSwitches" : {
+        "useDDWDDayPart" : true,
+        "useDDWDDayPartDDay" : true,
+        "useDDWDDayPartDate" : true,
+        "useDDWDDayPartTitle" : true,
+        "useDDWTimerPart" : true,
+        "useDDWTimerPartNumber" : true,
+        "useDDWTimerPartNumberString" : true
+      },
+      "styles" : {
+        "styleDDW" : {
+          "border-color" : "rgba(0, 0, 0,0.00)",
+          "border-radius" : "5px",
+          "border-style" : "double",
+          "border-width" : "5px",
+          "opacityForBorder" : "0.00",
+          "width" : "400px"
+        },
+        "styleDDWDDayPart" : {
+          "background-color" : "rgba(35, 35, 35,0.00)",
+          "height" : "130px",
+          "opacityForBG" : "0.00"
+        },
+        "styleDDWDDayPartDDay" : {
+          "color" : "rgba(255, 74, 74, 1)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "35px",
+          "font-weight" : "normal",
+          "opacityForText" : 1
+        },
+        "styleDDWDDayPartDate" : {
+          "color" : "rgba(0,0,0,1)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "20px",
+          "font-weight" : "normal",
+          "opacityForText" : 1
+        },
+        "styleDDWDDayPartTitle" : {
+          "color" : "rgba(0,0,0,1.00)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "40px",
+          "font-weight" : "normal",
+          "opacityForText" : "1.00"
+        },
+        "styleDDWTimerPart" : {
+          "background-color" : "rgba(5, 24, 36,0.00)",
+          "height" : "80px",
+          "opacityForBG" : "0.00"
+        },
+        "styleDDWTimerPartNumber" : {
+          "background-color" : "rgba(80, 77, 77,0.00)",
+          "border-color" : "rgba(35, 35, 35,1.00)",
+          "border-radius" : "5px",
+          "border-style" : "solid",
+          "border-width" : "1px",
+          "color" : "rgba(0,0,0,1)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "20px",
+          "font-weight" : "normal",
+          "height" : "30px",
+          "opacityForBG" : "0.00",
+          "opacityForBorder" : "1.00",
+          "opacityForText" : 1,
+          "padding-bottom" : "0px",
+          "padding-left" : "5px",
+          "padding-right" : "5px",
+          "padding-top" : "0px",
+          "width" : "55px"
+        },
+        "styleDDWTimerPartNumberString" : {
+          "color" : "rgba(0,0,0,1)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "20px",
+          "font-weight" : "bold",
+          "opacityForText" : 1
+        }
+      }
+    }
+  },
+  "xh2f6wx60zg22unv0noj" : {
+    "d_day_widget" : {
+      "animations" : {
+        "animationDuration" : 0.8,
+        "animationInterval" : 5,
+        "animationType" : "fade-short-strong"
+      },
+      "exams" : [ {
+        "examDate" : "2019-05-01",
+        "examTitle" : "viva"
+      }, {
+        "examDate" : "2019-03-26",
+        "examTitle" : "hardbound"
+      } ],
+      "formats" : {
+        "formatDDay" : "D-09 (D-%dd)",
+        "formatDate" : "2019.02.09 (yyyy.mm.dd)",
+        "formatTimerString" : "일/시/분/초"
+      },
+      "onOffSwitches" : {
+        "useDDWDDayPart" : true,
+        "useDDWDDayPartDDay" : true,
+        "useDDWDDayPartDate" : true,
+        "useDDWDDayPartTitle" : true,
+        "useDDWTimerPart" : true,
+        "useDDWTimerPartNumber" : true,
+        "useDDWTimerPartNumberString" : true
+      },
+      "styles" : {
+        "styleDDW" : {
+          "border-color" : "rgba(74,74,74,0.6)",
+          "border-radius" : "5px",
+          "border-style" : "groove",
+          "border-width" : "5px",
+          "opacityForBorder" : 0.6,
+          "width" : "300px"
+        },
+        "styleDDWDDayPart" : {
+          "background-color" : "rgba(35, 35, 35, 1.0)",
+          "height" : "130px",
+          "opacityForBG" : 1
+        },
+        "styleDDWDDayPartDDay" : {
+          "color" : "rgba(255, 74, 74,1.00)",
+          "font-family" : "Nanum Pen Script",
+          "font-size" : "45px",
+          "font-weight" : "bold",
+          "opacityForText" : "1.00"
+        },
+        "styleDDWDDayPartDate" : {
+          "color" : "rgba(255, 255, 255, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "20px",
+          "font-weight" : "normal",
+          "opacityForText" : 1
+        },
+        "styleDDWDDayPartTitle" : {
+          "color" : "rgba(255, 255, 255, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "30px",
+          "font-weight" : "normal",
+          "opacityForText" : 1
+        },
+        "styleDDWTimerPart" : {
+          "background-color" : "rgba(5, 24, 36, 1.0)",
+          "height" : "80px",
+          "opacityForBG" : 1
+        },
+        "styleDDWTimerPartNumber" : {
+          "background-color" : "rgba(80, 77, 77, 1.0)",
+          "border-color" : "rgba(35, 35, 35,1.00)",
+          "border-radius" : "5px",
+          "border-style" : "solid",
+          "border-width" : "1px",
+          "color" : "rgba(255, 255, 255, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "20px",
+          "font-weight" : "normal",
+          "height" : "30px",
+          "opacityForBG" : 0.7,
+          "opacityForBorder" : "1.00",
+          "opacityForText" : 1,
+          "padding-bottom" : "0px",
+          "padding-left" : "2px",
+          "padding-right" : "2px",
+          "padding-top" : "0px",
+          "width" : "40px"
+        },
+        "styleDDWTimerPartNumberString" : {
+          "color" : "rgba(255, 255, 255, 1.0)",
+          "font-family" : "Noto Sans KR",
+          "font-size" : "10px",
+          "font-weight" : "normal",
+          "opacityForText" : 1
+        }
+      }
+    }
+  },
+  "y3p4mzsut7wd1bpx1klj" : {
+    "d_day_widget" : {
+      "animations" : {
+        "animationDuration" : 0.8,
+        "animationInterval" : 5,
+        "animationType" : "fade"
+      },
+      "exams" : [ {
+        "examDate" : "2019-03-26"
+      }, {
+        "examDate" : "2020-03-26"
+      } ],
+      "formats" : {
+        "formatDDay" : "D-9 (D-%d)",
+        "formatDate" : "2019.2.9 (yyyy.m.d)",
+        "formatTimerString" : "일/시/분/초"
+      },
+      "onOffSwitches" : {
+        "useDDWDDayPart" : true,
+        "useDDWDDayPartDDay" : true,
+        "useDDWDDayPartDate" : true,
+        "useDDWDDayPartTitle" : true,
+        "useDDWTimerPart" : true,
+        "useDDWTimerPartNumber" : true,
+        "useDDWTimerPartNumberString" : true
+      },
+      "styles" : {
+        "styleDDW" : {
+          "border-bottom-left-radius" : "20px",
+          "border-bottom-right-radius" : "20px",
+          "border-color" : "rgba(0, 0, 0, 0.6)",
+          "border-style" : "double",
+          "border-top-left-radius" : "20px",
+          "border-top-right-radius" : "20px",
+          "border-width" : "5px",
+          "opacityForBorder" : 0.6,
+          "width" : "400px"
+        },
+        "styleDDWDDayPart" : {
+          "background-color" : "rgba(35, 35, 35, 0.95)",
+          "border-bottom-left-radius" : "0px",
+          "border-bottom-right-radius" : "0px",
+          "border-top-left-radius" : "10px",
+          "border-top-right-radius" : "10px",
+          "bottom" : "0px",
+          "height" : "130px",
+          "left" : "0px",
+          "opacityForBG" : 0.95
+        },
+        "styleDDWDDayPartDDay" : {
+          "bottom" : "0px",
+          "color" : "rgba(255, 74, 74, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "35px",
+          "font-weight" : "normal",
+          "left" : "0px",
+          "opacityForText" : 1,
+          "text-align" : "center"
+        },
+        "styleDDWDDayPartDate" : {
+          "bottom" : "0px",
+          "color" : "rgba(255, 255, 255, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "20px",
+          "font-weight" : "normal",
+          "left" : "0px",
+          "opacityForText" : 1,
+          "text-align" : "center"
+        },
+        "styleDDWDDayPartTitle" : {
+          "bottom" : "0px",
+          "color" : "rgba(255, 255, 255, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "40px",
+          "font-weight" : "normal",
+          "left" : "0px",
+          "opacityForText" : 1,
+          "text-align" : "center"
+        },
+        "styleDDWTimerPart" : {
+          "background-color" : "rgba(5, 24, 36, 0.95)",
+          "border-bottom-left-radius" : "10px",
+          "border-bottom-right-radius" : "10px",
+          "border-top-left-radius" : "0px",
+          "border-top-right-radius" : "0px",
+          "bottom" : "0px",
+          "height" : "80px",
+          "left" : "0px",
+          "opacityForBG" : 0.95
+        },
+        "styleDDWTimerPartNumber" : {
+          "background-color" : "rgba(80, 77, 77, 1.0)",
+          "border-bottom-left-radius" : "10px",
+          "border-bottom-right-radius" : "10px",
+          "border-color" : "rgba(35, 35, 35, 0.5)",
+          "border-style" : "solid",
+          "border-top-left-radius" : "10px",
+          "border-top-right-radius" : "10px",
+          "border-width" : "2px",
+          "bottom" : "0px",
+          "color" : "rgba(255, 255, 255, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "20px",
+          "font-weight" : "normal",
+          "height" : "30px",
+          "left" : "0px",
+          "opacityForBG" : 0.7,
+          "opacityForBorder" : 0.5,
+          "opacityForText" : 1,
+          "padding-bottom" : "0px",
+          "padding-left" : "5px",
+          "padding-right" : "5px",
+          "padding-top" : "0px",
+          "text-align" : "center",
+          "width" : "55px"
+        },
+        "styleDDWTimerPartNumberString" : {
+          "bottom" : "0px",
+          "color" : "rgba(255, 255, 255, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "20px",
+          "font-weight" : "normal",
+          "left" : "0px",
+          "opacityForText" : 1,
+          "text-align" : "center"
+        }
+      }
+    }
+  },
+  "ya5s3wwd656083vs2och" : {
+    "d_day_widget" : {
+      "animations" : {
+        "animationDuration" : 0.8,
+        "animationInterval" : "1",
+        "animationType" : "fade"
+      },
+      "exams" : [ {
+        "examDate" : "2019-03-26"
+      }, {
+        "examDate" : "2020-03-26"
+      } ],
+      "formats" : {
+        "formatDDay" : "D-9 (D-%d)",
+        "formatDate" : "2019.2.9 (yyyy.m.d)",
+        "formatTimerString" : "일/시/분/초"
+      },
+      "onOffSwitches" : {
+        "useDDWDDayPart" : true,
+        "useDDWDDayPartDDay" : true,
+        "useDDWDDayPartDate" : true,
+        "useDDWDDayPartTitle" : true,
+        "useDDWTimerPart" : true,
+        "useDDWTimerPartNumber" : true,
+        "useDDWTimerPartNumberString" : true
+      },
+      "styles" : {
+        "styleDDW" : {
+          "border-bottom-left-radius" : "20px",
+          "border-bottom-right-radius" : "20px",
+          "border-color" : "rgba(0, 0, 0, 0.6)",
+          "border-style" : "double",
+          "border-top-left-radius" : "20px",
+          "border-top-right-radius" : "20px",
+          "border-width" : "5px",
+          "opacityForBorder" : 0.6,
+          "width" : "400px"
+        },
+        "styleDDWDDayPart" : {
+          "background-color" : "rgba(35, 35, 35, 0.95)",
+          "border-bottom-left-radius" : "0px",
+          "border-bottom-right-radius" : "0px",
+          "border-top-left-radius" : "10px",
+          "border-top-right-radius" : "10px",
+          "bottom" : "0px",
+          "height" : "130px",
+          "left" : "0px",
+          "opacityForBG" : 0.95
+        },
+        "styleDDWDDayPartDDay" : {
+          "bottom" : "0px",
+          "color" : "rgba(255, 74, 74, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "35px",
+          "font-weight" : "normal",
+          "left" : "0px",
+          "opacityForText" : 1,
+          "text-align" : "center"
+        },
+        "styleDDWDDayPartDate" : {
+          "bottom" : "0px",
+          "color" : "rgba(255, 255, 255, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "20px",
+          "font-weight" : "normal",
+          "left" : "0px",
+          "opacityForText" : 1,
+          "text-align" : "center"
+        },
+        "styleDDWDDayPartTitle" : {
+          "bottom" : "0px",
+          "color" : "rgba(255, 255, 255, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "40px",
+          "font-weight" : "normal",
+          "left" : "0px",
+          "opacityForText" : 1,
+          "text-align" : "center"
+        },
+        "styleDDWTimerPart" : {
+          "background-color" : "rgba(5, 24, 36, 0.95)",
+          "border-bottom-left-radius" : "10px",
+          "border-bottom-right-radius" : "10px",
+          "border-top-left-radius" : "0px",
+          "border-top-right-radius" : "0px",
+          "bottom" : "0px",
+          "height" : "80px",
+          "left" : "0px",
+          "opacityForBG" : 0.95
+        },
+        "styleDDWTimerPartNumber" : {
+          "background-color" : "rgba(80, 77, 77, 1.0)",
+          "border-bottom-left-radius" : "10px",
+          "border-bottom-right-radius" : "10px",
+          "border-color" : "rgba(35, 35, 35, 0.5)",
+          "border-style" : "solid",
+          "border-top-left-radius" : "10px",
+          "border-top-right-radius" : "10px",
+          "border-width" : "2px",
+          "bottom" : "0px",
+          "color" : "rgba(255, 255, 255, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "20px",
+          "font-weight" : "normal",
+          "height" : "30px",
+          "left" : "0px",
+          "opacityForBG" : 0.7,
+          "opacityForBorder" : 0.5,
+          "opacityForText" : 1,
+          "padding-bottom" : "0px",
+          "padding-left" : "5px",
+          "padding-right" : "5px",
+          "padding-top" : "0px",
+          "text-align" : "center",
+          "width" : "55px"
+        },
+        "styleDDWTimerPartNumberString" : {
+          "bottom" : "0px",
+          "color" : "rgba(255, 255, 255, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "20px",
+          "font-weight" : "normal",
+          "left" : "0px",
+          "opacityForText" : 1,
+          "text-align" : "center"
+        }
+      }
+    }
+  },
+  "yi2a34jiqfavn4jq2h5d" : {
+    "d_day_widget" : {
+      "animations" : {
+        "animationDuration" : 0.8,
+        "animationInterval" : 5,
+        "animationType" : "fade"
+      },
+      "exams" : [ {
+        "examDate" : "2019-03-25"
+      }, {
+        "examDate" : "2020-03-25"
+      } ],
+      "formats" : {
+        "formatDDay" : "D-9 (D-%d)",
+        "formatDate" : "2019.2.9 (yyyy.m.d)",
+        "formatTimerString" : "일/시/분/초"
+      },
+      "onOffSwitches" : {
+        "useDDWDDayPart" : true,
+        "useDDWDDayPartDDay" : true,
+        "useDDWDDayPartDate" : true,
+        "useDDWDDayPartTitle" : true,
+        "useDDWTimerPart" : true,
+        "useDDWTimerPartNumber" : true,
+        "useDDWTimerPartNumberString" : true
+      },
+      "styles" : {
+        "styleDDW" : {
+          "border-bottom-left-radius" : "0px",
+          "border-bottom-right-radius" : "0px",
+          "border-color" : "rgba(0, 0, 0, 0.6)",
+          "border-radius" : "5px",
+          "border-style" : "double",
+          "border-top-left-radius" : "0px",
+          "border-top-right-radius" : "0px",
+          "border-width" : "5px",
+          "opacityForBorder" : 0.6,
+          "width" : "400px"
+        },
+        "styleDDWDDayPart" : {
+          "background-color" : "rgba(35, 35, 35, 1.0)",
+          "border-bottom-left-radius" : "0px",
+          "border-bottom-right-radius" : "0px",
+          "border-radius" : "0px",
+          "border-top-left-radius" : "0px",
+          "border-top-right-radius" : "0px",
+          "bottom" : "0px",
+          "height" : "130px",
+          "left" : "0px",
+          "opacityForBG" : 1
+        },
+        "styleDDWDDayPartDDay" : {
+          "bottom" : "0px",
+          "color" : "rgba(255, 74, 74, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "35px",
+          "font-weight" : "normal",
+          "left" : "0px",
+          "opacityForText" : 1,
+          "text-align" : "center"
+        },
+        "styleDDWDDayPartDate" : {
+          "bottom" : "0px",
+          "color" : "rgba(255, 255, 255, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "20px",
+          "font-weight" : "normal",
+          "left" : "0px",
+          "opacityForText" : 1,
+          "text-align" : "center"
+        },
+        "styleDDWDDayPartTitle" : {
+          "bottom" : "0px",
+          "color" : "rgba(255, 255, 255, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "40px",
+          "font-weight" : "normal",
+          "left" : "0px",
+          "opacityForText" : 1,
+          "text-align" : "center"
+        },
+        "styleDDWTimerPart" : {
+          "background-color" : "rgba(5, 24, 36, 1.0)",
+          "border-bottom-left-radius" : "0px",
+          "border-bottom-right-radius" : "0px",
+          "border-radius" : "0px",
+          "border-top-left-radius" : "0px",
+          "border-top-right-radius" : "0px",
+          "bottom" : "0px",
+          "height" : "80px",
+          "left" : "0px",
+          "opacityForBG" : 1
+        },
+        "styleDDWTimerPartNumber" : {
+          "background-color" : "rgba(80, 77, 77, 1.0)",
+          "border-bottom-left-radius" : "0px",
+          "border-bottom-right-radius" : "0px",
+          "border-color" : "rgba(35, 35, 35, 1)",
+          "border-radius" : "5px",
+          "border-style" : "solid",
+          "border-top-left-radius" : "0px",
+          "border-top-right-radius" : "0px",
+          "border-width" : "1px",
+          "bottom" : "0px",
+          "color" : "rgba(255, 255, 255, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "20px",
+          "font-weight" : "normal",
+          "height" : "30px",
+          "left" : "0px",
+          "opacityForBG" : 0.7,
+          "opacityForBorder" : 1,
+          "opacityForText" : 1,
+          "padding-bottom" : "0px",
+          "padding-left" : "5px",
+          "padding-right" : "5px",
+          "padding-top" : "0px",
+          "width" : "55px"
+        },
+        "styleDDWTimerPartNumberString" : {
+          "bottom" : "0px",
+          "color" : "rgba(255, 255, 255, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "20px",
+          "font-weight" : "normal",
+          "left" : "0px",
+          "opacityForText" : 1
+        }
+      }
+    }
+  },
+  "yo3dxq9i7nwx64foouw6" : {
+    "d_day_widget" : {
+      "animations" : {
+        "animationDuration" : 0.8,
+        "animationInterval" : 5,
+        "animationType" : "fade"
+      },
+      "exams" : [ {
+        "examDate" : "2019-03-21"
+      }, {
+        "examDate" : "2020-03-21"
+      } ],
+      "formats" : {
+        "formatDDay" : "D-9 (D-%d)",
+        "formatDate" : "2019.2.9 (yyyy.m.d)",
+        "formatTimerString" : "일/시/분/초"
+      },
+      "onOffSwitches" : {
+        "useDDWDDayPart" : true,
+        "useDDWDDayPartDDay" : true,
+        "useDDWDDayPartDate" : true,
+        "useDDWDDayPartTitle" : true,
+        "useDDWTimerPart" : true,
+        "useDDWTimerPartNumber" : true,
+        "useDDWTimerPartNumberString" : true
+      },
+      "styles" : {
+        "styleDDW" : {
+          "border-color" : "rgba(0, 0, 0, 0.6)",
+          "border-radius" : "5px",
+          "border-style" : "double",
+          "border-width" : "5px",
+          "opacityForBorder" : 0.6,
+          "width" : "400px"
+        },
+        "styleDDWDDayPart" : {
+          "background-color" : "rgba(35, 35, 35, 1.0)",
+          "height" : "130px",
+          "opacityForBG" : 1
+        },
+        "styleDDWDDayPartDDay" : {
+          "color" : "rgba(255, 74, 74, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "35px",
+          "font-weight" : "normal",
+          "opacityForText" : 1
+        },
+        "styleDDWDDayPartDate" : {
+          "color" : "rgba(255, 255, 255, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "20px",
+          "font-weight" : "normal",
+          "opacityForText" : 1
+        },
+        "styleDDWDDayPartTitle" : {
+          "color" : "rgba(255, 255, 255, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "40px",
+          "font-weight" : "normal",
+          "opacityForText" : 1
+        },
+        "styleDDWTimerPart" : {
+          "background-color" : "rgba(5, 24, 36, 1.0)",
+          "height" : "80px",
+          "opacityForBG" : 1
+        },
+        "styleDDWTimerPartNumber" : {
+          "background-color" : "rgba(80, 77, 77, 1.0)",
+          "border-color" : "rgba(35, 35, 35, 1)",
+          "border-radius" : "5px",
+          "border-style" : "solid",
+          "border-width" : "1px",
+          "color" : "rgba(255, 255, 255, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "20px",
+          "font-weight" : "normal",
+          "height" : "30px",
+          "opacityForBG" : 0.7,
+          "opacityForBorder" : 1,
+          "opacityForText" : 1,
+          "padding-bottom" : "0px",
+          "padding-left" : "5px",
+          "padding-right" : "5px",
+          "padding-top" : "0px",
+          "width" : "55px"
+        },
+        "styleDDWTimerPartNumberString" : {
+          "color" : "rgba(255, 255, 255, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "20px",
+          "font-weight" : "normal",
+          "opacityForText" : 1
+        }
+      }
+    }
+  },
+  "yrttzy0a7f9n334i7h15" : {
+    "d_day_widget" : {
+      "animations" : {
+        "animationDuration" : 0.8,
+        "animationInterval" : 5,
+        "animationType" : "fade"
+      },
+      "exams" : [ {
+        "examDate" : "2019-03-25",
+        "examTitle" : "ㅈㄱㅈㄷㄱㅈ"
+      }, {
+        "examDate" : "2020-03-25"
+      } ],
+      "formats" : {
+        "formatDDay" : "D-9 (D-%d)",
+        "formatDate" : "2019.2.9 (yyyy.m.d)",
+        "formatTimerString" : "일/시/분/초"
+      },
+      "onOffSwitches" : {
+        "useDDWDDayPart" : true,
+        "useDDWDDayPartDDay" : true,
+        "useDDWDDayPartDate" : true,
+        "useDDWDDayPartTitle" : true,
+        "useDDWTimerPart" : true,
+        "useDDWTimerPartNumber" : true,
+        "useDDWTimerPartNumberString" : true
+      },
+      "styles" : {
+        "styleDDW" : {
+          "border-color" : "rgba(0, 0, 0, 0.6)",
+          "border-radius" : "5px",
+          "border-style" : "double",
+          "border-width" : "5px",
+          "opacityForBorder" : 0.6,
+          "width" : "400px"
+        },
+        "styleDDWDDayPart" : {
+          "background-color" : "rgba(35, 35, 35, 1.0)",
+          "height" : "130px",
+          "opacityForBG" : 1
+        },
+        "styleDDWDDayPartDDay" : {
+          "color" : "rgba(255, 74, 74, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "35px",
+          "font-weight" : "normal",
+          "opacityForText" : 1
+        },
+        "styleDDWDDayPartDate" : {
+          "color" : "rgba(255, 255, 255, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "20px",
+          "font-weight" : "normal",
+          "opacityForText" : 1
+        },
+        "styleDDWDDayPartTitle" : {
+          "color" : "rgba(255, 255, 255, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "40px",
+          "font-weight" : "normal",
+          "opacityForText" : 1
+        },
+        "styleDDWTimerPart" : {
+          "background-color" : "rgba(5, 24, 36, 1.0)",
+          "height" : "80px",
+          "opacityForBG" : 1
+        },
+        "styleDDWTimerPartNumber" : {
+          "background-color" : "rgba(80, 77, 77, 1.0)",
+          "border-color" : "rgba(35, 35, 35, 1)",
+          "border-radius" : "5px",
+          "border-style" : "solid",
+          "border-width" : "1px",
+          "color" : "rgba(255, 255, 255, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "20px",
+          "font-weight" : "normal",
+          "height" : "30px",
+          "opacityForBG" : 0.7,
+          "opacityForBorder" : 1,
+          "opacityForText" : 1,
+          "padding-bottom" : "0px",
+          "padding-left" : "5px",
+          "padding-right" : "5px",
+          "padding-top" : "0px",
+          "width" : "55px"
+        },
+        "styleDDWTimerPartNumberString" : {
+          "color" : "rgba(255, 255, 255, 1.0)",
+          "font-family" : "Jeju Gothic",
+          "font-size" : "20px",
+          "font-weight" : "normal",
+          "opacityForText" : 1
+        }
+      }
+    }
+  }
+}

@@ -1,6 +1,6 @@
 <template>
   <div class="navBar">
-    <h1 class="title">GongBang Helper v0.01</h1>
+    <h1 class="title">GongBang Helper v0.10</h1>
 
     <nav class="links">
       <router-link class="activated" :to="{ name: 'd-day-widget-generator' }"

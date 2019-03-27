@@ -92,8 +92,8 @@ export const actions = {
   resetExams({ commit }, exams) {
     commit("RESET_EXAMS", exams)
 
-    console.log(`exams/RESET_EXAMS
-    state.examsData = ${JSON.stringify(exams)}`)
+    // console.log(`exams/RESET_EXAMS
+    // state.examsData = ${JSON.stringify(exams)}`)
   },
 
   updateIndexSelector({ commit }, cmd) {
