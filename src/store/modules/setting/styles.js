@@ -261,9 +261,6 @@ export const mutations = {
             }
           }
         } else {
-          // @T Continue: Styles -> exams -> ... all
-          // @T ADD UNDEFINED
-
           if (styles[target] !== undefined) {
             state[target] = styles[target]
           }

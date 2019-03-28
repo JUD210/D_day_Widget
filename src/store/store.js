@@ -43,11 +43,9 @@ export default new Vuex.Store({
           // @T [ManyCam 위젯 크기 추천]  Left: 400px
 
           alert(`URL복사 및 데이터 저장 완료!
-Ctrl+V 로 웹 소스 URL에 붙여넣으시면 됩니다.
-😃👍
+Ctrl+V 로 웹 소스 URL에 붙여넣으시면 됩니다. 😃👍
 -------------------------------------
-[저장된 위젯 크기]
-Left: ${getters.getVisualWidth}  |  세로: ${getters.getVisualHeight}`)
+${getters.getWidgetSize}`)
           console.log(`store/saveWidgetData [OK]
           ${JSON.stringify(getters.getWidgetData)}`)
         })
@@ -120,45 +118,40 @@ ${state.uniqueId.uniqueId}`)
       return result
     },
 
-    getVisualWidth: state => {
+    getWidgetSize: state => {
       // @T
-      let result = 0
-      console.log(state)
-      // let ddayPartLeftDistance = 0
-      // let timerPartLeftDistance = 0
+      let result = ""
 
-      // if (state.onOffSwitches.useDDWDDayPart) {
-      //   ddayPartLeftDistance = Math.abs(
-      //     state.styles.styleDDWDDayPart.left.split("px")[0],
-      //   )
-      // }
-      // if (state.onOffSwitches.useDDWTimerPart) {
-      //   timerPartLeftDistance = Math.abs(
-      //     state.styles.styleDDWTimerPart.left.split("px")[0],
-      //   )
-      // }
+      if (state.onOffSwitches.useDDWDDayPart) {
+        let width = state.styles.styleDDWDDayPart.width
+        let height = state.styles.styleDDWDDayPart.height
 
-      // result += Number(state.styles.styleDDW.width.split("px")[0])
-      // result += Number(state.styles.styleDDW["border-width"].split("px")[0] * 2)
-      // result += Math.max(ddayPartLeftDistance, timerPartLeftDistance)
+        let left = state.styles.styleDDWDDayPart.left.split("px")[0]
+        let bottom = state.styles.styleDDWDDayPart.bottom.split("px")[0]
 
-      return `${result}px`
-    },
+        left >= 0 ? (left = `+${left}px`) : (left = `-${left}px`)
+        bottom >= 0 ? (bottom = `+${bottom}px`) : (bottom = `-${bottom}px`)
 
-    getVisualHeight: state => {
-      // @T
-      let result = 0
-      console.log(state)
+        result += `[D-day 사이즈]
+가로: ${width} (${left})  |  세로: ${height} (${bottom})
+`
+      }
+      if (state.onOffSwitches.useDDWTimerPart) {
+        let width = state.styles.styleDDWTimerPart.width
+        let height = state.styles.styleDDWTimerPart.height
 
-      // if (state.onOffSwitches.useDDWDDayPart) {
-      //   result += Number(state.styles.styleDDWDDayPart.height.split("px")[0])
-      // }
-      // if (state.onOffSwitches.useDDWTimerPart) {
-      //   result += Number(state.styles.styleDDWTimerPart.height.split("px")[0])
-      // }
-      // result += Number(state.styles.styleDDW["border-width"].split("px")[0] * 2)
+        let left = state.styles.styleDDWTimerPart.left.split("px")[0]
+        let bottom = state.styles.styleDDWTimerPart.bottom.split("px")[0]
 
-      return `${result}px`
+        left >= 0 ? (left = `+${left}px`) : (left = `-${left}px`)
+        bottom >= 0 ? (bottom = `+${bottom}px`) : (bottom = `-${bottom}px`)
+
+        result += `[타이머 사이즈]
+가로: ${width} (${left})  |  세로: ${height} (${bottom})
+`
+      }
+
+      return result
     },
   },
 })

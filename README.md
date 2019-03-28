@@ -6,5 +6,5 @@
 
 If you have any feedback, contact me below!
 
-- [[📺] youtube](https://www.youtube.com/channel/UCYPWzViA-uq9sBop7ssYaEg?sub_confirmation=1) : 매일 08:00~22:30 개발/공부 방송
+- [[📺] youtube](https://www.youtube.com/channel/UCYPWzViA-uq9sBop7ssYaEg?sub_confirmation=1) : 월~토 08:00~23:00 개발/공부 방송
 - [📠] judicious210@gmail.com
