@@ -440,11 +440,14 @@ export default {
       maxValue = Number(maxValue) ? Number(maxValue) : maxValue
       minValue = Number(minValue) ? Number(minValue) : minValue
 
-      if (typeof value != "string" && (value > maxValue || value < minValue)) {
-        alert(`${minValue} ~ ${maxValue} 사이의 값을 입력해주세요!
-(입력값: ${value})`)
-
-        return 9
+      if (typeof value != "string") {
+        if (value > maxValue) {
+          event.target.value = maxValue
+          value = maxValue
+        } else if (value < minValue) {
+          event.target.value = minValue
+          value = minValue
+        }
       }
 
       try {

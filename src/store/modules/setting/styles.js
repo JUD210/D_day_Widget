@@ -282,8 +282,8 @@ export const actions = {
   updateStyle({ commit }, { target, attr, value }) {
     commit("UPDATE_STYLE", { target, attr, value })
 
-    // console.log(`styles/UPDATE_STYLE
-    // state[${target}][${attr}] = ${value}`)
+    console.log(`styles/UPDATE_STYLE
+    state[${target}][${attr}] = ${value}`)
   },
 
   resetStyles({ commit }, styles) {
@@ -304,6 +304,7 @@ export const actions = {
 
 export const getters = {
   getStyleAttr: state => (target, attr) => {
+    console.log("getStyleAttr", target, attr)
     if (
       [
         "font-size",
