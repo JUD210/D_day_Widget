@@ -24,7 +24,10 @@
     <input type="text" id="copy_url" :value="url" readonly />
 
     <div class="switchesContainer" v-if="showSwitches">
-      <button class="hideButton" @click="showSwitches = !showSwitches">
+      <button
+        class="hideButton toggle_btn"
+        @click="showSwitches = !showSwitches"
+      >
         숨기기
       </button>
 
@@ -117,14 +120,17 @@
     </div>
 
     <div class="switchesContainer" v-if="!showSwitches">
-      <button class="showButton" @click="showSwitches = !showSwitches">
+      <button
+        class="showButton toggle_btn"
+        @click="showSwitches = !showSwitches"
+      >
         보이기
       </button>
     </div>
 
     <div class="preview">
       <button
-        class="hideButton"
+        class="hideButton toggle_btn"
         v-if="showPreview"
         @click="showPreview = !showPreview"
       >
@@ -136,7 +142,7 @@
       </div>
 
       <button
-        class="showButton"
+        class="showButton toggle_btn"
         v-if="!showPreview"
         @click="showPreview = !showPreview"
       >
