@@ -9,7 +9,7 @@
 .navBar>.title {
   color: white;
   text-align: center;
-  line-height: 10px;
+  line-height: 1px;
   font-size: 40px;
 }
 
@@ -17,7 +17,7 @@
   border-top-style: solid;
   border-top-color: rgb(221, 221, 221);
   border-top-width: 1px;
-  line-height: 10px;
+  line-height: 0px;
   text-align: center;
 }
 

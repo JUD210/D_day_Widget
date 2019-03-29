@@ -128,7 +128,7 @@ ${state.uniqueId.uniqueId}`)
         width += Number(
           state.styles.styleDDWDDayPart["border-right-width"].split("px")[0],
         )
-        left >= 0 ? (left = `+${left}`) : (left = `-${left}`)[0]
+        left >= 0 ? (left = `+${left}`) : (left = `${left}`)[0]
 
         //
 
@@ -141,7 +141,7 @@ ${state.uniqueId.uniqueId}`)
         height += Number(
           state.styles.styleDDWDDayPart["border-right-width"].split("px")[0],
         )
-        bottom >= 0 ? (bottom = `+${bottom}`) : (bottom = `-${bottom}`)[0]
+        bottom >= 0 ? (bottom = `+${bottom}`) : (bottom = `${bottom}`)[0]
 
         //
 
@@ -161,7 +161,7 @@ ${state.uniqueId.uniqueId}`)
         width += Number(
           state.styles.styleDDWTimerPart["border-right-width"].split("px")[0],
         )
-        left >= 0 ? (left = `+${left}`) : (left = `-${left}`)[0]
+        left >= 0 ? (left = `+${left}`) : (left = `${left}`)[0]
 
         //
 
@@ -178,7 +178,7 @@ ${state.uniqueId.uniqueId}`)
         height += Number(
           state.styles.styleDDWTimerPart["border-right-width"].split("px")[0],
         )
-        bottom >= 0 ? (bottom = `+${bottom}`) : (bottom = `-${bottom}`)[0]
+        bottom >= 0 ? (bottom = `+${bottom}`) : (bottom = `${bottom}`)[0]
 
         //
 

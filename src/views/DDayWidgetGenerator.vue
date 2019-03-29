@@ -31,7 +31,7 @@
         숨기기
       </button>
 
-      <p>ON / OFF</p>
+      <p class="header">ON / OFF</p>
 
       <div class="switch-main">
         <input
@@ -71,6 +71,14 @@
         </div>
       </div>
 
+      <p v-if="useDDWDDayPart" class="status">
+        {{
+          `${getWidgetSize["ddw"]["width"]}&nbsp; | &nbsp;${
+            getWidgetSize["ddw"]["height"]
+          }`
+        }}
+      </p>
+
       <div class="switch-main">
         <input
           type="checkbox"
@@ -100,23 +108,13 @@
         </div>
       </div>
 
-      <div class="status">
-        <p v-if="useDDWDDayPart">
-          {{
-            `[D-day] ${getWidgetSize["ddw"]["width"]} | ${
-              getWidgetSize["ddw"]["height"]
-            }`
-          }}
-        </p>
-
-        <p v-if="useDDWTimerPart">
-          {{
-            `[타이머] ${getWidgetSize["timer"]["width"]} | ${
-              getWidgetSize["timer"]["height"]
-            }`
-          }}
-        </p>
-      </div>
+      <p v-if="useDDWTimerPart" class="status">
+        {{
+          `${getWidgetSize["timer"]["width"]}&nbsp; | &nbsp;${
+            getWidgetSize["timer"]["height"]
+          }`
+        }}
+      </p>
     </div>
 
     <div class="switchesContainer" v-if="!showSwitches">
