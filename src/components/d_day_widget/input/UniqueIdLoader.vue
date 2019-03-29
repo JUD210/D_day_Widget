@@ -1,6 +1,7 @@
 <template>
   <div class="unique_id_loader">
-    <h2>저장한 위젯 불러오기 (키 값)</h2>
+    <h2>저장한 위젯 불러오기<br /></h2>
+    <h3>(키 값 입력)</h3>
     <button @click="createUniqueId">New</button>
     <input type="text" :value="uniqueId" @change="updateUniqueId" />
     <button @click="reloadWithLoading">Load</button>
@@ -34,9 +35,3 @@ export default {
   },
 }
 </script>
-
-<style scoped>
-p {
-  text-align: center;
-}
-</style>

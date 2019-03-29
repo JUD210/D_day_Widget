@@ -39,15 +39,12 @@ export default new Vuex.Store({
         .ref(`${state.uniqueId.uniqueId}/d_day_widget`)
         .set(getters.getWidgetData)
         .then(() => {
-          // @T Left 세로 비율
-          // @T [ManyCam 위젯 크기 추천]  Left: 400px
-
           alert(`URL복사 및 데이터 저장 완료!
 Ctrl+V 로 웹 소스 URL에 붙여넣으시면 됩니다. 😃👍
 -------------------------------------
-${getters.getWidgetSize}`)
-          console.log(`store/saveWidgetData [OK]
-          ${JSON.stringify(getters.getWidgetData)}`)
+⚠️주의⚠️
+생성된 키 값을 공유하지 마세요! 
+저장된 데이터가 손상될 수도 있습니다!`)
         })
         .catch(error => {
           alert(`오류 발생! 제 연락처로 문의해주세요. 
@@ -119,36 +116,76 @@ ${state.uniqueId.uniqueId}`)
     },
 
     getWidgetSize: state => {
-      // @T
-      let result = ""
+      let result = {}
 
       if (state.onOffSwitches.useDDWDDayPart) {
-        let width = state.styles.styleDDWDDayPart.width
-        let height = state.styles.styleDDWDDayPart.height
+        let width = Number(state.styles.styleDDWDDayPart.width.split("px")[0])
+        let left = Number(state.styles.styleDDWDDayPart.left.split("px")[0])
 
-        let left = state.styles.styleDDWDDayPart.left.split("px")[0]
-        let bottom = state.styles.styleDDWDDayPart.bottom.split("px")[0]
+        width += Number(
+          state.styles.styleDDWDDayPart["border-left-width"].split("px")[0],
+        )
+        width += Number(
+          state.styles.styleDDWDDayPart["border-right-width"].split("px")[0],
+        )
+        left >= 0 ? (left = `+${left}`) : (left = `-${left}`)[0]
 
-        left >= 0 ? (left = `+${left}px`) : (left = `-${left}px`)
-        bottom >= 0 ? (bottom = `+${bottom}px`) : (bottom = `-${bottom}px`)
+        //
 
-        result += `[D-day 사이즈]
-가로: ${width} (${left})  |  세로: ${height} (${bottom})
-`
+        let height = Number(state.styles.styleDDWDDayPart.height.split("px")[0])
+        let bottom = Number(state.styles.styleDDWDDayPart.bottom.split("px")[0])
+
+        height += Number(
+          state.styles.styleDDWDDayPart["border-bottom-width"].split("px")[0],
+        )
+        height += Number(
+          state.styles.styleDDWDDayPart["border-right-width"].split("px")[0],
+        )
+        bottom >= 0 ? (bottom = `+${bottom}`) : (bottom = `-${bottom}`)[0]
+
+        //
+
+        result["ddw"] = {
+          width: `${width} (${left}) px`,
+          height: `${height} (${bottom}) px`,
+        }
       }
+
       if (state.onOffSwitches.useDDWTimerPart) {
-        let width = state.styles.styleDDWTimerPart.width
-        let height = state.styles.styleDDWTimerPart.height
+        let width = Number(state.styles.styleDDWTimerPart.width.split("px")[0])
+        let left = Number(state.styles.styleDDWTimerPart.left.split("px")[0])
 
-        let left = state.styles.styleDDWTimerPart.left.split("px")[0]
-        let bottom = state.styles.styleDDWTimerPart.bottom.split("px")[0]
+        width += Number(
+          state.styles.styleDDWTimerPart["border-left-width"].split("px")[0],
+        )
+        width += Number(
+          state.styles.styleDDWTimerPart["border-right-width"].split("px")[0],
+        )
+        left >= 0 ? (left = `+${left}`) : (left = `-${left}`)[0]
 
-        left >= 0 ? (left = `+${left}px`) : (left = `-${left}px`)
-        bottom >= 0 ? (bottom = `+${bottom}px`) : (bottom = `-${bottom}px`)
+        //
 
-        result += `[타이머 사이즈]
-가로: ${width} (${left})  |  세로: ${height} (${bottom})
-`
+        let height = Number(
+          state.styles.styleDDWTimerPart.height.split("px")[0],
+        )
+        let bottom = Number(
+          state.styles.styleDDWTimerPart.bottom.split("px")[0],
+        )
+
+        height += Number(
+          state.styles.styleDDWTimerPart["border-bottom-width"].split("px")[0],
+        )
+        height += Number(
+          state.styles.styleDDWTimerPart["border-right-width"].split("px")[0],
+        )
+        bottom >= 0 ? (bottom = `+${bottom}`) : (bottom = `-${bottom}`)[0]
+
+        //
+
+        result["timer"] = {
+          width: `${width} (${left}) px`,
+          height: `${height} (${bottom}) px`,
+        }
       }
 
       return result

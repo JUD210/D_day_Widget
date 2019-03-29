@@ -36,7 +36,7 @@
           @click="updateOnOffSwitches('useDDWDDayPart')"
           :checked="useDDWDDayPart"
         />
-        <label>D-Day</label>
+        <label>D-day</label>
 
         <div>
           <div class="switch-sub">
@@ -96,6 +96,24 @@
           </div>
         </div>
       </div>
+
+      <div class="status">
+        <p v-if="useDDWDDayPart">
+          {{
+            `[D-day] ${getWidgetSize["ddw"]["width"]} | ${
+              getWidgetSize["ddw"]["height"]
+            }`
+          }}
+        </p>
+
+        <p v-if="useDDWTimerPart">
+          {{
+            `[타이머] ${getWidgetSize["timer"]["width"]} | ${
+              getWidgetSize["timer"]["height"]
+            }`
+          }}
+        </p>
+      </div>
     </div>
 
     <div class="switchesContainer" v-if="!showSwitches">
@@ -113,6 +131,10 @@
         숨기기
       </button>
 
+      <div v-show="showPreview">
+        <DDayWidget class="widget"></DDayWidget>
+      </div>
+
       <button
         class="showButton"
         v-if="!showPreview"
@@ -120,10 +142,6 @@
       >
         보이기
       </button>
-
-      <div v-show="showPreview">
-        <DDayWidget class="widget"></DDayWidget>
-      </div>
     </div>
     <!-- </transition> -->
   </div>
@@ -141,7 +159,7 @@ import SettingList from "@/components/d_day_widget/input/SettingList.vue"
 
 import DDayWidget from "@/components/d_day_widget/output/DDayWidget.vue"
 
-import { mapState, mapActions } from "vuex"
+import { mapState, mapActions, mapGetters } from "vuex"
 
 import firebase from "firebase/app"
 import "firebase/database"
@@ -161,7 +179,10 @@ export default {
   },
 
   data() {
-    return { showPreview: true, showSwitches: true }
+    return {
+      showPreview: true,
+      showSwitches: true,
+    }
   },
   computed: {
     ...mapState("uniqueId", ["uniqueId"]),
@@ -174,6 +195,7 @@ export default {
       "useDDWTimerPartNumber",
       "useDDWTimerPartNumberString",
     ]),
+    ...mapGetters(["getWidgetSize"]),
 
     url() {
       return `https://jud210.github.io/gongbang-helper/#/ddw/${this.uniqueId}`
