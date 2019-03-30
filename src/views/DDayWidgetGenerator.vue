@@ -16,8 +16,6 @@
     <div class="d_day_widget d_day_widget_input input">
       <SettingList></SettingList>
 
-      <button class="saveButton" @click="saveAndCopyUrl()">Save</button>
-
       <!-- <button @click="showResult()">Show</button> -->
     </div>
 
@@ -207,15 +205,7 @@ export default {
   },
 
   methods: {
-    saveAndCopyUrl() {
-      this.saveWidgetData()
-      this.copyText()
-    },
-    copyText() {
-      var copyText = document.querySelector("#copy_url")
-      copyText.select()
-      document.execCommand("copy")
-    },
+    ...mapActions(["loadWidgetData"]),
 
     formattedUse(bool) {
       if (bool) {
@@ -228,7 +218,6 @@ export default {
     updateOnOffSwitches(attr) {
       this.$store.dispatch("onOffSwitches/updateOnOffSwitches", { attr })
     },
-    ...mapActions(["saveWidgetData", "loadWidgetData"]),
 
     // showResult() {
     //   this.$router.push({

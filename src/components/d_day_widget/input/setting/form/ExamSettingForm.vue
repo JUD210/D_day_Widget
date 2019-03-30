@@ -1,10 +1,10 @@
-<template>
-  <div>
-    <div class="inputForm">
-      <div class="titleContainer">
-        <h3>{{ title }}</h3>
+<template
+  ><div>
+    <BaseBox class="inputForm" :title="title">
+      <!-- //@T take back below from BaseBox v-if
+      <span class="examController">
         <button @click="removeExam">-</button>
-      </div>
+      </span> -->
 
       <div class="inputLinesContainer">
         <div class="inputLine">
@@ -26,8 +26,7 @@
           />
         </div>
       </div>
-    </div>
-    <br />
+    </BaseBox>
   </div>
 </template>
 
@@ -55,12 +54,6 @@ export default {
         value: event.target.value,
       })
     },
-
-    removeExam() {
-      this.$store.state.exams["examsData"].length != 1
-        ? this.$store.dispatch("exams/removeExam", this.index)
-        : alert("최소 한 개의 시험 데이터는 있어야 합니다!")
-    },
   },
   computed: mapGetters("exams", ["getExamTitleById", "getExamDateById"]),
 }
@@ -71,7 +64,7 @@ h3 {
   margin: 0;
   margin-right: 15px;
 }
-.titleContainer {
+.examController {
   margin-bottom: 15px;
   display: flex;
   justify-content: center;

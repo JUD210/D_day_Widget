@@ -1,17 +1,18 @@
 <template>
   <div class="baseToggleBox">
-    <div class="folder" @click="changeIsOpen()">
+    <div class="folder">
       <img
         class="folder_image"
         type="image"
         src="@/assets/image/down_arrow_in_circle.png"
+        @click="changeIsOpen()"
       />
-      <span class="folder_title">&nbsp;{{ title }}</span>
+      <span class="folder_title" @click="changeIsOpen()"
+        >&nbsp;{{ title }}</span
+      >
     </div>
 
-    <div v-if="isOpen">
-      <slot>DEBUG: fill the content!</slot>
-    </div>
+    <slot v-if="isOpen">DEBUG: fill the content!</slot>
   </div>
 </template>
 

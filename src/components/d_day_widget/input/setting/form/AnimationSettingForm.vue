@@ -1,9 +1,5 @@
 <template>
-  <div class="inputForm">
-    <div>
-      <h3>{{ title }}</h3>
-    </div>
-
+  <BaseBox class="inputForm" :title="title">
     <div class="inputLinesContainer">
       <div class="inputLine">
         <label>애니메이션 종류</label>
@@ -46,7 +42,7 @@
         />
       </div>
     </div>
-  </div>
+  </BaseBox>
 </template>
 
 <script>

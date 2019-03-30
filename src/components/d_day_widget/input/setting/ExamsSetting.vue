@@ -1,5 +1,5 @@
 <template>
-  <BaseToggleBox class="toggleBox" title="시험 정보">
+  <BaseBox title="시험 정보">
     <ExamSettingForm
       v-for="(exam, index) in examsData"
       :key="index"
@@ -7,7 +7,7 @@
       :title="`#${index + 1}`"
     ></ExamSettingForm>
     <button @click="addExam">+</button>
-  </BaseToggleBox>
+  </BaseBox>
 </template>
 
 <script>

@@ -1,7 +1,7 @@
 <template>
-  <BaseToggleBox class="toggleBox" title="애니메이션">
+  <BaseBox title="애니메이션">
     <AnimationSettingForm title="날짜 전환"></AnimationSettingForm>
-  </BaseToggleBox>
+  </BaseBox>
 </template>
 
 <script>

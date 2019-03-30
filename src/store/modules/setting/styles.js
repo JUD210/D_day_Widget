@@ -304,7 +304,6 @@ export const actions = {
 
 export const getters = {
   getStyleAttr: state => (target, attr) => {
-    console.log("getStyleAttr", target, attr)
     if (
       [
         "font-size",

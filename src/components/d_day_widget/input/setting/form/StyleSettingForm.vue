@@ -1,9 +1,5 @@
 <template>
-  <div class="inputForm">
-    <div>
-      <h3>{{ title }}</h3>
-    </div>
-
+  <BaseBox class="inputForm" :title="title">
     <div
       v-if="
         isApplicable('font-family') ||
@@ -401,7 +397,7 @@
         />
       </div>
     </div>
-  </div>
+  </BaseBox>
 </template>
 
 <script>

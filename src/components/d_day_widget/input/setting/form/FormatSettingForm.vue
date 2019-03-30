@@ -1,9 +1,5 @@
 <template>
-  <div class="inputForm">
-    <div>
-      <h3>{{ title }}</h3>
-    </div>
-
+  <BaseBox class="inputForm" :title="title">
     <div class="inputLinesContainer">
       <div class="inputLine">
         <label>D-day 형식</label>
@@ -50,7 +46,7 @@
         </select>
       </div>
     </div>
-  </div>
+  </BaseBox>
 </template>
 
 <script>
