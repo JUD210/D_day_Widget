@@ -10,6 +10,10 @@
       <span class="folder_title" @click="changeIsOpen()"
         >&nbsp;{{ title }}</span
       >
+
+      <div v-if="title[0] == '#'" class="examController">
+        <button @click="removeExam">-</button>
+      </div>
     </div>
 
     <slot v-if="isOpen">DEBUG: fill the content!</slot>
@@ -34,7 +38,15 @@ export default {
   },
   methods: {
     changeIsOpen() {
+      console.log("FUCK")
       this.isOpen = !this.isOpen
+    },
+
+    // this.index comes from ExamSettingForm
+    removeExam() {
+      this.$store.state.exams["examsData"].length != 1
+        ? this.$store.dispatch("exams/removeExam", this.index)
+        : alert("최소 한 개의 시험 데이터는 있어야 합니다!")
     },
   },
 }

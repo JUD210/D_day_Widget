@@ -4,27 +4,19 @@
 
     <!-- Intro if == 0 -->
 
-    <!-- <ExamsSetting v-if="Math.floor(currentPage / 100) == 1"></ExamsSetting>
-    <StylesSetting v-if="Math.floor(currentPage / 100) == 2"></StylesSetting>
-    <FormatsSetting v-if="Math.floor(currentPage / 100) == 3"></FormatsSetting>
-    <AnimationsSetting
-      v-if="Math.floor(currentPage / 100) == 4"
-    ></AnimationsSetting> -->
-
     <ExamsSetting></ExamsSetting>
     <StylesSetting></StylesSetting>
     <FormatsSetting></FormatsSetting>
     <AnimationsSetting></AnimationsSetting>
 
+    <BasePageBtns></BasePageBtns>
+
     <!-- //@T change -->
-    <!-- <button
-      v-if="Math.floor(currentPage / 100) == 2"
-      class="saveButton"
+    <button
+      v-if="getCurrentPage.split('-')[1] === 'Save'"
+      class="saveBtn"
       @click="saveAndCopyUrl()"
     >
-      Save
-    </button> -->
-    <button class="saveButton" @click="saveAndCopyUrl()">
       Save
     </button>
   </div>
@@ -38,7 +30,7 @@ import StylesSetting from "@/components/d_day_widget/input/setting/StylesSetting
 import FormatsSetting from "@/components/d_day_widget/input/setting/FormatsSetting.vue"
 import AnimationsSetting from "@/components/d_day_widget/input/setting/AnimationsSetting.vue"
 
-import { mapState, mapActions } from "vuex"
+import { mapGetters, mapActions } from "vuex"
 
 export default {
   name: "SettingList",
@@ -63,7 +55,7 @@ export default {
     },
   },
   computed: {
-    ...mapState("breadcrumbData", ["currentPage"]),
+    ...mapGetters("pageData", ["getCurrentPage"]),
   },
 }
 </script>

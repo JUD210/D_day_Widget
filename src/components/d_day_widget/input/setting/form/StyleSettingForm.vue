@@ -539,7 +539,7 @@ export default {
           value,
         })
       } catch (error) {
-        alert(`오류 발생! 사진을 찍어서 연락처로 문의해주세요. 
+        alert(`오류 발생! 스크린샷과 함께 연락처로 문의해주세요. 
         StyleSettingForm-> ${error}`)
       }
     },

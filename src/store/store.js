@@ -2,7 +2,7 @@ import Vue from "vue"
 import Vuex from "vuex"
 
 import * as uniqueId from "./modules/uniqueId"
-import * as breadcrumbData from "./modules/breadcrumbData"
+import * as pageData from "./modules/pageData"
 
 import * as exams from "./modules/setting/exams"
 import * as onOffSwitches from "./modules/setting/onOffSwitches"
@@ -26,7 +26,7 @@ var database = firebase.database()
 export default new Vuex.Store({
   modules: {
     uniqueId,
-    breadcrumbData,
+    pageData,
 
     exams,
     onOffSwitches,
@@ -49,7 +49,7 @@ Ctrl+V 로 웹 소스 URL에 붙여넣으시면 됩니다. 😃👍
 저장된 데이터가 손상될 수도 있습니다!`)
         })
         .catch(error => {
-          alert(`오류 발생! 제 연락처로 문의해주세요. 
+          alert(`오류 발생! 스크린샷과 함께 연락처로 문의해주세요. 
           store -> ${error}`)
 
           console.log(`store/saveWidgetData [ERROR]

@@ -1,6 +1,6 @@
 <template>
   <BaseBox class="inputForm" :title="title">
-    <div class="inputLinesContainer">
+    <BaseToggleBox class="inputLinesContainer">
       <div class="inputLine">
         <label>애니메이션 종류</label>
         <select
@@ -41,7 +41,7 @@
           placeholder="날짜 전환 주기를 입력해주세요."
         />
       </div>
-    </div>
+    </BaseToggleBox>
   </BaseBox>
 </template>
 

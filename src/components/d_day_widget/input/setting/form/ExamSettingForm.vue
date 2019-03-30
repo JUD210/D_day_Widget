@@ -1,32 +1,31 @@
-<template
-  ><div>
-    <BaseBox class="inputForm" :title="title">
-      <!-- //@T take back below from BaseBox v-if
-      <span class="examController">
-        <button @click="removeExam">-</button>
-      </span> -->
+<!-- //@T take back below from BaseBox v-if
+    <span class="examController">
+      <button @click="removeExam">-</button>
+    </span> 
+  -->
 
-      <div class="inputLinesContainer">
-        <div class="inputLine">
-          <label>제목</label>
-          <input
-            type="text"
-            :value="getExamTitleById(index)"
-            @change="updateExam($event, 'examTitle')"
-            placeholder="시험명을 입력해주세요."
-          />
-        </div>
-
-        <div class="inputLine">
-          <label>날짜</label>
-          <input
-            type="date"
-            :value="getExamDateById(index)"
-            @change="updateExam($event, 'examDate')"
-          />
-        </div>
+<template>
+  <div class="inputForm">
+    <BaseToggleBox class="inputLinesContainer" :title="title">
+      <div class="inputLine">
+        <label>제목</label>
+        <input
+          type="text"
+          :value="getExamTitleById(index)"
+          @change="updateExam($event, 'examTitle')"
+          placeholder="시험명을 입력해주세요."
+        />
       </div>
-    </BaseBox>
+
+      <div class="inputLine">
+        <label>날짜</label>
+        <input
+          type="date"
+          :value="getExamDateById(index)"
+          @change="updateExam($event, 'examDate')"
+        />
+      </div>
+    </BaseToggleBox>
   </div>
 </template>
 

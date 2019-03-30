@@ -1,6 +1,6 @@
 <template>
   <BaseBox class="inputForm" :title="title">
-    <div class="inputLinesContainer">
+    <BaseToggleBox class="inputLinesContainer">
       <div class="inputLine">
         <label>D-day 형식</label>
         <select
@@ -45,7 +45,7 @@
           >
         </select>
       </div>
-    </div>
+    </BaseToggleBox>
   </BaseBox>
 </template>
 

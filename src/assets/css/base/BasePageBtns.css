@@ -1,0 +1,22 @@
+.base-page-btns .prev-btn {
+  position: fixed;
+  z-index:1;
+  height: 100vh;
+  width: 6vw;
+  bottom:0;
+  left:0;
+
+  text-align: center;
+  font-size: 3vw;
+}
+
+.base-page-btns .next-btn {
+  position: fixed;
+  z-index:1;
+  height: 100vh;
+  width: 6vw;
+  bottom:0;
+  right:0;
+
+  font-size: 3vw;
+}
