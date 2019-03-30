@@ -7,10 +7,10 @@
     <div class="d_day_widget d_day_widget_intro intro">
       <Description></Description>
 
-      <!-- // @T Seperate UniqueIdLoader -->
+      <!-- // @T Seperate UniqueIdController -->
       <br />
       <br />
-      <UniqueIdLoader></UniqueIdLoader>
+      <UniqueIdController></UniqueIdController>
     </div>
 
     <div class="d_day_widget d_day_widget_input input">
@@ -148,9 +148,10 @@ import "@/assets/css/d_day_widget/DDayWidgetGenerator.css"
 
 import NavBar from "@/components/common/NavBar.vue"
 
+import UniqueIdController from "@/components/common/UniqueIdController.vue"
+
 import Description from "@/components/d_day_widget/intro/Description.vue"
 
-import UniqueIdLoader from "@/components/d_day_widget/input/UniqueIdLoader.vue"
 import SettingList from "@/components/d_day_widget/input/SettingList.vue"
 
 import DDayWidget from "@/components/d_day_widget/output/DDayWidget.vue"
@@ -165,10 +166,10 @@ export default {
 
   components: {
     NavBar,
+    UniqueIdController,
 
     Description,
 
-    UniqueIdLoader,
     SettingList,
 
     DDayWidget,

@@ -5,7 +5,7 @@
         'prev-btn--activated': isPrevPageExist,
         'prev-btn--deactivated': !isPrevPageExist,
       }"
-      class="prev-btn"
+      class="page-btn prev-btn"
       @click="gotoPrevPage"
     >
       이전◀
@@ -15,7 +15,7 @@
         'next-btn--activated': isNextPageExist,
         'next-btn--deactivated': !isNextPageExist,
       }"
-      class="next-btn"
+      class="page-btn next-btn"
       @click="gotoNextPage"
     >
       ▶다음

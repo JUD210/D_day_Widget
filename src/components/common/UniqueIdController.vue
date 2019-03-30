@@ -1,22 +1,26 @@
 <template>
-  <div class="unique_id_loader">
-    <h2>저장한 위젯 불러오기<br /></h2>
-    <h3>(키 값 입력)</h3>
+  <div class="unique-id-controller">
     <button @click="createUniqueId">New</button>
     <input type="text" :value="uniqueId" @change="updateUniqueId" />
-    <button @click="reloadWithLoading">Load</button>
 
-    <!-- // @T add: Reset Btn -->
-    <!-- <button @click="">Reset</button> -->
+    <button class="load-btn" @click="reloadWithLoading()">
+      불<br />러<br />오<br />기
+    </button>
+
+    <button class="save-btn" @click="saveAndCopyUrl()">저<br />장</button>
   </div>
 </template>
 
 <script>
-import { mapState } from "vuex"
+import "@/assets/css/d_day_widget/UniqueIdController.css"
+
+import { mapState, mapActions } from "vuex"
 
 export default {
-  name: "UniqueIdLoader",
+  name: "UniqueIdController",
   methods: {
+    ...mapActions(["saveWidgetData"]),
+
     reloadWithLoading() {
       localStorage["requireReloadWhenLoading"] = "yes"
       this.$store.dispatch("loadWidgetData")
@@ -27,6 +31,16 @@ export default {
     },
     updateUniqueId(event) {
       this.$store.dispatch("uniqueId/updateUniqueId", event.target.value)
+    },
+
+    saveAndCopyUrl() {
+      this.saveWidgetData()
+      this.copyText()
+    },
+    copyText() {
+      var copyText = document.querySelector("#copy_url")
+      copyText.select()
+      document.execCommand("copy")
     },
   },
   computed: mapState("uniqueId", ["uniqueId"]),

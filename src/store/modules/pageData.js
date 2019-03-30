@@ -59,7 +59,6 @@ export const actions = {
 
 export const getters = {
   getCurrentPage: state => {
-    console.log(state.allPages[state.currentMainPage][state.currentSubPage])
     return state.allPages[state.currentMainPage][state.currentSubPage]
   },
 }

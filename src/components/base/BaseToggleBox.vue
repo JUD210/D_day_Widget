@@ -38,7 +38,6 @@ export default {
   },
   methods: {
     changeIsOpen() {
-      console.log("FUCK")
       this.isOpen = !this.isOpen
     },
 

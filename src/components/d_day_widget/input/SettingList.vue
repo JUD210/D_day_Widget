@@ -10,27 +10,16 @@
     <AnimationsSetting></AnimationsSetting>
 
     <BasePageBtns></BasePageBtns>
-
-    <!-- //@T change -->
-    <button
-      v-if="getCurrentPage.split('-')[1] === 'Save'"
-      class="saveBtn"
-      @click="saveAndCopyUrl()"
-    >
-      Save
-    </button>
   </div>
 </template>
 
 <script>
-import "@/assets/css/d_day_widget/SettingList.css"
-
 import ExamsSetting from "@/components/d_day_widget/input/setting/ExamsSetting.vue"
 import StylesSetting from "@/components/d_day_widget/input/setting/StylesSetting.vue"
 import FormatsSetting from "@/components/d_day_widget/input/setting/FormatsSetting.vue"
 import AnimationsSetting from "@/components/d_day_widget/input/setting/AnimationsSetting.vue"
 
-import { mapGetters, mapActions } from "vuex"
+import { mapGetters } from "vuex"
 
 export default {
   name: "SettingList",
@@ -40,19 +29,6 @@ export default {
     StylesSetting,
     FormatsSetting,
     AnimationsSetting,
-  },
-  methods: {
-    ...mapActions(["saveWidgetData"]),
-
-    saveAndCopyUrl() {
-      this.saveWidgetData()
-      this.copyText()
-    },
-    copyText() {
-      var copyText = document.querySelector("#copy_url")
-      copyText.select()
-      document.execCommand("copy")
-    },
   },
   computed: {
     ...mapGetters("pageData", ["getCurrentPage"]),
