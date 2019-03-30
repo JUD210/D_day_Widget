@@ -2,6 +2,7 @@ import Vue from "vue"
 import Vuex from "vuex"
 
 import * as uniqueId from "./modules/uniqueId"
+import * as breadcrumbData from "./modules/breadcrumbData"
 
 import * as exams from "./modules/setting/exams"
 import * as onOffSwitches from "./modules/setting/onOffSwitches"
@@ -25,6 +26,7 @@ var database = firebase.database()
 export default new Vuex.Store({
   modules: {
     uniqueId,
+    breadcrumbData,
 
     exams,
     onOffSwitches,
