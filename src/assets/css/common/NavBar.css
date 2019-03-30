@@ -4,6 +4,7 @@
   position: fixed;
   top: 0px;
   width: 100%;
+  z-index: 1000;
 }
 
 .navBar>.title {
@@ -23,17 +24,17 @@
 
 .navBar>.links>a {
   display: inline-block;
-  color: rgb(242,242,242);
+  color: rgb(242, 242, 242);
   padding: 14px 16px;
   text-decoration: none;
   font-size: 20px;
 }
 
 .navBar>.links>a:hover {
-  background: rgb(124,124,124);
+  background: rgb(124, 124, 124);
 }
 
 .navBar>.links>.activated {
-  background: rgb(221,221,221);
+  background: rgb(221, 221, 221);
   color: black;
 }

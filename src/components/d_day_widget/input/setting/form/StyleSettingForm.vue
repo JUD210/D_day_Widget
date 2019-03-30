@@ -1,6 +1,6 @@
 <template>
   <BaseBox class="inputForm" :title="title">
-    <div
+    <BaseToggleBox
       v-if="
         isApplicable('font-family') ||
           isApplicable('font-size') ||
@@ -10,6 +10,7 @@
           isApplicable('opacityForText')
       "
       class="inputLinesContainer"
+      title="글자"
     >
       <div v-if="isApplicable('font-family')" class="inputLine">
         <label>글꼴</label>
@@ -91,11 +92,12 @@
           placeholder="투명도를 입력해주세요."
         />
       </div>
-    </div>
+    </BaseToggleBox>
 
-    <div
+    <BaseToggleBox
       v-if="isApplicable('background-color') || isApplicable('opacityForBG')"
       class="inputLinesContainer"
+      title="배경"
     >
       <div v-if="isApplicable('background-color')" class="inputLine">
         <label>배경 색</label>
@@ -119,9 +121,9 @@
           placeholder="투명도를 입력해주세요."
         />
       </div>
-    </div>
+    </BaseToggleBox>
 
-    <div
+    <BaseToggleBox
       v-if="
         isApplicable('border-color') ||
           isApplicable('opacityForBorder') ||
@@ -136,6 +138,7 @@
           isApplicable('border-bottom-right-radius')
       "
       class="inputLinesContainer"
+      title="테두리"
     >
       <div v-if="isApplicable('border-color')" class="inputLine">
         <label>테두리 색</label>
@@ -176,7 +179,7 @@
       </div>
 
       <div v-if="isApplicable('border-left-width')" class="inputLine">
-        <label>테두리 폭 - ← (px)</label>
+        <label>테두리 폭 ← (px)</label>
         <input
           type="number"
           min="0"
@@ -188,7 +191,7 @@
         />
       </div>
       <div v-if="isApplicable('border-right-width')" class="inputLine">
-        <label>테두리 폭 - → (px)</label>
+        <label>테두리 폭 → (px)</label>
         <input
           type="number"
           min="0"
@@ -200,7 +203,7 @@
         />
       </div>
       <div v-if="isApplicable('border-top-width')" class="inputLine">
-        <label>테두리 폭 - ↑ (px)</label>
+        <label>테두리 폭 ↑ (px)</label>
         <input
           type="number"
           min="0"
@@ -212,7 +215,7 @@
         />
       </div>
       <div v-if="isApplicable('border-bottom-width')" class="inputLine">
-        <label>테두리 폭 - ↓ (px)</label>
+        <label>테두리 폭 ↓ (px)</label>
         <input
           type="number"
           min="0"
@@ -225,7 +228,7 @@
       </div>
 
       <div v-if="isApplicable('border-top-left-radius')" class="inputLine">
-        <label>테두리 다듬기 - ↖ (px)</label>
+        <label>테두리 다듬기 ↖ (px)</label>
         <input
           type="number"
           min="0"
@@ -237,7 +240,7 @@
         />
       </div>
       <div v-if="isApplicable('border-top-right-radius')" class="inputLine">
-        <label>테두리 다듬기 - ↗ (px)</label>
+        <label>테두리 다듬기 ↗ (px)</label>
         <input
           type="number"
           min="0"
@@ -249,7 +252,7 @@
         />
       </div>
       <div v-if="isApplicable('border-bottom-left-radius')" class="inputLine">
-        <label>테두리 다듬기 - ↙ (px)</label>
+        <label>테두리 다듬기 ↙ (px)</label>
         <input
           type="number"
           min="0"
@@ -261,7 +264,7 @@
         />
       </div>
       <div v-if="isApplicable('border-bottom-right-radius')" class="inputLine">
-        <label>테두리 다듬기 - ↘ (px)</label>
+        <label>테두리 다듬기 ↘ (px)</label>
         <input
           type="number"
           min="0"
@@ -272,11 +275,12 @@
           placeholder="값을 입력해주세요."
         />
       </div>
-    </div>
+    </BaseToggleBox>
 
-    <div
+    <BaseToggleBox
       v-if="isApplicable('width') || isApplicable('height')"
       class="inputLinesContainer"
+      title="크기"
     >
       <div v-if="isApplicable('width')" class="inputLine">
         <label>가로 길이 (px)</label>
@@ -303,11 +307,12 @@
           placeholder="길이를 입력해주세요."
         />
       </div>
-    </div>
+    </BaseToggleBox>
 
-    <div
+    <BaseToggleBox
       v-if="isApplicable('left') || isApplicable('bottom')"
       class="inputLinesContainer"
+      title="위치"
     >
       <div v-if="isApplicable('left')" class="inputLine">
         <label>수평 위치 (px)</label>
@@ -334,9 +339,9 @@
           placeholder="위치를 입력해주세요."
         />
       </div>
-    </div>
+    </BaseToggleBox>
 
-    <div
+    <BaseToggleBox
       v-if="
         isApplicable('padding-left') ||
           isApplicable('padding-right') ||
@@ -344,9 +349,10 @@
           isApplicable('padding-top')
       "
       class="inputLinesContainer"
+      title="간격"
     >
       <div v-if="isApplicable('padding-left')" class="inputLine">
-        <label>패딩 왼쪽 (px)</label>
+        <label>간격 ← (px)</label>
         <input
           type="number"
           min="0"
@@ -359,7 +365,7 @@
       </div>
 
       <div v-if="isApplicable('padding-right')" class="inputLine">
-        <label>패딩 오른쪽 (px)</label>
+        <label>간격 → (px)</label>
         <input
           type="number"
           min="0"
@@ -372,7 +378,7 @@
       </div>
 
       <div v-if="isApplicable('padding-bottom')" class="inputLine">
-        <label>패딩 아랫쪽 (px)</label>
+        <label>간격 ↑ (px)</label>
         <input
           type="number"
           min="0"
@@ -385,7 +391,7 @@
       </div>
 
       <div v-if="isApplicable('padding-top')" class="inputLine">
-        <label>패딩 윗쪽 (px)</label>
+        <label>간격 ↓ (px)</label>
         <input
           type="number"
           min="0"
@@ -396,7 +402,7 @@
           placeholder="사이즈를 입력해주세요."
         />
       </div>
-    </div>
+    </BaseToggleBox>
   </BaseBox>
 </template>
 
