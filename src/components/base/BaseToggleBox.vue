@@ -7,6 +7,9 @@
         src="@/assets/image/down_arrow_in_circle.png"
         @click="changeIsOpen()"
       />
+
+      &nbsp;
+
       <span class="folder_title" @click="changeIsOpen()">{{ title }}</span>
 
       <div v-if="title[0] == '#'" class="examController">
