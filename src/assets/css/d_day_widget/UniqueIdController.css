@@ -43,3 +43,14 @@
     font-size: 40px;
   }
 }
+
+/* TO MODAL! */
+
+.create-unique-id-btn {
+  width: 300px;
+  padding: 0;
+}
+
+.unique-id-input {
+  width: 296px;
+}

@@ -4,19 +4,15 @@
       <NavBar></NavBar>
     </div>
 
-    <div class="d_day_widget d_day_widget_intro intro">
-      <Description></Description>
+    <div class="page-selected">
+      <Introduction></Introduction>
+      <ExamsSetting></ExamsSetting>
+      <StylesSetting></StylesSetting>
+      <FormatsSetting></FormatsSetting>
+      <AnimationsSetting></AnimationsSetting>
 
       <!-- // @T Seperate UniqueIdController -->
-      <br />
-      <br />
       <UniqueIdController></UniqueIdController>
-    </div>
-
-    <div class="d_day_widget d_day_widget_input input">
-      <SettingList></SettingList>
-
-      <!-- <button @click="showResult()">Show</button> -->
     </div>
 
     <input type="text" id="copy_url" :value="url" readonly />
@@ -139,7 +135,8 @@
         보이기
       </button>
     </div>
-    <!-- </transition> -->
+
+    <BasePageBtns></BasePageBtns>
   </div>
 </template>
 
@@ -150,9 +147,12 @@ import NavBar from "@/components/common/NavBar.vue"
 
 import UniqueIdController from "@/components/common/UniqueIdController.vue"
 
-import Description from "@/components/d_day_widget/intro/Description.vue"
+import Introduction from "@/components/d_day_widget/intro/Introduction.vue"
 
-import SettingList from "@/components/d_day_widget/input/SettingList.vue"
+import ExamsSetting from "@/components/d_day_widget/setting/ExamsSetting.vue"
+import StylesSetting from "@/components/d_day_widget/setting/StylesSetting.vue"
+import FormatsSetting from "@/components/d_day_widget/setting/FormatsSetting.vue"
+import AnimationsSetting from "@/components/d_day_widget/setting/AnimationsSetting.vue"
 
 import DDayWidget from "@/components/d_day_widget/output/DDayWidget.vue"
 
@@ -168,9 +168,12 @@ export default {
     NavBar,
     UniqueIdController,
 
-    Description,
+    Introduction,
 
-    SettingList,
+    ExamsSetting,
+    StylesSetting,
+    FormatsSetting,
+    AnimationsSetting,
 
     DDayWidget,
   },
@@ -192,6 +195,7 @@ export default {
       "useDDWTimerPartNumber",
       "useDDWTimerPartNumberString",
     ]),
+    ...mapGetters("pageData", ["getCurrentPage"]),
     ...mapGetters(["getWidgetSize"]),
 
     url() {

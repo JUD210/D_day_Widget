@@ -1,5 +1,5 @@
 <template>
-  <BaseBox class="inputForm" :title="title">
+  <BaseBox :title="title">
     <BaseToggleBox class="inputLinesContainer">
       <div class="inputLine">
         <label>D-day 형식</label>

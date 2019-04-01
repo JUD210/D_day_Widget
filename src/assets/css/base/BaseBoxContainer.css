@@ -1,0 +1,17 @@
+.base-box-container {
+  display: grid;
+  border-style: groove;
+  border-width: 5px;
+  padding: 10px;
+}
+
+.base-box-container .title {
+  text-align: center;
+  font-size: 40px;
+}
+
+@media (min-width:800px) {
+  .base-box-container {
+    width: 600px;
+  }
+}

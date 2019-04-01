@@ -1,5 +1,8 @@
 <template>
-  <BaseBox v-if="getCurrentPage.split('-')[0] === 'Styles'" title="스타일">
+  <BaseBoxContainer
+    v-if="getCurrentPage.split('-')[0] === 'Styles'"
+    title="스타일"
+  >
     <StyleSettingForm
       v-if="getCurrentPage.split('-')[1] === 'DDayPart'"
       title="D-day 배경"
@@ -41,11 +44,12 @@
       title="타이머 글자"
       styleFor="styleDDWTimerPartNumberString"
     ></StyleSettingForm>
-  </BaseBox>
+  </BaseBoxContainer>
 </template>
 
 <script>
-import StyleSettingForm from "@/components/d_day_widget/input/setting/form/StyleSettingForm.vue"
+import StyleSettingForm from "@/components/d_day_widget/setting/form/StyleSettingForm.vue"
+
 import { mapGetters } from "vuex"
 
 export default {

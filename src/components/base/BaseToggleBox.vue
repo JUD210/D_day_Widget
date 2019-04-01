@@ -7,9 +7,7 @@
         src="@/assets/image/down_arrow_in_circle.png"
         @click="changeIsOpen()"
       />
-      <span class="folder_title" @click="changeIsOpen()"
-        >&nbsp;{{ title }}</span
-      >
+      <span class="folder_title" @click="changeIsOpen()">{{ title }}</span>
 
       <div v-if="title[0] == '#'" class="examController">
         <button @click="removeExam">-</button>

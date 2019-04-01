@@ -1,8 +1,6 @@
 <template>
   <div class="unique-id-controller">
-    <button @click="createUniqueId">New</button>
-    <input type="text" :value="uniqueId" @change="updateUniqueId" />
-
+    <!-- //@T Change to MODAL! -->
     <button class="load-btn" @click="reloadWithLoading()">
       불<br />러<br />오<br />기
     </button>

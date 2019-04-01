@@ -1,4 +1,8 @@
-.navBar {
+.nav-bar {
+  display:grid;
+  text-align: center;
+  align-items: center;
+  grid-template-rows: 50px 30px 20px; 
   overflow: hidden;
   background-color: rgb(51, 51, 51);
   position: fixed;
@@ -7,22 +11,25 @@
   z-index: 1000;
 }
 
-.navBar>.title {
+.nav-bar__title {
   color: white;
-  text-align: center;
-  line-height: 1px;
   font-size: 40px;
+  margin: 0;
+}
+.nav-bar__title-ver {
+  color: white;
+  font-size: 25px;
+  margin: 0;
 }
 
-.navBar>.links {
+.nav-bar__links {
   border-top-style: solid;
   border-top-color: rgb(221, 221, 221);
   border-top-width: 1px;
   line-height: 0px;
-  text-align: center;
 }
 
-.navBar>.links>a {
+.nav-bar__links>a {
   display: inline-block;
   color: rgb(242, 242, 242);
   padding: 14px 16px;
@@ -30,11 +37,11 @@
   font-size: 20px;
 }
 
-.navBar>.links>a:hover {
+.nav-bar__links>a:hover {
   background: rgb(124, 124, 124);
 }
 
-.navBar>.links>.activated {
+.nav-bar__links>.activated {
   background: rgb(221, 221, 221);
   color: black;
 }

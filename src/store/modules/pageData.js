@@ -1,7 +1,7 @@
 export const namespaced = "true"
 
 export const state = {
-  allPages: [
+  pageList: [
     ["Intro-Introduction"],
     ["Exams-Exams"],
     [
@@ -18,7 +18,7 @@ export const state = {
     ["Outro-Save"],
   ],
 
-  currentMainPage: 2,
+  currentMainPage: 0,
   currentSubPage: 0,
 }
 
@@ -28,9 +28,9 @@ export const mutations = {
     let csp = state.currentSubPage
 
     if (cmd == "next") {
-      if (state.allPages[cmp][csp + 1] !== undefined) {
+      if (state.pageList[cmp][csp + 1] !== undefined) {
         state.currentSubPage += 1
-      } else if (state.allPages[cmp + 1][0] !== undefined) {
+      } else if (state.pageList[cmp + 1][0] !== undefined) {
         state.currentMainPage += 1
         state.currentSubPage = 0
       } else {
@@ -38,11 +38,11 @@ export const mutations = {
         pageDataUpdate`)
       }
     } else if (cmd == "prev") {
-      if (state.allPages[cmp][csp - 1] !== undefined) {
+      if (state.pageList[cmp][csp - 1] !== undefined) {
         state.currentSubPage -= 1
-      } else if (state.allPages[cmp - 1][csp] !== undefined) {
+      } else if (state.pageList[cmp - 1][csp] !== undefined) {
         state.currentMainPage -= 1
-        state.currentSubPage = state.allPages[state.currentMainPage].length - 1
+        state.currentSubPage = state.pageList[state.currentMainPage].length - 1
       } else {
         alert(`오류 발생! 스크린샷과 함께 연락처로 문의해주세요.
         pageDataUpdate`)
@@ -59,6 +59,6 @@ export const actions = {
 
 export const getters = {
   getCurrentPage: state => {
-    return state.allPages[state.currentMainPage][state.currentSubPage]
+    return state.pageList[state.currentMainPage][state.currentSubPage]
   },
 }

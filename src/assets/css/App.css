@@ -40,12 +40,6 @@ body {
   text-align: center;
 }
 
-h3 {
-  font-size: 25px;
-  font-weight: bold;
-  margin: 15px;
-  margin-top: 0px;
-}
 
 button, label, input, optgroup, select, textarea {
   font-family: "Jeju Gothic";

@@ -1,5 +1,5 @@
 <template>
-  <div class="base-page-btns">
+  <div class="page-btns">
     <button
       :class="{
         'prev-btn--activated': isPrevPageExist,
@@ -43,7 +43,7 @@ export default {
     },
   },
   computed: {
-    ...mapState("pageData", ["allPages", "currentMainPage", "currentSubPage"]),
+    ...mapState("pageData", ["pageList", "currentMainPage", "currentSubPage"]),
 
     ...mapGetters("pageData", ["getCurrentPage"]),
 

@@ -1,8 +1,6 @@
 .baseBox {
-  width: 95%;
   border-style: groove;
-  border-width: 5px;
-  padding: 10px;
+  border-width: 4px;
 }
 
 .folder {

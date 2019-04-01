@@ -1,6 +1,6 @@
 # (In Development...)
 
-[GongBang Helper](https://jud210.github.io/gongbang-helper/#/)
+[공부방송 도우미](https://jud210.github.io/gongbang-helper/#/)
 
 문의 및 건의사항 있으시면 아래로 연락해주세요!
 

@@ -1,5 +1,5 @@
 <template>
-  <BaseBox class="inputForm" :title="title">
+  <BaseBox :title="title">
     <BaseToggleBox
       v-if="
         isApplicable('font-family') ||

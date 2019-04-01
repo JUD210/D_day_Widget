@@ -1,11 +1,5 @@
-<!-- //@T take back below from BaseBox v-if
-    <span class="examController">
-      <button @click="removeExam">-</button>
-    </span> 
-  -->
-
 <template>
-  <div class="inputForm">
+  <BaseBox title="exam">
     <BaseToggleBox class="inputLinesContainer" :title="title">
       <div class="inputLine">
         <label>제목</label>
@@ -26,7 +20,7 @@
         />
       </div>
     </BaseToggleBox>
-  </div>
+  </BaseBox>
 </template>
 
 <script>
@@ -57,16 +51,3 @@ export default {
   computed: mapGetters("exams", ["getExamTitleById", "getExamDateById"]),
 }
 </script>
-
-<style scoped>
-h3 {
-  margin: 0;
-  margin-right: 15px;
-}
-.examController {
-  margin-bottom: 15px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-</style>

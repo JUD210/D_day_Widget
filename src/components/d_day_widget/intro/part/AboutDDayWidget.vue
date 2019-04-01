@@ -35,8 +35,9 @@
       <li>
         <a
           href="https://www.youtube.com/channel/UCYPWzViA-uq9sBop7ssYaEg?sub_confirmation=1"
-          >[📺] YouTube : 월~토 08:00~23:00 개발/공부 방송</a
-        >
+          >[📺] YouTube : Study with Hyeogikarp 잉혁킹
+        </a>
+        <br />( 월~토 08:00~23:00 개발/공부 방송 )
       </li>
       <li>[📠] judicious210@gmail.com</li>
     </ul>

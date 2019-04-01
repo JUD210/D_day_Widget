@@ -1,7 +1,7 @@
-.base-page-btns .page-btn {
+.page-btns .page-btn {
   position: fixed;
   z-index: 1;
-  height: 50px;
+  height: 40px;
   width: 44vw;
   bottom: 0;
   text-align: center;
@@ -9,26 +9,26 @@
   padding: 0
 }
 
-.base-page-btns .prev-btn {
+.page-btns .prev-btn {
   left: 6vw;
 }
 
-.base-page-btns .prev-btn--activated {
+.page-btns .prev-btn--activated {
   color: rgba(0, 0, 0, 1)
 }
 
-.base-page-btns .prev-btn--deactivated {
-  color: rgba(0, 0, 0, 0.3)
+.page-btns .prev-btn--deactivated {
+  color: rgba(0, 0, 0, 0.2)
 }
 
-.base-page-btns .next-btn {
+.page-btns .next-btn {
   right: 6vw;
 }
 
-.base-page-btns .next-btn--activated {
+.page-btns .next-btn--activated {
   color: rgba(0, 0, 0, 1)
 }
 
-.base-page-btns .next-btn--deactivated {
-  color: rgba(0, 0, 0, 0.3)
+.page-btns .next-btn--deactivated {
+  color: rgba(0, 0, 0, 0.2)
 }
