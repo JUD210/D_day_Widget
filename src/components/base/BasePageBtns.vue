@@ -48,7 +48,7 @@ export default {
     ...mapGetters("pageData", ["getCurrentPage"]),
 
     isPrevPageExist() {
-      if (this.getCurrentPage == "Intro-Introduction") {
+      if (this.getCurrentPage === this.pageList[0][0]) {
         return false
       } else {
         return true
@@ -56,7 +56,12 @@ export default {
     },
 
     isNextPageExist() {
-      if (this.getCurrentPage == "Outro-Save") {
+      if (
+        this.getCurrentPage ===
+        this.pageList[this.pageList.length - 1][
+          this.pageList[this.pageList.length - 1].length - 1
+        ]
+      ) {
         return false
       } else {
         return true

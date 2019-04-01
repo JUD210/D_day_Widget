@@ -1,7 +1,7 @@
 <template>
   <div class="nav-bar">
     <h1 class="nav-bar__title">공부방송 도우미</h1>
-    <h3 class="nav-bar__title-ver">v0.20</h3>
+    <h3 class="nav-bar__title-ver">v0.21</h3>
 
     <nav class="nav-bar__links">
       <router-link class="activated" :to="{ name: 'd-day-widget-generator' }"

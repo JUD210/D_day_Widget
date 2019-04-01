@@ -15,7 +15,7 @@ export const state = {
     ],
     ["Formats-Formats"],
     ["Animations-Animations"],
-    ["Outro-Save"],
+    // ["Outro-Save"],
   ],
 
   currentMainPage: 0,

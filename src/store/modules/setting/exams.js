@@ -2,10 +2,18 @@ export const namespaced = true
 
 const d = new Date()
 let date = ""
+date += `${d.getUTCFullYear()}-`
+
 if (d.getUTCMonth() + 1 < 10) {
-  date += `${d.getUTCFullYear()}-0${d.getUTCMonth() + 1}-${d.getUTCDate()}`
+  date += `0${d.getUTCMonth() + 1}-`
 } else {
-  date += `${d.getUTCFullYear()}-${d.getUTCMonth() + 1}-${d.getUTCDate()}`
+  date += `${d.getUTCMonth() + 1}-`
+}
+
+if (d.getUTCDate() < 10) {
+  date += `0${d.getUTCDate()}`
+} else {
+  date += `${d.getUTCDate()}`
 }
 
 export const state = {
