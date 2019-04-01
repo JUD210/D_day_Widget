@@ -1,22 +1,37 @@
 .base-page-btns .prev-btn {
   position: fixed;
-  z-index:1;
-  height: 100vh;
-  width: 6vw;
-  bottom:0;
-  left:0;
-
+  z-index: 1;
+  height: 50px;
+  width: 44vw;
+  bottom: 0;
+  left: 6vw;
   text-align: center;
-  font-size: 3vw;
+  font-size: 30px;
+}
+
+.base-page-btns .prev-btn--activated {
+  color: rgba(0, 0, 0, 1)
+}
+
+.base-page-btns .prev-btn--deactivated {
+  color: rgba(0, 0, 0, 0.3)
 }
 
 .base-page-btns .next-btn {
   position: fixed;
-  z-index:1;
-  height: 100vh;
-  width: 6vw;
-  bottom:0;
-  right:0;
+  z-index: 1;
+  height: 50px;
+  width: 44vw;
+  bottom: 0;
+  right: 6vw;
+  text-align: center;
+  font-size: 30px;
+}
 
-  font-size: 3vw;
+.base-page-btns .next-btn--activated {
+  color: rgba(0, 0, 0, 1)
+}
+
+.base-page-btns .next-btn--deactivated {
+  color: rgba(0, 0, 0, 0.3)
 }

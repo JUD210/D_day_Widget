@@ -1,16 +1,22 @@
 <template>
   <div class="base-page-btns">
     <button
-      v-if="isPrevPageExist"
-      class="page-btn prev-btn"
-      @click="updateCurrentPage('prev')"
+      :class="{
+        'prev-btn--activated': isPrevPageExist,
+        'prev-btn--deactivated': !isPrevPageExist,
+      }"
+      class="prev-btn"
+      @click="gotoPrevPage"
     >
-      ◀이전
+      이전◀
     </button>
     <button
-      v-if="isNextPageExist"
-      class="page-btn next-btn"
-      @click="updateCurrentPage('next')"
+      :class="{
+        'next-btn--activated': isNextPageExist,
+        'next-btn--deactivated': !isNextPageExist,
+      }"
+      class="next-btn"
+      @click="gotoNextPage"
     >
       ▶다음
     </button>
@@ -27,8 +33,13 @@ export default {
     return {}
   },
   methods: {
-    updateCurrentPage(cmd) {
-      this.$store.dispatch("pageData/updateCurrentPage", cmd)
+    gotoPrevPage() {
+      if (this.isPrevPageExist)
+        this.$store.dispatch("pageData/updateCurrentPage", "prev")
+    },
+    gotoNextPage() {
+      if (this.isNextPageExist)
+        this.$store.dispatch("pageData/updateCurrentPage", "next")
     },
   },
   computed: {
