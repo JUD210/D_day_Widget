@@ -1,18 +1,14 @@
 @import url(https://fonts.googleapis.com/earlyaccess/jejugothic.css);
 @import url(https://fonts.googleapis.com/earlyaccess/jejuhallasan.css);
 @import url(https://fonts.googleapis.com/earlyaccess/jejumyeongjo.css);
-
 @import url(https://fonts.googleapis.com/earlyaccess/hanna.css);
-
 @import url(https://fonts.googleapis.com/earlyaccess/nanumgothic.css);
-@import url(https://fonts.googleapis.com/earlyaccess/nanumgothiccoding.css);@import url(https://fonts.googleapis.com/earlyaccess/nanumbrushscript.css);
+@import url(https://fonts.googleapis.com/earlyaccess/nanumgothiccoding.css);
+@import url(https://fonts.googleapis.com/earlyaccess/nanumbrushscript.css);
 @import url(https://fonts.googleapis.com/earlyaccess/nanumpenscript.css);
 @import url(https://fonts.googleapis.com/css?family=Nanum+Myeongjo);
-
 @import url(https://fonts.googleapis.com/earlyaccess/kopubbatang.css);
-
 @import url(https://fonts.googleapis.com/earlyaccess/notosanskr.css);
-
 #app {
   display: grid;
   /* grid-template-columns: auto auto auto; */
@@ -20,7 +16,8 @@
   /* align-items: center; */
   font-family: "Jeju Gothic";
   font-weight: 400;
-  color: rgb(44,62,80);
+  color: rgb(44, 62, 80);
+  background-color: rgb(254, 255, 255);
   /* Chrome, Safari, Opera */
   /* -webkit-text-size-adjust: 100%; */
   /* -webkit-font-smoothing: antialiased; */
@@ -40,14 +37,11 @@ body {
   text-align: center;
 }
 
-
 button, label, input, optgroup, select, textarea {
   font-family: "Jeju Gothic";
   text-transform: none;
   font-size: 100%;
 }
-
-
 
 /* button,
 [type="button"],

@@ -2,6 +2,7 @@
   <div>
     <div class="common">
       <NavBar></NavBar>
+      <Breadcrumbs></Breadcrumbs>
     </div>
 
     <div class="page-selected">
@@ -22,7 +23,7 @@
       class="switchesContainer"
       :class="{ 'switchesContainer--activated': showSwitches }"
     >
-      <button class="hideBtn toggle_btn" @click="showSwitches = !showSwitches">
+      <button class="hide-btn toggle-btn" @click="showSwitches = !showSwitches">
         숨기기
       </button>
 
@@ -117,31 +118,33 @@
       class="switchesContainer"
       :class="{ 'switchesContainer--deactivated': !showSwitches }"
     >
-      <button class="show-btn toggle_btn" @click="showSwitches = !showSwitches">
+      <button class="show-btn toggle-btn" @click="showSwitches = !showSwitches">
         보이기
       </button>
     </div>
 
     <div class="preview">
-      <button
-        class="hideBtn toggle_btn"
-        v-if="showPreview"
-        @click="showPreview = !showPreview"
-      >
-        숨기기
-      </button>
-
       <div v-show="showPreview">
         <DDayWidget class="widget"></DDayWidget>
       </div>
 
-      <button
-        class="show-btn toggle_btn"
-        v-if="!showPreview"
-        @click="showPreview = !showPreview"
-      >
-        보이기
-      </button>
+      <div class="toggle-btns">
+        <button
+          class="hide-btn"
+          v-if="showPreview"
+          @click="showPreview = !showPreview"
+        >
+          숨기기
+        </button>
+
+        <button
+          class="show-btn"
+          v-if="!showPreview"
+          @click="showPreview = !showPreview"
+        >
+          보이기
+        </button>
+      </div>
     </div>
 
     <BasePageBtns></BasePageBtns>
@@ -152,6 +155,7 @@
 import "@/assets/css/d_day_widget/DDayWidgetGenerator.css"
 
 import NavBar from "@/components/common/NavBar.vue"
+import Breadcrumbs from "@/components/common/Breadcrumbs.vue"
 
 import UniqueIdController from "@/components/common/UniqueIdController.vue"
 
@@ -174,6 +178,8 @@ export default {
 
   components: {
     NavBar,
+    Breadcrumbs,
+
     UniqueIdController,
 
     Introduction,

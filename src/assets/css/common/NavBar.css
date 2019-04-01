@@ -1,8 +1,8 @@
 .nav-bar {
   display:grid;
+  grid-template-rows: 60px 40px; 
   text-align: center;
   align-items: center;
-  grid-template-rows: 50px 30px 20px; 
   overflow: hidden;
   background-color: rgb(51, 51, 51);
   position: fixed;
@@ -16,15 +16,10 @@
   font-size: 40px;
   margin: 0;
 }
-.nav-bar__title-ver {
-  color: white;
-  font-size: 25px;
-  margin: 0;
-}
 
 .nav-bar__links {
   border-top-style: solid;
-  border-top-color: rgb(221, 221, 221);
+  border-top-color: rgb(210, 210, 210);
   border-top-width: 1px;
   line-height: 0px;
 }
@@ -32,7 +27,7 @@
 .nav-bar__links>a {
   display: inline-block;
   color: rgb(242, 242, 242);
-  padding: 14px 16px;
+  padding: 20px 20px;
   text-decoration: none;
   font-size: 20px;
 }
@@ -42,6 +37,7 @@
 }
 
 .nav-bar__links>.activated {
-  background: rgb(221, 221, 221);
+  background: rgb(210, 210, 210);
   color: black;
 }
+

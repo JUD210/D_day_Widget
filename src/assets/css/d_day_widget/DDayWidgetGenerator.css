@@ -18,15 +18,22 @@
   justify-items: right;
 }
 
-.preview>.hideBtn {
+.preview .toggle-btns {
+  border-width: 2px;
+  border-style: solid;
+}
+
+.hide-btn {
   position: relative;
-  z-index: 100;
+  z-index: 10000;
 }
 
 /*--------------------------------------------------------*/
 
 .show-btn {
-  right: 5%;
+  position: relative;
+  z-index: 10000;
+  /* right: 5%; */
   /* border: 2px; */
   /* border-style: groove; */
   /* border-color: rgb(28, 43, 20); */
@@ -44,7 +51,7 @@
 .switchesContainer {
   position: fixed;
   z-index: 11;
-  top: 120px;
+  top: 160px;
   right: 6vw;
   width: 200px;
   border: 2px;

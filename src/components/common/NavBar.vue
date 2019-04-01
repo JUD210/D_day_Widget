@@ -1,19 +1,37 @@
 <template>
   <div class="nav-bar">
-    <h1 class="nav-bar__title">공부방송 도우미</h1>
-    <h3 class="nav-bar__title-ver">v0.21</h3>
+    <h1 class="nav-bar__title">
+      공부방송 도우미
+      <span style="font-size:20px;">v0.30</span>
+    </h1>
 
-    <nav class="nav-bar__links">
+    <nav class="nav-bar__links" @click="gotoPage(0, 0)">
       <router-link class="activated" :to="{ name: 'd-day-widget-generator' }"
         >D-day 위젯</router-link
       >
       <!-- <a onclick="alert('제작중입니다.')">(제작중) 뽀모도로 타이머</a> -->
     </nav>
+
+    <Breadcrumbs :forWhat="'D-Day Widget'"></Breadcrumbs>
   </div>
 </template>
 
 <script>
 import "@/assets/css/common/NavBar.css"
 
-export default {}
+import Breadcrumbs from "@/components/common/Breadcrumbs.vue"
+
+export default {
+  name: "NavBar",
+  components: {
+    Breadcrumbs,
+  },
+  methods: {
+    gotoPage(mainPage, subPage) {
+      console.log(mainPage, subPage)
+      let target = [mainPage, subPage]
+      this.$store.dispatch("pageData/gotoPage", target)
+    },
+  },
+}
 </script>

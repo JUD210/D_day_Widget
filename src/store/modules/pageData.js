@@ -23,7 +23,7 @@ export const state = {
 }
 
 export const mutations = {
-  UPDATE_Current_Page(state, cmd) {
+  UPDATE_CURRENT_PAGE(state, cmd) {
     let cmp = state.currentMainPage
     let csp = state.currentSubPage
 
@@ -48,12 +48,28 @@ export const mutations = {
         pageDataUpdate`)
       }
     }
+
+    window.scrollTo(0, 0)
+    // console.log(state.currentMainPage, state.currentSubPage)
+  },
+
+  GOTO_PAGE(state, target) {
+    state.currentMainPage = target[0]
+    state.currentSubPage = target[1]
+
+    window.scrollTo(0, 0)
+
+    // console.log(state.currentMainPage, state.currentSubPage)
   },
 }
 
 export const actions = {
   updateCurrentPage({ commit }, cmd) {
-    commit("UPDATE_Current_Page", cmd)
+    commit("UPDATE_CURRENT_PAGE", cmd)
+  },
+
+  gotoPage({ commit }, target) {
+    commit("GOTO_PAGE", target)
   },
 }
 

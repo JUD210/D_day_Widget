@@ -36,12 +36,10 @@ export default {
     gotoPrevPage() {
       if (this.isPrevPageExist)
         this.$store.dispatch("pageData/updateCurrentPage", "prev")
-      window.scrollTo(0, 0)
     },
     gotoNextPage() {
       if (this.isNextPageExist)
         this.$store.dispatch("pageData/updateCurrentPage", "next")
-      window.scrollTo(0, 0)
     },
   },
   computed: {

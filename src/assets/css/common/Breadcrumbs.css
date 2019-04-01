@@ -1,0 +1,28 @@
+.breadcrumbs__ul {
+  margin: 0;
+  padding: 2px;
+  background: rgb(210, 210, 210);
+}
+
+.breadcrumbs__ul li {
+  display: inline-block;
+  align-items: center;
+  font-size: 16px;
+  /* color: rgba(2, 117, 216, 1.0); */
+  color: rgba(5, 5, 5, 1.0);
+  text-decoration: none;
+}
+
+.breadcrumbs__ul li+li:before {
+  padding: 8px;
+  color: rgba(5, 5, 5, 1.0);
+  content: ">";
+}
+
+.breadcrumbs__ul li:hover {
+  color: red;
+}
+
+.breadcrumbs__ul .activated {
+  color: rgba(255, 66, 66, 1.0);
+}
