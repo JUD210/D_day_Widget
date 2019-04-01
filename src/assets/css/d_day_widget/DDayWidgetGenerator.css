@@ -14,6 +14,8 @@
   z-index: 10;
   bottom: 50px;
   right: 6vw;
+  display: grid;
+  justify-items: right;
 }
 
 .preview>.hideBtn {
@@ -42,7 +44,7 @@
 .switchesContainer {
   position: fixed;
   z-index: 11;
-  bottom: 60%;
+  top: 120px;
   right: 6vw;
   width: 200px;
   border: 2px;
@@ -88,11 +90,13 @@
   border-style: dotted;
 }
 
-.switch-sub {
+.switch-sub-container {
   display: grid;
-  grid-template-columns: auto auto;
-  justify-items: center;
+  justify-items: right;
   align-items: center;
+}
+
+.switch-sub {
   padding: 1px;
   border: 0px;
   border-left: 1px;
@@ -122,13 +126,13 @@
 
 .inputLine {
   display: grid;
-  grid-template-columns: 160px auto;
+  grid-template-columns: 170px auto;
   /* justify-items: center; */
 }
 
 @media (max-width: 500px) {
   .inputLine {
-    grid-template-columns: 150px auto;
+    grid-template-columns: auto;
   }
 }
 

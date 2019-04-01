@@ -1,5 +1,23 @@
 <template>
   <div class="unique-id-controller">
+    <div
+      class="temp-before-modalization
+    "
+      v-if="this.getCurrentPage.split('-')[0] === 'Intro'"
+    >
+      <input
+        class="unique-id-input"
+        type="text"
+        :value="uniqueId"
+        @change="updateUniqueId"
+      />
+      <br />
+      <button class="create-unique-id-btn" @click="createUniqueId">
+        클릭 시 새로운 키 생성<br />
+        (임시)
+      </button>
+    </div>
+
     <!-- //@T Change to MODAL! -->
     <button class="load-btn" @click="reloadWithLoading()">
       불<br />러<br />오<br />기
@@ -12,7 +30,7 @@
 <script>
 import "@/assets/css/d_day_widget/UniqueIdController.css"
 
-import { mapState, mapActions } from "vuex"
+import { mapState, mapGetters, mapActions } from "vuex"
 
 export default {
   name: "UniqueIdController",
@@ -41,7 +59,10 @@ export default {
       document.execCommand("copy")
     },
   },
-  computed: mapState("uniqueId", ["uniqueId"]),
+  computed: {
+    ...mapState("uniqueId", ["uniqueId"]),
+    ...mapGetters("pageData", ["getCurrentPage"]),
+  },
   created() {
     this.$store.dispatch("uniqueId/createUniqueId")
   },

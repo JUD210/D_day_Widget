@@ -36,7 +36,7 @@
         />
         <label>D-day</label>
 
-        <div>
+        <div switch-sub-container>
           <div class="switch-sub">
             <input
               type="checkbox"

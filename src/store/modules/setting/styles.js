@@ -51,22 +51,22 @@ export const state = {
     // @T add: Import provided BG Image
     // @T add: Custom Image
 
-    "border-color": "rgba(0, 0, 0, 0.6)",
-    opacityForBorder: 0.6,
+    "border-color": "rgba(255, 255, 255, 0.3)",
+    opacityForBorder: 0.3,
     "border-style": "double",
 
     "border-left-width": "5px",
     "border-right-width": "5px",
     "border-top-width": "5px",
-    "border-bottom-width": "5px",
+    "border-bottom-width": "0px",
 
     "border-top-left-radius": "10px",
     "border-top-right-radius": "10px",
     "border-bottom-left-radius": "0px",
     "border-bottom-right-radius": "0px",
 
-    width: "400px",
-    height: "130px",
+    width: "250px",
+    height: "120px",
 
     left: "0px",
     bottom: "0px",
@@ -157,13 +157,13 @@ export const state = {
     // @T add: Import provided BG Image
     // @T add: Custom Image
 
-    "border-color": "rgba(0, 0, 0, 0.6)",
-    opacityForBorder: 0.6,
+    "border-color": "rgba(255, 255, 255, 0.3)",
+    opacityForBorder: 0.3,
     "border-style": "double",
 
     "border-left-width": "5px",
     "border-right-width": "5px",
-    "border-top-width": "5px",
+    "border-top-width": "0px",
     "border-bottom-width": "5px",
 
     "border-top-left-radius": "0px",
@@ -171,8 +171,8 @@ export const state = {
     "border-bottom-left-radius": "10px",
     "border-bottom-right-radius": "10px",
 
-    width: "400px",
-    height: "80px",
+    width: "250px",
+    height: "50px",
 
     left: "0px",
     bottom: "0px",
@@ -203,8 +203,8 @@ export const state = {
     "border-bottom-left-radius": "10px",
     "border-bottom-right-radius": "10px",
 
-    width: "55px",
-    height: "30px",
+    width: "40px",
+    height: "20px",
 
     left: "0px",
     bottom: "0px",
