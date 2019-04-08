@@ -2,7 +2,8 @@
   <div class="baseToggleBox">
     <div class="folder">
       <img
-        class="folder_image"
+        class="folder-image"
+        :class="{ folded: this.isOpen }"
         type="image"
         src="@/assets/image/down_arrow_in_circle.png"
         @click="changeIsOpen()"
@@ -10,7 +11,7 @@
 
       &nbsp;
 
-      <span class="folder_title" @click="changeIsOpen()">{{ title }}</span>
+      <span class="folder-title" @click="changeIsOpen()">{{ title }}</span>
 
       <div v-if="title[0] == '#'" class="examController">
         <button @click="removeExam">-</button>

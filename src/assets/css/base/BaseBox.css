@@ -10,12 +10,12 @@
   margin: 5px;
 }
 
-.folder_image {
+.folder-image {
   width: 33px;
   height: 33px;
 }
 
-.folder_title {
+.folder-title {
   font-size: 30px;
   font-weight: bold;
 }

@@ -15,12 +15,17 @@
   margin: 5px;
 }
 
-.folder_image {
-  width: 33px;
-  height: 33px;
+.folder .folded{
+  transform: rotate(0deg);  
 }
 
-.folder_title {
+.folder-image {
+  width: 33px;
+  height: 33px;
+  transform: rotate(-90deg);
+}
+
+.folder-title {
   font-size: 30px;
   font-weight: bold;
 }

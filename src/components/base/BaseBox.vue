@@ -1,7 +1,7 @@
 <template>
   <div class="baseBox">
     <div v-if="title !== 'exam'" class="folder">
-      <span class="folder_title">{{ title }}</span>
+      <span class="folder-title">{{ title }}</span>
     </div>
 
     <slot v-if="isOpen">DEBUG: fill the content!</slot>
