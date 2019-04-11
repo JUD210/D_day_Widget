@@ -10,7 +10,6 @@
       />
 
       &nbsp;
-
       <span class="folder-title" @click="changeIsOpen()">{{ title }}</span>
 
       <div v-if="title[0] == '#'" class="examController">
@@ -32,6 +31,10 @@ export default {
       type: String,
       default: "",
     },
+    index: {
+      type: Number,
+      default: 9999,
+    },
   },
   data() {
     return {
@@ -43,7 +46,6 @@ export default {
       this.isOpen = !this.isOpen
     },
 
-    // this.index comes from ExamSettingForm
     removeExam() {
       this.$store.state.exams["examsData"].length != 1
         ? this.$store.dispatch("exams/removeExam", this.index)

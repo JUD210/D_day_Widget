@@ -1,6 +1,6 @@
 <template>
   <BaseBox title="exam">
-    <BaseToggleBox class="inputLinesContainer" :title="title">
+    <BaseToggleBox class="inputLinesContainer" :title="title" :index="index">
       <div class="inputLine">
         <label>제목</label>
         <input
