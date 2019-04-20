@@ -3,11 +3,14 @@
     <h2>주요 기능</h2>
 
     <ul>
-      <h4>D-day / 타이머 제공</h4>
-      <li>시험 제목 및 날짜</li>
-      <li>세세한 스타일</li>
-      <li>글자 형식</li>
-      <li>애니메이션</li>
+      <h3>D-day / 타이머 제공</h3>
+      <img
+        class="example-image example-manycam"
+        type="image"
+        src="@/assets/image/main_features.png"
+      />
+      <li>시험 정보 입력</li>
+      <li>다양한 커스터마이징</li>
     </ul>
   </div>
 </template>
@@ -16,7 +19,4 @@
 export default {}
 </script>
 
-<style scoped>
-h4 {
-}
-</style>
+<style scoped></style>

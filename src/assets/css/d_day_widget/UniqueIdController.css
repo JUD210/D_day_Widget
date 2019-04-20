@@ -2,13 +2,13 @@
   position: fixed;
   z-index: 2;
   right: 0;
-  top: 120px;
-  width: 6vw;
-  height: calc(100vh - 120px);
-  font-size: 4vw;
+  bottom: 0;
+  width: 120px;
+  height: 40px;
+  font-size: 25px;
   text-align: center;
   /* background-color: rgba(0, 128, 0, 0.1); */
-  background-image: linear-gradient(to right, rgba(0, 230, 0, 0.1), rgba(0, 230, 0, 0.4));
+  /* background-image: linear-gradient(to right, rgba(0, 230, 0, 0.1), rgba(0, 230, 0, 0.4)); */
   border-style: solid;
   border-width: 1px;
   border-color: black;
@@ -17,7 +17,7 @@
 
 @media(min-width:800px) {
   .save-btn {
-    font-size: 40px;
+    font-size: 25px;
   }
 }
 
@@ -25,13 +25,13 @@
   position: fixed;
   z-index: 2;
   left: 0;
-  top: 120px;
-  width: 6vw;
-  height: calc(100vh - 120px);
-  font-size: 4vw;
+  bottom: 0;
+  width: 120px;
+  height: 40px;
+  font-size: 25px;
   text-align: center;
   /* background-color: rgba(0, 128, 0, 0.1); */
-  background-image: linear-gradient(to left, rgba(230, 0, 0, 0.1), rgba(230, 0, 0, 0.4));
+  /* background-image: linear-gradient(to left, rgba(230, 0, 0, 0.1), rgba(230, 0, 0, 0.4)); */
   border-style: solid;
   border-width: 1px;
   border-color: black;
@@ -40,7 +40,7 @@
 
 @media(min-width:800px) {
   .load-btn {
-    font-size: 40px;
+    font-size: 25px;
   }
 }
 

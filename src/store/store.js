@@ -77,14 +77,19 @@ Ctrl+V 로 웹 소스 URL에 붙여넣으시면 됩니다. 😃👍
           dispatch("formats/resetFormats", newData.formats)
           dispatch("animations/resetAnimations", newData.animations)
 
-          if (localStorage["requireReloadWhenLoading"] === "yes") {
-            location.reload()
+          try {
+            if (localStorage["requireReloadWhenLoading"] === "yes") {
+              location.reload()
+            }
+          } catch (error) {
+            // alert(error)
           }
         })
         .catch(error => {
           alert(`입력된/저장된 키 값과 일치하는 데이터가 없습니다!
 키 값을 잘못 붙여넣었는지 확인해주세요. (띄어쓰기 등)
-${state.uniqueId.uniqueId}`)
+${state.uniqueId.uniqueId}
+${error}`)
 
           console.log(`store/loadWidgetData [ERROR]
           ${error}`)

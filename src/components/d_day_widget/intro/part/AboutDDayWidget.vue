@@ -3,47 +3,118 @@
     <h2>D-day 위젯이란?</h2>
 
     <p>
-      각종 시험 D-day를 간편하게 편집하여, 캠(ManyCam) 또는 방송
-      프로그램(OBS/Xsplit)의 웹 소스 화면에 띄울 수 있는 위젯입니다.
+      각종 시험의
+      <b>D-day</b>를 간편하게 편집하여, <b>캠</b> 또는 <b>방송 프로그램</b>의
+      <b>화면</b>에 띄우는 위젯입니다.
       <br />
-      <br />캠스터디를 하며 열공하시는 여러분을 위해 만들어졌으며, 평생 완전
+      <br />
+      캠스터디를 하며 열공하시는 여러분을 위해 만들어졌으며, 평생 완전
       무료입니다!
       <br />
-      <br />DB를 제외한 모든 소스는 GitHub에 공개되어 있습니다.
       <br />
+      <br />ex) ManyCam
+      <br />
+      <img
+        class="example-image example-manycam"
+        type="image"
+        src="@/assets/image/example_manycam.png"
+      />
+      <br />
+      <br />ex) OBS
+      <br />
+      <img
+        class="example-image example-obs"
+        type="image"
+        src="@/assets/image/example_obs.png"
+      />
+      <br />
+      <br />ex) XSplit
+      <br />
+      <img
+        class="example-image example-xsplit"
+        type="image"
+        src="@/assets/image/example_xsplit.png"
+      />
     </p>
 
-    <ul>
-      <li>
-        <a href="https://github.com/JUD210/gongbang-helper"
-          >[👨‍💻] GitHub : 소스 파일</a
-        >
-      </li>
-      <li>
-        <a href="https://trello.com/b/bQBvL7Zj/project-gongbanghelper-v001"
-          >[📌] Trello : To Do List</a
-        >
-      </li>
-    </ul>
+    <br />
 
-    <p>
-      여러분의 피드백/건의는 언제나 환영합니다. 😄
-      <br />
-    </p>
+    <button class="how-to-btn" @click="wantFeedback = !wantFeedback">
+      피드백/건의하기
+    </button>
 
-    <ul>
-      <li>
-        <a
-          href="https://www.youtube.com/channel/UCYPWzViA-uq9sBop7ssYaEg?sub_confirmation=1"
-          >[📺] YouTube : Study with Hyeogikarp 잉혁킹
-        </a>
-        <br />( 월~토 08:00~23:00 개발/공부 방송 )
-      </li>
-      <li>[📠] judicious210@gmail.com</li>
-    </ul>
+    <div class="how-to-feedback" v-if="wantFeedback">
+      <ul>
+        <li>
+          <a
+            href="https://www.youtube.com/channel/UCYPWzViA-uq9sBop7ssYaEg?sub_confirmation=1"
+            >[📺] YouTube: 잉혁킹</a
+          >
+          <br />
+        </li>
+        <li>[📠] judicious210@gmail.com</li>
+      </ul>
+    </div>
+
+    <br />
+    <br />
+
+    <button class="how-to-btn" @click="wantContribute = !wantContribute">
+      개발 돕기 (Vue)
+    </button>
+
+    <div class="how-to-contribute" v-if="wantContribute">
+      <p>
+        공부방송 도우미는 Vue / Vue Router / VueX 를 활용하여 만들어졌습니다.
+        <br />초보 개발자 혼자서 만든 앱이기에 아직 부족한 점이 많습니다.
+        <br />
+        <br />DB를 제외한 모든 소스가 GitHub에 공개되어 있으므로, 아래의 To Do
+        List와 소스 파일에서 개선 및 추가할 점이 보이시면 언제든지 말씀해주세요!
+      </p>
+
+      <ul>
+        <li>
+          <a href="https://trello.com/b/bQBvL7Zj/project-gongbanghelper-v001"
+            >[📌] Trello : To Do List</a
+          >
+        </li>
+        <li>
+          <a href="https://github.com/JUD210/gongbang-helper"
+            >[👨‍💻] GitHub : 소스 파일 (DB 제외)</a
+          >
+        </li>
+      </ul>
+
+      <h4>Thanks to</h4>
+
+      <ul>
+        <li>steelbear</li>
+      </ul>
+    </div>
   </div>
 </template>
 
 <script>
-export default {}
+export default {
+  name: "AboutDDayWidget",
+  data() {
+    return {
+      wantContribute: false,
+      wantFeedback: false,
+    }
+  },
+}
 </script>
+
+<style scoped>
+.how-to-feedback,
+.how-to-contribute {
+  border-style: solid;
+  border-width: 1px;
+}
+
+.how-to-btn,
+.example-image {
+  width: 100%;
+}
+</style>

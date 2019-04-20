@@ -35,7 +35,7 @@ export default {
     },
     index: {
       type: Number,
-      default: 0,
+      default: 9999,
     },
   },
 

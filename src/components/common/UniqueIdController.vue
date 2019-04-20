@@ -20,10 +20,12 @@
 
     <!-- //@T Change to MODAL! -->
     <button class="load-btn" @click="reloadWithLoading()">
-      불<br />러<br />오<br />기
+      불러오기
     </button>
 
-    <button class="save-btn" @click="saveAndCopyUrl()">저<br />장</button>
+    <button class="save-btn" @click="saveAndCopyUrl()">
+      저장
+    </button>
   </div>
 </template>
 

@@ -11,23 +11,37 @@ export const mutations = {
   CREATE_UNIQUE_ID(state) {
     let possible = "abcdefghijklmnopqrstuvwxyz0123456789"
 
-    if (localStorage["uniqueId"] === undefined) {
-      let uniqueId = ""
-      for (let i = 0; i < 20; i++) {
-        uniqueId += possible.charAt(Math.floor(Math.random() * possible.length))
+    try {
+      if (localStorage["uniqueId"] === undefined) {
+        let uniqueId = ""
+        for (let i = 0; i < 20; i++) {
+          uniqueId += possible.charAt(
+            Math.floor(Math.random() * possible.length),
+          )
+        }
+
+        state.uniqueId = uniqueId
+        localStorage["uniqueId"] = uniqueId
+
+        location.reload()
+      } else {
+        state.uniqueId = localStorage["uniqueId"]
       }
-
-      state.uniqueId = uniqueId
-      localStorage["uniqueId"] = uniqueId
-
-      location.reload()
-    } else {
-      state.uniqueId = localStorage["uniqueId"]
+    } catch (error) {
+      alert(error)
     }
   },
   UPDATE_UNIQUE_ID(state, uniqueId) {
+    // * 0ba55df 2019-04-12 <JUD210_Hyuk> !@#!@  (HEAD -> master)
+    // Add> 2 buttons
     state.uniqueId = uniqueId
-    localStorage["uniqueId"] = uniqueId
+
+    // To prevent ManyCam error
+    try {
+      localStorage["uniqueId"] = uniqueId
+    } catch (error) {
+      // alert(error)
+    }
   },
 }
 

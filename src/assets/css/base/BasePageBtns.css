@@ -2,33 +2,33 @@
   position: fixed;
   z-index: 1;
   height: 40px;
-  width: 44vw;
+  width: calc(50vw - 120px);
   bottom: 0;
   text-align: center;
   font-size: 30px;
-  padding: 0
+  padding: 0;
 }
 
 .page-btns .prev-btn {
-  left: 6vw;
+  left: 120px;
 }
 
 .page-btns .prev-btn--activated {
-  color: rgba(0, 0, 0, 1)
+  color: rgba(0, 0, 0, 1);
 }
 
 .page-btns .prev-btn--deactivated {
-  color: rgba(0, 0, 0, 0.2)
+  color: rgba(0, 0, 0, 0.2);
 }
 
 .page-btns .next-btn {
-  right: 6vw;
+  right: 120px;
 }
 
 .page-btns .next-btn--activated {
-  color: rgba(0, 0, 0, 1)
+  color: rgba(0, 0, 0, 1);
 }
 
 .page-btns .next-btn--deactivated {
-  color: rgba(0, 0, 0, 0.2)
+  color: rgba(0, 0, 0, 0.2);
 }
