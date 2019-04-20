@@ -95,10 +95,21 @@
         </li>
       </ul>
 
-      <h4>Thanks to</h4>
+      <h4>Special Thanks to</h4>
 
       <ul>
-        <li>steelbear</li>
+        <li>
+          <a
+            href="https://www.youtube.com/channel/UC5F_d3cnqsl_6syKejWVWxw?sub_confirmation=1"
+          >
+            내 옆자리 남자 The man sitting next to me
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/steelbear">
+            Alan Choi (steelbear)
+          </a>
+        </li>
       </ul>
     </div>
   </div>

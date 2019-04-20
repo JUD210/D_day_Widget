@@ -13,8 +13,7 @@
       />
       <br />
       <button class="create-unique-id-btn" @click="createUniqueId">
-        클릭 시 새로운 키 생성<br />
-        (임시)
+        클릭 시 새로운 위젯 생성<br />
       </button>
     </div>
 
