@@ -19,4 +19,8 @@
 export default {}
 </script>
 
-<style scoped></style>
+<style scoped>
+.example-image {
+  width: 100%;
+}
+</style>

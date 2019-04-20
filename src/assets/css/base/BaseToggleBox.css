@@ -15,8 +15,8 @@
   margin: 5px;
 }
 
-.folder .folded{
-  transform: rotate(0deg);  
+.folder .folded {
+  transform: rotate(0deg);
 }
 
 .folder-image {
@@ -28,4 +28,17 @@
 .folder-title {
   font-size: 30px;
   font-weight: bold;
+}
+
+.exam-controller {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+/* //@T Continue to FIX! */
+/* This is not good! Change it! */
+.remove-exam-btn {
+  position: relative;
+  bottom: 40px;
 }

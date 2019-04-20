@@ -12,10 +12,25 @@
       &nbsp;
       <span class="folder-title" @click="changeIsOpen()">{{ title }}</span>
 
-      <div v-if="title[0] == '#'" class="examController">
-        <button @click="removeExam">-</button>
+      <div v-if="title[0] == '#'" class="exam-controller">
+        <button
+          v-if="index != 0"
+          class="order-exam-btn"
+          @click="orderExam('up')"
+        >
+          ↑
+        </button>
+        <button
+          v-if="index != examsData.length - 1"
+          class="order-exam-btn"
+          @click="orderExam('down')"
+        >
+          ↓
+        </button>
       </div>
     </div>
+
+    <button class="remove-exam-btn" @click="removeExam">-</button>
 
     <slot v-if="isOpen">DEBUG: fill the content!</slot>
   </div>
@@ -23,6 +38,7 @@
 
 <script>
 import "@/assets/css/base/BaseToggleBox.css"
+import { mapState } from "vuex"
 
 export default {
   name: "BaseToggleBox",
@@ -51,6 +67,17 @@ export default {
         ? this.$store.dispatch("exams/removeExam", this.index)
         : alert("최소 한 개의 시험 데이터는 있어야 합니다!")
     },
+
+    orderExam(cmd) {
+      this.$store.dispatch("exams/orderExam", {
+        cmd: cmd,
+        currentIndex: this.index,
+      })
+    },
+  },
+
+  computed: {
+    ...mapState("exams", ["examsData"]),
   },
 }
 </script>

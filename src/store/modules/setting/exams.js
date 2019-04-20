@@ -41,6 +41,23 @@ export const mutations = {
   UPDATE_EXAM(state, { index, attr, value }) {
     state.examsData[index][attr] = value
   },
+  ORDER_EXAM(state, { cmd, currentIndex }) {
+    var targetIndex = null
+
+    if (cmd == "up") {
+      targetIndex = currentIndex - 1
+    } else if (cmd == "down") {
+      targetIndex = currentIndex + 1
+    }
+
+    var temp = state.examsData[targetIndex]
+    state.examsData[targetIndex] = state.examsData[currentIndex]
+    state.examsData[currentIndex] = temp
+
+    // To refresh examsData
+    state.examsData.push({ examTitle: null, examDate: date })
+    state.examsData.pop()
+  },
   REMOVE_EXAM(state, index) {
     state.__indexSelector = 0
     state.examsData.splice(index, 1)
@@ -89,6 +106,9 @@ export const actions = {
 
     // console.log(`exams/UPDATE_EXAM
     // state.examsData[${index}][${attr}] = ${value}`)
+  },
+  orderExam({ commit }, cmd) {
+    commit("ORDER_EXAM", cmd)
   },
   removeExam({ commit }, index) {
     commit("REMOVE_EXAM", index)
