@@ -1,6 +1,6 @@
 .nav-bar {
   display:grid;
-  grid-template-rows: 60px 40px; 
+  grid-template-rows: 80px 30px; 
   text-align: center;
   align-items: center;
   overflow: hidden;
@@ -27,7 +27,7 @@
 .nav-bar__links>a {
   display: inline-block;
   color: rgb(242, 242, 242);
-  padding: 20px 20px;
+  padding: 15px 15px;
   text-decoration: none;
   font-size: 20px;
 }

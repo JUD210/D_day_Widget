@@ -44,6 +44,11 @@
     </button>
 
     <div class="how-to-feedback" v-if="wantFeedback">
+      <h2>
+        앱 개발자 잉혁킹이 현재 편입학 공부중입니다!<br />
+        2020년 2월 이전까지는 임시로 보류하겠습니다.<br />
+      </h2>
+
       <ul>
         <li>
           <a
@@ -64,6 +69,11 @@
     </button>
 
     <div class="how-to-contribute" v-if="wantContribute">
+      <h2>
+        앱 개발자 잉혁킹이 현재 편입학 공부중입니다!<br />
+        2020년 2월 이전까지는 임시로 보류하겠습니다.<br />
+      </h2>
+
       <p>
         공부방송 도우미는 Vue / Vue Router / VueX 를 활용하여 만들어졌습니다.
         <br />초보 개발자 혼자서 만든 앱이기에 아직 부족한 점이 많습니다.

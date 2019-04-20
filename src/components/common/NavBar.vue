@@ -2,7 +2,8 @@
   <div class="nav-bar">
     <h1 class="nav-bar__title">
       공부방송 도우미
-      <span style="font-size:20px;">v0.30</span>
+      <span style="font-size:20px;">v0.31</span>
+      <div style="font-size:20px;">Made by 잉혁킹</div>
     </h1>
 
     <nav class="nav-bar__links" @click="gotoPage(0, 0)">
