@@ -8,7 +8,6 @@
         src="@/assets/image/down_arrow_in_circle.png"
         @click="changeIsOpen()"
       />
-
       &nbsp;
       <span class="folder-title" @click="changeIsOpen()">{{ title }}</span>
 
@@ -30,7 +29,9 @@
       </div>
     </div>
 
-    <button class="remove-exam-btn" @click="removeExam">-</button>
+    <button v-if="title[0] == '#'" class="remove-exam-btn" @click="removeExam">
+      -
+    </button>
 
     <slot v-if="isOpen">DEBUG: fill the content!</slot>
   </div>
