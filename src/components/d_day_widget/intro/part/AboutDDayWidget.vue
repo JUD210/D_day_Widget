@@ -57,7 +57,7 @@
           >
           <br />
         </li>
-        <li>[📠] judicious210@gmail.com</li>
+        <li>[📠] Hyeogikarp@gmail.com</li>
       </ul>
     </div>
 
