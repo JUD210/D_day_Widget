@@ -147,12 +147,16 @@
 }
 
 .title, .dday, .date {
+  text-shadow: 1.5px 1.5px rgba(0, 0, 0, 0.5);
+
   align-items: center;
 
   position: relative;
 }
 
 .day, .hour, .min, .sec {
+  text-shadow: 1.5px 1.5px rgba(0, 0, 0, 0.5);
+
   margin: 5px;
   align-items: center;
 
@@ -160,6 +164,8 @@
 }
 
 .number {
+  text-shadow: 1.5px 1.5px rgba(0, 0, 0, 0.5);
+
   display: grid;
   align-items: center;
 
@@ -167,6 +173,8 @@
 }
 
 .number_str {
+  text-shadow: 1.5px 1.5px rgba(0, 0, 0, 0.5);
+
   padding-top: 2px;
   align-items: center;
 
